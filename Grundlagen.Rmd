@@ -1,0 +1,92 @@
+---
+title: "Grundlagen"
+author: "Jan-Philipp Kolb"
+date: "Friday, March 20, 2015"
+output: html_document
+---
+
+R ist eine Objekt-orientierte Sprache
+
+
+# Vektoren und Zuweisungen
+
+* R ist eine Objekt-orientierte Sprache
+* `r <-` ist der Zuweisungsoperator
+* `r b` <- c(1,2)} erzeugt ein Objekt mit den Zahlen 1 und 2
+* Eine Funktion kann auf dieses Objekt angewendet werden:
+* `r mean(b)` berechnet den Mittelwert
+
+Mit den folgenden Funktionen können wir etwas über die Eigenschaften des Objekts lernen:
+
+* `r length(b)` - b hat die Länge 2
+* `r str(b)}` - b ist ein numerischer Vektor
+
+
+Funktionen im base-Paket
+
+
+Diese Funktionen brauchen nur ein Argument.
+
+Funktion & Bedeutung & Beispiel 
+
+length() & 
+
+
+
+```{r}
+# Länge 
+b <- c(1,2)
+length(b)
+
+  # Das Maximum:
+max(b)
+
+  # Minimum
+min(b)
+
+  # Standardabweichung
+sd(b)
+
+  # Varianz
+var(b)
+
+  # Mittelwert
+mean(b)
+
+  # Median
+median(b)
+
+  # Das Ergebnis kann wieder einem Objekt zugewiesen werden
+med_b <- median(b)
+```
+
+
+Funktionen mit mehr Argumenten:
+
+```{r}
+
+d <- c(1,4,3,7,9,5,4,3)
+
+
+  # Quantil berechnen:
+quantile(d,0.9)
+
+
+  # hier werden 2 Elemente aus d gezogen
+sample(x=d,size=2,replace=FALSE)
+
+  # jedes Mal können andere Ergebnisse resultieren
+
+  # hier wird nur ein Element gezogen
+sample(x=d,size=1,replace=FALSE)
+
+  # auch dieses Ergebnis kann wieder in einem Element
+  # gespeichert werden
+
+stichA <- sample(x=d,size=1,replace=FALSE)
+
+```
+
+Das Argument replace gibt an, ob eine Stichprobe mit oder ohne zurücklegen gezogen wird
+
+
