@@ -1,0 +1,47 @@
+---
+title: "Erste Schritte"
+author: "Jan-Philipp Kolb"
+date: "Friday, March 20, 2015"
+output: html_document
+---
+
+R als Taschenrechner
+-----
+
+```{r}
+1+1
+2-1
+2*2
+4/2
+```
+
+
+Mathematische Funktionen
+
+```{r}
+log(4)
+log(4,base=2)
+exp(4)
+sqrt(4)
+2^4
+```
+
+
+Reference cards
+------
+
+* Die bekannteste Version:
+
+<http://cran.r-project.org/doc/contrib/Short-refcard.pdf>
+
+* Eine Karte für Data Mining
+
+<http://cran.r-project.org/doc/contrib/YanchangZhao-refcard-data-mining.pdf>
+
+Modularer Aufbau
+----------
+
+
+![Caption for the picture.](Packages.PNG)
+
+<http://www.ats.ucla.edu/stat/r/seminars/intro.htm>

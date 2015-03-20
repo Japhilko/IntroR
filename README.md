@@ -28,12 +28,12 @@ Aber die meisten Menschen nutzen aus folgenden Gründen einen Editor oder ein GU
 
 * Syntax highlighting
 * Auto-Vervollständigung
-* Bessere Übersicht über Graphiken, Bibliotheken
+* Bessere Übersicht über  Graphiken, Bibliotheken
 
 
 Verschiedene Möglichkeiten:
 
-* Gedit mit R-spezifischen Add-ons für Linux
+* Gedit mit R-spezifischen Add-ons fÃ¼r Linux
 
 <https://projects.gnome.org/gedit/>
 
@@ -44,5 +44,9 @@ Verschiedene Möglichkeiten:
 * TinnR
 
 <http://www.sciviews.org/Tinn-R/>
+
+* Rstudio
+
+<http://www.rstudio.com/>
 
 
