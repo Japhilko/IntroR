@@ -1,0 +1,36 @@
+---
+title: "Make Maps"
+author: "Jan-Philipp Kolb"
+date: "Friday, March 20, 2015"
+output: ioslides_presentation
+---
+
+## Example maptools
+
+Three lines of code to plot a worldmap:
+
+```{r, fig.height=3.5}
+library(maptools)
+data(wrld_simpl)
+plot(wrld_simpl)
+```
+
+
+## A map for Europe
+
+```{r}
+Europe <- wrld_simpl[wrld_simpl$REGION=="150",]
+plot(Europe,col="royalblue")
+```
+
+
+## Fewer states
+
+```{r}
+threeStates <- wrld_simpl[wrld_simpl$NAME%in%c("Germany","Poland","Denmark"),]
+plot(threeStates,col="chocolate1")
+```
+
+
+
+
