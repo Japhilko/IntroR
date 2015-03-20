@@ -1,0 +1,17 @@
+{
+    "contents" : "---\ntitle: \"Datenimport und -export\"\nauthor: \"Jan-Philipp Kolb\"\ndate: \"Friday, March 20, 2015\"\noutput: ioslides_presentation\n---\n\n## Rein und raus - Datenimport und -export\n\n\n## Datemimport\n\n![Modularer Aufbau](figure/Datenimport.PNG)\n\n\n## Slide with R Code and Output\n\n```{r}\nsummary(cars)\n```\n\n## Slide with Plot\n\n```{r, echo=FALSE}\nplot(cars)\n```\n\n",
+    "created" : 1426860707441.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2422070847",
+    "id" : "BEB0E2E1",
+    "lastKnownWriteTime" : 1426861409,
+    "path" : "~/GitHub/IntroR/slides/ImportExport.Rmd",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_markdown"
+}
