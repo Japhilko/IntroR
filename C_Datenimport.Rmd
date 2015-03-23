@@ -1,5 +1,5 @@
 ---
-title: "Datenimport und -export"
+title: "Datenimport"
 author: "Jan-Philipp Kolb"
 date: "Friday, March 20, 2015"
 output: html_document
@@ -155,13 +155,24 @@ MZ13 <- read.spss(file=link,
 ```
 
 
-  	### STATA Dateien einlesen
-		Mit dem foreign-paket können auch STATA (.dta) Dateien eingelesen werden:
+### STATA Dateien einlesen
+Mit dem foreign-paket können auch STATA (.dta) Dateien eingelesen werden:
     
 		
 		
 ```{r,eval=F}
 ?read.dta
-MZ02 <- read.dta(file="MZ02.dta")
+data(swiss)
+write.dta(swiss,swissfile <- tempfile())
+read.dta(swissfile)
 ```
+
+
+### Datenmanagement wie in SPSS oder Stata
+
+```{r,eval=F}
+install.packages("Rz")
+library(Rz)
+```
+
 
