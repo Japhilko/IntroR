@@ -42,7 +42,7 @@ Modularer Aufbau
 ----------
 
 
-![Modularer Aufbau](Packages.PNG)
+![Modularer Aufbau](figure/Packages.PNG)
 
 <http://www.ats.ucla.edu/stat/r/seminars/intro.htm>
 
@@ -61,7 +61,7 @@ library(lme4)
 ```
 
 
-![Pakete zur graphischen Datenanalyse](PaketeDeskriptiv.png)
+![Pakete zur graphischen Datenanalyse](figure/PaketeDeskriptiv.png)
 
 <http://cran.r-project.org/web/views/Graphics.html>
 
@@ -120,7 +120,7 @@ wordcloud(Befehle,p,colors=pal)
 
 # Paket - big data (pbdR)
 
-![Big data](pbdR.PNG)
+![Big data](figure/pbdR.PNG)
 
 
 <http://r-pbd.org/>
