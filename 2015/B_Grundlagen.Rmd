@@ -251,6 +251,14 @@ rep("A",10)
 ?paste
 paste(1:4)
 paste("A", 1:6, sep = "")
-
 ```
+
+
+# Allgemeine Informationen:
+
+```{r}
+sessionInfo()
+```
+
+
 
