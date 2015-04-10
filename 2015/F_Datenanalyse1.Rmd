@@ -1,0 +1,25 @@
+---
+title: "Datenanalyse1"
+author: "Jan-Philipp Kolb"
+date: "10. April 2015"
+output: html_document
+---
+
+Der Code zu diesem Teil befindet sich im R-file:
+
+<https://github.com/Japhilko/IntroR/blob/master/2015/rcode/IntroR_C_ApplyFamilie.R>
+
+```{r, echo=FALSE}
+ab <- rnorm(100)
+
+var(ab)
+
+sd(ab)
+
+min(ab)
+
+max(ab)
+
+range(ab)
+```
+

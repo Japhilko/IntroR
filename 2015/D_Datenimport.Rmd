@@ -15,11 +15,11 @@ meist stark anonymisierte Daten
 
 viele Beispiele unter:
 
-<www.forschungsdatenzentrum.de>
+<http://www.forschungsdatenzentrum.de>
 
-<www.statistik-portal.de>
+<http://www.statistik-portal.de>
 
-<www.infothek.statistik.rlp.de/lis/MeineRegion/index.asp>
+<http://www.infothek.statistik.rlp.de/lis/MeineRegion/index.asp>
 
 ### Scientific-Use-File (SUF)
 
@@ -27,6 +27,7 @@ viele Beispiele unter:
  
  
 On-Site-Nutzung: 
+
  *Arbeitsplätze für Gastwissenschaftler
 *Kontrollierte Datenfernverarbeitung
 
@@ -35,7 +36,8 @@ On-Site-Nutzung:
 
 * Forschungsdatenzentrum
 
-<www.forschungsdatenzentrum.de/>
+<http://www.forschungsdatenzentrum.de/>
+
 * GDELT: Global Data on Events, Location and Tone 
 
 <http://gdelt.utdallas.edu/>
@@ -43,6 +45,7 @@ On-Site-Nutzung:
 * Social security administration puf
 
 <http://www.ssa.gov/policy/docs/data/index.html>
+
 * National health and nutrition examination survey
 
 ```{r}
@@ -175,4 +178,11 @@ install.packages("Rz")
 library(Rz)
 ```
 
+
+R code zu diesem Abschnitt:
+
+<https://github.com/Japhilko/IntroR/blob/master/2015/rcode/IntroR_B_Datenimportexport.R>
+
+
+Hier geht es weiter:
 

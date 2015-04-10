@@ -1,0 +1,22 @@
+---
+title: "DatenExport"
+author: "Jan-Philipp Kolb"
+date: "10. April 2015"
+output: html_document
+---
+
+
+Quick R für das Exportieren von Daten:
+
+<http://www.statmethods.net/input/exportingdata.html>
+
+
+Hilfe zum Export auf dem cran Server:
+
+
+<http://cran.r-project.org/doc/manuals/r-release/R-data.pdf>
+
+
+## Ein erster Eindruck
+
+
