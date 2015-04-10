@@ -4,7 +4,7 @@
 # 
 # Erste Befehle
 #
-# 30.04.2014
+# 13.04.2015
 #------------------------------------------------------------#
 
 # IntroR_A_ErsteBefehle.R
@@ -28,33 +28,6 @@ exp(4)
 sqrt(4)
 2^4
 
-#------------------------------------------------------------#
-# Modularer Aufbau - Bibliotheken
-#------------------------------------------------------------#
-
-  # so installiert man eine Bibliothek
-install.packages("lme4")
-
-  # so lädt man eine Bibliothek
-library(lme4)
-
-#------------------------------------------------------------#
-# Wie bekommt man Hilfe
-#------------------------------------------------------------#
-
-help.start()
-
-# Die Funktion help:
-help(lm)
-help(lapply)
-
-help(package = "splines")
-
-# Grundsätzlich mit dem Befehl ?
-
-# Beispiele bekommt man so:
-
-example(lm)
 
 #------------------------------------------------------------#
 # Vektoren und Zuweisungen
@@ -63,31 +36,31 @@ example(lm)
 # <- ist der Zuweisungsoperator
 b <- c(1,2)
 
-  # den Mittelwert berechnen
+# den Mittelwert berechnen
 mean(b)
 length(b)
 
 str(b)
 
-  # Das Maximum:
+# Das Maximum:
 max(b)
 
-  # Minimum
+# Minimum
 min(b)
 
-  # Standardabweichung
+# Standardabweichung
 sd(b)
 
-  # Varianz
+# Varianz
 var(b)
 
-  # Mittelwert
+# Mittelwert
 mean(b)
 
-  # Median
+# Median
 median(b)
 
-  # Das Ergebnis kann wieder einem Objekt zugewiesen werden
+# Das Ergebnis kann wieder einem Objekt zugewiesen werden
 med_b <- median(b)
 
 #####
@@ -96,25 +69,27 @@ med_b <- median(b)
 d <- c(1,4,3,7,9,5,4,3)
 
 
-  # Quantil berechnen:
+# Quantil berechnen:
 quantile(d,0.9)
 
 
-  # hier werden 2 Elemente aus d gezogen
+# hier werden 2 Elemente aus d gezogen
 sample(x=d,size=2,replace=FALSE)
 
-  # jedes Mal können andere Ergebnisse resultieren
+# jedes Mal können andere Ergebnisse resultieren
 
-  # hier wird nur ein Element gezogen
+# hier wird nur ein Element gezogen
 sample(x=d,size=1,replace=FALSE)
 
-  # auch dieses Ergebnis kann wieder in einem Element
-  # gespeichert werden
+# auch dieses Ergebnis kann wieder in einem Element
+# gespeichert werden
 
 stichA <- sample(x=d,size=1,replace=FALSE)
 
-  # Das Argument replace gibt an, ob eine Stichprobe mit
-  # oder ohne zurücklegen gezogen wird
+# Das Argument replace gibt an, ob eine Stichprobe mit
+# oder ohne zurücklegen gezogen wird
+
+
 
 #------------------------------------------------------------#
 # Verschiedene Datentypen
@@ -132,8 +107,8 @@ C <- c("AB","F","23")
 is.logical(C)
 str(C)
 
-  # immer das niedrigste 
-  # Niveau wird genommen
+# immer das niedrigste 
+# Niveau wird genommen
 
 D <- c(1,3,"A")
 str(D)
@@ -142,16 +117,16 @@ b <- c(1,2)
 log <- c(T,F)
 char <- c("A","b")
 
-  # Faktoren sind eine spezielle Form,
-  # vor allem bei Regression hilfreich
+# Faktoren sind eine spezielle Form,
+# vor allem bei Regression hilfreich
 
 fac <- as.factor(c(1,2))
 
-  # mit as... kann man also umwandeln
+# mit as... kann man also umwandeln
 
 as.character(b)
-  # wenn man das nicht in Objekt speichert
-  # merkt es es sich R auch nicht
+# wenn man das nicht in Objekt speichert
+# merkt es es sich R auch nicht
 
 b
 
@@ -178,14 +153,14 @@ A1[-4]
 ####
 # dataframe
 
-  # Beispieldaten generieren:
+# Beispieldaten generieren:
 AGE <- c(20,35,48,12)
 SEX <- c("m","w","w","m")
 
-  # Diese beiden Vektoren zu einem data.frame verbinden:
+# Diese beiden Vektoren zu einem data.frame verbinden:
 Daten <- data.frame(Alter=AGE,Geschlecht=SEX)
 
-  # Anzahl der Zeilen/Spalten herausfinden
+# Anzahl der Zeilen/Spalten herausfinden
 
 nrow(Daten) # Zeilen
 ncol(Daten) # Spalten
@@ -218,27 +193,27 @@ A4[[2]]
 # Logische Operatoren
 #------------------------------------------------------------#
 
-  # Ist 1 größer als 2?
+# Ist 1 größer als 2?
 1>2
 1<2
 
 1==2
 
-  # Diese Operatoren eignen sich gut 
-  # um Datensätze einzuschränken
+# Diese Operatoren eignen sich gut 
+# um Datensätze einzuschränken
 
 Daten
 Daten[AGE>20,]
 Daten[SEX=="w",]
 
-  # gleiches Ergebnis:
+# gleiches Ergebnis:
 Daten[SEX!="m",]
 
-  # Ergebnis in ein Objekt speichern
+# Ergebnis in ein Objekt speichern
 subDat <- Daten[AGE>20,]
 
-  # mehrere Bedingeungen können mit
-  # & verknüpft werden:
+# mehrere Bedingeungen können mit
+# & verknüpft werden:
 
 Daten[AGE>18 & SEX=="w",]
 
@@ -273,3 +248,33 @@ rep("A",10)
 paste(1:4)
 paste("A", 1:6, sep = "")
 
+
+#------------------------------------------------------------#
+# Wie bekommt man Hilfe
+#------------------------------------------------------------#
+
+help.start()
+
+# Die Funktion help:
+help(lm)
+help(lapply)
+
+help(package = "splines")
+
+# Grundsätzlich mit dem Befehl ?
+
+# Beispiele bekommt man so:
+
+example(lm)
+
+?mean
+
+#------------------------------------------------------------#
+# Modularer Aufbau - Bibliotheken
+#------------------------------------------------------------#
+
+# so installiert man eine Bibliothek
+install.packages("lme4")
+
+# so lädt man eine Bibliothek
+library(lme4)

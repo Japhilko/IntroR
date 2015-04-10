@@ -43,6 +43,139 @@ b <- c(1 ,2)
 b <- c(1,2)
 ```
 
+Hier findet man mehr:
+
+<http://cran.r-project.org/doc/manuals/R-intro.html>
+
+
+# den Mittelwert berechnen
+
+```{r}
+b <- c(1,2)
+mean(b)
+length(b)
+```
+
+```{r}
+str(b)
+```
+
+
+
+# Das Maximum:
+
+```{r}
+max(b)
+```
+
+
+```{r}
+# Minimum
+
+min(b)
+
+# Standardabweichung
+sd(b)
+
+# Varianz
+var(b)
+
+# Mittelwert
+mean(b)
+
+# Median
+median(b)
+
+# Das Ergebnis kann wieder einem Objekt zugewiesen werden
+med_b <- median(b)
+
+#####
+# Funktionen mit mehr Argumenten
+
+d <- c(1,4,3,7,9,5,4,3)
+
+
+# Quantil berechnen:
+quantile(d,0.9)
+
+
+# hier werden 2 Elemente aus d gezogen
+sample(x=d,size=2,replace=FALSE)
+
+# jedes Mal können andere Ergebnisse resultieren
+
+# hier wird nur ein Element gezogen
+sample(x=d,size=1,replace=FALSE)
+
+# auch dieses Ergebnis kann wieder in einem Element
+# gespeichert werden
+
+stichA <- sample(x=d,size=1,replace=FALSE)
+
+# Das Argument replace gibt an, ob eine Stichprobe mit
+# oder ohne zurücklegen gezogen wird
+
+```
+
+# Reference Cards:
+
+<http://cran.r-project.org/doc/contrib/Short-refcard.pdf>
+
+
+Data Mining:
+
+<http://cran.r-project.org/doc/contrib/YanchangZhao-refcard-data-mining.pdf>
+
+# Cheat Sheets:
+
+<http://shiny.rstudio.com/articles/cheatsheet.html>
+
+<http://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf>
+
+
+## Verschiedene Datentypen und Indizieren
+
+<https://github.com/Japhilko/IntroR/blob/master/2015/rcode/IntroR_A_ErsteBefehle.R>
+
+
+## Wie bekommt man Hilfe
+
+```{r}
+help.start()
+```
+
+
+Die Funktion help bei einer linearen Regression:
+
+```{r}
+help(lm)
+```
+
+
+
+```{r}
+help(package = "ggplot2")
+```
+
+```{r}
+?mean
+```
+
+```{r}
+example(lm)
+```
+
 
 ## Modularer Aufbau - Bibliotheken
+
+
+
+
+
+
+### Graphics
+
+## ggplot2
+
+<http://zevross.com/blog/2014/11/20/under-the-hood-of-ggplot2-graphics-in-r/>
 
