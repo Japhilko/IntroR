@@ -1,0 +1,8 @@
+---
+title: "ModularerAufbau"
+author: "Jan-Philipp Kolb"
+date: "10. April 2015"
+output: html_document
+---
+
+# Pakete - deskriptive Datenanalyse
