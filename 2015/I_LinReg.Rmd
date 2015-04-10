@@ -24,3 +24,33 @@ Falls das Modell ohne Intercept geschätzt werden soll
 lm(prestige ~ -1 + income, data = Prestige)
 ```
 
+
+Vorhersage mit predict
+  
+```{r}
+predict(prestige.lm)
+
+```
+
+
+Die Residuen bekommt man mit 
+
+```{r}
+resid(prestige.lm)
+```
+
+
+Die gefitteten Werte und die Residuen 
+
+```{r}
+data.frame(Prestige, fitted.value=predict(prestige.lm), 
+           residual=resid(prestige.lm))
+```
+
+
+Ein Residuenplot
+  
+```{r,eval=TRUE}
+plot(prestige.lm, which = 1)
+```
+
