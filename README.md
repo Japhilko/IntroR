@@ -31,12 +31,12 @@ Aber die meisten Menschen nutzen aus folgenden Gründen einen Editor oder ein GU
 
 * Syntax highlighting
 * Auto-Vervollständigung
-* Bessere Übersicht über  Graphiken, Bibliotheken
+* Bessere Übersicht zu  Graphiken, Bibliotheken
 
 
 Verschiedene Möglichkeiten:
 
-* Gedit mit R-spezifischen Add-ons fÃ¼r Linux
+* Gedit mit R-spezifischen Add-ons Linux
 
 <https://projects.gnome.org/gedit/>
 
@@ -51,5 +51,13 @@ Verschiedene Möglichkeiten:
 * Rstudio
 
 <http://www.rstudio.com/>
+
+
+Download Unterlagen
+-------------
+
+Github Verzeichnis
+
+<https://github.com/Japhilko/IntroR/blob/master/2015/README.Rmd>
 
 
