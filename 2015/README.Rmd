@@ -1,6 +1,9 @@
 Einführung in R 2015
 ===================
 
+In diesem Verzeichnis befinden sich die Unterlagen für den Kurs "Einführung in die Datenanalyse mit R", der am Gesis Leibniz Institut für Sozialwissenschaften in Mannheim durchgeführt wird. Weitere Informationen sind auf <rpossib.wordpress.com> 
+
+
 * R ist eine freie, nicht-kommerzielle Implementierung der Programmiersprache S (von ATT Bell Laboratories entwickelt)
 
 * Freie Beteiligung - modularer Aufbau (immer mehr Erweiterungspakete)
