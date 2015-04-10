@@ -90,7 +90,7 @@ vioplot(Chem97$gcsescore,col="royalblue")
 
 # Scatterplot
 
-```{r}
+```{r,eval=TRUE}
 plot(Chem97$gcsescore,Chem97$gcsecnt,xlab="gcsescore",
      ylab="gcsecnt",pch=15,col="royalblue",cex=3)
 ```

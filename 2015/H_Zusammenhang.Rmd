@@ -87,4 +87,6 @@ mosaicplot(Titanic, main = "Survival on the Titanic", color = TRUE)
 ```
 
 
+Hier gehts weiter mit der linearen Regression:
 
+<https://github.com/Japhilko/IntroR/blob/master/2015/I_LinReg.Rmd>
