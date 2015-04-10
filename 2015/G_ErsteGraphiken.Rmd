@@ -91,7 +91,11 @@ vioplot(Chem97$gcsescore,col="royalblue")
 # Scatterplot
 
 ```{r}
-plot(oecd$Einkommen,oecd$Armut,xlab="Einkommen",
-     ylab="Armut",pch=15,col="royalblue",cex=3)
+plot(Chem97$gcsescore,Chem97$gcsecnt,xlab="gcsescore",
+     ylab="gcsecnt",pch=15,col="royalblue",cex=3)
 ```
 
+
+Hier geht es weiter mit Zusammenhang:
+
+<https://github.com/Japhilko/IntroR/blob/master/2015/H_Zusammenhang.Rmd>
