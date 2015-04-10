@@ -186,3 +186,4 @@ R code zu diesem Abschnitt:
 
 Hier geht es weiter:
 
+<https://github.com/Japhilko/IntroR/blob/master/2015/E_Datenexport.Rmd>

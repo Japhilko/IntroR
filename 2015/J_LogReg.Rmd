@@ -1,0 +1,49 @@
+---
+title: "Logistische Regression"
+author: "Jan-Philipp Kolb"
+date: "10. April 2015"
+output: html_document
+---
+
+<https://home.comcast.net/~lthompson221/Splusdiscrete2.pdf>
+
+
+```{r}
+library(HSAUR)
+library(faraway)
+library(MASS)
+library(brlr)
+library(survival)
+```
+
+```{r}
+data("plasma", package = "HSAUR")
+
+cdplot(ESR ~ fibrinogen, data = plasma)
+
+plasma_glm_1 <- glm(ESR ~ fibrinogen, data = plasma, 
+                    family = binomial())
+
+summary(plasma_glm_1)
+
+probitmod <- glm(ESR ~ fibrinogen, data = plasma, 
+                 family = binomial(link=probit))
+```
+
+```{r}
+
+data(gala)
+
+  # Regression mit Zähldaten:
+modp <- glm(Species ~ .,family=poisson,gala)
+
+    # Proportional odds logistic regression
+
+house.plr<-polr(Sat~Infl,weights=Freq,data=housing)
+```
+
+# Links:
+
+<http://cran.r-project.org/web/packages/HSAUR/vignettes/Ch_logistic_regression_glm.pdf>
+
+<http://www.filewatcher.com/p/HSAUR_1.3-0.tgz.2195072/HSAUR/doc/Ch_logistic_regression_glm.R.html>

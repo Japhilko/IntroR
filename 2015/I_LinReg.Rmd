@@ -8,6 +8,8 @@ output: html_document
 
 
 ```{r}
+library(DAAG)
+library(car)
 data(Prestige)       # DAAG package
 
 ?Prestige
@@ -28,7 +30,7 @@ lm(prestige ~ -1 + income, data = Prestige)
 Vorhersage mit predict
   
 ```{r}
-predict(prestige.lm)
+head(predict(prestige.lm))
 
 ```
 
@@ -36,7 +38,7 @@ predict(prestige.lm)
 Die Residuen bekommt man mit 
 
 ```{r}
-resid(prestige.lm)
+head(resid(prestige.lm))
 ```
 
 
@@ -54,3 +56,26 @@ Ein Residuenplot
 plot(prestige.lm, which = 1)
 ```
 
+# Linkliste
+
+Auf dem Kurs an der Uni Leipzig von Verena Zuber basieren
+auch viele der Aufgaben in diesem Workshop:
+
+<http://www.uni-leipzig.de/~zuber/teaching/ws09/r-kurs/theorie/Kurs9.pdf>
+
+Eine der vielen interessanten Blogs auf r-bloggers:
+
+<http://www.r-bloggers.com/r-tutorial-series-simple-linear-regression/>
+
+Komplettes Buch von Faraway (sehr intuitiv geschrieben):
+
+<http://cran.r-project.org/doc/contrib/Faraway-PRA.pdf>
+
+Gute Einfuhrung auf Quick-R:
+
+<http://www.statmethods.net/stats/regression.html>
+
+
+Und hier geht es weiter:
+
+<https://github.com/Japhilko/IntroR/blob/master/2015/J_LogReg.Rmd>
