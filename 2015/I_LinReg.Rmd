@@ -4,3 +4,23 @@ author: "Jan-Philipp Kolb"
 date: "10. April 2015"
 output: html_document
 ---
+
+
+
+```{r}
+data(Prestige)       # DAAG package
+
+?Prestige
+  # Datensatz über kanadische Berufe
+
+prestige.lm <- lm(prestige ~ income, data = Prestige)
+  
+summary(prestige.lm)
+```
+
+Falls das Modell ohne Intercept geschätzt werden soll
+
+```{r,echo=TRUE}
+lm(prestige ~ -1 + income, data = Prestige)
+```
+
