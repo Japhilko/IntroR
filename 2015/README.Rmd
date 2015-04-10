@@ -1,5 +1,48 @@
 Einführung in R 2015
 ===================
 
-Hier gehts weiter
+Hier gehts weiter...
+
+
+```{r}
+date()
+```
+
+
+## R als Taschenrechner
+
+
+#Grundrechenarten
+
+```{r}
+1+1
+2-1
+2*2
+4/2
+```
+
+
+# Mathematische Funktionen
+
+```{r,eval=F}
+log(4)
+log(4,base=2)
+exp(4)
+sqrt(4)
+2^4
+```
+
+```{r,eval=F}
+b <- c(1 ,2)
+```
+
+# Vektoren und Zuweisungen
+
+```{r,eval=F}
+# <- ist der Zuweisungsoperator
+b <- c(1,2)
+```
+
+
+## Modularer Aufbau - Bibliotheken
 
