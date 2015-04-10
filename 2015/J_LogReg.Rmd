@@ -47,3 +47,7 @@ house.plr<-polr(Sat~Infl,weights=Freq,data=housing)
 <http://cran.r-project.org/web/packages/HSAUR/vignettes/Ch_logistic_regression_glm.pdf>
 
 <http://www.filewatcher.com/p/HSAUR_1.3-0.tgz.2195072/HSAUR/doc/Ch_logistic_regression_glm.R.html>
+
+Hier geht es zu dem Lattice Abschnitt:
+
+
