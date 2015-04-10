@@ -9,4 +9,89 @@ output: html_document
 ### Erste Graphiken
 
 
+<http://cran.r-project.org/web/views/Graphics.html>
+
+```{r}
+library(mlmRev)
+library(datasets)
+library(lattice)
+library(vioplot)
+```
+
+
+```{r}
+head(Chem97)
+? Chem97
+```
+
+# Histogram
+
+
+```{r}
+# Histogramm
+?hist
+hist(Chem97$gcsescore)
+```
+
+
+```{r}
+hist(Chem97$gcsescore,col="blue",
+     main="Hallo Welt",ylab="y-Werte",
+     xlab="x-Werte")
+```
+
+
+# Barplot
+
+  Der Befehl rgb
+
+```{r}
+tabScore <- table(Chem97$score)
+barplot(tabScore)
+```
+
+```{r}
+barplot(tabScore,col=rgb(0,0,1))
+```
+
+
+```{r}
+barplot(tabScore,col=rgb(0,1,0))
+```
+
+```{r}
+barplot(tabScore,col=rgb(1,0,0,.3))
+```
+
+weitere Barplots
+
+```{r}
+barplot(table(Chem97$lea))
+```
+
+# Boxplot
+
+<http://edoc.hu-berlin.de/dissertationen/gruenwald-andreas-2005-01-17/HTML/chapter2.html>
+
+```{r}
+boxplot(Chem97$gcsescore,horizontal=TRUE)
+```
+
+```{r}
+boxplot(Chem97$gcsescore~Chem97$gender)
+```
+
+# vioplot
+
+```{r}
+vioplot(Chem97$gcsescore,col="royalblue")
+```
+
+
+# Scatterplot
+
+```{r}
+plot(oecd$Einkommen,oecd$Armut,xlab="Einkommen",
+     ylab="Armut",pch=15,col="royalblue",cex=3)
+```
 
