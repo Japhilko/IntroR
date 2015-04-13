@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 Einführung in R 2015
 ===================
 
@@ -166,16 +169,20 @@ example(lm)
 ```
 
 
+<http://stackoverflow.com/>
+
 ## Modularer Aufbau - Bibliotheken
 
 
+<http://www.ats.ucla.edu/stat/r/seminars/intro.htm>
+
+```{r}
+# so installiert man eine Bibliothek
+install.packages("lme4")
+
+# so lädt man eine Bibliothek
+library(lme4)
+```
 
 
-
-
-### Graphics
-
-## ggplot2
-
-<http://zevross.com/blog/2014/11/20/under-the-hood-of-ggplot2-graphics-in-r/>
 
