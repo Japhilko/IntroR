@@ -1,0 +1,35 @@
+---
+title: "Regression"
+author: "Jan-Philipp Kolb"
+date: "23. Juni 2015"
+output: html_document
+---
+
+
+```{r}
+setwd("C:/Users/kolbjp/Documents/GitHub/IntroR/2016")
+```
+
+## Logistic regression
+
+```{r}
+library("MASS")
+```
+
+
+
+Tutorial for [logistic regression](http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html)
+
+All three spellings lead to the same result:
+
+```{r}
+glm.out = glm(cbind(Menarche, Total-Menarche) ~ Age,
+               family=binomial(logit), data=menarche)
+
+glm.out1 = glm(cbind(Menarche, Total-Menarche) ~ Age,
+               family=binomial, data=menarche)
+
+glm.out3 = glm(cbind(Menarche, Total-Menarche) ~ Age,
+               binomial(link=logit), data=menarche)
+```
+
