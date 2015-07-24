@@ -1,0 +1,11 @@
+---
+title: "Literature"
+author: "Jan-Philipp Kolb"
+date: "23. Juni 2015"
+output: html_document
+---
+
+## Intro to R
+
+[Manual in German](http://cran.r-project.org/doc/contrib/Grosz+Peters-R-Reader.pdf)
+

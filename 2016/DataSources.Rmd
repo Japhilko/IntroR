@@ -1,0 +1,12 @@
+---
+title: "Data sources"
+author: "Jan-Philipp Kolb"
+date: "23. Juni 2015"
+output: html_document
+---
+
+## New York Taxi driver data
+
+<http://chriswhong.com/open-data/foil_nyc_taxi/>
+
+This data is used to [explain the usage](http://htmlpreview.github.io/?https://github.com/andrie/RHadoop-tutorial/blob/master/2-Taxi-analysis-with-RHadoop.html#/1) of R in combination with [hadoop](http://hortonworks.com/tutorials/)
