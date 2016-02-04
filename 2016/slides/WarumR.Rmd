@@ -1,0 +1,11 @@
+---
+title: "Warum R nutzen?"
+author: "Jan-Philipp Kolb"
+date: "4 Februar 2016"
+output: html_document
+---
+
+- R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
+
+- R ist eine Skriptsprache 
+- 
