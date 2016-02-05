@@ -7,7 +7,7 @@ Unterlagen für den Kurs 2016.
 
 - Dein Freund das GUI
 
-- Aufgabe: Vorbereitung
+- Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Vorbereitung.md))
 
 
 - Modularer Aufbau von R

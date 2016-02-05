@@ -2,7 +2,7 @@
 title: "Einführung in die Datenanalyse mit R - Dein Freund das GUI"
 author: "Jan-Philipp Kolb"
 date: "5. Februar 2016"
-output: html_document
+output: md_document
 ---
 
 ## Anzahl der Fragen in Hilfeforen zu R
