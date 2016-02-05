@@ -1,4 +1,4 @@
-IntroR_Mannheim2014
+Einführung in die Datenanalyse mit R  
 ===================
 
-Introduction to R
+Unterlagen für den Kurs 2014 (Mannheim).

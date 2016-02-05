@@ -1,11 +1,11 @@
 ---
-title: "Warum R nutzen?"
+title: "Einführung in die Datenanalyse mit R - Warum R nutzen?"
 author: "Jan-Philipp Kolb"
 date: "4 Februar 2016"
 output: md_document
 ---
 
-## 
+## Gründe für die Nutzung von R
 
 - Als Weg kreativ zu sein ...
 - Graphiken, Graphiken, Graphiken

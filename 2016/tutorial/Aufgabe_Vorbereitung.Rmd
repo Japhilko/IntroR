@@ -1,0 +1,20 @@
+---
+title: 'Aufgabe: Vorbereitung'
+author: "Jan-Philipp Kolb"
+date: "5 Februar 2016"
+output: md_document
+---
+
+## Aufgabe - Vorbereitung
+
+\item Prüfen Sie, ob eine Version von R auf Rechner installiert ist.
+\item Falls dies nicht der Fall ist, laden Sie [R](r-project.org)  runter und installieren Sie R.
+\item Prüfen Sie, ob Rstudio installiert ist.
+\item Falls nicht - [Installieren](http://www.rstudio.com/) sie Rstudio.
+\item Laden Sie die R-Skripte von meinem GitHub-Account
+\item Erstellen Sie ein erstes Script und finden Sie das Datum mit dem Befehl `date()` heraus.
+
+```{r}
+date()
+```
+
