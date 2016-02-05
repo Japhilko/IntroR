@@ -2,7 +2,7 @@
 title: "Warum R nutzen?"
 author: "Jan-Philipp Kolb"
 date: "4 Februar 2016"
-output: beamer_presentation
+output: md_document
 ---
 
 ## 
