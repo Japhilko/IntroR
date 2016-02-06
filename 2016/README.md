@@ -15,4 +15,9 @@ Unterlagen für den Kurs 2016.
 ## Grundlagen im Umgang mit der Sprache R
 
 - Modularer Aufbau von R
+- Wie bekommt man Hilfe
 
+## Rein und raus 
+
+- Import
+- Export 
