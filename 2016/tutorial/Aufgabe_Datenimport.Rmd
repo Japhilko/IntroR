@@ -2,7 +2,7 @@
 title: "Aufgabe Datenimport"
 author: "Jan-Philipp Kolb"
 date: "8 Februar 2016"
-output: html_document
+output: md_document
 ---
 
 ## Aufgabe - Datenimport
