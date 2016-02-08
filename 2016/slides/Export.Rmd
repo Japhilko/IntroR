@@ -23,3 +23,6 @@ save(Dat, file="Dat.RData")
 - [Quick R](http://www.statmethods.net/input/exportingdata.html) für das Exportieren von Daten:
 
 - Hilfe zum Export auf dem [cran Server](http://cran.r-project.org/doc/manuals/r-release/R-data.pdf)
+
+
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)

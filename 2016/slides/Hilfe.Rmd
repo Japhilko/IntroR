@@ -47,3 +47,6 @@ R-project + Was ich schon immer wissen wollte
 -  Für Fragen zum Programmieren
 -  Ist nicht auf R fokussiert
 -  Sehr detailierte Diskussionen
+
+
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)

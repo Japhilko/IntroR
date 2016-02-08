@@ -10,3 +10,5 @@ output: html_document
 ## Datenimport und Export
 
 <http://www.statmethods.net/input/importingdata.html>
+
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)

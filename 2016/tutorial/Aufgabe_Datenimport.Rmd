@@ -11,3 +11,5 @@ output: md_document
 - Laden Sie den Datensatz mit einer geeigneten Funktion in Ihren Workspace.
 
 - Finden Sie heraus, wieviele Beobachtungen und Variablen der Datensatz umfasst.
+
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)

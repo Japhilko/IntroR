@@ -35,6 +35,10 @@ Unterlagen für den Kurs 2016.
 
 ## Ein erster Eindruck – Was uns die Daten sagen
 
+- Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datenanalyse.md))
+
+    - Aufgabe - Apply Funktion verwenden
+
 ## Liebe auf den ersten Plot – Grafiken mit R	
 
 - Einfache Grafiken
