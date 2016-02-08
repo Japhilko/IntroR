@@ -5,18 +5,21 @@ date: "10. April 2015"
 output: md_document
 ---
 
+## R's Exportformate
 
-Quick R für das Exportieren von Daten:
+-  In R werden offene Dateiformate bevorzugt
+-  Als Äquivalenz zu den `read.X()` Funktionen stehen viele `write.X()` Funktionen zur Verfügung
+-  Das eigene Format von R sind sog. Workspaces (`.RData`)
 
-<http://www.statmethods.net/input/exportingdata.html>
+## Überblick Daten Import/Export
+
+```{r}
+save(Dat, file="Dat.RData")
+```
 
 
-Hilfe zum Export auf dem cran Server:
+## Links
 
+- [Quick R](http://www.statmethods.net/input/exportingdata.html) für das Exportieren von Daten:
 
-<http://cran.r-project.org/doc/manuals/r-release/R-data.pdf>
-
-
-## Ein erster Eindruck von den Daten:
-
-<https://github.com/Japhilko/IntroR/blob/master/2015/F_Datenanalyse1.Rmd>
+- Hilfe zum Export auf dem [cran Server](http://cran.r-project.org/doc/manuals/r-release/R-data.pdf)
