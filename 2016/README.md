@@ -5,23 +5,25 @@ Unterlagen für den Kurs 2016.
 
 ## Einführung und Vorbereitung
 
-- Warum R nutzen? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/WarumR.md) |  [pdf](https://github.com/Japhilko/IntroR/raw/master/2016/slides/WarumR.pdf) )
+Warum R nutzen? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/WarumR.md) |  [pdf](https://github.com/Japhilko/IntroR/raw/master/2016/slides/WarumR.pdf) )
 
-- Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/FreundGUI.md))
+Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/FreundGUI.md))
 
 - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Vorbereitung.md))
 
 
-- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.md))
+Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.md))
 
 - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Zuweisung.md))
 
-- Datentypen und Indizieren
+Datentypen und Indizieren
 ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.md))
 
-- Wie bekommt man Hilfe ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Hilfe.md))
+Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Hilfe.md))
 
-- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ModularerAufbau.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/rcode/InstallPackages.R))
+Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ModularerAufbau.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/rcode/InstallPackages.R))
+
+- Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Zusatzpakete.md))
 
 ## Rein und raus – Datenimport und -export
 
