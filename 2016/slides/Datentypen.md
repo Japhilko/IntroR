@@ -156,3 +156,28 @@ Indizieren eines array
     ##      [,1] [,2]
     ## [1,]    5    7
     ## [2,]    6    8
+
+Listen
+------
+
+-   Eine Liste in R entspricht einem geschachtelten Array in anderen
+    Programmiersprachen
+-   Listen können alles enthalten
+-   Listen können geschachtelt sein
+-   Listen sollte man sehr bedacht verwenden
+
+Indizieren einer Liste
+----------------------
+
+    A4 <- list(A1,1)
+    A4
+
+    ## [[1]]
+    ## [1] 1 2 3 4
+    ## 
+    ## [[2]]
+    ## [1] 1
+
+    A4[[2]]
+
+    ## [1] 1
