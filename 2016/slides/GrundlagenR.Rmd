@@ -2,7 +2,65 @@
 title: "Grundlagen R"
 author: "Jan-Philipp Kolb, Stefan Zins and Matthias Sand"
 date: "8. Februar 2016"
-output: md_document
+output: html_document
 ---
 
 ## R ist eine Objekt-orientierte Sprache
+
+Vektoren und Zuweisungen
+
+-  R ist eine Objekt-orientierte Sprache
+-  <- ist der Zuweisungsoperator
+
+```{r}
+b <- c(1,2)
+```
+
+-  b <- c(1,2) erzeugt ein Objekt mit den Zahlen 1 und 2
+-  Eine Funktion kann auf dieses Objekt angewendet werden:
+
+```{r}
+mean(b)
+```
+
+-  mean(b) berechnet den Mittelwert
+
+Mit den folgenden Funktionen können wir etwas über die Eigenschaften des Objekts lernen:
+
+```{r}
+length(b) 
+```
+
+-  length(b) - b hat die Länge 2
+
+```{r}
+str(b)
+```
+
+-  str(b) - b ist ein numerischer Vektor
+
+## Funktionen im base-Paket
+
+|Funktion |Bedeutung          |Beispiel  |
+|:--------|:------------------|:---------|
+|length() |Länge              |length(b) |
+|max()    |Maximum            |max(b)    |
+|min()    |Minimum            |min(b)    |
+|sd()     |Standardabweichung |sd(b)     |
+|var()    |Varianz            |var(b)    |
+|mean()   |Mittelwert         |mean(b)   |
+|median() |Median             |median(b) |
+
+Diese Funktionen brauchen nur ein Argument.
+
+Andere Funktionen brauchen mehr:
+
+|Argument   |Bedeutung         |Beispiel       |
+|:----------|:-----------------|:--------------|
+|quantile() |90 % Quantile     |quantile(b,.9) |
+|sample()   |Stichprobe ziehen |sample(b,1)    |
+
+
+## Übersicht Befehle
+
+Eine einführende Übersicht findet man [hier](http://cran.r-project.org/doc/manuals/R-intro.html)

@@ -1,0 +1,17 @@
+---
+title: "Aufgabe Zuweisungen"
+author: "Jan-Philipp Kolb"
+date: "8 Februar 2016"
+output: html_document
+---
+
+
+Aufgabe - Zuweisungen und Funktionen
+
+Erzeugen Sie einen Vektor b mit den Zahlen von 1 bis 5 und berechnen Sie...
+
+
+- den Mittelwert
+- die Varianz
+- die Standardabweichung
+- die quadratische Wurzel aus dem Mittelwert
