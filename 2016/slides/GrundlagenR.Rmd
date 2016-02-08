@@ -1,0 +1,8 @@
+---
+title: "Grundlagen R"
+author: "Jan-Philipp Kolb, Stefan Zins and Matthias Sand"
+date: "8. Februar 2016"
+output: md_document
+---
+
+## R ist eine Objekt-orientierte Sprache
