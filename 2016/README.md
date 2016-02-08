@@ -27,14 +27,15 @@ Unterlagen für den Kurs 2016.
 
 - Import ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/DataImport.md))
 
-- Export 
+- Export ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Export.md))
 
 ## Ein erster Eindruck – Was uns die Daten sagen
 
 ## Liebe auf den ersten Plot – Grafiken mit R	
 
-- Einfache Grafiken ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/EinfacheGrafiken.md))
------------------------------------------
+- Einfache Grafiken
+([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/EinfacheGrafiken.md))
+
 
 ## Noch mehr Grafiken - multidimensional
 
