@@ -12,12 +12,25 @@ Unterlagen für den Kurs 2016.
 - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Vorbereitung.md))
 
 
-## Grundlagen im Umgang mit der Sprache R
+- Grundlagen im Umgang mit der Sprache R
 
 - Modularer Aufbau von R
 - Wie bekommt man Hilfe
 
-## Rein und raus 
+## Rein und raus – Datenimport und -export
 
 - Import
 - Export 
+
+## Ein erster Eindruck – Was uns die Daten sagen
+
+## Liebe auf den ersten Plot – Grafiken mit R	
+
+
+-----------------------------------------
+
+## Noch mehr Grafiken - multidimensional
+
+## Regression – Überblick der Methoden in R
+
+## Ausblick – Möglichkeiten mit R
