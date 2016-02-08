@@ -1,0 +1,20 @@
+---
+title: "Daten Import"
+author: "Jan-Philipp Kolb"
+date: "8 Februar 2016"
+output: html_document
+---
+
+## Datenzugang
+
+- Public-Use-File (PUF) Datei zur öffentlichen Nutzung - 
+
+meist stark anonymisierte Daten
+
+(Beispiele: [FDZ](www.forschungsdatenzentrum.de), [Statistik Portal](www.statistik-portal.de), [Meine Region](www.infothek.statistik.rlp.de/lis/MeineRegion/index.asp) )
+
+- Scientific-Use-File (SUF) - Datei zur wissenschaftlichen Nutzung - anonymisierte Daten, die zu wissenschaftlichen Zwecken und zur Sekundäranalyse genutzt werden können. 
+ 
+- On-Site-Nutzung - Arbeitsplätze für Gastwissenschaftler - Kontrollierte Datenfernverarbeitung
+
+

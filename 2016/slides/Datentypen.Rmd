@@ -108,3 +108,79 @@ A4
 A4[[2]]
 ```
 
+
+## Logische Operatoren
+
+```{r}
+# Ist 1 größer als 2?
+1>2
+1<2
+
+1==2
+```
+
+Diese Operatoren eignen sich gut um Datensätze einzuschränken
+
+```{r}
+Daten
+Daten[AGE>20,]
+Daten[SEX=="w",]
+```
+
+```{r}
+# gleiches Ergebnis:
+Daten[SEX!="m",]
+```
+
+```{r}
+# Ergebnis in ein Objekt speichern
+subDat <- Daten[AGE>20,]
+```
+
+```{r}
+# mehrere Bedingeungen können mit
+# & verknüpft werden:
+Daten[AGE>18 & SEX=="w",]
+```
+
+## Sequenzen
+
+```{r}
+# Sequenz von 1 bis 10
+1:10
+```
+
+```{r}
+Daten[1:3,]
+```
+
+## Weitere Sequenzen
+
+```{r}
+seq(-2,8,by=1.5)
+
+a<-seq(3,12,length=12)
+
+b<- seq(to=5,length=12,by=0.2)
+
+d <-1:10
+d<- seq(1,10,1)
+d <- seq(length=10,from=1,by=1)
+
+# wiederhole 1 10 mal
+rep(1,10)
+rep("A",10)
+```
+
+## Die Funktion paste
+
+```{r,eval=F}
+?paste
+```
+
+
+```{r}
+paste(1:4)
+paste("A", 1:6, sep = "")
+```
+
