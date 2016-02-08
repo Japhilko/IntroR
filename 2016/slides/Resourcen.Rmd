@@ -6,3 +6,7 @@ output: html_document
 ---
 
 [Tutorien](http://blog.revolutionanalytics.com/2012/04/20-free-r-tutorials-and-one-reference-card.html)
+
+## Datenimport und Export
+
+<http://www.statmethods.net/input/importingdata.html>

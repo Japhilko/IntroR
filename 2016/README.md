@@ -19,9 +19,9 @@ Unterlagen für den Kurs 2016.
 - Datentypen und Indizieren
 ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.md))
 
-- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ModularerAufbau.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/rcode/InstallPackages.R))
+- Wie bekommt man Hilfe ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Hilfe.md))
 
-- Wie bekommt man Hilfe
+- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ModularerAufbau.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/rcode/InstallPackages.R))
 
 ## Rein und raus – Datenimport und -export
 

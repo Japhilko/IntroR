@@ -5,8 +5,23 @@ date: "10 Februar 2016"
 output: md_document
 ---
 
+## Modularer Aufbau
 
-Übersicht viele nützliche Pakete:
+- Viele Funktionen sind im Basis-R enthalten 
+- Viele spezifische Funktionen sind in zusätzlichen Bibliotheken integriert
+- R kann modular erweitert werden durch sog. packages bzw. libraries
+- Auf CRAN werden die wichtigsten packages gehostet (im Moment 4567)
+- Weitergehende Pakete finden sich z.B. bei [bioconductor](www.bioconductor.org)
+
+
+```{r}
+install.packages("lme4")
+
+library(lme4)
+```
+
+
+## Übersicht viele nützliche Pakete:
 
 Luhmann - [Verwendete Pakete](http://www.beltz.de/fileadmin/beltz/downloads/OnlinematerialienPVU/28090_Luhmann/Verwendete%20Pakete.pdf)
 
@@ -25,7 +40,7 @@ Die wichtigsten Pakete zur Visualisierung mit R:
 
 [plotrix](http://www.inside-r.org/packages/cran/plotrix/docs/draw.circle)
 
-[Frabpaletten in R](http://cran.r-project.org/web/packages/colorspace/vignettes/hcl-colors.pdf)
+[Farbpaletten in R](http://cran.r-project.org/web/packages/colorspace/vignettes/hcl-colors.pdf)
 
 
 # Pakete Regression
@@ -43,11 +58,8 @@ Die wichtigsten Pakete zur Visualisierung mit R:
 [Lasso Verfahren](http://web.stanford.edu/~hastie/glmnet/glmnet_alpha.html)
 
 
-# Datenimport und Export
 
-<http://www.statmethods.net/input/importingdata.html>
-
-# Large memory and out-of-memory data
+## Large memory and out-of-memory data
 
 <http://cran.r-project.org/web/views/HighPerformanceComputing.html>
 
