@@ -2,12 +2,12 @@
 title: "Data Import"
 author: "Jan-Philipp Kolb"
 date: "19. Juni 2015"
-output: html_document
+output: md_document
 ---
 
 
 
-```{r}
+```{r,eval=F}
 setwd("C:/Users/kolbjp/Documents/GitHub/IntroR/2016")
 ```
 
