@@ -1,0 +1,49 @@
+---
+title: "Wie bekommt man Hilfe?"
+author: "Jan-Philipp Kolb"
+date: "8. Februar 2016"
+output: md_document
+---
+
+## Wie bekommt man Hilfe?
+
+-  [Um generell Hilfe zu bekommen:](http://itfeature.com/tag/how-to-get-help-in-r)
+
+
+```{r,eval=F}
+help.start()
+```
+
+-  Online Dokumentation für die meisten Funktionen:
+
+```{r,eval=F}
+help(name)
+```
+
+-  Nutze ? um Hilfe zu bekommen.
+
+```{r,eval=F}
+?mean
+```
+
+-  example(lm) gibt ein Beispiel für die lineare Regression
+
+```{r,eval=F}
+example(lm)
+```
+
+## Nutzung Suchmaschinen
+
+-  Ich nutze meistens google 
+-  Tippe:
+
+R-project + Was ich schon immer wissen wollte
+
+-  Das funktioniert natürlich mit jeder Suchmaschine!
+
+## Stackoverflow
+
+-  [Stackoverflow](http://stackoverflow.com/)
+-  Für Fragen zum Programmieren
+-  Ist nicht auf R fokussiert
+-  Sehr detailierte Diskussionen

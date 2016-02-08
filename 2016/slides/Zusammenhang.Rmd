@@ -1,0 +1,91 @@
+---
+title: "Zusammenhang"
+author: "Jan-Philipp Kolb"
+date: "10. April 2015"
+output: html_document
+---
+
+
+```{r}
+library(foreign)
+library(vcd)
+
+library(visreg)
+library(datasets)
+library(AER)
+
+```
+
+Edgar Anderson's Iris Daten
+
+<http://en.wikipedia.org/wiki/Iris_flower_data_set>
+
+* Korrelation zwischen Lange Kelchblatt und Blutenblatt 0,87
+* Der Pearson'sche Korrelationskoeffizient ist die default
+methode in cor():
+
+```{r}
+
+head(iris)
+
+cor(iris$Sepal.Length,iris$Sepal.Width)
+
+cor(iris$Sepal.Length,iris$Petal.Length)
+
+```
+
+
+
+
+```{r}
+  plot(iris$Sepal.Length,iris$Petal.Length,pch=20,col="royalblue",
+       xlab="Länge Kelchblatt",ylab="Länge Blütenblatt")
+```
+
+```{r}
+  pairs(iris[,1:4])
+```
+
+```{r}
+  pairs.panels(iris[1:4],bg=c("red","yellow","blue")[iris$Species],
+             pch=21,main="Iris Datensatz")
+```
+
+```{r}
+cor(iris[,1:4])
+cor(iris[,1:4], method = "kendall")
+cor(longley, method = "spearman") 
+```
+
+# Zusammenhang zwischen kategorialen Variablen
+
+```{r}
+?chisq.test
+
+M <- as.table(rbind(c(762, 327, 468), c(484, 239, 477)))
+dimnames(M) <- list(gender = c("M","F"),
+                    party = c("Democrat","Independent", "Republican"))
+(Xsq <- chisq.test(M))  # Prints test summary
+Xsq$observed   # observed counts (same as M)
+Xsq$expected   # expected counts under the null
+Xsq$residuals  # Pearson residuals
+Xsq$stdres     # standardized residuals
+```
+
+```{r}
+data(BankWages)
+
+levelplot(table(BankWages$education,BankWages$job))
+
+```
+
+# Mosaikplot
+
+```{r, echo=FALSE}
+mosaicplot(Titanic, main = "Survival on the Titanic", color = TRUE)
+```
+
+
+Hier gehts weiter mit der linearen Regression:
+
+<https://github.com/Japhilko/IntroR/blob/master/2015/I_LinReg.Rmd>
