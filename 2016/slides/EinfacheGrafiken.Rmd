@@ -175,3 +175,12 @@ boxplot(count~spray,data=InsectSprays,col="blue")
 beanplot(count~spray,data=InsectSprays,col="orange")
 ```
 
+# Grafiken für bedingte, bi- und multivariate Verteilungen
+
+## Scatterplots
+
+- Ein einfacher two-way scatterplot kann mit der Funktion plot() erstellt werden
+-  plot() muss mindestens ein x und ein y Beobachtungsvektor übergeben werden
+-  Um die Farbe der Plot-Symbole anzupassen gibt es die Option col} (Farbe als character oder numerisch)
+-  Die Plot-Symbole selbst können mit pch} (plotting character) angepasst werden (character oder numerisch)
+-  Die Achenbeschriftungen (labels) werden mit xlab und ylab definiert

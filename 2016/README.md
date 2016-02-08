@@ -14,7 +14,7 @@ Unterlagen für den Kurs 2016.
 
 - Grundlagen im Umgang mit der Sprache R
 
-- Modularer Aufbau von R
+- Modularer Aufbau von R ([rcode](https://github.com/Japhilko/IntroR/blob/master/2016/rcode/InstallPackages.R))
 - Wie bekommt man Hilfe
 
 ## Rein und raus – Datenimport und -export

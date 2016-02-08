@@ -2,7 +2,7 @@
 title: "ModularerAufbau"
 author: "Jan-Philipp Kolb"
 date: "10 Februar 2016"
-output: html_document
+output: md_document
 ---
 
 
