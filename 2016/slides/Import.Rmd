@@ -17,4 +17,10 @@ meist stark anonymisierte Daten
  
 - On-Site-Nutzung - Arbeitsplätze für Gastwissenschaftler - Kontrollierte Datenfernverarbeitung
 
+## Dateiformate in R
+
+-  Von R werden quelloffene, nicht-proprietäre Formate bevorzugt
+		-  Es können aber auch Formate von anderen Statistik Software Paketen eingelesen werden
+		-  R-user speichern Objekte gerne in sog. Workspaces ab
+		-  Auch hier jedoch gilt: (fast) alles andere ist möglich
 
