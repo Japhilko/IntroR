@@ -26,7 +26,7 @@ Unterlagen für den Kurs 2016.
 
 ## Liebe auf den ersten Plot – Grafiken mit R	
 
-
+- Einfache Grafiken ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/EinfacheGrafiken.md))
 -----------------------------------------
 
 ## Noch mehr Grafiken - multidimensional

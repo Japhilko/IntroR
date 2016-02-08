@@ -2,7 +2,7 @@
 title: "Einfache Grafiken"
 author: "Jan-Philipp Kolb, Stefan Zins and Matthias Sand"
 date: "8. Februar 2016"
-output: md_document
+output: html_document
 ---
 
 ## Ein Plot sagt mehr als 1000 Worte
@@ -144,5 +144,34 @@ horizontal=TRUE)
 
 ```{r}
 boxplot(Chem97$gcsescore~Chem97$gender)
+```
+
+## Alternativen zu Boxplot
+
+Violinplot 
+
+-  Baut auf Boxplot auf 
+-  Zusätzlich Informationen über Dichte der Daten 
+-  Dichte wird über Kernel Methode berechnet.
+-  weißer Punkt - Median
+-  Je weiter die Ausdehnung, desto größer ist die Dichte an dieser Stelle. 
+
+
+```{r}
+library(vioplot)
+x <- rnorm(100)
+y <- rnorm(100)
+plot(x, y, xlim=c(-5,5), ylim=c(-5,5))
+vioplot(x, col="tomato", horizontal=TRUE, at=-4, add=TRUE,lty=2, rectCol="gray")
+vioplot(y, col="cyan", horizontal=FALSE, at=-4, add=TRUE,lty=2)
+```
+
+## Alternativen zum Boxplot
+
+```{r}
+library(beanplot)
+par(mfrow = c(1,2))
+boxplot(count~spray,data=InsectSprays,col="blue")
+beanplot(count~spray,data=InsectSprays,col="orange")
 ```
 
