@@ -1,0 +1,12 @@
+Quick R für das Exportieren von Daten:
+
+<http://www.statmethods.net/input/exportingdata.html>
+
+Hilfe zum Export auf dem cran Server:
+
+<http://cran.r-project.org/doc/manuals/r-release/R-data.pdf>
+
+Ein erster Eindruck von den Daten:
+----------------------------------
+
+<https://github.com/Japhilko/IntroR/blob/master/2015/F_Datenanalyse1.Rmd>
