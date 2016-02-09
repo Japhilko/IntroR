@@ -2,7 +2,7 @@
 title: "Lineare Regression"
 author: "Jan-Philipp Kolb"
 date: "9. Februar 2016"
-output: md_document
+output: html_document
 ---
 
 ## Die lineare Regression
@@ -89,3 +89,11 @@ plot(roller.lm,2)
 ```
 
 - Wenn die Residuen normalverteilt sind sollten sie auf einer Linie liegen.
+
+## Linkliste - lineare Regression
+
+-  Eine der vielen interessanten Blogs auf [r-bloggers](http://www.r-bloggers.com/r-tutorial-series-simple-linear-regression/)
+
+-  Komplettes Buch von [Faraway](http://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)- sehr intuitiv geschrieben
+
+-  Gute Einführung auf [Quick-R](http://www.statmethods.net/stats/regression.html)

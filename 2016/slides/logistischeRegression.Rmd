@@ -1,0 +1,80 @@
+---
+title: "Die logistische Regression"
+author: "Jan-Philipp Kolb"
+date: "9 Februar 2016"
+output: html_document
+---
+
+## Die logistische Regression
+
+- Agresti - [Categorical Data Analysis
+ (2002)](https://mathdept.iut.ac.ir/sites/mathdept.iut.ac.ir/files/AGRESTI.PDF)
+-  Sehr intiutiv geschriebenes Buch
+-  Sehr ausführliches begleitendes Skript von [Thompson](http://statweb.stanford.edu/~owen/courses/306a/Splusdiscrete2.pdf)
+-  Das Skript eignet sich um die kategoriale Datenanalyse nachzuvollziehen
+
+## Literatur zu logistischer Regression in R
+
+-  Logistische Regressionen gut erklärt
+-  Beispiele mit R-code
+
+    - Faraway - Extending the linear model with r
+
+    - Faraway - [Practical Regression and Anova using R](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)
+    
+    
+## Binäre AVs mit glm()
+
+-  Die [logistische Regression](http://data.princeton.edu/R/glms.html) gehört zur Klasse der generalisierten linearen Modelle (GLM)
+-  Die Funktion zur Schätzung eines Modells dieser Klasse in heißt `glm()`
+-  `glm()` muss 1. ein Formel-Objekt mitgegeben werden und 2. die Klasse (binomial, gaussian, Gamma) samt link-Funktion (logit, probit, cauchit, log, cloglog)
+
+## Logistische Regression mit R
+
+[Kategoriale Daten: ](http://homepage.univie.ac.at/herbert.nagel/KategorialeDaten.pdf)
+
+```{r,message=F}
+library("HSAUR")
+
+data("plasma", package = "HSAUR")
+
+cdplot(ESR ~ fibrinogen, data = plasma)
+```
+
+[Logistische Regression](http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html) mit R
+
+```{r}
+plasma_glm_1 <- glm(ESR ~ fibrinogen, data = plasma, 
+                    family = binomial())
+```
+
+## Generalisierte Regression mit R - weitere Funktionen
+
+- Logistisches Modell mit Probit-Link:
+
+```{r}
+library("faraway")
+data(orings)
+
+probitmod <- glm(cbind(damage,6-damage) ~ temp, 
+	family=binomial(link=probit), orings)
+```
+
+- Regression mit Zähldaten:
+
+```{r}
+modp <- glm(Species ~ .,family=poisson,gala)
+```
+
+- Proportional odds logistic regression im Paket \R{library(MASS)}:
+
+```{r}
+library("MASS")
+house.plr<-polr(Sat~Infl,weights=Freq,data=housing)
+```
+
+## Linkliste - logistische Regression
+
+-  Einführung in [logistische Regression](http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html)
+
+-  [Code zum Buch von Faraway](http://www.maths.bath.ac.uk/~jjf23/ELM/scripts/binary.R)

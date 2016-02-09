@@ -49,8 +49,14 @@ Unterlagen für den Kurs 2016.
 
 - Zusammenhang ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Multidimensional.md))
 
+- Das lattice Paket ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/LatticePaket.Rmd))
+
 ## Regression – Überblick der Methoden in R
 
 - Die lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/LineareRegression.md))
+
+    - Aufgabe lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_LineareRegression.Rmd))
+
+- Die logistische Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/logistischeRegression.md))
 
 ## Ausblick – Möglichkeiten mit R
