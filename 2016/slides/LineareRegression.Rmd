@@ -1,0 +1,8 @@
+---
+title: "Lineare Regression"
+author: "Jan-Philipp Kolb"
+date: "9. Februar 2016"
+output: md_document
+---
+
+## Die lineare Regression

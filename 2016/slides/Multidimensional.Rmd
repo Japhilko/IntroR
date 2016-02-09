@@ -35,3 +35,66 @@ cor(iris$Sepal.Length,iris$Petal.Length)
 pairs(iris[,1:4])
 ```
 
+## Zusammenhang zwischen mehreren Variablen
+
+```{r}
+pairs.panels(iris[1:4],bg=c("red","yellow","blue")
+[iris$Species],pch=21,main="Iris Datensatz")
+```
+
+## Verschiedene Korrelationskoeffizienten
+
+
+```{r}
+# Pearson Korrelationskoeffizient
+cor(iris[,1:4]) 
+```
+
+```{r}
+# Kendall's tau (Rangkorrelation)
+cor(iris[,1:4], method = "kendall") 
+```
+
+```{r}
+# Spearman's rho (Rangkorrelation)
+cor(iris[,1:4], method = "spearman") 
+```
+
+## Zusammenhang zwischen kategorialen Variablen
+
+- chisq.test() testet, ob zwei kategoriale Merkmale stochastisch unabhängig sind.
+- Getestet wird gegen die Nullhypothese der Gleichverteilung
+
+
+## Levelplot
+
+```{r}
+library("lattice")
+library("AER")
+data(BankWages)
+levelplot(table(BankWages$education,BankWages$job))
+```
+
+## Visualisierung von Zusammenhängen zwischen kategorialen Variablen
+
+```{r}
+mosaicplot(~ Sex + Age + Survived, 
+           data = Titanic, color = TRUE)
+```
+
+## Shading
+
+Flächen werden entsprechend der Residuen eingefärbt:
+
+```{r}
+mosaicplot(~ Sex + Age + Survived, 
+           data = Titanic, shade = TRUE)
+```
+
+## Literatur zu Zusammenhangsmaßen
+
+-  Methodensammlung mit R
+-  Beispiele zu Zusammenhangsmaßen
+-  Umsetzung in R
+
+Sachs - [Angewandte Statistik mit R](https://books.google.de/books/about/Angewandte_Statistik.html?id=S-zXmAEACAAJ&redir_esc=y)
