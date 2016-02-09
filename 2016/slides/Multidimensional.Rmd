@@ -1,0 +1,37 @@
+---
+title: "Multidimensional"
+author: "Jan-Philipp Kolb"
+date: "9. Februar 2016"
+output: html_document
+---
+
+## Edgar Anderson's Iris Daten
+
+
+```{r}
+data(iris)
+head(iris)
+```
+
+petal length and width - Blütenblatt Länge und Breite
+
+sepal length and width - Kelchblatt Länge und Breite 
+
+- [Wikipedia Artikel zum IRIS Datensatz](https://en.wikipedia.org/wiki/Iris_flower_data_set)
+
+## Zusammenhang zwischen stetigen Variablen
+
+```{r}
+# Pearson Korrelationskoeffizient
+cor(iris$Sepal.Length,iris$Petal.Length)
+```
+
+- Korrelation zwischen Länge Kelchblatt und Blütenblatt 0,87
+- Der Pearson'sche Korrelationskoeffizient ist die default methode in `cor()`.
+
+## Zusammenhang zwischen mehreren Variablen
+
+```{r}
+pairs(iris[,1:4])
+```
+

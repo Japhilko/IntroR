@@ -12,9 +12,12 @@ output: md_document
 - Prüfen Sie, ob Rstudio installiert ist.
 - Falls nicht - [Installieren](http://www.rstudio.com/) sie Rstudio.
 - Laden Sie die R-Skripte von meinem GitHub-Account
-- Erstellen Sie ein erstes Script und finden Sie das Datum mit dem Befehl `date()` heraus.
+- Erstellen Sie ein erstes Script und finden Sie das Datum mit dem Befehl `date()` und die R-version mit `sessionInfo()` heraus.
 
 ```{r}
 date()
 ```
 
+```{r}
+sessionInfo()
+```

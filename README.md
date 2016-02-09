@@ -1,6 +1,10 @@
 Einführung in R
 ===================
 
+Das OpenSource Software Paket R ist kostenfrei und bietet neben Standardverfahren der Datenanalyse ein umfangreiches Repertoire von hoch spezialisierten Prozeduren und Verfahren auch für komplexe Anwendungen.
+Ein Schwerpunkt wird auf der Vermittlung von Methoden der grafisch gestützten Datenanalyse liegen, zu der sich R in besonderer Weise eignet.
+
+
 In diesem Verzeichnis befinden sich die Unterlagen für den Kurs "Einführung in die Datenanalyse mit R", der am Gesis Leibniz Institut für Sozialwissenschaften in Mannheim durchgeführt wird. 
 
 * R ist eine freie, nicht-kommerzielle Implementierung der Programmiersprache S (von ATT Bell Laboratories entwickelt)
