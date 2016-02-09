@@ -7,7 +7,7 @@ Unterlagen für den Kurs 2016.
 
 - Warum R nutzen? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/WarumR.md) |  [pdf](https://github.com/Japhilko/IntroR/raw/master/2016/slides/WarumR.pdf) )
 
-- Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/FreundGUI.md))
+- Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/FreundGUI.md) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GUI.pdf))
 
     - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Vorbereitung.md))
 
