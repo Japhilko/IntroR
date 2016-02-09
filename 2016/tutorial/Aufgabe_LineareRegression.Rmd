@@ -1,0 +1,16 @@
+---
+title: "Aufgabe - lineare Regression"
+author: "Jan-Philipp Kolb"
+date: "9 Februar 2016"
+output: html_document
+---
+
+## Aufgabe - lineare Regression
+
+Datensatz toycars - Paket DAAG
+
+Beschrieben wird Wegstrecke, dreier Spielzeugautos die in unterschiedlichen Winkeln Rampe herunterfuhren.
+
+- angle: Winkel der Rampe
+- distance: Zurückgelegte Strecke des Spielzeugautos
+- car: Autotyp (1, 2 oder 3)

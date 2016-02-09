@@ -6,3 +6,86 @@ output: md_document
 ---
 
 ## Die lineare Regression
+
+Maindonald - [DataAnalysis](https://cran.r-project.org/doc/contrib/usingR.pdf)
+
+-  Einführung in R 
+-  Datenanalyse
+-  Statistische Modelle
+-  Inferenzkonzepte
+-  Regression mit einem Prädiktor
+-  Multiple lineare Regression
+-  Ausweitung des linearen Modells
+-  ...
+
+## Lineare Regression in R - Beispieldatensatz
+
+John H. Maindonald and W. John Braun
+
+DAAG - [Data Analysis and Graphics Data and Functions](http://cran.ms.unimelb.edu.au/web/packages/DAAG/DAAG.pdf)
+
+```{r}
+library("DAAG")
+data(roller)
+```
+
+help on roller data:
+
+```{r,eval=F}
+?roller
+```
+
+## Das lineare Regressionsmodell in R
+
+Schätzen eines Regressionsmodells:
+
+```{r}
+roller.lm <- lm(depression ~ weight, data = roller)
+```
+
+So bekommt man die Schätzwerte:
+
+```{r}
+summary(roller.lm)
+```
+
+Falls das Modell ohne Intercept geschätzt werden soll:
+
+```{r}
+lm(depression ~ -1 + weight, data = roller)
+```
+
+
+## Summary des Modells
+
+```{r}
+summary(roller.lm)
+```
+
+## R arbeitet mit Objekten
+
+- `roller.lm` ist nun ein spezielles Regressions-Objekt
+- Auf dieses Objekt können nun verschiedene Funktionen angewendet werden
+
+```{r}
+predict(roller.lm) # Vorhersage
+resid(roller.lm) # Residuen
+```
+
+## Residuenplot
+
+-  Sind Annahmen des linearen Regressionsmodells verletzt? 
+-  Dies ist der Fall, wenn ein Muster abweichend von einer Linie zu erkennen ist.
+-  Hier ist der Datensatz sehr klein
+
+```{r}
+plot(roller.lm,1)
+```
+
+## Residuenplot
+
+```{r}
+plot(roller.lm,2)
+```
+
+- Wenn die Residuen normalverteilt sind sollten sie auf einer Linie liegen.
