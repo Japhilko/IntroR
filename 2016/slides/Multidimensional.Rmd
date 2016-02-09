@@ -1,8 +1,8 @@
 ---
 title: "Multidimensional"
 author: "Jan-Philipp Kolb"
-date: "9. Februar 2016"
-output: html_document
+date: "9 Februar 2016"
+output: md_document
 ---
 
 ## Edgar Anderson's Iris Daten
@@ -38,6 +38,7 @@ pairs(iris[,1:4])
 ## Zusammenhang zwischen mehreren Variablen
 
 ```{r}
+library("psych")
 pairs.panels(iris[1:4],bg=c("red","yellow","blue")
 [iris$Species],pch=21,main="Iris Datensatz")
 ```

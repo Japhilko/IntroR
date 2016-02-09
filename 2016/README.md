@@ -47,6 +47,10 @@ Unterlagen für den Kurs 2016.
 
 ## Noch mehr Grafiken - multidimensional
 
+
+
 ## Regression – Überblick der Methoden in R
+
+- Die lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/LineareRegression.md))
 
 ## Ausblick – Möglichkeiten mit R
