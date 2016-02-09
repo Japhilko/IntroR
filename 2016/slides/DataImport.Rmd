@@ -1,13 +1,28 @@
 ---
 title: "Data Import"
 author: "Jan-Philipp Kolb"
-date: "19. Juni 2015"
+date: "13 Februar 2016"
 output: md_document
 ---
 
+```{r}
+link <- "https://commondatastorage.googleapis.com/ckannet-storage/2012-07-09T214020/global_airports.csv"
 
+#read.csv#
+```
+
+
+
+
+```{r,eval=F,echo=F}
+setwd("C:/Users/kolbjp/Documents/GitHub/IntroR/2016")
+```
 
 ```{r,eval=F}
-setwd("C:/Users/kolbjp/Documents/GitHub/IntroR/2016")
+link<- "http://www.statistik.at/web_de/static/
+mz_2013_sds_-_datensatz_080469.sav"
+
+?read.spss
+Dat <- read.spss(link,to.data.frame=T)
 ```
 
