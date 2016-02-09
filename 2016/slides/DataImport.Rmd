@@ -8,9 +8,12 @@ output: md_document
 ```{r}
 link <- "https://commondatastorage.googleapis.com/ckannet-storage/2012-07-09T214020/global_airports.csv"
 
-#read.csv#
+airports <- read.csv(link)
 ```
 
+```{r}
+head(airports)
+```
 
 
 
@@ -24,5 +27,16 @@ mz_2013_sds_-_datensatz_080469.sav"
 
 ?read.spss
 Dat <- read.spss(link,to.data.frame=T)
+```
+
+
+## xlsx Daten importieren
+
+
+```{r}
+url <- "https://files.datapress.com/london/dataset/resources-of-global-city-comparison-indicators/List%20of%20global%20city%20indicator%20sources-reports.xlsx"
+
+library("xlsx")
+indi <- read.xlsx(url,1)
 ```
 

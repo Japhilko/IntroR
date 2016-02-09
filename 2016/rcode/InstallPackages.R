@@ -14,8 +14,12 @@ install.packages("MASS")
 install.packages("mlmRev")
 
 
+install.packages("xlsx")
+
 # Graphical User Interface
 
 install.packages("Rcmdr")
 
 install.packages("raster")
+
+
