@@ -51,6 +51,9 @@ Unterlagen für den Kurs 2016.
 
 - Das lattice Paket ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/LatticePaket.Rmd))
 
+    - Aufgabe - Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Aufgabe_Datenanalyse.Rmd))
+    
+    
 ## Regression – Überblick der Methoden in R
 
 - Die lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/LineareRegression.md))
