@@ -1,0 +1,34 @@
+---
+title: "Eine Karte der Gemeinden im Saarland"
+author: "Jan-Philipp Kolb"
+date: "9. Februar 2016"
+output: html_document
+---
+
+## Datenquelle
+
+Global Administrative Boundaries (GADM)
+
+```{r,cache=T}
+library("raster")
+DEU4 <- getData('GADM', country='DEU', level=4)
+```
+
+## Overview data
+
+```{r}
+head(DEU4@data)
+```
+
+
+## Subselect
+
+```{r}
+SAL <- DEU4[DEU4@data$ID_1==12,]
+```
+
+```{r}
+plot(SAL)
+```
+
+## 

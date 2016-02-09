@@ -1,5 +1,6 @@
 # Installieren aller benötigten Pakete
 
+
 install.packages("lattice")
 install.packages("beanplot")
 install.packages("vioplot")
@@ -10,3 +11,11 @@ install.packages("DAAG")
 install.packages("HSAUR")
 install.packages("faraway")
 install.packages("MASS")
+install.packages("mlmRev")
+
+
+# Graphical User Interface
+
+install.packages("Rcmdr")
+
+install.packages("raster")

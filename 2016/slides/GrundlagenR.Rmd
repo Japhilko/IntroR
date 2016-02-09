@@ -1,8 +1,8 @@
 ---
 title: "Grundlagen R"
-author: "Jan-Philipp Kolb, Stefan Zins and Matthias Sand"
-date: "8. Februar 2016"
-output: html_document
+author: "Jan-Philipp Kolb"
+date: "8 Februar 2016"
+output: beamer_presentation
 ---
 
 ## R ist eine Objekt-orientierte Sprache
@@ -13,31 +13,27 @@ Vektoren und Zuweisungen
 -  <- ist der Zuweisungsoperator
 
 ```{r}
-b <- c(1,2)
+b <- c(1,2) # erzeugt ein Objekt mit den Zahlen 1 und 2
 ```
-
--  b <- c(1,2) erzeugt ein Objekt mit den Zahlen 1 und 2
 -  Eine Funktion kann auf dieses Objekt angewendet werden:
 
 ```{r}
-mean(b)
+mean(b) # berechnet den Mittelwert
 ```
-
--  mean(b) berechnet den Mittelwert
 
 Mit den folgenden Funktionen können wir etwas über die Eigenschaften des Objekts lernen:
 
 ```{r}
-length(b) 
+length(b) # b hat die Länge 2
 ```
 
--  length(b) - b hat die Länge 2
+
+## Objektstruktur
 
 ```{r}
-str(b)
+str(b) # b ist ein numerischer Vektor
 ```
 
--  str(b) - b ist ein numerischer Vektor
 
 ## Funktionen im base-Paket
 
@@ -59,6 +55,25 @@ Andere Funktionen brauchen mehr:
 |:----------|:-----------------|:--------------|
 |quantile() |90 % Quantile     |quantile(b,.9) |
 |sample()   |Stichprobe ziehen |sample(b,1)    |
+
+
+## Funktionen mit einem Argument
+
+```{r}
+max(b)
+min(b)
+sd(b)
+var(b)
+mean(b)
+median(b)
+```
+
+## Funktionen mit mehr Argumenten
+
+```{r}
+quantile(b,.9)
+sample(b,1) 
+```
 
 
 ## Übersicht Befehle

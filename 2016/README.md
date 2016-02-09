@@ -12,12 +12,12 @@ Unterlagen für den Kurs 2016.
     - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Vorbereitung.md))
 
 
-- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.md))
+- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.R) )
 
     - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Zuweisung.md))
 
 - Datentypen und Indizieren
-([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.md))
+([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.md)| [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.R))
 
 - Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Hilfe.md))
 
@@ -63,3 +63,5 @@ Unterlagen für den Kurs 2016.
 - Die logistische Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/logistischeRegression.md))
 
 ## Ausblick – Möglichkeiten mit R
+
+- Karten erstellen mit R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/KartenErstellen.Rmd))

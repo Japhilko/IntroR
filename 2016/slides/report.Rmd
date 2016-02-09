@@ -1,0 +1,14 @@
+---
+title: "report"
+author: "Jan-Philipp Kolb"
+date: "9. Februar 2016"
+output: 
+  pdf_document:
+    toc: yes 
+---
+
+```{r child = 'WarumR.Rmd.Rmd'}
+```
+
+```{r child = 'FreundGUI.Rmd'}
+```

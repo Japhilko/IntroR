@@ -2,7 +2,7 @@
 title: "Einführung in die Datenanalyse mit R - Warum R nutzen?"
 author: "Jan-Philipp Kolb"
 date: "4 Februar 2016"
-output: md_document
+output: beamer_presentation
 ---
 
 ## Gründe für die Nutzung von R
@@ -36,6 +36,15 @@ output: md_document
 ## Wo sind die aktivsten Nutzer?
 
 ![Aktivität Nutzer](http://spatial.ly/wp-content/uploads/2013/06/r_activity.png)
+
+
+## R für SPSS Nutzer
+
+```{r,eval=F}
+library("Rcmdr")
+```
+
+Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datamgmt/statistics/r/documents/r_for_sas_spss_users.pdf)
 
 
 ## Links
