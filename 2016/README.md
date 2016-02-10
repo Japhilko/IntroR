@@ -28,7 +28,7 @@ Unterlagen für den Kurs 2016.
 
 ## Rein und raus – Datenimport und -export
 
-- Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/DataImport.md))
+- Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Import.Rmd))
 
     - Aufgabe Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Datenimport.md))
 
