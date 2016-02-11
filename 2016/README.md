@@ -22,17 +22,19 @@ Unterlagen für den Kurs 2016.
 - Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Hilfe.Rmd) |
 [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Hilfe.R))
 
-- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ModularerAufbau.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/rcode/InstallPackages.R))
+- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ModularerAufbau.Rmd) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/rcode/InstallPackages.R))
 
     - Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Zusatzpakete.md))
 
 ## Rein und raus – Datenimport und -export
 
+- Exkurs: Datenquellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datenquellen.md))
+
 - Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Import.Rmd))
 
     - Aufgabe Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Datenimport.md))
 
-- Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Export.md))
+- Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Export.Rmd))
 
 ## Ein erster Eindruck – Was uns die Daten sagen
 

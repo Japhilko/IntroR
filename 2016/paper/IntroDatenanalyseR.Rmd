@@ -2,8 +2,16 @@
 title: "Einführung in die Datenanalyse mit R"
 author: "Jan-Philipp Kolb"
 date: "9 Februar 2016"
-output: pdf_document
+output: html_document
 ---
+
+
+```{r,echo=F}
+library(knitr)
+ca=F
+Ex=F
+```
+
 
 # Warum R nutzen?
 
@@ -447,7 +455,7 @@ R-project + Was ich schon immer wissen wollte
 - Weitergehende Pakete finden sich z.B. bei [bioconductor](www.bioconductor.org)
 
 
-```{r}
+```{r,eval=F}
 install.packages("lme4")
 
 library(lme4)
@@ -458,75 +466,899 @@ library(lme4)
 
 Luhmann - [Verwendete Pakete](http://www.beltz.de/fileadmin/beltz/downloads/OnlinematerialienPVU/28090_Luhmann/Verwendete%20Pakete.pdf)
 
-
-# Pakete - deskriptive Datenanalyse
+Pakete - deskriptive Datenanalyse
 
 Die wichtigsten Pakete zur Visualisierung mit R: 
+
 - [ggplot](http://ggplot2.org/)
 - [lattice](http://lattice.r-forge.r-project.org/Vignettes/src/lattice-intro/lattice-intro.pdf)
 
-[Visualisierung kategorialer Daten ](http://www.statmethods.net/advgraphs/mosaic.html)
+- [Visualisierung kategorialer Daten ](http://www.statmethods.net/advgraphs/mosaic.html)
 
+- [Interaktive Visualisierungen](http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html)
 
+- [plotrix](http://www.inside-r.org/packages/cran/plotrix/docs/draw.circle)
 
-[Interaktive Visualisierungen](http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html)
-
-[plotrix](http://www.inside-r.org/packages/cran/plotrix/docs/draw.circle)
-
-[Farbpaletten in R](http://cran.r-project.org/web/packages/colorspace/vignettes/hcl-colors.pdf)
+- [Farbpaletten in R](http://cran.r-project.org/web/packages/colorspace/vignettes/hcl-colors.pdf)
 
 
 # Pakete Regression
 
-[Autoregressive Modelle (Zeitreihen)](http://cran.r-project.org/web/packages/tsDyn/vignettes/tsDyn.pdf)
+- [R-Paket MASS](http://cran.r-project.org/web/packages/MASS/MASS.pdf)
+
+- [Autoregressive Modelle (Zeitreihen)](http://cran.r-project.org/web/packages/tsDyn/vignettes/tsDyn.pdf)
+
+- [Robuste Regressionen](http://robustbase.r-forge.r-project.org/)
+
+
+- [Nichtparametrische Regression](http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Nie+S~Racine.pdf)
+
+- [Lasso Verfahren](http://web.stanford.edu/~hastie/glmnet/glmnet_alpha.html)
+
+## Big Data
+
+- [Task View - High Performance Computing](http://cran.r-project.org/web/views/HighPerformanceComputing.html)
+
+Weitere interessante Pakete
+
+Paket für den Import/Export - [foreign](http://cran.r-project.org/web/packages/foreign/foreign.pdf)
+
+- [Pakete für Survey Sampling](http://iase-web.org/documents/papers/icots8/ICOTS8_4J1_TILLE.pdf)
+
+- Paket - Latex und R (xtable) ([xtable Galerie](http://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf))
+
+- [Paket zur Erzeugung von Dummies](http://cran.r-project.org/web/packages/dummies/dummies.pdf)
+
+- [Multivariate Normalverteilung](http://cran.r-project.org/web/packages/mvtnorm/index.html)
+
+
+- [Paket für Karten](http://www.r-bloggers.com/tag/maptools/)
+
+# Datenquellen
 
 
 
-[Robuste Regressionen](http://robustbase.r-forge.r-project.org/)
+## Datenzugang
+
+- Public-Use-File (PUF) Datei zur öffentlichen Nutzung - meist stark anonymisierte Daten
+(Beispiele: [FDZ](www.forschungsdatenzentrum.de), [Statistik Portal](www.statistik-portal.de), [Meine Region](www.infothek.statistik.rlp.de/lis/MeineRegion/index.asp) )
+
+- Scientific-Use-File (SUF) - Datei zur wissenschaftlichen Nutzung - anonymisierte Daten, die zu wissenschaftlichen Zwecken und zur Sekundäranalyse genutzt werden können. 
+ 
+- On-Site-Nutzung - Arbeitsplätze für Gastwissenschaftler - Kontrollierte Datenfernverarbeitung
 
 
-[Nichtparametrische Regression](http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Nie+S~Racine.pdf)
+## Datenquellen
+
+- Auf dem Portal [datahub.io](http://datahub.io/) sind sehr viele Beispieldatensätze in verschiedenen Formaten abrufbar. 
+
+- Weitere Portale: [OpenGov](http://ropengov.github.io/projects/), [okfn](http://data.okfn.org/), [enigma](https://app.enigma.io/table/org.worldbank.hnp.data), 
+Amazon Web Services ([AWS](http://aws.amazon.com/de/public-data-sets/))
 
 
-[Lasso Verfahren](http://web.stanford.edu/~hastie/glmnet/glmnet_alpha.html)
+- Umweltdaten ([National climatic data center](http://www.ncdc.noaa.gov/ibtracs/index.php?name=ibtracs-data))
+
+
+- [FAO Datenbank](http://cran.r-project.org/web/packages/FAOSTAT/index.html)
+
+```{r,eval=Ex}
+library("FAOSTAT")
+```
+
+- Public Use File für Soziales in den USA [Social security administration ](http://www.ssa.gov/policy/docs/data/index.html)
+
+- National health and nutrition examination survey
+
+```{r,eval=Ex}
+library(survey)
+data(nhanes)
+```
+
+
+## Das R-Paket datasets
+
+```{r,eval=Ex}
+library(datasets)
+```
+
+Beispiel Erdbeben Datensatz:
+
+```{r,eval=Ex}
+head(quakes)
+```
+
+
+```{r,echo=F,eval=Ex}
+kable(head(quakes))
+```
+
+## Datensatz zum US Zensus
+
+```{r,message=F,eval=Ex}
+library(UScensus2010)
+```
+
+## Weltbank Daten
+
+[`WDI`](https://cran.r-project.org/web/packages/WDI/index.html) - World Development Indicators (World Bank) - [Einführung in das Paket](https://github.com/vincentarelbundock/WDI)
+
+```{r,message=F,eval=Ex}
+library(WDI)
+```
+
+```{r,eval=F,eval=Ex}
+WDIsearch('gdp')[1:10,]
+```
+
+```{r,echo=F,eval=Ex}
+kable(WDIsearch('gdp')[1:10,])
+```
+
+
+## Nutzung von WDI Daten
+
+```{r,cache=ca,eval=Ex}
+dat <-  WDI(indicator='NY.GDP.PCAP.KD', country=c('MX','CA','US'), start=1960, end=2012)
+head(dat)
+```
+
+```{r,echo=F,eval=Ex}
+kable(head(dat))
+```
+
+## Erste Grafik mit WDI Daten
+
+```{r,echo=F,cache=ca,eval=Ex}
+library(ggplot2)
+ggplot(dat, aes(year, NY.GDP.PCAP.KD, color=country)) + geom_line() + 
+    xlab('Year') + ylab('GDP per capita')
+```
+
+
+## OpenStreetMap
+
+> OpenStreetMap (OSM) ist ein kollaboratives Projekt um eine editierbare Weltkarte zu erzeugen.
+
+[Wikipedia - OpenStreetMap](https://en.wikipedia.org/wiki/OpenStreetMap)
+
+## Download von OpenStreetMap Daten
+
+```{r,message=F,cache=ca,warning=F,eval=Ex}
+library(osmar)
+api <- osmsource_api()
+library(ggmap)
+```
+
+```{r,cache=ca,warning=F,eval=F}
+cityC <- geocode("Berlin",source="google")
+bb <- center_bbox(cityC$lon,cityC$lat,1000, 1000)
+uaBerlin <- get_osm(bb, source = api)
+```
+
+- Ausschnitte von OpenStreetMap für einzelne Städte ([metro extracts](https://mapzen.com/data/metro-extracts/))
+
+- Liste möglicher Datenquellen für räumliche Analysen ([weltweit](http://wiki.openstreetmap.org/wiki/Potential_Datasources), [Deutschland](http://wiki.openstreetmap.org/wiki/DE:Potential_Datasources)
+)
+
+- [SALB](http://wiki.openstreetmap.org/wiki/SALB) - Administrative Grenzen
+
+- Kartendaten ([openaprs](http://www.openaprs.net/))
+
+
+## TwittR
+
+```{r,eval=F,cache=ca,warning=F}
+library(twitteR)
+library(streamR)
+```
+
+<http://www.r-bloggers.com/mapping-the-world-with-tweets-including-a-gif-without-cats-and-a-shiny-app/>
+
+## worldHires Daten
+
+```{r,cache=ca,warning=F,message=F,eval=Ex}
+library(mapdata)
+data(worldHiresMapEnv)
+map('worldHires', col=1:10)
+```
+
+
+## Historische Daten
+
+- [Historischer Geocoder](http://www.azavea.com/blogs/newsletter/v2i3/azavea-research-historic-geocoder/)
+
+- [Paket HistData](http://www.inside-r.org/packages/cran/HistData)
+
+```{r,cache=ca,warning=F,eval=Ex}
+library(HistData)
+data(Arbuthnot)
+```
+
+
+## GDELT Daten
+
+- [GDELT](http://www.gdeltproject.org/)
+- Nutzung von GDELT Daten ([Beispiel 1](http://quantifyingmemory.blogspot.de/2013/04/mapping-gdelt-data-in-r-and-some.html), 
+[Beispiel 2](http://www.kalevleetaru.com/))
+
+```{r,eval=F,cache=ca,warning=F,eval=Ex}
+library(GDELTtools)
+test.filter <- list(ActionGeo_ADM1Code=c("NI", "US"), ActionGeo_CountryCode="US")
+test.results <- GetGDELT(start.date="1979-01-01", end.date="1979-12-31",
+                         filter=test.filter)
+```
 
 
 
-## Large memory and out-of-memory data
 
-<http://cran.r-project.org/web/views/HighPerformanceComputing.html>
-
-# Weitere interessante Pakete
-
-<http://cran.r-project.org/web/packages/foreign/foreign.pdf>
+## Andere Datenquellen
 
 
-Pakete für Survey Sampling:
+- [Die US Flughäfen und Fluglinien](http://www.sasanalysis.com/2013/06/the-us-airports-with-most-flight-routes.html)
 
-<http://iase-web.org/documents/papers/icots8/ICOTS8_4J1_TILLE.pdf>
+- Mehr Daten [hier](http://openflights.org/data.html)
 
+```{r,eval=F}
+link1 <- "http://openflights.svn.sourceforge.net/viewvc/openflights/
+openflights/data/airports.dat"
+airport <- read.csv(link1, header = F)
 
-<http://cran.r-project.org/web/packages/MASS/MASS.pdf>
-
-
-Paket - Latex und R:
-
-<http://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf>
-
-Paket um Dummies zu erzeugen:
-
-<http://cran.r-project.org/web/packages/dummies/dummies.pdf>
-
-Multivariate Normalverteilung:
-
-<http://cran.r-project.org/web/packages/mvtnorm/index.html>
+link2 <- "http://openflights.svn.sourceforge.net/viewvc/openflights/
+openflights/data/routes.dat"
+route <- read.csv(link2, header = F)
+```
 
 
-Paket für Karten:
+- Hafen Daten ([Natural earth data](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/))
 
-<http://www.r-bloggers.com/tag/maptools/>
+- [Minimalistische Karten](http://www.r-bloggers.com/minimalist-maps/)
+
+- [Census results - Germany](https://ergebnisse.zensus2011.de/)
+- [Census results - Britain](http://www.r-bloggers.com/2011-census-open-atlas-project/) and [boundaries](http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/new-developments-for-2011-census-results/2011-census-geography/2011-census-geography-prospectus/index.html)
+- [Data on airports](http://openflights.org/data.html) and an [example](http://www.milanor.net/blog/?p=594) on the usage in R
 
 
-Hier geht es weiter:
+- [ADFC/opengeodb](http://www.fa-technik.adfc.de/code/opengeodb/)
 
-<https://github.com/Japhilko/IntroR/blob/master/2015/D_Datenimport.Rmd>
+```{r,eval=Ex}
+link <- "http://www.fa-technik.adfc.de/code/opengeodb/DE9.tab"
+info <- read.csv(link,sep="\t",header=F)
+```
+
+
+## Weitere Quellen
+
+
+- [ICEDS European Data Server](http://geocommons.com/overlays/96341)
+
+
+- [Mobilfunkdaten](http://opencellid.org/), [CO2 Emmissionen](http://databank.worldbank.org/data/reports.aspx?source=2&country=DEU&series=&period=)
+
+- Daten für New York ([Daten](https://data.cityofnewyork.us/), [Beispiel](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi)
+
+# Datenimport
+
+
+## Dateiformate in R
+
+-  Von R werden quelloffene, nicht-proprietäre Formate bevorzugt
+		-  Es können aber auch Formate von anderen Statistik Software Paketen eingelesen werden
+		-  R-user speichern Objekte gerne in sog. Workspaces ab
+		-  Auch hier jedoch gilt: (fast) alles andere ist möglich
+
+## Formate - base package
+
+-  R unterstützt von Haus aus schon einige wichtige Formate:
+		
+				-  CSV (Comma Separated Values): `read.csv()`
+				-  FWF (Fixed With Format): `read.fwf()`
+				-  Tab-getrennte Werte: `read.delim()`
+
+## Der Arbeitsspeicher
+
+So findet man heraus, in welchem Verzeichnis man sich gerade befindet
+
+```{r,eval=F}
+getwd()
+```
+
+So kann man das Arbeitsverzeichnis ändern:
+
+Man erzeugt ein Objekt in dem man den Pfad abspeichert:
+
+```{r,eval=F}
+main.path <- "C:/" # Beispiel für Windows
+main.path <- "/users/Name/" # Beispiel für Mac
+main.path <- "/home/user/" # Beispiel für Linux
+```
+
+Und ändert dann den Pfad mit setwd()
+
+```{r,eval=F}
+setwd(main.path)
+```
+
+Bei Windows ist es wichtig Slashs anstelle von Backslashs zu verwenden.
+
+## Import von Excel-Daten
+
+-  `library(foreign)` ist für den Import von fremden Datenformaten nötig
+-  Wenn Excel-Daten vorliegen - als .csv abspeichern
+-  Dann kann `read.csv()` genutzt werden um die Daten einzulesen.
+- Bei Deutschen Daten kann es sein, dass man `read.csv2()` wegen der Komma-Separierung braucht.
+
+```{r,eval=F}
+library(foreign)
+?read.csv
+?read.csv2
+```
+
+## CSV Dateien einlesen
+
+Zunächst muss das Arbeitsverzeichnis gesetzt werden, in dem sich die Daten befinden:
+
+```{r,eval=F}
+Dat <- read.csv("schuldaten_export.csv")
+```
+
+Wenn es sich um Deutsche Daten handelt:
+
+```{r,eval=F}
+Dat <- read.csv2("schuldaten_export.csv")
+```
+
+## SPSS Dateien einlesen
+
+Dateien können auch direkt aus dem Internet geladen werden:
+
+```{r,eval=F}
+link<- "http://www.statistik.at/web_de/static/
+mz_2013_sds_-_datensatz_080469.sav"
+
+?read.spss
+Dat <- read.spss(link,to.data.frame=T)
+```
+
+## stata Dateien einlesen
+
+```{r,eval=F}
+MZ02 <- read.dta("MZ02.dta")
+```
+
+- Einführung in Import mit R ([is.R](http://is-r.tumblr.com/post/37181850668/reading-writing-stata-dta-files-with-foreign))
+
+## Datenmanagement ähnlich wie in SPSS oder Stata
+
+```{r,eval=F}
+install.packages("Rz")
+library(Rz)
+```
+
+# Datenexport
+
+
+## R's Exportformate
+
+-  In R werden offene Dateiformate bevorzugt
+-  Als Äquivalenz zu den `read.X()` Funktionen stehen viele `write.X()` Funktionen zur Verfügung
+-  Das eigene Format von R sind sog. Workspaces (`.RData`)
+
+## Beispieldatensatz erzeugen
+
+```{r}
+A <- c(1,2,3,4)
+B <- c("A","B","C","D")
+
+mydata <- data.frame(A,B)
+```
+
+
+
+## Überblick Daten Import/Export
+
+```{r,eval=F}
+save(mydata, file="mydata.RData")
+```
+
+## Daten in Excel Format abspeichern
+
+```{r,eval=F}
+write.csv(mydata,file="mydata.csv") 
+```
+
+
+```{r,eval=F}
+library(xlsx)
+write.xlsx(mydata,file="mydata.xlsx") 
+```
+
+
+
+## Daten in stata Format abspeichern
+
+```{r}
+library(foreign)
+write.dta(mydata,file="mydata.dta") 
+```
+
+## Links Export
+
+- [Quick R](http://www.statmethods.net/input/exportingdata.html) für das Exportieren von Daten:
+
+- Hilfe zum Export auf dem [cran Server](http://cran.r-project.org/doc/manuals/r-release/R-data.pdf)
+
+
+## Streuungsmaße
+
+Im base Package sind die wichtigsten Streuungsmaße enthalten:
+
+-  Varianz: `var()`
+-  Standardabweichung: `sd()`
+-  Minimum und Maximum: `min()` und `max()`
+-  Range: `range()`
+
+```{r}
+ab <- rnorm(100)
+
+var(ab)
+
+sd(ab)
+
+range(ab)
+```
+
+## Extremwerte
+
+```{r}
+min(ab)
+
+max(ab)
+```
+
+
+## Fehlende Werte
+
+- Sind `NA`s vorhanden muss dies der Funktion mitgeteilt werden
+
+```{r}
+ab[10] <- NA
+
+var(ab)
+```
+
+Bei fehlenden Werten muss ein weiteres Argument mitgegeben werden:
+
+```{r}
+var(ab,na.rm=T)
+```
+
+## Häufigkeiten und gruppierte Kennwerte
+
+-  Eine Auszählung der Häufigkeiten der Merkmale einer Variable liefert `table()`
+-  Mit `table()` sind auch Kreuztabellierungen möglich indem zwei Variablen durch Komma getrennt werden: `table(x,y)` liefert Häufigkeiten von `y` für gegebene Ausprägungen von `x`
+
+```{r}
+x <- sample(1:10,100,replace=T)
+
+table(x)
+```
+
+## Tabellieren - weiteres Beispiel
+
+```{r}
+musician <- sample(c("yes","no"),100,replace=T)
+```
+
+```{r,eval=F}
+?table
+```
+
+```{r}
+table(x)
+table(x,musician)
+data(esoph)
+table(esoph$agegp)
+```
+
+## Häufigkeitstabellen
+
+- `prop.table()` liefert die relativen Häufigkeiten
+- Wird die Funktion  außerhalb einer `table()` Funktion geschrieben erhält man die relativen Häufigkeiten bezogen auf alle Zellen
+
+Die Funktion prop.table()
+
+```{r,eval=F}
+table(esoph$agegp,esoph$alcgp)
+?prop.table
+prop.table(table(esoph$agegp,
+esoph$alcgp),1)
+```
+
+## Die aggregate Funktion
+
+- Mit der `aggregate()` Funktion können Kennwerte für Untergruppen erstellt werden
+- `aggregate(x,by,FUN)` müssen mindestens drei Argumente übergeben werden:
+
+```{r}
+aggregate(state.x77,by=list(state.region),mean)
+```
+
+			
+x: ein oder mehrere Beobachtungsvektor(en) für den der Kennwert berechnet werden soll
+
+by: eine oder mehrere bedingende Variable(n)
+
+FUN: die Funktion welche den Kennwert berechnet (z.B. `mean` oder `sd`)
+			
+			
+- Die Ausgabe kann mit Hilfe von `xtabs()` in eine schöne zweidimensionale Tabelle überführt werden
+
+## Beispieldatensatz - apply Funktion
+
+```{r}
+ApplyDat <- cbind(1:4,runif(4),rnorm(4))
+```
+
+```{r}
+apply(ApplyDat,1,mean)
+apply(ApplyDat,2,mean)
+```
+
+
+## Die Funktion apply
+
+```{r}
+apply(ApplyDat,1,var)
+apply(ApplyDat,1,sd)
+apply(ApplyDat,1,range)
+apply(ApplyDat,1,length)
+```
+
+## Argumente der Funktion apply
+
+- Für `margin=1` die Funktion `mean` auf die Reihen angewendet,
+
+- Für `margin=2` die Funktion `mean` auf die Spalten angewendet,
+
+- Anstatt `mean` können auch andere Funktionen wie `var`, `sd` oder `length` verwendet werden.
+
+## Die Funktion tapply
+
+```{r}
+ApplyDat <- data.frame(Income=rnorm(5,1400,200),
+                       Sex=sample(c(1,2),5,replace=T))
+```
+
+
+- Auch andere Funktionen können eingesetzt werden.... - Auch selbst programmierte Funktionen
+- Im Beispiel wird die einfachste eigene Funktion angewendet.
+
+```{r}
+ApplyDat
+```
+
+## Beispiel Funktion tapply
+
+
+```{r}
+tapply(ApplyDat$Income,ApplyDat$Sex,mean)
+
+tapply(ApplyDat$Income,
+       ApplyDat$Sex,function(x)x)
+```
+
+## Links Datenanalyse
+
+- Benutzung von `apply`, `tapply`, etc. ([R-bloggers](http://www.r-bloggers.com/using-apply-sapply-lapply-in-r/)) 
+- [Zurück zur Gliederung](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+
+# Einfache Grafiken
+
+## Ein Plot sagt mehr als 1000 Worte
+
+-  Grafisch gestützte Datenanalyse ist toll
+-  Gute Plots können zu einem besseren Verständnis beitragen
+-  Einen Plot zu generieren geht schnell
+-  Einen guten Plot zu machen kann sehr lange dauern
+-  Mit R Plots zu generieren macht Spaß
+-  Mit R erstellte Plots haben hohe Qualität
+-  Fast jeder Plottyp wird von R unterstützt
+-  R kennt eine große Menge an Exportformaten für Grafiken
+		
+## Plot ist nicht gleich Plot
+
+-  Bereits das base Package bringt eine große Menge von Plot Funktionen mit
+-  Das lattice Packet erweitert dessen Funktionalität
+-  Eine weit über diese Einführung hinausgehende Übersicht findet sich in Murrell, P (2006): R Graphics.
+
+## CRAN Task Views		
+		
+-  Zu einigen Themen sind alle Möglichkeiten in R zusammengestellt. ([Übersicht der Task Views](https://cran.r-project.org/web/views/))
+-  Task View zu Thema [Graphiken](https://cran.r-project.org/web/views/Graphics.html)
+
+
+## Datensatz
+
+```{r,message=F}
+library(mlmRev)
+data(Chem97)
+```
+
+- [lea] Local Education Authority - a factor
+- [school] School identifier - a factor
+- [student] Student identifier - a factor
+- [score] Point score on A-level Chemistry in 1997
+- [gender] Student's gender
+- [age] Age in month, centred at 222 months or 18.5 years
+- [gcsescore] Average GCSE score of individual.
+- [gcsecnt] Average GCSE score of individual, centered at mean.
+
+
+## Histogramm
+
+Wir erstellen ein Histogramm der Variable gcsescore:
+
+Die Funktion hist()
+
+```{r,eval=F}
+?hist
+```
+
+
+```{r}
+# Histogramm
+hist(Chem97$gcsescore)
+```
+
+
+## Graphik speichern
+
+- Mit dem button Export in Rstudio kann man die Grafik speichern.
+- Alternativ auch bspw. mit dem Befehl `png`
+
+```{r,eval=F}
+png("Histogramm.png")
+hist(Chem97$gcsescore)
+dev.off()
+```
+
+## Histogramme
+
+-  Die Funktion `hist()` plottet ein Histogramm der Daten
+-  Der Funktion muss mindestens ein Beobachtungsvektor übergeben werden
+- `hist()` hat noch sehr viel mehr Argumente, die alle (sinnvolle) default values haben
+
+
+|Argument |Bedeutung            |Beispiel          |
+|:--------|:--------------------|:-----------------|
+|main     |Überschrift          |main="Hallo Welt" |
+|xlab     |x-Achsenbeschriftung |xlab="x-Werte"    |
+|ylab     |y-Achsenbeschriftung |ylab="y-Werte"    |
+|col      |Farbe                |col="blue"        |
+
+## Histogramm
+
+```{r}
+hist(Chem97$gcsescore,col="blue",
+     main="Hallo Welt",ylab="y-Werte",
+     xlab="x-Werte")
+```
+
+Weitere Argumente:
+
+```{r,eval=F}
+?plot
+# oder
+?par
+```
+
+## Barplot
+
+-	 Die Funktion barplot() erzeugt aus einer Häufigkeitstabelle einen Barplot
+-  Ist das übergebene Tabellen-Objekt zweidimensional wird ein bedingter Barplot erstellt
+
+```{r}
+tabScore <- table(Chem97$score)
+```
+
+```{r,eval=F}
+barplot(tabScore)
+```
+
+## Barplots und barcharts
+
+```{r}
+barplot(tabScore)
+```
+
+## Mehr Farben:
+
+```{r}
+barplot(tabScore,col=rgb(0,0,1))
+```
+
+## Grüne Farbe 
+
+```{r}
+barplot(tabScore,col=rgb(0,1,0))
+```
+
+## Rote Farbe 
+
+```{r}
+barplot(tabScore,col=rgb(1,0,0))
+```
+
+
+## Transparent
+
+```{r}
+barplot(tabScore,col=rgb(1,0,0,.3))
+```
+
+## Boxplot
+
+-  Einen einfachen Boxplot erstellt man mit `boxplot()`
+-  Auch `boxplot()` muss mindestens ein Beobachtungsvektor übergeben werden
+
+```{r,eval=F}
+?boxplot
+```
+
+## Horizontaler Boxplot
+
+```{r}
+boxplot(Chem97$gcsescore,
+horizontal=TRUE)
+```
+
+- [Erklärung zu Boxplots](http://edoc.hu-berlin.de/dissertationen/gruenwald-andreas-2005-01-17/HTML/chapter2.html)
+
+## Gruppierte Boxplots
+
+-  Ein sehr einfacher Weg, einen ersten Eindruck über bedingte Verteilungen zu bekommen ist über sog. Gruppierte notched Boxplots
+-  Dazu muss der Funktion `boxplot()` ein sog. Formel-Objekt übergeben werden
+-  Die bedingende Variable steht dabei auf der rechten Seite einer Tilde
+
+
+## Beispiel grupierter Boxplot
+
+```{r}
+boxplot(Chem97$gcsescore~Chem97$gender)
+```
+
+## Alternativen zu Boxplot
+
+Violinplot 
+
+-  Baut auf Boxplot auf 
+-  Zusätzlich Informationen über Dichte der Daten 
+-  Dichte wird über Kernel Methode berechnet.
+-  weißer Punkt - Median
+-  Je weiter die Ausdehnung, desto größer ist die Dichte an dieser Stelle. 
+
+
+```{r,message=F}
+library(vioplot)
+x <- rnorm(100)
+y <- rnorm(100)
+plot(x, y, xlim=c(-5,5), ylim=c(-5,5))
+vioplot(x, col="tomato", horizontal=TRUE, at=-4, add=TRUE,lty=2, rectCol="gray")
+vioplot(y, col="cyan", horizontal=FALSE, at=-4, add=TRUE,lty=2)
+```
+
+## Alternativen zum Boxplot
+
+```{r}
+library(beanplot)
+par(mfrow = c(1,2))
+boxplot(count~spray,data=InsectSprays,col="blue")
+beanplot(count~spray,data=InsectSprays,col="orange")
+```
+
+# Grafiken für bedingte, bi- und multivariate Verteilungen
+
+## Scatterplots
+
+- Ein einfacher two-way scatterplot kann mit der Funktion plot() erstellt werden
+-  plot() muss mindestens ein x und ein y Beobachtungsvektor übergeben werden
+-  Um die Farbe der Plot-Symbole anzupassen gibt es die Option col (Farbe als character oder numerisch)
+-  Die Plot-Symbole selbst können mit pch} (plotting character) angepasst werden (character oder numerisch)
+-  Die Achenbeschriftungen (labels) werden mit xlab und ylab definiert
+
+# Multidimensionale Zusammenhänge
+
+
+## Edgar Anderson's Iris Daten
+
+```{r}
+data(iris)
+head(iris)
+```
+
+petal length and width - Blütenblatt Länge und Breite
+
+sepal length and width - Kelchblatt Länge und Breite 
+
+- [Wikipedia Artikel zum IRIS Datensatz](https://en.wikipedia.org/wiki/Iris_flower_data_set)
+
+## Zusammenhang zwischen stetigen Variablen
+
+```{r}
+# Pearson Korrelationskoeffizient
+cor(iris$Sepal.Length,iris$Petal.Length)
+```
+
+- Korrelation zwischen Länge Kelchblatt und Blütenblatt 0,87
+- Der Pearson'sche Korrelationskoeffizient ist die default methode in `cor()`.
+
+## Zusammenhang zwischen mehreren Variablen
+
+```{r}
+pairs(iris[,1:4])
+```
+
+## Zusammenhang zwischen mehreren Variablen
+
+```{r}
+library("psych")
+pairs.panels(iris[1:4],bg=c("red","yellow","blue")
+[iris$Species],pch=21,main="Iris Datensatz")
+```
+
+## Verschiedene Korrelationskoeffizienten
+
+
+```{r}
+# Pearson Korrelationskoeffizient
+cor(iris[,1:4]) 
+```
+
+```{r}
+# Kendall's tau (Rangkorrelation)
+cor(iris[,1:4], method = "kendall") 
+```
+
+```{r}
+# Spearman's rho (Rangkorrelation)
+cor(iris[,1:4], method = "spearman") 
+```
+
+## Zusammenhang zwischen kategorialen Variablen
+
+- chisq.test() testet, ob zwei kategoriale Merkmale stochastisch unabhängig sind.
+- Getestet wird gegen die Nullhypothese der Gleichverteilung
+
+
+## Levelplot
+
+```{r}
+library("lattice")
+library("AER")
+data(BankWages)
+levelplot(table(BankWages$education,BankWages$job))
+```
+
+## Visualisierung von Zusammenhängen zwischen kategorialen Variablen
+
+```{r}
+mosaicplot(~ Sex + Age + Survived, 
+           data = Titanic, color = TRUE)
+```
+
+## Shading
+
+Flächen werden entsprechend der Residuen eingefärbt:
+
+```{r}
+mosaicplot(~ Sex + Age + Survived, 
+           data = Titanic, shade = TRUE)
+```
+
+## Literatur zu Zusammenhangsmaßen
+
+-  Methodensammlung mit R
+-  Beispiele zu Zusammenhangsmaßen
+-  Umsetzung in R
+
+Sachs - [Angewandte Statistik mit R](https://books.google.de/books/about/Angewandte_Statistik.html?id=S-zXmAEACAAJ&redir_esc=y)

@@ -1,8 +1,8 @@
 ---
-title: "Einfache Grafiken"
+title: "Einführung in die Datenanalyse mit R  - Einfache Grafiken"
 author: "Jan-Philipp Kolb, Stefan Zins and Matthias Sand"
-date: "8. Februar 2016"
-output: html_document
+date: "8 Februar 2016"
+output: md_document
 ---
 
 ## Ein Plot sagt mehr als 1000 Worte
@@ -18,14 +18,14 @@ output: html_document
 		
 ## Plot ist nicht gleich Plot
 
-		-  Bereits das base Package bringt eine große Menge von Plot Funktionen mit
-		-  Das lattice Packet erweitert dessen Funktionalität
-		-  Eine weit über diese Einführung hinausgehende Übersicht findet sich in Murrell, P (2006): R Graphics.
+-  Bereits das base Package bringt eine große Menge von Plot Funktionen mit
+-  Das lattice Packet erweitert dessen Funktionalität
+-  Eine weit über diese Einführung hinausgehende Übersicht findet sich in Murrell, P (2006): R Graphics.
 
 ## CRAN Task Views		
 		
 -  Zu einigen Themen sind alle Möglichkeiten in R zusammengestellt. ([Übersicht der Task Views](https://cran.r-project.org/web/views/))
--  Beispiel: [Graphiken](https://cran.r-project.org/web/views/Graphics.html)
+-  Task View zu Thema [Graphiken](https://cran.r-project.org/web/views/Graphics.html)
 
 
 ## Datensatz
@@ -51,9 +51,13 @@ Wir erstellen ein Histogramm der Variable gcsescore:
 
 Die Funktion hist()
 
+```{r,eval=F}
+?hist
+```
+
+
 ```{r}
 # Histogramm
-?hist
 hist(Chem97$gcsescore)
 ```
 
@@ -102,23 +106,44 @@ Weitere Argumente:
 ## Barplot
 
 -	 Die Funktion barplot() erzeugt aus einer Häufigkeitstabelle einen Barplot
-	-  Ist das übergebene Tabellen-Objekt zweidimensional wird ein bedingter Barplot erstellt
+-  Ist das übergebene Tabellen-Objekt zweidimensional wird ein bedingter Barplot erstellt
 
 ```{r}
 tabScore <- table(Chem97$score)
-barplot(tabScore)
+```
 
+```{r,eval=F}
+barplot(tabScore)
 ```
 
 ## Barplots und barcharts
 
-Mehr Farben:
-
 ```{r}
 barplot(tabScore)
+```
+
+## Mehr Farben:
+
+```{r}
 barplot(tabScore,col=rgb(0,0,1))
+```
+
+## Grüne Farbe 
+
+```{r}
 barplot(tabScore,col=rgb(0,1,0))
+```
+
+## Rote Farbe 
+
+```{r}
 barplot(tabScore,col=rgb(1,0,0))
+```
+
+
+## Transparent
+
+```{r}
 barplot(tabScore,col=rgb(1,0,0,.3))
 ```
 
@@ -127,9 +152,13 @@ barplot(tabScore,col=rgb(1,0,0,.3))
 -  Einen einfachen Boxplot erstellt man mit `boxplot()`
 -  Auch `boxplot()` muss mindestens ein Beobachtungsvektor übergeben werden
 
-```{r}
+```{r,eval=F}
 ?boxplot
+```
 
+## Horizontaler Boxplot
+
+```{r}
 boxplot(Chem97$gcsescore,
 horizontal=TRUE)
 ```
@@ -141,6 +170,9 @@ horizontal=TRUE)
 -  Ein sehr einfacher Weg, einen ersten Eindruck über bedingte Verteilungen zu bekommen ist über sog. Gruppierte notched Boxplots
 -  Dazu muss der Funktion `boxplot()` ein sog. Formel-Objekt übergeben werden
 -  Die bedingende Variable steht dabei auf der rechten Seite einer Tilde
+
+
+## Beispiel grupierter Boxplot
 
 ```{r}
 boxplot(Chem97$gcsescore~Chem97$gender)
@@ -157,7 +189,7 @@ Violinplot
 -  Je weiter die Ausdehnung, desto größer ist die Dichte an dieser Stelle. 
 
 
-```{r}
+```{r,message=F}
 library(vioplot)
 x <- rnorm(100)
 y <- rnorm(100)
@@ -181,6 +213,6 @@ beanplot(count~spray,data=InsectSprays,col="orange")
 
 - Ein einfacher two-way scatterplot kann mit der Funktion plot() erstellt werden
 -  plot() muss mindestens ein x und ein y Beobachtungsvektor übergeben werden
--  Um die Farbe der Plot-Symbole anzupassen gibt es die Option col} (Farbe als character oder numerisch)
+-  Um die Farbe der Plot-Symbole anzupassen gibt es die Option col (Farbe als character oder numerisch)
 -  Die Plot-Symbole selbst können mit pch} (plotting character) angepasst werden (character oder numerisch)
 -  Die Achenbeschriftungen (labels) werden mit xlab und ylab definiert

@@ -1,13 +1,9 @@
 ---
-title: "Datenanalyse"
+title: "Einführung in die Datenanalyse mit R - Datenanalyse"
 author: "Jan-Philipp Kolb"
 date: "8 Februar 2016"
 output: md_document
 ---
-
-## Ein erster Eindruck von den Daten:
-
-<https://github.com/Japhilko/IntroR/blob/master/2015/F_Datenanalyse1.Rmd>
 
 ## Streuungsmaße
 
@@ -25,11 +21,15 @@ var(ab)
 
 sd(ab)
 
+range(ab)
+```
+
+## Extremwerte
+
+```{r}
 min(ab)
 
 max(ab)
-
-range(ab)
 ```
 
 
@@ -43,36 +43,34 @@ ab[10] <- NA
 var(ab)
 ```
 
+Bei fehlenden Werten muss ein weiteres Argument mitgegeben werden:
+
 ```{r}
-# hier muss ein weiteres Argument mitgegeben werden
 var(ab,na.rm=T)
-```
-
-
-
-```{r,eval=F}
-?var
-var(x)
-var(xNA)
-var(xNA, na.rm=TRUE)
 ```
 
 ## Häufigkeiten und gruppierte Kennwerte
 
 -  Eine Auszählung der Häufigkeiten der Merkmale einer Variable liefert `table()`
-	-  Mit `table()` sind auch Kreuztabellierungen möglich indem zwei Variablen durch Komma getrennt werden: `table(x,y)` liefert Häufigkeiten von `y` für gegebene Ausprägungen von `x`
+-  Mit `table()` sind auch Kreuztabellierungen möglich indem zwei Variablen durch Komma getrennt werden: `table(x,y)` liefert Häufigkeiten von `y` für gegebene Ausprägungen von `x`
 
 ```{r}
 x <- sample(1:10,100,replace=T)
 
 table(x)
+```
 
+## Tabellieren - weiteres Beispiel
+
+```{r}
 musician <- sample(c("yes","no"),100,replace=T)
 ```
 
-
 ```{r,eval=F}
 ?table
+```
+
+```{r}
 table(x)
 table(x,musician)
 data(esoph)
@@ -112,24 +110,28 @@ FUN: die Funktion welche den Kennwert berechnet (z.B. `mean` oder `sd`)
 			
 - Die Ausgabe kann mit Hilfe von `xtabs()` in eine schöne zweidimensionale Tabelle überführt werden
 
-## Beispieldatensatz
+## Beispieldatensatz - apply Funktion
 
 ```{r}
 ApplyDat <- cbind(1:4,runif(4),rnorm(4))
+```
+
+```{r}
+apply(ApplyDat,1,mean)
+apply(ApplyDat,2,mean)
 ```
 
 
 ## Die Funktion apply
 
 ```{r}
-apply(ApplyDat,1,mean)
-apply(ApplyDat,2,mean)
 apply(ApplyDat,1,var)
 apply(ApplyDat,1,sd)
 apply(ApplyDat,1,range)
 apply(ApplyDat,1,length)
 ```
 
+## Argumente der Funktion apply
 
 - Für `margin=1` die Funktion `mean` auf die Reihen angewendet,
 
@@ -145,21 +147,25 @@ ApplyDat <- data.frame(Income=rnorm(5,1400,200),
 ```
 
 
-Auch andere Funktionen können eingesetzt werden.... 
-
-Auch selbst programmierte Funktionen
-
-Im Beispiel wird die einfachste eigene Funktion angewendet.
+- Auch andere Funktionen können eingesetzt werden.... - Auch selbst programmierte Funktionen
+- Im Beispiel wird die einfachste eigene Funktion angewendet.
 
 ```{r}
 ApplyDat
+```
 
+## Beispiel Funktion tapply
+
+
+```{r}
 tapply(ApplyDat$Income,ApplyDat$Sex,mean)
 
 tapply(ApplyDat$Income,
        ApplyDat$Sex,function(x)x)
 ```
 
+## Links Datenanalyse
 
+- Benutzung von `apply`, `tapply`, etc. ([R-bloggers](http://www.r-bloggers.com/using-apply-sapply-lapply-in-r/)) 
+- [Zurück zur Gliederung](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
 
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)

@@ -13,16 +13,18 @@ Ein Plot sagt mehr als 1000 Worte
 Plot ist nicht gleich Plot
 --------------------------
 
-        -  Bereits das base Package bringt eine große Menge von Plot Funktionen mit
-        -  Das lattice Packet erweitert dessen Funktionalität
-        -  Eine weit über diese Einführung hinausgehende Übersicht findet sich in Murrell, P (2006): R Graphics.
+-   Bereits das base Package bringt eine große Menge von Plot Funktionen
+    mit
+-   Das lattice Packet erweitert dessen Funktionalität
+-   Eine weit über diese Einführung hinausgehende Übersicht findet sich
+    in Murrell, P (2006): R Graphics.
 
 CRAN Task Views
 ---------------
 
 -   Zu einigen Themen sind alle Möglichkeiten in R zusammengestellt.
     ([Übersicht der Task Views](https://cran.r-project.org/web/views/))
--   Beispiel:
+-   Task View zu Thema
     [Graphiken](https://cran.r-project.org/web/views/Graphics.html)
 
 Datensatz
@@ -47,16 +49,12 @@ Wir erstellen ein Histogramm der Variable gcsescore:
 
 Die Funktion hist()
 
-    # Histogramm
     ?hist
 
-    ## starting httpd help server ...
-
-    ##  done
-
+    # Histogramm
     hist(Chem97$gcsescore)
 
-![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-2-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-3-1.png)<!-- -->
 
 Graphik speichern
 -----------------
@@ -117,7 +115,7 @@ Histogramm
          main="Hallo Welt",ylab="y-Werte",
          xlab="x-Werte")
 
-![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-4-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-5-1.png)<!-- -->
 
 Weitere Argumente:
 
@@ -130,40 +128,49 @@ Barplot
 
 -   Die Funktion barplot() erzeugt aus einer Häufigkeitstabelle einen
     Barplot
-    -   Ist das übergebene Tabellen-Objekt zweidimensional wird ein
-        bedingter Barplot erstellt
+-   Ist das übergebene Tabellen-Objekt zweidimensional wird ein
+    bedingter Barplot erstellt
 
 <!-- -->
 
     tabScore <- table(Chem97$score)
-    barplot(tabScore)
 
-![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-6-1.png)<!-- -->
+    barplot(tabScore)
 
 Barplots und barcharts
 ----------------------
 
-Mehr Farben:
-
     barplot(tabScore)
 
-![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-7-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-9-1.png)<!-- -->
+
+Mehr Farben:
+------------
 
     barplot(tabScore,col=rgb(0,0,1))
 
-![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-7-2.png)<!-- -->
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-10-1.png)<!-- -->
+
+Grüne Farbe
+-----------
 
     barplot(tabScore,col=rgb(0,1,0))
 
-![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-7-3.png)<!-- -->
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-11-1.png)<!-- -->
+
+Rote Farbe
+----------
 
     barplot(tabScore,col=rgb(1,0,0))
 
-![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-7-4.png)<!-- -->
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-12-1.png)<!-- -->
+
+Transparent
+-----------
 
     barplot(tabScore,col=rgb(1,0,0,.3))
 
-![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-7-5.png)<!-- -->
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-13-1.png)<!-- -->
 
 Boxplot
 -------
@@ -176,10 +183,13 @@ Boxplot
 
     ?boxplot
 
+Horizontaler Boxplot
+--------------------
+
     boxplot(Chem97$gcsescore,
     horizontal=TRUE)
 
-![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-8-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-15-1.png)<!-- -->
 
 -   [Erklärung zu
     Boxplots](http://edoc.hu-berlin.de/dissertationen/gruenwald-andreas-2005-01-17/HTML/chapter2.html)
@@ -194,8 +204,58 @@ Gruppierte Boxplots
 -   Die bedingende Variable steht dabei auf der rechten Seite einer
     Tilde
 
-<!-- -->
+Beispiel grupierter Boxplot
+---------------------------
 
     boxplot(Chem97$gcsescore~Chem97$gender)
 
-![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-9-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-16-1.png)<!-- -->
+
+Alternativen zu Boxplot
+-----------------------
+
+Violinplot
+
+-   Baut auf Boxplot auf
+-   Zusätzlich Informationen über Dichte der Daten
+-   Dichte wird über Kernel Methode berechnet.
+-   weißer Punkt - Median
+-   Je weiter die Ausdehnung, desto größer ist die Dichte an dieser
+    Stelle.
+
+<!-- -->
+
+    library(vioplot)
+    x <- rnorm(100)
+    y <- rnorm(100)
+    plot(x, y, xlim=c(-5,5), ylim=c(-5,5))
+    vioplot(x, col="tomato", horizontal=TRUE, at=-4, add=TRUE,lty=2, rectCol="gray")
+    vioplot(y, col="cyan", horizontal=FALSE, at=-4, add=TRUE,lty=2)
+
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-17-1.png)<!-- -->
+
+Alternativen zum Boxplot
+------------------------
+
+    library(beanplot)
+    par(mfrow = c(1,2))
+    boxplot(count~spray,data=InsectSprays,col="blue")
+    beanplot(count~spray,data=InsectSprays,col="orange")
+
+![](EinfacheGrafiken_files/figure-markdown_strict/unnamed-chunk-18-1.png)<!-- -->
+
+Grafiken für bedingte, bi- und multivariate Verteilungen
+========================================================
+
+Scatterplots
+------------
+
+-   Ein einfacher two-way scatterplot kann mit der Funktion plot()
+    erstellt werden
+-   plot() muss mindestens ein x und ein y Beobachtungsvektor übergeben
+    werden
+-   Um die Farbe der Plot-Symbole anzupassen gibt es die Option col
+    (Farbe als character oder numerisch)
+-   Die Plot-Symbole selbst können mit pch} (plotting character)
+    angepasst werden (character oder numerisch)
+-   Die Achenbeschriftungen (labels) werden mit xlab und ylab definiert

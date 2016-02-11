@@ -1,12 +1,11 @@
 ---
-title: "Multidimensional"
+title: "Einführung in die Datenanalyse mit R - Multidimensional"
 author: "Jan-Philipp Kolb"
 date: "9 Februar 2016"
-output: md_document
+output: html_document
 ---
 
 ## Edgar Anderson's Iris Daten
-
 
 ```{r}
 data(iris)
@@ -69,7 +68,7 @@ cor(iris[,1:4], method = "spearman")
 
 ## Levelplot
 
-```{r}
+```{r,message=F}
 library("lattice")
 library("AER")
 data(BankWages)
