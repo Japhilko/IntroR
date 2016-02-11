@@ -38,28 +38,28 @@ Unterlagen für den Kurs 2016.
 
 - Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datenanalyse.md))
 
-    - Aufgabe - Apply Funktion verwenden ([Browser]())
+    - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Apply.Rmd))
 
 ## Liebe auf den ersten Plot – Grafiken mit R	
 
 - Einfache Grafiken
 ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/EinfacheGrafiken.md))
 
-
+    - Aufgabe - Barplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Barplot.md))
 ## Noch mehr Grafiken - multidimensional
 
 - Zusammenhang ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Multidimensional.md))
 
 - Das lattice Paket ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/LatticePaket.Rmd))
 
-    - Aufgabe - Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Aufgabe_Datenanalyse.Rmd))
+    - Aufgabe - OECD Datensatz ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Aufgabe_OECDdata.Rmd))
     
     
 ## Regression – Überblick der Methoden in R
 
 - Die lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/LineareRegression.md))
 
-    - Aufgabe lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_LineareRegression.Rmd))
+    - Aufgabe - lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_LineareRegression.Rmd))
 
 - Die logistische Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/logistischeRegression.md))
 

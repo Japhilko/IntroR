@@ -1,0 +1,19 @@
+---
+title: "Aufgabe - Barplot"
+author: "Jan-Philipp Kolb"
+date: "11 Februar 2016"
+output: md_document
+---
+
+## Aufgabe - einfache Grafiken
+
+- Laden Sie den Datensatz VADeaths und erzeugen Sie den
+folgenden plot:
+
+```{r,echo=F}
+library(datasets)
+data(VADeaths)
+barplot(VADeaths, border = "dark blue",beside=T,
+        col=c(1,2,3,4,5)) 
+```
+
