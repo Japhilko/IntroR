@@ -2,7 +2,7 @@
 title: "Einführung in die Datenanalyse mit R"
 author: "Jan-Philipp Kolb"
 date: "9 Februar 2016"
-output: html_document
+output: pdf_document
 ---
 
 
@@ -1332,7 +1332,7 @@ cor(iris[,1:4], method = "spearman")
 
 ## Levelplot
 
-```{r}
+```{r,message=F}
 library("lattice")
 library("AER")
 data(BankWages)
@@ -1362,3 +1362,6 @@ mosaicplot(~ Sex + Age + Survived,
 -  Umsetzung in R
 
 Sachs - [Angewandte Statistik mit R](https://books.google.de/books/about/Angewandte_Statistik.html?id=S-zXmAEACAAJ&redir_esc=y)
+
+# Das lattice Paket
+

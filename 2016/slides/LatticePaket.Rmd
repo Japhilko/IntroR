@@ -2,14 +2,14 @@
 title: "Das Lattice Paket"
 author: "Jan-Philipp Kolb"
 date: "9 Februar 2016"
-output: html_document
+output: beamer_presentation
 ---
 
 ## Das lattice-Paket
 
 - It is designed to meet most typical graphics needs with minimal tuning, but can also be easily extended to handle most nonstandard requirements. 
 
-[Lattice Graphics](http://stat.ethz.ch/R-manual/R-devel/library/lattice/html/Lattice.html)
+<http://stat.ethz.ch/R-manual/R-devel/library/lattice/html/Lattice.html>
 
 ## Histogramm mit Lattice
 
