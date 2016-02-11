@@ -16,7 +16,7 @@ Beschrieben wird Wegstrecke, dreier Spielzeugautos die in unterschiedlichen Wink
 - car: Autotyp (1, 2 oder 3)
 
 (a) Lesen        Sie        den        Datensatz
-Spielzeugautos        in        einen        dataframe
+toycars        in        einen        dataframe
 data
 ein        und        wandeln        Sie        die
 Variable car des        Datensatzes        in        einen        Faktor        (as.factor)        um.
@@ -37,14 +37,8 @@ ade          in          einen          Plot          von
 distance
 gegen
 angle
-einfügen.                Deutet          das
-R
-2
-jeweils          auf          eine          gute
-Mo dellanpassung        hin?
+einfügen. Deutet          das
+$$ R^2 $$ jeweils auf eine gute Modellanpassung hin?
 
-(e) Führen        Sie        weitere        deskriptive        Diagnosen        mit        Hilfe        der
-plot.lm()
-Funktion        durch.           Besteht
-ein          linearer          Zusammenhang?                Sind          die          Residuen          normalverteilt?                Haben          die          Fehler          gleiche
-Varianz?
+
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)

@@ -46,6 +46,7 @@ Unterlagen für den Kurs 2016.
 ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/EinfacheGrafiken.md))
 
     - Aufgabe - Barplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Barplot.md))
+    
 ## Noch mehr Grafiken - multidimensional
 
 - Zusammenhang ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Multidimensional.md))
@@ -62,6 +63,8 @@ Unterlagen für den Kurs 2016.
     - Aufgabe - lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_LineareRegression.Rmd))
 
 - Die logistische Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/logistischeRegression.md))
+
+    - Aufgabe - Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Datenanalyse.Rmd))
 
 ## Ausblick – Möglichkeiten mit R
 

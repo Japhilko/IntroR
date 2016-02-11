@@ -20,3 +20,6 @@ weichung         geteilt.             Somit         b esitzen         die       
 weichung        von        1.           Standardisieren        Sie        die        Spalten        der        Matrix
 A
 .
+
+
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
