@@ -1,7 +1,7 @@
 Einführung in die Datenanalyse mit R
 ===================
 
-Unterlagen für den Kurs 2016.
+Unterlagen für den Kurs 2016. Die Foliensätze für den ersten und zweiten Tag sind als pdf komplett oder als Browser Version (siehe unten) in diesem Github Ordner enthalten. Der rcode in den Folien lässt sich mit den Dateien im [rcode Ordner](https://github.com/Japhilko/IntroR/tree/master/2016/rcode) nachverfolgen. 
 
 ## Einführung und Vorbereitung
 
