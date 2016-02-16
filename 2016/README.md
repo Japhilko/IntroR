@@ -72,7 +72,7 @@ Unterlagen für den Kurs 2016. Die Foliensätze für den [ersten](https://github
 
 - Faktoren in R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Faktoren.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Faktoren.pdf))
 
-- Grafiken mit ggplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ggplot2.Rmd))
+- Grafiken mit ggplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ggplot2.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ggplot2.pdf))
 
 - Karten erstellen mit R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/KartenErstellen.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2016/slides/KartenErstellen.pdf))
 
@@ -80,6 +80,6 @@ Unterlagen für den Kurs 2016. Die Foliensätze für den [ersten](https://github
 
 - Regressionsdiagnostik mit R-Paket visreg ([pdf](https://github.com/Japhilko/IntroR/blob/master/2016/slides/pdfVersion/GESIS_R_Kurs_2016_visreg.pdf))
 
-- Weitere Themen im Ausblick ([Browser](https://github.com/Japhilko/GeoData/raw/master/2015/slides/Ausblick.Rmd))
+- Weitere Themen im Ausblick ([Browser](https://github.com/Japhilko/GeoData/raw/master/2015/slides/Ausblick.Rmd) | [pdf](https://github.com/Japhilko/GeoData/raw/master/2015/slides/Ausblick.pdf))
 
 - Beispiel einer [interaktiven Karte](http://rpubs.com/Japhilko82/Campsites) und [Rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive%20maps.R) um eine interaktive Karte mit leaflet zu erzeugen.

@@ -74,3 +74,8 @@ kable(head(iris), format = "latex")
 Folien zum [Workshop](https://github.com/Japhilko/npRegression/tree/master/slides):
 
 <https://github.com/Japhilko/npRegression/tree/master/slides>
+
+```{r,eval=F}
+library(splines)
+```
+
