@@ -1,15 +1,15 @@
 ---
 title: "Eine Karte der Gemeinden im Saarland"
 author: "Jan-Philipp Kolb"
-date: "9. Februar 2016"
-output: html_document
+date: "9 Februar 2016"
+output: beamer_presentation
 ---
 
 ## Datenquelle
 
 Global Administrative Boundaries (GADM)
 
-```{r,cache=T}
+```{r}
 library("raster")
 DEU4 <- getData('GADM', country='DEU', level=4)
 ```
@@ -31,4 +31,21 @@ SAL <- DEU4[DEU4@data$ID_1==12,]
 plot(SAL)
 ```
 
-## 
+## Karten mit Farbe
+
+```{r}
+plot(SAL,col="blue")
+```
+
+## Neue Variable erzeugen
+
+```{r}
+SAL$Zufall <- runif(length(SAL))
+```
+
+## Das Paket sp
+```{r}
+library(sp)
+spplot(SAL,"Zufall")
+```
+
