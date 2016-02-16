@@ -1,0 +1,39 @@
+---
+title: "Einführung in die Datenanalyse mit R - Ausblick"
+author: "Jan-Philipp Kolb"
+date: "16. Februar 2016"
+output: html_document
+---
+
+## Interaktive Grafiken mit R
+
+Quick-R - [Interaktive Grafiken ](http://www.statmethods.net/advgraphs/interactive.html)
+
+```{r,eval=F}
+# install.packages("iplots",dep=TRUE)
+library(iplots)
+cyl.f <- factor(mtcars$cyl)
+gear.f <- factor(mtcars$factor)
+attach(mtcars)
+ihist(mpg) # histogram
+ibar(carb) # barchart
+iplot(mpg, wt) # scatter plot
+ibox(mtcars[c("qsec","disp","hp")]) # boxplots
+ipcp(mtcars[c("mpg","wt","hp")]) # parallel coordinates
+imosaic(cyl.f,gear.f) # mosaic plot 
+```
+
+
+## R-Paket rggobi
+
+```{r,eval=F}
+library(rggobi)
+g <- ggobi(mydata) 
+```
+
+
+
+
+## Tabellen für Publikationen
+
+
