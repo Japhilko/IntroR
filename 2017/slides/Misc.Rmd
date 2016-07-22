@@ -1,0 +1,14 @@
+---
+title: "Miscelaneous"
+author: "Jan-Philipp Kolb"
+date: "22 Juli 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Misc
+
+[Unstatistik des Monats](http://www.rwi-essen.de/unstatistik/)
