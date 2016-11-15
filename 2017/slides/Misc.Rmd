@@ -2,7 +2,9 @@
 title: "Miscelaneous"
 author: "Jan-Philipp Kolb"
 date: "22 Juli 2016"
-output: html_document
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -11,4 +13,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Misc
 
-[Unstatistik des Monats](http://www.rwi-essen.de/unstatistik/)
+- [Unstatistik des Monats](http://www.rwi-essen.de/unstatistik/)
+
+- [Visualisierung mit R](http://www.stat.ruhr-uni-bochum.de/teaching-archiv/teaching-sose2012/teaching/vis/visu.pdf)
