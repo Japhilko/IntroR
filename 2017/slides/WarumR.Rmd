@@ -25,6 +25,8 @@ output: beamer_presentation
 
 - R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
 
+- [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
+
 ## Übersicht - warum R
 
 ![pic](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)

@@ -25,3 +25,5 @@ knitr::opts_chunk$set(echo = FALSE)
 - [Importing Data into R](https://thepracticalr.wordpress.com/2016/09/23/importing-data-into-r/)
 
 - [Mapping von Arbeitslosendaten in den USA](https://www.r-bloggers.com/mapping-unemployment-data-2016/)
+
+- [Das Paket readr](https://www.r-bloggers.com/readrproblems-returns-tidy-data/)
