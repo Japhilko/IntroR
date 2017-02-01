@@ -1,0 +1,18 @@
+---
+title: "Links"
+author: "Jan-Philipp Kolb"
+date: "1 Februar 2017"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+- [Der Anfang mit R](https://www.r-bloggers.com/getting-started-with-r-a-beginners-guide-part-2/)
+
+- [17 Tricks für das Arbeiten mit RStudio](https://www.rstudio.com/rviews/2017/01/27/january-17-tips-and-tricks/)
