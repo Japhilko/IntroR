@@ -1,0 +1,25 @@
+---
+title: "Import von Dateien"
+author: "Jan-Philipp Kolb"
+date: "1 Februar 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## 
+
+
+- [Datenimport bei R-bloggers](https://www.r-bloggers.com/importing-data-into-r-part-ii/)
+
+
+![Import Button](https://i1.wp.com/thepracticalr.files.wordpress.com/2017/01/rstudio-old-import.png?w=456&ssl=1)
+
+
+## Links
+
+- [Importing Data into R](https://thepracticalr.wordpress.com/2016/09/23/importing-data-into-r/)
