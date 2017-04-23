@@ -1,8 +1,10 @@
 ---
 title: "Einführung in die Datenanalyse mit R - Modularer Aufbau von R"
 author: "Jan-Philipp Kolb"
-date: "10 Februar 2016"
-output: html_document
+date: "10 Februar 2017"
+output: 
+  html_document: 
+    keep_md: yes
 ---
 
 ## Modularer Aufbau
@@ -78,3 +80,4 @@ Paket für den Import/Export - [foreign](http://cran.r-project.org/web/packages/
 - [Explore Packages Currently on CRAN
 ](https://mran.microsoft.com/packages/)
 
+- [Pakete die in letzter Zeit von CRAN heruntergeladen wurden](https://gallery.shinyapps.io/cran-gauge/)
