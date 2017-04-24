@@ -17,14 +17,14 @@ Unterlagen für den Kurs 2017. Die Foliensätze für den [ersten](https://github
 
 - Warum R nutzen? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/WarumR.md) |  [pdf](https://github.com/Japhilko/IntroR/raw/master/2016/slides/WarumR.pdf) )
 
-- Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/FreundGUI.md) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GUI.pdf))
+- Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/FreundGUI.md) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GUI.pdf))
 
     - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Vorbereitung.md))
 
 
-- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.R) )
+- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.R) )
 
-    - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Zuweisung.md))
+    - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zuweisung.md))
 
 - Datentypen und Indizieren
 ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.md)| [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.R))
