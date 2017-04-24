@@ -1,8 +1,19 @@
 ---
-title: "Einführung in die Datenanalyse mit R - Warum R nutzen?"
+title: "Intro Datenanalyse mit R - Warum R nutzen?"
 author: "Jan-Philipp Kolb"
-date: "22 September 2016"
-output: beamer_presentation
+date: "03 Mai 2017"
+output:
+  html_document:
+    keep_md: yes
+  pdf_document:
+    toc: yes
+  beamer_presentation:
+    colortheme: beaver
+    fig_caption: no
+    fonttheme: structurebold
+    highlight: tango
+    theme: CambridgeUS
+    toc: yes
 ---
 
 ## Gründe für die Nutzung von R
@@ -29,7 +40,12 @@ output: beamer_presentation
 
 ## Übersicht - warum R
 
-![pic](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+![](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+
+## [Die Popularität von R](https://gallery.shinyapps.io/cran-gauge/)
+
+![](https://github.com/Japhilko/RInterfaces/raw/master/slides/figure/CRANdownloads.PNG)
+
 
 ## R Nutzer rund um die Welt
 

@@ -1,5 +1,8 @@
-Einführung in die Datenanalyse mit R
-===================
+# Einführung in die Datenanalyse mit R
+Jan-Philipp Kolb  
+24 April 2017  
+
+
 
 Unterlagen für den Kurs 2017. Die Foliensätze für den [ersten](https://github.com/Japhilko/IntroR/blob/master/2016/slides/pdfVersion/GESIS_R_Kurs_2016_Teil1.pdf) und [zweiten](https://github.com/Japhilko/IntroR/blob/master/2016/slides/pdfVersion/GESIS_R_Kurs_2016_Teil2.pdf) Tag sind als pdf komplett oder als Browser Version (siehe unten) in diesem Github Ordner enthalten. Der rcode in den Folien lässt sich mit den Dateien im [rcode Ordner](https://github.com/Japhilko/IntroR/tree/master/2016/rcode) nachverfolgen. 
 
@@ -30,7 +33,7 @@ Unterlagen für den Kurs 2017. Die Foliensätze für den [ersten](https://github
 
 - Exkurs: Datenquellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datenquellen.md))
 
-- Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Import.Rmd))
+- Datenimport ([Browser](slides/Import.Rmd))
 
     - Aufgabe Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Datenimport.md))
 
