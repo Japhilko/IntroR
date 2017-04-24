@@ -1,33 +1,13 @@
----
-title: "Intro Datenanalyse mit R - Datenquellen"
-author: "Jan-Philipp Kolb"
-date: "3 Mai 2017"
-output:
-  slidy_presentation:
-    highlight: espresso
-    keep_md: yes    
-  html_document:
-    keep_md: yes
-  beamer_presentation:
-    colortheme: beaver
-    fig_caption: no
-    fonttheme: structurebold
-    highlight: espresso
-    theme: CambridgeUS
----
+# EinfÃ¼hrung in die Datenanalyse mit R - Datenquellen
+Jan-Philipp Kolb  
+3 Mai 2017  
 
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 
-```{r,echo=F}
-library(knitr)
-ca=F
-Ex=F
-```
+
+
 
 
 ## Datenzugang
@@ -53,7 +33,8 @@ Amazon Web Services ([AWS](http://aws.amazon.com/de/public-data-sets/))
 
 - [FAO Datenbank](http://cran.r-project.org/web/packages/FAOSTAT/index.html)
 
-```{r,eval=Ex}
+
+```r
 library("FAOSTAT")
 ```
 
@@ -61,7 +42,8 @@ library("FAOSTAT")
 
 - National health and nutrition examination survey
 
-```{r,eval=Ex}
+
+```r
 library(survey)
 data(nhanes)
 ```
@@ -69,24 +51,25 @@ data(nhanes)
 
 ## Das R-Paket datasets
 
-```{r,eval=Ex}
+
+```r
 library(datasets)
 ```
 
 Beispiel Erdbeben Datensatz:
 
-```{r,eval=Ex}
+
+```r
 head(quakes)
 ```
 
 
-```{r,echo=F,eval=Ex}
-kable(head(quakes))
-```
+
 
 ## Datensatz zum US Zensus
 
-```{r,message=F,eval=Ex}
+
+```r
 library(UScensus2010)
 ```
 
@@ -94,37 +77,32 @@ library(UScensus2010)
 
 [`WDI`](https://cran.r-project.org/web/packages/WDI/index.html) - World Development Indicators (World Bank) - [Einführung in das Paket](https://github.com/vincentarelbundock/WDI)
 
-```{r,message=F,eval=Ex}
+
+```r
 library(WDI)
 ```
 
-```{r,eval=F,eval=Ex}
+
+```r
 WDIsearch('gdp')[1:10,]
 ```
 
-```{r,echo=F,eval=Ex}
-kable(WDIsearch('gdp')[1:10,])
-```
+
 
 
 ## Nutzung von WDI Daten
 
-```{r,cache=ca,eval=Ex}
+
+```r
 dat <-  WDI(indicator='NY.GDP.PCAP.KD', country=c('MX','CA','US'), start=1960, end=2012)
 head(dat)
 ```
 
-```{r,echo=F,eval=Ex}
-kable(head(dat))
-```
+
 
 ## Erste Grafik mit WDI Daten
 
-```{r,echo=F,cache=ca,eval=Ex}
-library(ggplot2)
-ggplot(dat, aes(year, NY.GDP.PCAP.KD, color=country)) + geom_line() + 
-    xlab('Year') + ylab('GDP per capita')
-```
+
 
 
 ## OpenStreetMap
@@ -135,13 +113,15 @@ ggplot(dat, aes(year, NY.GDP.PCAP.KD, color=country)) + geom_line() +
 
 ## Download von OpenStreetMap Daten
 
-```{r,message=F,cache=ca,warning=F,eval=Ex}
+
+```r
 library(osmar)
 api <- osmsource_api()
 library(ggmap)
 ```
 
-```{r,cache=ca,warning=F,eval=F}
+
+```r
 cityC <- geocode("Berlin",source="google")
 bb <- center_bbox(cityC$lon,cityC$lat,1000, 1000)
 uaBerlin <- get_osm(bb, source = api)
@@ -159,7 +139,8 @@ uaBerlin <- get_osm(bb, source = api)
 
 ## TwittR
 
-```{r,eval=F,cache=ca,warning=F}
+
+```r
 library(twitteR)
 library(streamR)
 ```
@@ -168,7 +149,8 @@ library(streamR)
 
 ## worldHires Daten
 
-```{r,cache=ca,warning=F,message=F,eval=Ex}
+
+```r
 library(mapdata)
 data(worldHiresMapEnv)
 map('worldHires', col=1:10)
@@ -181,7 +163,8 @@ map('worldHires', col=1:10)
 
 - [Paket HistData](http://www.inside-r.org/packages/cran/HistData)
 
-```{r,cache=ca,warning=F,eval=Ex}
+
+```r
 library(HistData)
 data(Arbuthnot)
 ```
@@ -193,7 +176,8 @@ data(Arbuthnot)
 - Nutzung von GDELT Daten ([Beispiel 1](http://quantifyingmemory.blogspot.de/2013/04/mapping-gdelt-data-in-r-and-some.html), 
 [Beispiel 2](http://www.kalevleetaru.com/))
 
-```{r,eval=F,cache=ca,warning=F,eval=Ex}
+
+```r
 library(GDELTtools)
 test.filter <- list(ActionGeo_ADM1Code=c("NI", "US"), ActionGeo_CountryCode="US")
 test.results <- GetGDELT(start.date="1979-01-01", end.date="1979-12-31",
@@ -210,7 +194,8 @@ test.results <- GetGDELT(start.date="1979-01-01", end.date="1979-12-31",
 
 - Mehr Daten [hier](http://openflights.org/data.html)
 
-```{r,eval=F}
+
+```r
 link1 <- "http://openflights.svn.sourceforge.net/viewvc/openflights/
 openflights/data/airports.dat"
 airport <- read.csv(link1, header = F)
@@ -232,7 +217,8 @@ route <- read.csv(link2, header = F)
 
 - [ADFC/opengeodb](http://www.fa-technik.adfc.de/code/opengeodb/)
 
-```{r,eval=Ex}
+
+```r
 link <- "http://www.fa-technik.adfc.de/code/opengeodb/DE9.tab"
 info <- read.csv(link,sep="\t",header=F)
 ```

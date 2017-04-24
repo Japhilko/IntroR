@@ -1,29 +1,6 @@
----
-title: "Intro Datenanalyse mit R - Datenimport"
-author: "Jan-Philipp Kolb"
-date: "3 Mai 2017"
-output:
-  slidy_presentation:
-    highlight: espresso
-  html_document:
-    keep_md: yes
-  beamer_presentation:
-    colortheme: beaver
-    fig_caption: no
-    fonttheme: structurebold
-    highlight: espresso
-    theme: CambridgeUS
----
-
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
-```
-
-
-## Datenimport
-
-![](figure/Datenimport.PNG)
+# Einführung in die Datenanalyse mit R - Datenimport
+Jan-Philipp Kolb  
+3 Mai 2017  
 
 
 ## Dateiformate in R
@@ -46,7 +23,8 @@ R unterstützt von Haus aus schon einige wichtige Formate:
 
 So findet man heraus, in welchem Verzeichnis man sich gerade befindet
 
-```{r,eval=F}
+
+```r
 getwd()
 ```
 
@@ -54,7 +32,8 @@ So kann man das Arbeitsverzeichnis ändern:
 
 Man erzeugt ein Objekt in dem man den Pfad abspeichert:
 
-```{r,eval=F}
+
+```r
 main.path <- "C:/" # Beispiel für Windows
 main.path <- "/users/Name/" # Beispiel für Mac
 main.path <- "/home/user/" # Beispiel für Linux
@@ -62,7 +41,8 @@ main.path <- "/home/user/" # Beispiel für Linux
 
 Und ändert dann den Pfad mit setwd()
 
-```{r,eval=F}
+
+```r
 setwd(main.path)
 ```
 
@@ -79,7 +59,8 @@ Bei Windows ist es wichtig Slashs anstelle von Backslashs zu verwenden.
 -  Dann kann `read.csv()` genutzt werden um die Daten einzulesen.
 - Bei Deutschen Daten kann es sein, dass man `read.csv2()` wegen der Komma-Separierung braucht.
 
-```{r,eval=F}
+
+```r
 library(foreign)
 ?read.csv
 ?read.csv2
@@ -89,13 +70,15 @@ library(foreign)
 
 Zunächst muss das Arbeitsverzeichnis gesetzt werden, in dem sich die Daten befinden:
 
-```{r,eval=F}
+
+```r
 Dat <- read.csv("schuldaten_export.csv")
 ```
 
 Wenn es sich um Deutsche Daten handelt:
 
-```{r,eval=F}
+
+```r
 Dat <- read.csv2("schuldaten_export.csv")
 ```
 
@@ -103,7 +86,8 @@ Dat <- read.csv2("schuldaten_export.csv")
 
 Dateien können auch direkt aus dem Internet geladen werden:
 
-```{r,eval=F}
+
+```r
 link<- "http://www.statistik.at/web_de/static/
 mz_2013_sds_-_datensatz_080469.sav"
 
@@ -113,7 +97,8 @@ Dat <- read.spss(link,to.data.frame=T)
 
 ## stata Dateien einlesen
 
-```{r,eval=F}
+
+```r
 MZ02 <- read.dta("MZ02.dta")
 ```
 
@@ -121,21 +106,9 @@ MZ02 <- read.dta("MZ02.dta")
 
 ## Datenmanagement ähnlich wie in SPSS oder Stata
 
-```{r,eval=F}
+
+```r
 install.packages("Rz")
 library(Rz)
 ```
 
-## [Weitere Alternative Rcmdr](https://cran.r-project.org/web/packages/Rcmdr/index.html)
-
-```{r,eval=F}
-install.packages("Rcmdr")
-```
-
-- [Funktioniert auch mit Rstudio](http://www.rcommander.com/)
-
-```{r,eval=F}
-library(Rcmdr)
-```
-
-![](figure/Rcommander.PNG)

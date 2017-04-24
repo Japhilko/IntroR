@@ -1,12 +1,8 @@
 ---
-title: "Einführung in die Datenanalyse mit R - Erster Tag"
+title: "Intro Datenanalyse mit R - Erster Tag"
 author: "Jan-Philipp Kolb"
 date: "03 Mai 2017"
 output:
-  html_document:
-    keep_md: yes
-  pdf_document:
-    toc: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
@@ -14,6 +10,12 @@ output:
     highlight: tango
     theme: CambridgeUS
     toc: yes
+  html_document:
+    keep_md: yes
+  pdf_document:
+    toc: yes
+  slidy_presentation:
+    highlight: tango
 ---
 
 
