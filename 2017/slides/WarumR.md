@@ -16,19 +16,33 @@ Jan-Philipp Kolb
 ## Gründe
 
 - R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
-
 - R ist eine Skriptsprache 
 - Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
-
 - R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
-
 - [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
 
 ## Übersicht - warum R
 
-![pic](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
+![](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
 
-## Die Popularität von R
+## R lässt sich kombinieren...
+
+![](figure/Rinterfaces.PNG)
+
+
+## R für SPSS Nutzer
+
+
+```r
+library("Rcmdr")
+```
+
+Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datamgmt/statistics/r/documents/r_for_sas_spss_users.pdf)
+
+
+
+
+## [Die Popularität von R](https://gallery.shinyapps.io/cran-gauge/)
 
 ![](https://github.com/Japhilko/RInterfaces/raw/master/slides/figure/CRANdownloads.PNG)
 
@@ -41,16 +55,24 @@ Jan-Philipp Kolb
 
 ![Aktivität Nutzer](http://spatial.ly/wp-content/uploads/2013/06/r_activity.png)
 
+## Erwartungen und Anforderungen
 
-## R für SPSS Nutzer
+Das kann diese Schulung vermitteln:
+- Eine praxisnahe Einfuhrung in die statistische
+Programmiersprache R
+- Erlernen einer Programmier-Strategie
+- Guten Stil
+- Die Vorzüge graphischer Datenanalyse
 
 
-```r
-library("Rcmdr")
-```
+## Erwartungen und Anforderungen II
+	
+	Das kann sie nicht leisten:
 
-Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datamgmt/statistics/r/documents/r_for_sas_spss_users.pdf)
-
+		-  Eine Einführungsveranstaltung in die Statistik geben
+		-  Grundlegende datenanalytische Konzepte vermitteln
+		-  Verständnis zementieren
+		-  Das Trainieren abnehmen
 
 ## Links
 
