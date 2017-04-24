@@ -1,0 +1,17 @@
+---
+title: "AddOn"
+author: "Jan-Philipp Kolb"
+date: "24 April 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Anzahl der Fragen in Hilfeforen zu R
+
+![R-help postings](http://i1.wp.com/badhessian.org/wp-content/uploads/2013/04/monthly_posts-300x150.png?zoom=2&resize=300%2C150)
+
+[Source](http://www.r-bloggers.com/has-r-help-gotten-meaner-over-time-and-what-does-mancur-olson-have-to-say-about-it/)

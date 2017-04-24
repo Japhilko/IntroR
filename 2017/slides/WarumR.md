@@ -58,6 +58,7 @@ Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datam
 ## Erwartungen und Anforderungen
 
 Das kann diese Schulung vermitteln:
+
 - Eine praxisnahe Einfuhrung in die statistische
 Programmiersprache R
 - Erlernen einer Programmier-Strategie
@@ -67,12 +68,19 @@ Programmiersprache R
 
 ## Erwartungen und Anforderungen II
 	
-	Das kann sie nicht leisten:
+Das kann sie nicht leisten:
 
-		-  Eine Einführungsveranstaltung in die Statistik geben
-		-  Grundlegende datenanalytische Konzepte vermitteln
-		-  Verständnis zementieren
-		-  Das Trainieren abnehmen
+-  Eine Einführungsveranstaltung in die Statistik geben
+-  Grundlegende datenanalytische Konzepte vermitteln
+-  Verständnis zementieren
+-  Das Trainieren abnehmen
+
+## R herunterladen:
+
+<http://www.r-project.org/>
+
+![](figure/CRAN1picture.PNG)
+
 
 ## Links
 
