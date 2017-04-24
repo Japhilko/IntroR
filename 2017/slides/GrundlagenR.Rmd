@@ -17,6 +17,12 @@ output:
     toc: no
 ---
 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
 ## R ist eine Objekt-orientierte Sprache
 
 Vektoren und Zuweisungen

@@ -6,3 +6,6 @@ library(knitr)
 setwd("C:/Users/kolbjp/Documents/GitHub/IntroR/2017/slides")
 purl("WarumR.Rmd")
 purl("GrundlagenR.Rmd")
+purl("Datentypen.Rmd")
+purl("Hilfe.Rmd")
+

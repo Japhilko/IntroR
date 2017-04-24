@@ -27,12 +27,12 @@ Unterlagen für den Kurs 2017. Die Foliensätze für den [ersten](https://github
     - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zuweisung.md))
 
 - Datentypen und Indizieren
-([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.md)| [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.R))
+([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.md)| [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.R))
 
-- Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Hilfe.Rmd) |
-[rcode](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Hilfe.R))
+- Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.md) |
+[rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.R))
 
-- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ModularerAufbau.Rmd) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/rcode/InstallPackages.R))
+- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ModularerAufbau.Rmd) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/rcode/InstallPackages.R))
 
     - Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Zusatzpakete.md))
 
