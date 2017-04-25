@@ -1,4 +1,6 @@
+# Jan-Philipp Kolb
 # Installieren aller benötigten Pakete
+# Tue Apr 25 21:44:31 2017
 
 
 install.packages("lattice")
