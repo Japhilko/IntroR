@@ -1,0 +1,186 @@
+---
+title: "Einführung in die Datenanalyse mit R - Datenanalyse"
+author: "Jan-Philipp Kolb"
+date: "8 Februar 2016"
+output: 
+  html_document: 
+    keep_md: yes
+  beamer_presentation:
+    colortheme: beaver
+    fig_caption: no
+    fonttheme: structurebold
+    highlight: espresso
+    theme: CambridgeUS
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
+```
+
+
+
+## Streuungsmaße
+
+Im base Package sind die wichtigsten Streuungsmaße enthalten:
+
+-  Varianz: `var()`
+-  Standardabweichung: `sd()`
+-  Minimum und Maximum: `min()` und `max()`
+-  Range: `range()`
+
+```{r}
+ab <- rnorm(100)
+
+var(ab)
+
+sd(ab)
+
+range(ab)
+```
+
+## Extremwerte
+
+```{r}
+min(ab)
+
+max(ab)
+```
+
+
+## Fehlende Werte
+
+- Sind `NA`s vorhanden muss dies der Funktion mitgeteilt werden
+
+```{r}
+ab[10] <- NA
+
+var(ab)
+```
+
+Bei fehlenden Werten muss ein weiteres Argument mitgegeben werden:
+
+```{r}
+var(ab,na.rm=T)
+```
+
+## Häufigkeiten und gruppierte Kennwerte
+
+-  Eine Auszählung der Häufigkeiten der Merkmale einer Variable liefert `table()`
+-  Mit `table()` sind auch Kreuztabellierungen möglich indem zwei Variablen durch Komma getrennt werden: `table(x,y)` liefert Häufigkeiten von `y` für gegebene Ausprägungen von `x`
+
+```{r}
+x <- sample(1:10,100,replace=T)
+
+table(x)
+```
+
+## Tabellieren - weiteres Beispiel
+
+```{r}
+musician <- sample(c("yes","no"),100,replace=T)
+```
+
+```{r,eval=F}
+?table
+```
+
+```{r}
+table(x)
+table(x,musician)
+data(esoph)
+table(esoph$agegp)
+```
+
+## Häufigkeitstabellen
+
+- `prop.table()` liefert die relativen Häufigkeiten
+- Wird die Funktion  außerhalb einer `table()` Funktion geschrieben erhält man die relativen Häufigkeiten bezogen auf alle Zellen
+
+Die Funktion prop.table()
+
+```{r,eval=F}
+table(esoph$agegp,esoph$alcgp)
+?prop.table
+prop.table(table(esoph$agegp,
+esoph$alcgp),1)
+```
+
+## Die aggregate Funktion
+
+- Mit der `aggregate()` Funktion können Kennwerte für Untergruppen erstellt werden
+- `aggregate(x,by,FUN)` müssen mindestens drei Argumente übergeben werden:
+
+```{r}
+aggregate(state.x77,by=list(state.region),mean)
+```
+
+			
+x: ein oder mehrere Beobachtungsvektor(en) für den der Kennwert berechnet werden soll
+
+by: eine oder mehrere bedingende Variable(n)
+
+FUN: die Funktion welche den Kennwert berechnet (z.B. `mean` oder `sd`)
+			
+			
+- Die Ausgabe kann mit Hilfe von `xtabs()` in eine schöne zweidimensionale Tabelle überführt werden
+
+## Beispieldatensatz - apply Funktion
+
+```{r}
+ApplyDat <- cbind(1:4,runif(4),rnorm(4))
+```
+
+```{r}
+apply(ApplyDat,1,mean)
+apply(ApplyDat,2,mean)
+```
+
+
+## Die Funktion apply
+
+```{r}
+apply(ApplyDat,1,var)
+apply(ApplyDat,1,sd)
+apply(ApplyDat,1,range)
+apply(ApplyDat,1,length)
+```
+
+## Argumente der Funktion apply
+
+- Für `margin=1` die Funktion `mean` auf die Reihen angewendet,
+
+- Für `margin=2` die Funktion `mean` auf die Spalten angewendet,
+
+- Anstatt `mean` können auch andere Funktionen wie `var`, `sd` oder `length` verwendet werden.
+
+## Die Funktion tapply
+
+```{r}
+ApplyDat <- data.frame(Income=rnorm(5,1400,200),
+                       Sex=sample(c(1,2),5,replace=T))
+```
+
+
+- Auch andere Funktionen können eingesetzt werden.... - Auch selbst programmierte Funktionen
+- Im Beispiel wird die einfachste eigene Funktion angewendet.
+
+```{r}
+ApplyDat
+```
+
+## Beispiel Funktion tapply
+
+
+```{r}
+tapply(ApplyDat$Income,ApplyDat$Sex,mean)
+
+tapply(ApplyDat$Income,
+       ApplyDat$Sex,function(x)x)
+```
+
+## Links Datenanalyse
+
+- Benutzung von `apply`, `tapply`, etc. ([R-bloggers](http://www.r-bloggers.com/using-apply-sapply-lapply-in-r/)) 
+- [Zurück zur Gliederung](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+

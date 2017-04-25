@@ -3,17 +3,17 @@ title: "Intro Datenanalyse mit R - Datenquellen"
 author: "Jan-Philipp Kolb"
 date: "3 Mai 2017"
 output:
-  slidy_presentation:
-    highlight: espresso
-    keep_md: yes    
-  html_document:
-    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
     fonttheme: structurebold
     highlight: espresso
     theme: CambridgeUS
+  html_document:
+    keep_md: yes
+  slidy_presentation:
+    highlight: espresso
+    keep_md: yes
 ---
 
 
