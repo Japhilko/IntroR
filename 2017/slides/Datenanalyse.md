@@ -1,6 +1,6 @@
 # Einführung in die Datenanalyse mit R - Datenanalyse
 Jan-Philipp Kolb  
-8 Februar 2016  
+3 Mai 2017  
 
 
 
@@ -9,7 +9,7 @@ Jan-Philipp Kolb
 
 ## Streuungsmaße
 
-Im base Package sind die wichtigsten Streuungsmaße enthalten:
+Im base Paket sind die wichtigsten Streuungsmaße enthalten:
 
 -  Varianz: `var()`
 -  Standardabweichung: `sd()`
@@ -18,29 +18,23 @@ Im base Package sind die wichtigsten Streuungsmaße enthalten:
 
 
 ```r
-ab <- rnorm(100)
-
-var(ab)
+ab <- rnorm(100); var(ab)
 ```
 
 ```
-## [1] 0.9352526
+## [1] 1.09818
 ```
 
 ```r
-sd(ab)
+sd(ab); range(ab)
 ```
 
 ```
-## [1] 0.9670846
-```
-
-```r
-range(ab)
+## [1] 1.047941
 ```
 
 ```
-## [1] -2.160182  2.104221
+## [1] -2.711828  3.291990
 ```
 
 ## Extremwerte
@@ -51,7 +45,7 @@ min(ab)
 ```
 
 ```
-## [1] -2.160182
+## [1] -2.711828
 ```
 
 ```r
@@ -59,7 +53,7 @@ max(ab)
 ```
 
 ```
-## [1] 2.104221
+## [1] 3.29199
 ```
 
 
@@ -86,7 +80,7 @@ var(ab,na.rm=T)
 ```
 
 ```
-## [1] 0.9426076
+## [1] 1.065551
 ```
 
 ## Häufigkeiten und gruppierte Kennwerte
@@ -104,7 +98,7 @@ table(x)
 ```
 ## x
 ##  1  2  3  4  5  6  7  8  9 10 
-## 13 10 10  9 10  9 10 10  7 12
+##  7 15 12  8 11  4 21  7  8  7
 ```
 
 ## Tabellieren - weiteres Beispiel
@@ -127,7 +121,7 @@ table(x)
 ```
 ## x
 ##  1  2  3  4  5  6  7  8  9 10 
-## 13 10 10  9 10  9 10 10  7 12
+##  7 15 12  8 11  4 21  7  8  7
 ```
 
 ```r
@@ -137,17 +131,20 @@ table(x,musician)
 ```
 ##     musician
 ## x    no yes
-##   1   5   8
-##   2   4   6
-##   3   5   5
-##   4   4   5
-##   5   4   6
-##   6   7   2
-##   7   6   4
-##   8   2   8
-##   9   2   5
-##   10  5   7
+##   1   2   5
+##   2   6   9
+##   3   7   5
+##   4   3   5
+##   5   7   4
+##   6   2   2
+##   7  12   9
+##   8   0   7
+##   9   4   4
+##   10  6   1
 ```
+
+## Eine weitere Tabelle
+
 
 ```r
 data(esoph)
@@ -160,6 +157,8 @@ table(esoph$agegp)
 ##    15    15    16    16    15    11
 ```
 
+
+
 ## Häufigkeitstabellen
 
 - `prop.table()` liefert die relativen Häufigkeiten
@@ -170,10 +169,43 @@ Die Funktion prop.table()
 
 ```r
 table(esoph$agegp,esoph$alcgp)
+```
+
+```
+##        
+##         0-39g/day 40-79 80-119 120+
+##   25-34         4     4      3    4
+##   35-44         4     4      4    3
+##   45-54         4     4      4    4
+##   55-64         4     4      4    4
+##   65-74         4     3      4    4
+##   75+           3     4      2    2
+```
+
+## Die Funktion `prop.table`
+
+
+```r
 ?prop.table
+```
+
+
+```r
 prop.table(table(esoph$agegp,
 esoph$alcgp),1)
 ```
+
+```
+##        
+##         0-39g/day     40-79    80-119      120+
+##   25-34 0.2666667 0.2666667 0.2000000 0.2666667
+##   35-44 0.2666667 0.2666667 0.2666667 0.2000000
+##   45-54 0.2500000 0.2500000 0.2500000 0.2500000
+##   55-64 0.2500000 0.2500000 0.2500000 0.2500000
+##   65-74 0.2666667 0.2000000 0.2666667 0.2666667
+##   75+   0.2727273 0.3636364 0.1818182 0.1818182
+```
+
 
 ## Die aggregate Funktion
 
@@ -221,7 +253,7 @@ apply(ApplyDat,1,mean)
 ```
 
 ```
-## [1] 0.3462635 0.6796828 1.4342631 1.7897246
+## [1] -0.09373921  1.07856979  1.35357634  1.63025803
 ```
 
 ```r
@@ -229,7 +261,7 @@ apply(ApplyDat,2,mean)
 ```
 
 ```
-## [1] 2.5000000 0.4846095 0.2028410
+## [1] 2.5000000 0.3648729 0.1116258
 ```
 
 
@@ -241,7 +273,7 @@ apply(ApplyDat,1,var)
 ```
 
 ```
-## [1] 1.071508 1.575817 1.963258 3.883120
+## [1] 1.7861350 0.9847855 2.1134911 4.2286751
 ```
 
 ```r
@@ -249,7 +281,7 @@ apply(ApplyDat,1,sd)
 ```
 
 ```
-## [1] 1.035137 1.255315 1.401163 1.970563
+## [1] 1.3364636 0.9923636 1.4537851 2.0563743
 ```
 
 ```r
@@ -257,9 +289,9 @@ apply(ApplyDat,1,range)
 ```
 
 ```
-##            [,1]       [,2]     [,3]      [,4]
-## [1,] -0.8471956 -0.4985381 0.298394 0.2164713
-## [2,]  1.0000000  2.0000000 3.000000 4.0000000
+##           [,1]       [,2]      [,3]      [,4]
+## [1,] -1.583443 0.02793073 0.2467135 0.3153202
+## [2,]  1.000000 2.00000000 3.0000000 4.0000000
 ```
 
 ```r
@@ -297,11 +329,11 @@ ApplyDat
 
 ```
 ##     Income Sex
-## 1 1060.830   2
-## 2 1561.165   2
-## 3 1620.092   2
-## 4 1541.126   1
-## 5 1318.332   1
+## 1 1024.354   1
+## 2 1742.006   2
+## 3 1479.342   1
+## 4 1428.800   2
+## 5 1470.242   1
 ```
 
 ## Beispiel Funktion tapply
@@ -314,7 +346,7 @@ tapply(ApplyDat$Income,ApplyDat$Sex,mean)
 
 ```
 ##        1        2 
-## 1429.729 1414.029
+## 1324.646 1585.403
 ```
 
 ```r
@@ -324,14 +356,16 @@ tapply(ApplyDat$Income,
 
 ```
 ## $`1`
-## [1] 1541.126 1318.332
+## [1] 1024.354 1479.342 1470.242
 ## 
 ## $`2`
-## [1] 1060.830 1561.165 1620.092
+## [1] 1742.006 1428.800
 ```
 
 ## Links Datenanalyse
 
-- Benutzung von `apply`, `tapply`, etc. ([R-bloggers](http://www.r-bloggers.com/using-apply-sapply-lapply-in-r/)) 
-- [Zurück zur Gliederung](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+- Die Benutzung von `apply`, `tapply`, etc. (Artikel bei [R-bloggers](http://www.r-bloggers.com/using-apply-sapply-lapply-in-r/)) 
 
+- [Quick-R zu deskriptiver Statistik](http://www.statmethods.net/stats/descriptives.html)
+
+- [Quick-R zur Funktion `aggregate`](http://www.statmethods.net/management/aggregate.html)
