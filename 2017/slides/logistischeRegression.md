@@ -1,22 +1,9 @@
----
-title: "Die logistische Regression"
-author: "Jan-Philipp Kolb"
-date: "4 Mai 2017"
-output: 
-  ioslides_presentation: 
-    keep_md: yes
-  beamer_presentation:
-    colortheme: beaver
-    fig_caption: no
-    fonttheme: structurebold
-    highlight: espresso
-    theme: CambridgeUS
----
+# Die logistische Regression
+Jan-Philipp Kolb  
+4 Mai 2017  
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T)
-```
+
 
 
 ## Agresti - [Categorical Data Analysis
@@ -48,11 +35,13 @@ knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T)
 
 ## Beispieldaten für die logistische Regression 
 
-```{r,eval=F}
+
+```r
 install.packages("HSAUR")
 ```
 
-```{r,message=F}
+
+```r
 library("HSAUR")
 data("plasma", package = "HSAUR")
 ```
@@ -61,13 +50,17 @@ data("plasma", package = "HSAUR")
 
 - [Kategoriale Daten: ](http://homepage.univie.ac.at/herbert.nagel/KategorialeDaten.pdf)
 
-```{r}
+
+```r
 cdplot(ESR ~ fibrinogen, data = plasma)
 ```
 
+![](logistischeRegression_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+
 ## [Logistische Regression](http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html) mit R
 
-```{r}
+
+```r
 plasma_glm_1 <- glm(ESR ~ fibrinogen, data = plasma, 
                     family = binomial())
 ```
@@ -75,44 +68,52 @@ plasma_glm_1 <- glm(ESR ~ fibrinogen, data = plasma,
 
 ## Weitere Beispieldaten
 
-```{r,eval=F}
+
+```r
 install.packages("faraway")
 ```
 
 
-```{r}
+
+```r
 library("faraway")
 ```
 
 
-```{r}
+
+```r
 data(orings)
 ```
 
-```{r,echo=F}
-library(knitr)
-kable(orings[1:3,])
-```
+
+ temp   damage
+-----  -------
+   53        5
+   57        1
+   58        1
 
 
 ## Generalisierte Regression mit R - weitere Funktionen
 
 - Logistisches Modell mit Probit-Link:
 
-```{r}
+
+```r
 probitmod <- glm(cbind(damage,6-damage) ~ temp, 
 	family=binomial(link=probit), orings)
 ```
 
 - Regression mit Zähldaten:
 
-```{r}
+
+```r
 modp <- glm(Species ~ .,family=poisson,gala)
 ```
 
 - Proportional odds logistic regression im Paket `MASS`:
 
-```{r}
+
+```r
 library("MASS")
 house.plr<-polr(Sat~Infl,weights=Freq,data=housing)
 ```
