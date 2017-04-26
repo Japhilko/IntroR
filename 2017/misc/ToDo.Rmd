@@ -11,11 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## 
 
-- Cheatsheets einführen
-
-- Möglichkeiten mit Paket visreg hinzufügen 
-
-- ggmap - einfache Beispiele
+- Aufgabe Datenimport abändern - anderer Datensatz
 
 
 ## 

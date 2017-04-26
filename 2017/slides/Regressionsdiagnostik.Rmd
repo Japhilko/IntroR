@@ -15,7 +15,7 @@ output:
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,cache=F,eval=F)
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,cache=F,eval=T)
 ```
 
 
@@ -23,68 +23,91 @@ knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,cache=F,eval=F)
 
 Ein einfaches Modell
 ```{r}
-r
 N <- 5
 x1 <- rnorm(N)
 y <- runif(N)
 ```
 
-## Regressionsdiagnostik mit Basis-R
+## Modellvorhersage machen
 
 ```{r}
 mod1 <- lm(y~x1)
 pre <- predict(mod1)
+```
+
+## Regressionsdiagnostik mit Basis-R
+
+```{r}
 plot(x1,y)
 abline(mod1)
 segments(x1, y, x1, pre, col="red")
 ```
 
 
-## Das visreg-Paket 
+## Das `visreg`-Paket 
 
 Ein Modell wird auf dem airquality Datensatz geschätzt
+
+```{r,eval=F}
+install.packages("visreg")
+```
+
 
 ```{r}
 library(visreg)
 fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
+```
+
+## Visualisierung
+
+```{r}
 visreg(fit)
 ```
 
+## [Und dann mit `visreg` visualisiert.](http://myweb.uiowa.edu/pbreheny/publications/visreg.pdf)
 
-## Das visreg-Paket 
+- Zweites Argument -  Spezifikation erklärende Variable für Visualisierung
 
-Und dann mit visreg visualisiert.
+```{r,eval=F}
+visreg(fit, "Wind", type = "contrast")
+```
 
-Siehe: http://myweb.uiowa.edu/pbreheny/publications/visreg.pdf
-
-Zweites Argument -  Spezifikation erklärende Variable für Visualisierung
+## Visualisierung mit dem Paket `visreg`
 
 ```{r}
 visreg(fit, "Wind", type = "contrast")
 ```
 
 
-## Das visreg-Paket 
+## Das `visreg`-Paket 
+
+- Das Default-Argument für type ist conditional.
 
 ```{r}
 visreg(fit, "Wind", type = "conditional")
 ```
 
-Das Default-Argument für type ist conditional.
 
+## Regression mit Faktoren
 
-## Effekte von Faktoren
-
-Mit visreg können die Effekte bei Faktoren visualisiert werden.
+Mit `visreg` können die Effekte bei Faktoren visualisiert werden.
 
 ```{r}
 airquality$Heat <- cut(airquality$Temp, 3, 
 	labels=c("Cool", "Mild", "Hot"))
 fit.heat <- lm(Ozone ~ Solar.R + Wind + Heat, 
 	data = airquality)
+```
+
+## Effekte von Faktoren
+
+
+```{r}
+par(mfrow=c(1,2))
 visreg(fit.heat, "Heat", type = "contrast")
 visreg(fit.heat, "Heat", type = "conditional")
 ```
+
 
 ## Das Paket visreg - Interaktionen
 
@@ -92,17 +115,23 @@ visreg(fit.heat, "Heat", type = "conditional")
 airquality$Heat <- cut(airquality$Temp, 3, 
 labels=c("Cool", "Mild", "Hot"))
 fit <- lm(Ozone ~ Solar.R + Wind * Heat, data = airquality)
+```
+
+## Steuern der Graphikausgabe mittels `layout`
+
+```{r}
 visreg(fit, "Wind", by = "Heat",layout=c(3,1))
 ```
 
-## Das Paket visreg - Interaktionen overlay
+
+## Das Paket `visreg` - Interaktionen overlay
 
 ```{r}
 fit <- lm(Ozone ~ Solar.R + Wind * Heat, data = airquality)
 visreg(fit, "Wind", by="Heat", overlay=TRUE, partial=FALSE)
 ```
 
-## Das Paket visreg - surface
+## Das Paket `visreg` - `visreg2d`
 
 ```{r}
 fit2 <- lm(Ozone ~ Solar.R + Wind * Temp, data = airquality)

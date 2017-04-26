@@ -89,6 +89,6 @@ Unterlagen für den Kurs 2017. Die Foliensätze für den [ersten](https://github
 
 - Regressionsdiagnostik mit R-Paket `visreg` ([Browser](slides/Regressionsdiagnostik.Rmd))
 
-- Weitere Themen im Ausblick ([Browser](https://github.com/Japhilko/GeoData/raw/master/2015/slides/Ausblick.Rmd) | [pdf](https://github.com/Japhilko/GeoData/raw/master/2015/slides/Ausblick.pdf))
+- Weitere Themen im Ausblick ([Browser](slides/Ausblick.Rmd) | [pdf](slides/Ausblick.pdf))
 
 - Beispiel einer [interaktiven Karte](http://rpubs.com/Japhilko82/Campsites) und [Rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive%20maps.R) um eine interaktive Karte mit leaflet zu erzeugen.
