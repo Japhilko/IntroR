@@ -103,6 +103,17 @@ Paket für den Import/Export - [foreign](http://cran.r-project.org/web/packages/
 
 - [Paket für Karten](http://www.r-bloggers.com/tag/maptools/)
 
+## Pakete von Github installieren
+
+```{r,eval=F}
+install.packages("devtools")
+library(devtools)
+
+install_github("hadley/ggplot2")
+```
+
+
+
 ## Wie bekomme ich einen Überblick
 
 - [Explore Packages Currently on CRAN

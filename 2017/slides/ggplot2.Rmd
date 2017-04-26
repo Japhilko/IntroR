@@ -1,35 +1,62 @@
 ---
-title: "Einführung in die Datenanalyse mit R - ggplot2"
+title: "Intro Datenanalyse mit R - ggplot2"
 author: "Jan-Philipp Kolb"
-date: "15 Februar  2016"
-output: beamer_presentation
+date: "04 Mai  2017"
+output: 
+  ioslides_presentation: 
+    keep_md: yes
+  beamer_presentation:
+    colortheme: beaver
+    fig_caption: no
+    fonttheme: structurebold
+    highlight: espresso
+    theme: CambridgeUS
 ---
 
-## Das Paket ggplot2
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T)
+```
+
+
+## Das Paket `ggplot2`
 
 - Entwickelt von Hadley Wickham
 - Viele Informationen unter:
 - <http://ggplot2.org/>
 - Den Graphiken liegt eine eigene Grammitik zu Grunde
 
-## Bibliothek ggplot2
+![](figure/GalleryGGplot2.PNG)
+
+## [Basiseinführung `ggplot2`](www.r-bloggers.com/basic-introduction-to-ggplot2/)
 
 <www.r-bloggers.com/basic-introduction-to-ggplot2/>
+
+```{r,eval=F}
+install.packages("ggplot2")
+```
+
 
 ```{r,message=F}
 library(ggplot2)
 ```
 
-## Der Datensatz
+## Der `diamonds` Datensatz
 
-```{r}
+```{r,eval=F}
 head(diamonds)
 ```
 
-## Wie nutzt man qplot
+```{r,echo=F}
+library(knitr)
+kable(head(diamonds))
+```
 
-- qplot wird für schnelle Graphiken verwendet
-- bei ggplot kann man alles bis ins Detail kontrollieren
+
+## Wie nutzt man `qplot`
+
+- Die Funktion `qplot` wird für schnelle Graphiken verwendet (quick plots)
+- bei der Funktion `ggplot` kann man alles bis ins Detail kontrollieren
 
 ```{r,message=F}
 # histogram
@@ -37,13 +64,13 @@ qplot(depth, data=diamonds)
 ```
 
 
-## Barplot
+## Ein Balkendiagramm
 
 ```{r}
 qplot(cut, depth, data=diamonds)
 ```
 
-## Barplot
+## Ein weiteres Balkendiagramm
 
 ```{r}
 qplot(factor(cyl), data=mtcars,geom="bar")
@@ -89,6 +116,8 @@ coord_flip()
 
 ## Wie nutzt man ggplot
 
+- die aestetics:
+
 ```{r}
 ggplot(diamonds, aes(clarity, fill=cut)) + geom_bar()
 ```
@@ -97,7 +126,12 @@ ggplot(diamonds, aes(clarity, fill=cut)) + geom_bar()
 
 ## Farben selber wählen
 
-Es wird das Paket RColorBrewer verwendet um die Farbpalette zu ändern
+Es wird das Paket `RColorBrewer` verwendet um die Farbpalette zu ändern
+
+```{r,eval=F}
+install.packages("RColorBrewer")
+```
+
 
 ```{r}
 library(RColorBrewer)
@@ -109,7 +143,7 @@ colScale <- scale_colour_manual(name = "cut",
 
 <http://stackoverflow.com/questions/6919025/>
 
-## Plot mit den Farben
+## Eine Graphik mit den gewählten Farben
 
 ```{r}
 p <- ggplot(diamonds,aes(carat, depth,colour = cut)) + 
@@ -128,8 +162,11 @@ ggsave("Graphik.jpg")
 
 - [Warum man ggplot2 für einfache Grafiken nutzen sollte](http://www.r-bloggers.com/why-i-use-ggplot2/)
 
+![](figure/WhyIuseggplot2.PNG)
+
 - [Einführung in ggplot2](https://opr.princeton.edu/workshops/Downloads/2015Jan_ggplot2Koffman.pdf)
 
+![](figure/introggplot2.PNG)
 - [ggplot2 Basics](http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html)
 
 - Noam Ross - [Quick Introduction to ggplot2](http://www.noamross.net/blog/2012/10/5/ggplot-introduction.html)
