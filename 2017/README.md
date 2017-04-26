@@ -10,53 +10,54 @@ Unterlagen für den Kurs 2017. Die Foliensätze für den [ersten](https://github
 
 - Warum R nutzen? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/WarumR.md) |  [pdf](https://github.com/Japhilko/IntroR/raw/master/2016/slides/WarumR.pdf) )
 
-- Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/FreundGUI.md) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GUI.pdf))
+- Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/FreundGUI.md) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GUI.pdf))
 
-    - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Vorbereitung.md))
+    - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Vorbereitung.md))
 
 
-- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.R) )
+- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.R) )
 
-    - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Zuweisung.md))
+    - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zuweisung.md))
 
 - Datentypen und Indizieren
-([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.md)| [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datentypen.R))
+([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.md)| [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.R))
 
-- Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Hilfe.Rmd) |
-[rcode](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Hilfe.R))
+- Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.md) |
+[rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.R))
 
-- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/ModularerAufbau.Rmd) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2016/rcode/InstallPackages.R))
+- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ModularerAufbau.Rmd) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/rcode/InstallPackages.R))
 
     - Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Zusatzpakete.md))
 
 ## Rein und raus – Datenimport und -export
 
-- Exkurs: Datenquellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datenquellen.md))
-
 - Datenimport ([Browser](slides/Import.Rmd))
 
     - Aufgabe Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Datenimport.md))
 
-- Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Export.Rmd))
+- Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Export.md))
+
+- Exkurs: Datenquellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenquellen.md))
+
 
 ## Ein erster Eindruck – Was uns die Daten sagen
 
-- Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Datenanalyse.md))
+- Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenanalyse.md))
 
     - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Apply.Rmd))
 
 ## Liebe auf den ersten Plot – Grafiken mit R	
 
 - Einfache Grafiken
-([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/EinfacheGrafiken.md))
+([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/EinfacheGrafiken.md))
 
     - Aufgabe - Barplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Barplot.md))
     
 ## Noch mehr Grafiken - multidimensional
 
-- Zusammenhang ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Multidimensional.md))
+- Zusammenhang ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Multidimensional.md))
 
-- Das lattice Paket ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/LatticePaket.Rmd))
+- Das lattice Paket ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/LatticePaket.md))
 
     - Aufgabe - OECD Datensatz ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Aufgabe_OECDdata.Rmd))
     

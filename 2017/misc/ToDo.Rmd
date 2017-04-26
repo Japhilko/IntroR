@@ -1,0 +1,21 @@
+---
+title: "ToDo"
+author: "Jan-Philipp Kolb"
+date: "26 April 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 
+
+- Cheatsheets einführen
+
+- Möglichkeiten mit Paket visreg hinzufügen 
+
+- ggmap - einfache Beispiele
+
+
+## 

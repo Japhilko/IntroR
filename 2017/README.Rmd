@@ -71,7 +71,7 @@ Unterlagen für den Kurs 2017. Die Foliensätze für den [ersten](https://github
     
 ## Regression – Überblick der Methoden in R
 
-- Die lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/LineareRegression.md))
+- Die lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/LineareRegression.md))
 
     - Aufgabe - lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_LineareRegression.Rmd))
 
