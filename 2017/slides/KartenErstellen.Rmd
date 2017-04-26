@@ -15,7 +15,7 @@ output:
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T)
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=F,cache=F)
 ```
 
 ```{r,echo=F,warning=F}
