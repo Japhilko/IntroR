@@ -2,12 +2,21 @@
 Jan-Philipp Kolb  
 3 Mai 2017  
 
+
+## Aufgabe - Datenimport
+
+- Gehen Sie auf [meine Github Seite](https://github.com/Japhilko/IntroR/blob/master/2017/data/oecd.dta?raw=true) und laden Sie den OECD Datensatz herunter
+- Laden Sie den Datensatz mit einer geeigneten Funktion in Ihre Console.
+
+- Finden Sie heraus, wieviele Beobachtungen und Variablen der Datensatz umfasst.
+
+
 ## Daten herunterladen
 
 ![](figure/DownloadData.PNG)
 
 
-### Paket laden
+## Paket laden
 
 - Am Besten eignet sich das Paket `rio`
 
@@ -18,14 +27,14 @@ library("rio")
 
 - [rio: A Swiss-Army Knife for Data I/O](https://cran.r-project.org/web/packages/rio/README.html)
 
-### Datensatz in die Console laden
+## Datensatz in die Console laden
 
 
 ```r
 oecd <- import("../../data/oecd.dta")
 ```
 
-### Den Datensatz anschauen
+## Den Datensatz anschauen
 
 
 ```r
@@ -57,7 +66,7 @@ head(oecd)
 ```
 
 
-### Wieviele Zeilen und Spalten
+## Wieviele Zeilen und Spalten
 
 
 ```r
