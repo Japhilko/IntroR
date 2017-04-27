@@ -1,0 +1,12 @@
+---
+title: "Intro Datenanalyse mit R"
+author: "Jan-Philipp Kolb"
+date: "27 April 2017"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 

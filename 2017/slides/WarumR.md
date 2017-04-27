@@ -106,8 +106,12 @@ Weil andere Programme große Fehler haben:
 
 - [Datum in Excel](https://coffeehouse.dataone.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/)
 
-- [Probleme mit Excel](http://www.biomedcentral.com/1471-2105/5/80)
+![](figure/Abandon.PNG)
 
-## Einordnung 
+## [Probleme mit Excel](http://www.biomedcentral.com/1471-2105/5/80)
 
-- [Vergleich mit anderen Programmen](https://www.inwt-statistics.de/blog-artikel-lesen/Statistik-Software-R_SAS_SPSS_STATA_im_Vergleich.html)
+![](figure/ExcelProblems.PNG)
+
+## [Vergleich mit anderen Programmen](https://www.inwt-statistics.de/blog-artikel-lesen/Statistik-Software-R_SAS_SPSS_STATA_im_Vergleich.html)
+
+![](figure/SoftwareVergleich.PNG)
