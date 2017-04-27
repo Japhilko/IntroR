@@ -1,15 +1,23 @@
 ---
 title: "Aufgabe Datenimport"
 author: "Jan-Philipp Kolb"
-date: "8 Februar 2016"
-output: md_document
+date: "3 Mai 2017"
+output:
+  slidy_presentation:
+    highlight: espresso
+  html_document:
+    keep_md: yes
+  beamer_presentation:
+    colortheme: beaver
+    fig_caption: no
+    fonttheme: structurebold
+    highlight: espresso
+    theme: CambridgeUS
 ---
 
 ## Aufgabe - Datenimport
 
-- Gehen Sie auf die Seite des Forschungsdatenzentrums und laden Sie den Campusfile des Mikrozensus 2002 herunter
+- Gehen Sie auf meine Github Seite und laden Sie den OECD Datensatz herunter
 - Laden Sie den Datensatz mit einer geeigneten Funktion in Ihren Workspace.
 
 - Finden Sie heraus, wieviele Beobachtungen und Variablen der Datensatz umfasst.
-
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)

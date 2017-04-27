@@ -65,6 +65,18 @@ library(foreign)
 write.dta(mydata,file="mydata.dta") 
 ```
 
+## Auch zum Export eignet sich das `rio` Paket
+
+```{r,eval=F}
+library("rio")
+
+export(mtcars, "mtcars.csv")
+export(mtcars, "mtcars.rds")
+export(mtcars, "mtcars.dta")
+```
+
+
+
 ## Links Export
 
 - [Quick R](http://www.statmethods.net/input/exportingdata.html) für das Exportieren von Daten:
