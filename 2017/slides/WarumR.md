@@ -2,6 +2,11 @@
 Jan-Philipp Kolb  
 03 Mai 2017  
 
+
+
+
+
+
 ## Gründe für die Nutzung von R
 
 - Als Weg kreativ zu sein ...
@@ -34,17 +39,18 @@ Jan-Philipp Kolb
 
 
 ```r
+install.packages("Rcmdr")
 library("Rcmdr")
 ```
 
 Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datamgmt/statistics/r/documents/r_for_sas_spss_users.pdf)
 
-
+![](figure/Rcommanderex.PNG)
 
 
 ## [Die Popularität von R](https://gallery.shinyapps.io/cran-gauge/)
 
-![](https://github.com/Japhilko/RInterfaces/raw/master/slides/figure/CRANdownloads.PNG)
+![](figure/CRANdownloads.PNG)
 
 
 ## R Nutzer rund um die Welt

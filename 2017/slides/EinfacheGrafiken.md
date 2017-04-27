@@ -26,7 +26,21 @@ Jan-Philipp Kolb
 ## CRAN Task Views		
 		
 -  Zu einigen Themen sind alle Möglichkeiten in R zusammengestellt. ([Übersicht der Task Views](https://cran.r-project.org/web/views/))
--  Task View zu Thema [Graphiken](https://cran.r-project.org/web/views/Graphics.html)
+- Zur Zeit gibt es 35 Task Views
+- [Alle Pakete eines Task Views können mit folgendem Befehl installiert werden:](https://mran.microsoft.com/rpackages/)
+
+
+```r
+install.packages("ctv")
+library("ctv")
+install.views("Bayesian")
+```
+
+![](figure/CRANtaskViews.PNG)
+
+##  Task View zu Thema [Graphiken](https://cran.r-project.org/web/views/Graphics.html)
+
+![](figure/TaskViewGraphics.PNG)
 
 
 ## Datensatz
@@ -47,11 +61,9 @@ data(Chem97)
 - [gcsecnt] Average GCSE score of individual, centered at mean.
 
 
-## Histogramm
+## Histogramm - Die Funktion hist()
 
 Wir erstellen ein Histogramm der Variable gcsescore:
-
-Die Funktion hist()
 
 
 ```r
@@ -61,17 +73,21 @@ Die Funktion hist()
 
 
 ```r
-# Histogramm
 hist(Chem97$gcsescore)
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-4-1.png)<!-- -->
 
 
 ## Graphik speichern
 
 - Mit dem button Export in Rstudio kann man die Grafik speichern.
-- Alternativ auch bspw. mit dem Befehl `png`
+
+![](figure/GraphikSpeichern.PNG)
+
+## Befehl um Graphik zu speichern
+
+- Alternativ auch bspw. mit den Befehlen `png`, `pdf` oder `jpeg`
 
 
 ```r
@@ -99,11 +115,10 @@ dev.off()
 
 ```r
 hist(Chem97$gcsescore,col="blue",
-     main="Hallo Welt",ylab="y-Werte",
-     xlab="x-Werte")
+     main="Hallo Welt",ylab="y-Werte", xlab="x-Werte")
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-6-1.png)<!-- -->
 
 Weitere Argumente:
 
@@ -116,7 +131,7 @@ Weitere Argumente:
 
 ## Barplot
 
--	 Die Funktion barplot() erzeugt aus einer Häufigkeitstabelle einen Barplot
+-	 Die Funktion `barplot()` erzeugt aus einer Häufigkeitstabelle einen Barplot
 -  Ist das übergebene Tabellen-Objekt zweidimensional wird ein bedingter Barplot erstellt
 
 
@@ -136,7 +151,7 @@ barplot(tabScore)
 barplot(tabScore)
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-10-1.png)<!-- -->
 
 ## Mehr Farben:
 
@@ -145,7 +160,7 @@ barplot(tabScore)
 barplot(tabScore,col=rgb(0,0,1))
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-11-1.png)<!-- -->
 
 ## Grüne Farbe 
 
@@ -154,7 +169,7 @@ barplot(tabScore,col=rgb(0,0,1))
 barplot(tabScore,col=rgb(0,1,0))
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-12-1.png)<!-- -->
 
 ## Rote Farbe 
 
@@ -163,7 +178,7 @@ barplot(tabScore,col=rgb(0,1,0))
 barplot(tabScore,col=rgb(1,0,0))
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-13-1.png)<!-- -->
 
 
 ## Transparent
@@ -173,7 +188,7 @@ barplot(tabScore,col=rgb(1,0,0))
 barplot(tabScore,col=rgb(1,0,0,.3))
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-14-1.png)<!-- -->
 
 ## Boxplot
 
@@ -193,7 +208,7 @@ boxplot(Chem97$gcsescore,
 horizontal=TRUE)
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-16-1.png)<!-- -->
 
 - [Erklärung zu Boxplots](http://edoc.hu-berlin.de/dissertationen/gruenwald-andreas-2005-01-17/HTML/chapter2.html)
 
@@ -211,7 +226,7 @@ horizontal=TRUE)
 boxplot(Chem97$gcsescore~Chem97$gender)
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-17-1.png)<!-- -->
 
 ## Alternativen zu Boxplot
 
@@ -224,17 +239,28 @@ Violinplot
 -  Je weiter die Ausdehnung, desto größer ist die Dichte an dieser Stelle. 
 
 
+```r
+# Beispieldaten erzeugen
+x <- rnorm(100)
+y <- rnorm(100)
+```
+
+## Die Bibliothek `vioplot`
+
 
 ```r
 library(vioplot)
-x <- rnorm(100)
-y <- rnorm(100)
 plot(x, y, xlim=c(-5,5), ylim=c(-5,5))
-vioplot(x, col="tomato", horizontal=TRUE, at=-4, add=TRUE,lty=2, rectCol="gray")
-vioplot(y, col="cyan", horizontal=FALSE, at=-4, add=TRUE,lty=2)
+vioplot(x, col="tomato", horizontal=TRUE, at=-4, 
+        add=TRUE,lty=2, rectCol="gray")
+vioplot(y, col="cyan", horizontal=FALSE, at=-4, 
+        add=TRUE,lty=2)
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+##  `vioplot` - Das Ergebnis
+
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-20-1.png)<!-- -->
+
 
 ## Alternativen zum Boxplot
 
@@ -246,7 +272,7 @@ boxplot(count~spray,data=InsectSprays,col="blue")
 beanplot(count~spray,data=InsectSprays,col="orange")
 ```
 
-![](EinfacheGrafiken_files/figure-html/unnamed-chunk-18-1.png)<!-- -->
+![](EinfacheGrafiken_files/figure-slidy/unnamed-chunk-21-1.png)<!-- -->
 
 # Grafiken für bedingte, bi- und multivariate Verteilungen
 

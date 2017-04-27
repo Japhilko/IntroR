@@ -1,6 +1,14 @@
-# Einführung in die Datenanalyse mit R - Datenimport
+# Intro Datenanalyse mit R - Datenimport
 Jan-Philipp Kolb  
 3 Mai 2017  
+
+
+
+
+
+## Datenimport
+
+![](figure/Datenimport.PNG)
 
 
 ## Dateiformate in R
@@ -104,6 +112,23 @@ MZ02 <- read.dta("MZ02.dta")
 
 - Einführung in Import mit R ([is.R](http://is-r.tumblr.com/post/37181850668/reading-writing-stata-dta-files-with-foreign))
 
+## [Das Paket `rio`](https://cran.r-project.org/web/packages/rio/vignettes/rio.html)
+
+
+```r
+install.packages("rio")
+```
+
+
+```r
+library("rio")
+x <- import("mtcars.csv")
+y <- import("mtcars.rds")
+z <- import("mtcars.dta")
+```
+
+- [rio: A Swiss-Army Knife for Data I/O](https://cran.r-project.org/web/packages/rio/README.html)
+
 ## Datenmanagement ähnlich wie in SPSS oder Stata
 
 
@@ -112,3 +137,18 @@ install.packages("Rz")
 library(Rz)
 ```
 
+## [Weitere Alternative Rcmdr](https://cran.r-project.org/web/packages/Rcmdr/index.html)
+
+
+```r
+install.packages("Rcmdr")
+```
+
+- [Funktioniert auch mit Rstudio](http://www.rcommander.com/)
+
+
+```r
+library(Rcmdr)
+```
+
+![](figure/Rcommander.PNG)

@@ -3,6 +3,8 @@ title: "Intro Datenanalyse mit R - Warum R nutzen?"
 author: "Jan-Philipp Kolb"
 date: "03 Mai 2017"
 output:
+  slidy_presentation:
+    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
@@ -127,7 +129,7 @@ Weil andere Programme große Fehler haben:
 
 - [Datum in Excel](https://coffeehouse.dataone.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/)
 
-![](https://github.com/Japhilko/IntroR/tree/master/2017/slides/figure/Abandon.PNG)
+![](figure/Abandon.PNG)
 
 ## [Probleme mit Excel](http://www.biomedcentral.com/1471-2105/5/80)
 

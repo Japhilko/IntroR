@@ -1,8 +1,10 @@
 ---
 title: "Aufgabe - Barplot"
 author: "Jan-Philipp Kolb"
-date: "11 Februar 2016"
-output: md_document
+date: "3 Mai 2017"
+output: 
+  slidy_presentation:
+    keep_md: yes
 ---
 
 ## Aufgabe - einfache Grafiken

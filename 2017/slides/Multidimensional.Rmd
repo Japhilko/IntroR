@@ -3,16 +3,18 @@ title: "Einführung in die Datenanalyse mit R - Multidimensional"
 author: "Jan-Philipp Kolb"
 date: "3 Mai 2017"
 output:
+  slidy_presentation:
+    highlight: espresso
+  html_document:
+    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
-    fig_width: 6
     fig_height: 4
+    fig_width: 6
     fonttheme: structurebold
     highlight: espresso
     theme: CambridgeUS
-  html_document:
-    keep_md: yes
 ---
 
 

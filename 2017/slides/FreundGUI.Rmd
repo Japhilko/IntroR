@@ -33,7 +33,7 @@ knitr::opts_chunk$set(echo = TRUE,message=F,warning = F)
 <https://cran.r-project.org/>
 
 
-![](https://github.com/Japhilko/IntroR/tree/master/2017/slides/figure/BasisR.PNG)
+![](figure/BasisR.PNG)
 
 
 ## Graphisches User Interface

@@ -1,4 +1,4 @@
-# EinfÃ¼hrung in die Datenanalyse mit R - Datenquellen
+# Intro Datenanalyse mit R - Datenquellen
 Jan-Philipp Kolb  
 3 Mai 2017  
 

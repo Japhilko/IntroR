@@ -1,7 +1,12 @@
-Aufgabe - einfache Grafiken
----------------------------
+# Aufgabe - Barplot
+Jan-Philipp Kolb  
+3 Mai 2017  
 
--   Laden Sie den Datensatz VADeaths und erzeugen Sie den folgenden
-    plot:
+## Aufgabe - einfache Grafiken
 
-![](Aufgabe_Barplot_files/figure-markdown_strict/unnamed-chunk-1-1.png)<!-- -->
+- Laden Sie den Datensatz VADeaths und erzeugen Sie den
+folgenden plot:
+
+![](Aufgabe_Barplot_files/figure-slidy/unnamed-chunk-1-1.png)<!-- -->
+
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)

@@ -51,14 +51,14 @@ Unterlagen für den Kurs 2017. Die Foliensätze für den [ersten](https://github
 
 - Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenanalyse.md))
 
-    - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Apply.Rmd))
+    - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Apply.md))
 
 ## Liebe auf den ersten Plot – Grafiken mit R	
 
 - Einfache Grafiken
 ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/EinfacheGrafiken.md))
 
-    - Aufgabe - Barplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Barplot.md))
+    - Aufgabe - Barplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Barplot.md))
     
 ## Noch mehr Grafiken - multidimensional
 
