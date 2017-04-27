@@ -119,3 +119,44 @@ output:
 ```{r child = '../tutorial/Aufgabe_LineareRegression.Rmd'}
 ```
 
+
+# Die logistische Regression 
+
+```{r child = 'logistischeRegression.Rmd'}
+```
+
+
+
+```{r child = '../tutorial/Aufgabe_Datenanalyse.Rmd'}
+```
+
+
+# Faktoren in R 
+
+```{r child = 'Faktoren.Rmd'}
+```
+
+# Grafiken mit ggplot 
+
+```{r child = 'ggplot2.Rmd'}
+```
+
+# Einfache Karten mit R erstellen 
+
+```{r child = 'ggmap.Rmd'}
+```
+
+
+# Regressionsdiagnostik mit R-Paket `visreg` 
+
+```{r child = 'Regressionsdiagnostik.Rmd'}
+```
+
+# Weitere Themen im Ausblick 
+
+```{r child = 'Ausblick.Rmd'}
+```
+
+## Beispiel einer [interaktiven Karte](http://rpubs.com/Japhilko82/Campsites) 
+
+[interaktiven Karte](http://rpubs.com/Japhilko82/Campsites)  und [Rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive%20maps.R) um eine interaktive Karte mit leaflet zu erzeugen.
