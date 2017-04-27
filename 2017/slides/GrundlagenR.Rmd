@@ -106,5 +106,5 @@ sample(b,1)
 
 <http://cran.r-project.org/doc/manuals/R-intro.html>
 
-![](https://github.com/Japhilko/IntroR/tree/master/2017/slides/figure/UebersichtBefehle.PNG)
+![](figure/UebersichtBefehle.PNG)
 

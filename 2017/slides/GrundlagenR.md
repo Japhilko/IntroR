@@ -2,6 +2,10 @@
 Jan-Philipp Kolb  
 3 Mai 2017  
 
+
+
+
+
 ## R ist eine Objekt-orientierte Sprache
 
 Vektoren und Zuweisungen
@@ -144,7 +148,7 @@ sample(b,1)
 ```
 
 ```
-## [1] 1
+## [1] 2
 ```
 
 

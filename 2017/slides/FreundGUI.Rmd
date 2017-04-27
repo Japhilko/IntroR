@@ -2,8 +2,9 @@
 title: "Intro Datenanalyse mit R - Dein Freund das GUI"
 author: "Jan-Philipp Kolb"
 date: "3 Mai 2017"
-output: 
 output:
+  slidy_presentation:
+    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no

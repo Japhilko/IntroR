@@ -1,12 +1,10 @@
-# Einführung in die Datenanalyse mit R - Dein Freund das GUI
+# Intro Datenanalyse mit R - Dein Freund das GUI
 Jan-Philipp Kolb  
 3 Mai 2017  
 
-## Anzahl der Fragen in Hilfeforen zu R
 
-![R-help postings](http://i1.wp.com/badhessian.org/wp-content/uploads/2013/04/monthly_posts-300x150.png?zoom=2&resize=300%2C150)
 
-[Source](http://www.r-bloggers.com/has-r-help-gotten-meaner-over-time-and-what-does-mancur-olson-have-to-say-about-it/)
+
 
 
 ## Open Source Programm R
@@ -16,10 +14,13 @@ Jan-Philipp Kolb
 
 - Der Download ist auf dieser Seite möglich:
 
-www.r-project.org
+<https://cran.r-project.org/>
 
 
-## Grpahisches User Interface
+![](https://github.com/Japhilko/IntroR/tree/master/2017/slides/figure/BasisR.PNG)
+
+
+## Graphisches User Interface
 
 Aber die meisten Menschen nutzen einen Editor oder ein graphical user interface (GUI).
 
@@ -52,7 +53,8 @@ Auf [github](github.com/Japhilko/IntroR/) sind alle Unterlagen für diesen Kurs 
 
 ## Rstudio
 
-Sechs [Gründe](http://www.r-bloggers.com/top-6-reasons-you-need-to-be-using-rstudio/) Rstudio zu nutzen.
+- Sechs [Gründe](http://www.r-bloggers.com/top-6-reasons-you-need-to-be-using-rstudio/) Rstudio zu nutzen.
 
-Wie man Rstudio [nutzen kann.](https://support.rstudio.com/hc/en-us/sections/200107586-Using-RStudio)
+- Wie man Rstudio [nutzen kann.](https://support.rstudio.com/hc/en-us/sections/200107586-Using-RStudio)
 
+- [Das Rstudio einrichten](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio)
