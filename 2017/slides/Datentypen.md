@@ -1,20 +1,8 @@
----
-title: "Datentypen"
-author: "Jan-Philipp Kolb"
-date: "3 Mai 2017"
-output: 
-  slidy_presentation: 
-    keep_md: yes
-  beamer_presentation:
-    colortheme: beaver
-    fonttheme: structurebold
-    highlight: espresso
-    theme: CambridgeUS
----
+# Datentypen
+Jan-Philipp Kolb  
+3 Mai 2017  
 
-```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 ## Verschiedene Datentypen
 
@@ -28,7 +16,8 @@ Quelle: [R. Münnich und M. Knobelspieß](https://www.uni-trier.de/fileadmin/fb4
 
 ## Verschiedene Datentypen
 
-```{r}
+
+```r
 b <- c(1,2) # numeric
 log <- c(T,F) # logical
 char <-c("A","b") # character
@@ -40,48 +29,127 @@ Mit `str()` bekommt man den Objekttyp.
 ## Indizieren eines Vektors:
 
 
-```{r}
+
+```r
 A1 <- c(1,2,3,4)
 A1
+```
+
+```
+## [1] 1 2 3 4
+```
+
+```r
 A1[1]
+```
+
+```
+## [1] 1
+```
+
+```r
 A1[4]
+```
+
+```
+## [1] 4
+```
+
+```r
 A1[1:3]
+```
+
+```
+## [1] 1 2 3
+```
+
+```r
 A1[-4]
+```
+
+```
+## [1] 1 2 3
 ```
 
 ## data.frames
 
 Beispieldaten generieren:
 
-```{r}
+
+```r
 AGE <- c(20,35,48,12)
 SEX <- c("m","w","w","m")
 ```
 
 Diese beiden Vektoren zu einem data.frame verbinden:
 
-```{r}
+
+```r
 Daten <- data.frame(Alter=AGE,Geschlecht=SEX)
 ```
 
 Anzahl der Zeilen/Spalten herausfinden
 
-```{r}
+
+```r
 nrow(Daten) # Zeilen
+```
+
+```
+## [1] 4
+```
+
+```r
 ncol(Daten) # Spalten
+```
+
+```
+## [1] 2
 ```
 
 ## Indizieren
 
 Indizieren eines dataframe:
 
-```{r}
+
+```r
 AA <- 4:1
 A2 <- cbind(A1,AA)
 A2[1,1]
+```
+
+```
+## A1 
+##  1
+```
+
+```r
 A2[2,]
+```
+
+```
+## A1 AA 
+##  2  3
+```
+
+```r
 A2[,1]
+```
+
+```
+## [1] 1 2 3 4
+```
+
+```r
 A2[,1:2]
+```
+
+```
+##      A1 AA
+## [1,]  1  4
+## [2,]  2  3
+## [3,]  3  2
+## [4,]  4  1
 ```
 
 ## Matrizen und Arrays
@@ -90,22 +158,49 @@ A2[,1:2]
 -  Dadurch wird beispielsweise Matrix Multiplikation möglich.
 -  Anders als beim data.frame sind mehr als zwei Dimensionen möglich.
 
-```{r}
+
+```r
 A <- matrix(seq(1,100), nrow = 4)
 dim(A)
 ```
 
+```
+## [1]  4 25
+```
+
 ## Ein Array erzeugen
 
-```{r}
+
+```r
 A3 <- array(1:8,c(2,2,2))
 A3
 ```
 
+```
+## , , 1
+## 
+##      [,1] [,2]
+## [1,]    1    3
+## [2,]    2    4
+## 
+## , , 2
+## 
+##      [,1] [,2]
+## [1,]    5    7
+## [2,]    6    8
+```
+
 ## Indizieren eines Array
 
-```{r}
+
+```r
 A3[,,2]
+```
+
+```
+##      [,1] [,2]
+## [1,]    5    7
+## [2,]    6    8
 ```
 
 
@@ -118,21 +213,55 @@ A3[,,2]
 			
 ## Indizieren einer Liste
 
-```{r}
+
+```r
 A4 <- list(A1,1)
 A4
+```
+
+```
+## [[1]]
+## [1] 1 2 3 4
+## 
+## [[2]]
+## [1] 1
+```
+
+```r
 A4[[2]]
+```
+
+```
+## [1] 1
 ```
 
 
 ## Logische Operatoren
 
-```{r}
+
+```r
 # Ist 1 größer als 2?
 1>2
-1<2
+```
 
+```
+## [1] FALSE
+```
+
+```r
+1<2
+```
+
+```
+## [1] TRUE
+```
+
+```r
 1==2
+```
+
+```
+## [1] FALSE
 ```
 
 
@@ -141,49 +270,111 @@ A4[[2]]
 
 Diese Operatoren eignen sich gut um Datensätze einzuschränken
 
-```{r}
+
+```r
 Daten
+```
+
+```
+##   Alter Geschlecht
+## 1    20          m
+## 2    35          w
+## 3    48          w
+## 4    12          m
+```
+
+```r
 Daten[AGE>20,]
+```
+
+```
+##   Alter Geschlecht
+## 2    35          w
+## 3    48          w
 ```
 
 ## Datensätze einschränken
 
-```{r}
+
+```r
 Daten[SEX=="w",]
+```
+
+```
+##   Alter Geschlecht
+## 2    35          w
+## 3    48          w
+```
+
+```r
 # gleiches Ergebnis:
 Daten[SEX!="m",]
+```
+
+```
+##   Alter Geschlecht
+## 2    35          w
+## 3    48          w
 ```
 
 
 ## Weitere wichtige Optionen
 
-```{r}
+
+```r
 # Ergebnis in ein Objekt speichern
 subDat <- Daten[AGE>20,]
 ```
 
-```{r}
+
+```r
 # mehrere Bedingeungen können mit
 # & verknüpft werden:
 Daten[AGE>18 & SEX=="w",]
 ```
 
+```
+##   Alter Geschlecht
+## 2    35          w
+## 3    48          w
+```
+
 ## Sequenzen
 
-```{r}
+
+```r
 # Sequenz von 1 bis 10
 1:10
 ```
 
-```{r}
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10
+```
+
+
+```r
 Daten[1:3,]
+```
+
+```
+##   Alter Geschlecht
+## 1    20          m
+## 2    35          w
+## 3    48          w
 ```
 
 ## Weitere Sequenzen
 
-```{r}
-seq(-2,8,by=1.5)
 
+```r
+seq(-2,8,by=1.5)
+```
+
+```
+## [1] -2.0 -0.5  1.0  2.5  4.0  5.5  7.0
+```
+
+```r
 a <-seq(3,12,length=12)
 
 b <- seq(to=5,length=12,by=0.2)
@@ -195,21 +386,46 @@ d <- seq(length=10,from=1,by=1)
 
 ## Wiederholungen
 
-```{r}
+
+```r
 # wiederhole 1 10 mal
 rep(1,10)
+```
+
+```
+##  [1] 1 1 1 1 1 1 1 1 1 1
+```
+
+```r
 rep("A",10)
+```
+
+```
+##  [1] "A" "A" "A" "A" "A" "A" "A" "A" "A" "A"
 ```
 
 ## Die Funktion paste
 
-```{r,eval=F}
+
+```r
 ?paste
 ```
 
 
-```{r}
+
+```r
 paste(1:4)
+```
+
+```
+## [1] "1" "2" "3" "4"
+```
+
+```r
 paste("A", 1:6, sep = "")
+```
+
+```
+## [1] "A1" "A2" "A3" "A4" "A5" "A6"
 ```
 
