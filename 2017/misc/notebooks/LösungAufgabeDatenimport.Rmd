@@ -1,5 +1,5 @@
 ---
-title: "Aufgabe Datenimport"
+title: "Lösung - Aufgabe Datenimport"
 author: "Jan-Philipp Kolb"
 date: "3 Mai 2017"
 output:
@@ -16,11 +16,38 @@ output:
     theme: CambridgeUS
 ---
 
-## Daten importieren
+## Daten herunterladen
+
+![](figure/DownloadData.PNG)
+
+
+## Paket laden
+
+- Am Besten eignet sich das Paket `rio`
 
 ```{r}
 library("rio")
+```
 
+- [rio: A Swiss-Army Knife for Data I/O](https://cran.r-project.org/web/packages/rio/README.html)
+
+## Datensatz in die Console laden
+
+```{r}
 oecd <- import("../../data/oecd.dta")
+```
+
+## Den Datensatz anschauen
+
+```{r}
+head(oecd)
+```
+
+
+## Wieviele Zeilen und Spalten
+
+```{r}
+nrow(oecd)
+ncol(oecd)
 ```
 
