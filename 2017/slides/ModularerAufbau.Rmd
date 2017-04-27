@@ -14,13 +14,13 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Modularer Aufbau
 
-![](figure/Packages.PNG)
+![](https://github.com/Japhilko/IntroR/blob/master/2017/slides/figure/Packages.PNG ?raw=true)
 
 ## Modularer Aufbau
 
@@ -48,12 +48,12 @@ library(lme4)
 
 ## Installation von Paketen mit RStudio
 
-![](figure/PaketeRstudio.PNG)
+![](https://github.com/Japhilko/IntroR/blob/master/2017/slides/figure/PaketeRstudio.PNG?raw=true)
 
 
 ## Vorhandene Pakete und Installation
 
-![](figure/packages3.PNG)
+![](https://github.com/Japhilko/IntroR/blob/master/2017/slides/figure/packages3.PNG?raw=true)
 
 
 ## Übersicht viele nützliche Pakete:

@@ -55,4 +55,10 @@ R-project + Was ich schon immer wissen wollte
 -  Ist nicht auf R fokussiert
 -  Sehr detailierte Diskussionen
 
-![](figure/StackoverflowEx.PNG)
+![](https://github.com/Japhilko/IntroR/blob/master/2017/slides/figure/StackoverflowEx.PNG?raw=true)
+
+## Ein Schummelzettel - Cheatsheet
+
+<https://www.rstudio.com/resources/cheatsheets/>
+
+![](figure/cheatsheetBaseR.PNG)

@@ -16,6 +16,13 @@ output:
     toc: yes
 ---
 
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message=F,warning = F)
+```
+
+
+
 ## Gründe für die Nutzung von R
 
 - Als Weg kreativ zu sein ...
@@ -47,17 +54,18 @@ output:
 ## R für SPSS Nutzer
 
 ```{r,eval=F}
+install.packages("Rcmdr")
 library("Rcmdr")
 ```
 
 Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datamgmt/statistics/r/documents/r_for_sas_spss_users.pdf)
 
-
+![](figure/Rcommanderex.PNG)
 
 
 ## [Die Popularität von R](https://gallery.shinyapps.io/cran-gauge/)
 
-![](https://github.com/Japhilko/RInterfaces/raw/master/slides/figure/CRANdownloads.PNG)
+![](figure/CRANdownloads.PNG)
 
 
 ## R Nutzer rund um die Welt
@@ -119,7 +127,7 @@ Weil andere Programme große Fehler haben:
 
 - [Datum in Excel](https://coffeehouse.dataone.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/)
 
-![](figure/Abandon.PNG)
+![](https://github.com/Japhilko/IntroR/tree/master/2017/slides/figure/Abandon.PNG)
 
 ## [Probleme mit Excel](http://www.biomedcentral.com/1471-2105/5/80)
 

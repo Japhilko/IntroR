@@ -15,3 +15,8 @@ knitr::opts_chunk$set(echo = TRUE)
 ![R-help postings](http://i1.wp.com/badhessian.org/wp-content/uploads/2013/04/monthly_posts-300x150.png?zoom=2&resize=300%2C150)
 
 [Source](http://www.r-bloggers.com/has-r-help-gotten-meaner-over-time-and-what-does-mancur-olson-have-to-say-about-it/)
+
+
+<!--
+https://github.com/Japhilko/IntroR/blob/master/2017/slides/ ?raw=true
+-->

@@ -1,0 +1,13 @@
+---
+title: "Intro Datenanalyse 1"
+author: "Jan-Philipp Kolb"
+date: "27 April 2017"
+output:
+  slidy_presentation:
+    keep_md: yes
+---
+
+# Warum R nutzen
+
+```{r child = 'WarumR.Rmd'}
+```

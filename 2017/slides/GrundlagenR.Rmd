@@ -18,7 +18,7 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -106,5 +106,5 @@ sample(b,1)
 
 <http://cran.r-project.org/doc/manuals/R-intro.html>
 
-![](figure/UebersichtBefehle.PNG)
+![](https://github.com/Japhilko/IntroR/tree/master/2017/slides/figure/UebersichtBefehle.PNG)
 
