@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Modularer Aufbau
 
-![](https://github.com/Japhilko/IntroR/blob/master/2017/slides/figure/Packages.PNG ?raw=true)
+![](figure/Packages.PNG)
 
 ## Modularer Aufbau
 

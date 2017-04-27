@@ -55,7 +55,7 @@ data("plasma", package = "HSAUR")
 cdplot(ESR ~ fibrinogen, data = plasma)
 ```
 
-![](logistischeRegression_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](logistischeRegression_files/figure-slidy/unnamed-chunk-4-1.png)<!-- -->
 
 ## [Logistische Regression](http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html) mit R
 

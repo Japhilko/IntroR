@@ -59,7 +59,7 @@ head(diamonds)
 qplot(depth, data=diamonds)
 ```
 
-![](ggplot2_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
+![](ggplot2_files/figure-slidy/unnamed-chunk-6-1.png)<!-- -->
 
 
 ## Ein Balkendiagramm
@@ -69,7 +69,7 @@ qplot(depth, data=diamonds)
 qplot(cut, depth, data=diamonds)
 ```
 
-![](ggplot2_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](ggplot2_files/figure-slidy/unnamed-chunk-7-1.png)<!-- -->
 
 ## Ein weiteres Balkendiagramm
 
@@ -78,7 +78,7 @@ qplot(cut, depth, data=diamonds)
 qplot(factor(cyl), data=mtcars,geom="bar")
 ```
 
-![](ggplot2_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](ggplot2_files/figure-slidy/unnamed-chunk-8-1.png)<!-- -->
 
 
 ## Boxplot
@@ -88,7 +88,7 @@ qplot(factor(cyl), data=mtcars,geom="bar")
 qplot(data=diamonds,x=cut,y=depth,geom="boxplot")
 ```
 
-![](ggplot2_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](ggplot2_files/figure-slidy/unnamed-chunk-9-1.png)<!-- -->
 
 
 ## Scatterplot
@@ -99,7 +99,7 @@ qplot(data=diamonds,x=cut,y=depth,geom="boxplot")
 qplot(carat, depth, data=diamonds)
 ```
 
-![](ggplot2_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](ggplot2_files/figure-slidy/unnamed-chunk-10-1.png)<!-- -->
 
 
 ## Farbe hinzu:
@@ -109,7 +109,7 @@ qplot(carat, depth, data=diamonds)
 qplot(carat, depth, data=diamonds,color=cut)
 ```
 
-![](ggplot2_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](ggplot2_files/figure-slidy/unnamed-chunk-11-1.png)<!-- -->
 
 
 ## Trendlinie hinzufügen
@@ -120,7 +120,7 @@ myGG<-qplot(data=diamonds,x=carat,y=depth,color=carat)
 myGG + stat_smooth(method="lm")
 ```
 
-![](ggplot2_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](ggplot2_files/figure-slidy/unnamed-chunk-12-1.png)<!-- -->
 
 ## Graphik drehen
 
@@ -130,7 +130,7 @@ qplot(factor(cyl), data=mtcars, geom="bar") +
 coord_flip()
 ```
 
-![](ggplot2_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](ggplot2_files/figure-slidy/unnamed-chunk-13-1.png)<!-- -->
 
 
 ## Wie nutzt man ggplot
@@ -142,7 +142,7 @@ coord_flip()
 ggplot(diamonds, aes(clarity, fill=cut)) + geom_bar()
 ```
 
-![](ggplot2_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](ggplot2_files/figure-slidy/unnamed-chunk-14-1.png)<!-- -->
 
 
 
@@ -176,7 +176,7 @@ p <- ggplot(diamonds,aes(carat, depth,colour = cut)) +
 p + colScale
 ```
 
-![](ggplot2_files/figure-html/unnamed-chunk-16-1.png)<!-- -->
+![](ggplot2_files/figure-slidy/unnamed-chunk-17-1.png)<!-- -->
 
 
 ## Speichern mit ggsave

@@ -1,20 +1,20 @@
 ---
-title: "Einführung in die Datenanalyse mit R - Ausblick"
+title: "IntroDatenanalyse mit R - Ausblick"
 author: "Jan-Philipp Kolb"
 date: "04 Mai 2017"
 output: 
+  slidy_presentation: 
+    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
     fonttheme: structurebold
     highlight: espresso
     theme: CambridgeUS
-  ioslides_presentation: 
-    keep_md: yes
 ---
 
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=F)
 ```
 

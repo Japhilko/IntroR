@@ -1,13 +1,13 @@
 ---
 title: "Kartentypen mit ggmap"
 author: "Jan-Philipp Kolb"
-date: "22 Februar 2017"
+date: "3 Mai 2017"
 output: 
-  ioslides_presentation: 
+  slidy_presentation: 
     keep_md: yes
 ---
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,cache=T)
 ```
 

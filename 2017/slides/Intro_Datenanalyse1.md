@@ -205,7 +205,7 @@ date()
 ```
 
 ```
-## [1] "Thu Apr 27 21:45:43 2017"
+## [1] "Thu Apr 27 22:20:08 2017"
 ```
 
 
@@ -383,7 +383,7 @@ sample(b,1)
 ```
 
 ```
-## [1] 2
+## [1] 1
 ```
 
 
@@ -918,7 +918,7 @@ R-project + Was ich schon immer wissen wollte
 
 ## Modularer Aufbau
 
-![](https://github.com/Japhilko/IntroR/blob/master/2017/slides/figure/Packages.PNG ?raw=true)
+![](figure/Packages.PNG)
 
 ## Modularer Aufbau
 
@@ -1537,7 +1537,7 @@ ab <- rnorm(100); var(ab)
 ```
 
 ```
-## [1] 0.905472
+## [1] 1.275675
 ```
 
 ```r
@@ -1545,11 +1545,11 @@ sd(ab); range(ab)
 ```
 
 ```
-## [1] 0.9515629
+## [1] 1.129458
 ```
 
 ```
-## [1] -2.928560  2.096803
+## [1] -2.482100  2.947881
 ```
 
 ## Extremwerte
@@ -1560,7 +1560,7 @@ min(ab)
 ```
 
 ```
-## [1] -2.92856
+## [1] -2.4821
 ```
 
 ```r
@@ -1568,7 +1568,7 @@ max(ab)
 ```
 
 ```
-## [1] 2.096803
+## [1] 2.947881
 ```
 
 
@@ -1595,7 +1595,7 @@ var(ab,na.rm=T)
 ```
 
 ```
-## [1] 0.896406
+## [1] 1.284462
 ```
 
 ## Häufigkeiten und gruppierte Kennwerte
@@ -1613,7 +1613,7 @@ table(x)
 ```
 ## x
 ##  1  2  3  4  5  6  7  8  9 10 
-##  9 10 17 14  6 10  6 10  9  9
+## 11 12 11  9 12  9 12  8  8  8
 ```
 
 ## Tabellieren - weiteres Beispiel
@@ -1636,7 +1636,7 @@ table(x)
 ```
 ## x
 ##  1  2  3  4  5  6  7  8  9 10 
-##  9 10 17 14  6 10  6 10  9  9
+## 11 12 11  9 12  9 12  8  8  8
 ```
 
 ```r
@@ -1646,16 +1646,16 @@ table(x,musician)
 ```
 ##     musician
 ## x    no yes
-##   1   5   4
-##   2   3   7
-##   3  11   6
-##   4   4  10
-##   5   4   2
-##   6   5   5
-##   7   4   2
-##   8   7   3
-##   9   5   4
-##   10  3   6
+##   1   3   8
+##   2   8   4
+##   3   9   2
+##   4   7   2
+##   5   5   7
+##   6   4   5
+##   7   5   7
+##   8   1   7
+##   9   5   3
+##   10  4   4
 ```
 
 ## Eine weitere Tabelle
@@ -1768,7 +1768,7 @@ apply(ApplyDat,1,mean)
 ```
 
 ```
-## [1] 0.2525712 1.4252776 1.0209842 1.8218634
+## [1] 0.4716602 1.2015323 1.4372189 1.8300832
 ```
 
 ```r
@@ -1776,7 +1776,7 @@ apply(ApplyDat,2,mean)
 ```
 
 ```
-## [1] 2.5000000 0.7689200 0.1216024
+## [1] 2.5000000 0.8384566 0.3669144
 ```
 
 
@@ -1788,7 +1788,7 @@ apply(ApplyDat,1,var)
 ```
 
 ```
-## [1] 0.8120648 0.2849767 3.4899658 3.5719706
+## [1] 0.4314949 0.4782003 1.8878686 3.5837045
 ```
 
 ```r
@@ -1796,7 +1796,7 @@ apply(ApplyDat,1,sd)
 ```
 
 ```
-## [1] 0.9011464 0.5338321 1.8681450 1.8899658
+## [1] 0.6568827 0.6915203 1.3739973 1.8930675
 ```
 
 ```r
@@ -1804,9 +1804,9 @@ apply(ApplyDat,1,range)
 ```
 
 ```
-##            [,1]      [,2]       [,3]     [,4]
-## [1,] -0.7481021 0.9449207 -0.7118865 0.615486
-## [2,]  1.0000000 2.0000000  3.0000000 4.000000
+##            [,1]      [,2]      [,3]      [,4]
+## [1,] -0.2638246 0.7961921 0.4188577 0.5164321
+## [2,]  1.0000000 2.0000000 3.0000000 4.0000000
 ```
 
 ```r
@@ -1844,11 +1844,11 @@ ApplyDat
 
 ```
 ##     Income Sex
-## 1 1257.376   1
-## 2 1071.330   1
-## 3 1105.388   1
-## 4 1390.398   2
-## 5 1177.605   1
+## 1 1344.940   1
+## 2 1052.460   2
+## 3 1349.384   2
+## 4 1307.758   1
+## 5 1393.767   1
 ```
 
 ## Beispiel Funktion tapply
@@ -1861,7 +1861,7 @@ tapply(ApplyDat$Income,ApplyDat$Sex,mean)
 
 ```
 ##        1        2 
-## 1152.925 1390.398
+## 1348.822 1200.922
 ```
 
 ```r
@@ -1871,10 +1871,10 @@ tapply(ApplyDat$Income,
 
 ```
 ## $`1`
-## [1] 1257.376 1071.330 1105.388 1177.605
+## [1] 1344.940 1307.758 1393.767
 ## 
 ## $`2`
-## [1] 1390.398
+## [1] 1052.460 1349.384
 ```
 
 ## Links Datenanalyse
@@ -1906,4 +1906,759 @@ A
 
 
 [Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+
+
+# Einfache Grafiken
+
+
+
+
+
+
+
+## Ein Plot sagt mehr als 1000 Worte
+
+-  Grafisch gestützte Datenanalyse ist toll
+-  Gute Plots können zu einem besseren Verständnis beitragen
+-  Einen Plot zu generieren geht schnell
+-  Einen guten Plot zu machen kann sehr lange dauern
+-  Mit R Plots zu generieren macht Spaß
+-  Mit R erstellte Plots haben hohe Qualität
+-  Fast jeder Plottyp wird von R unterstützt
+-  R kennt eine große Menge an Exportformaten für Grafiken
+		
+## Plot ist nicht gleich Plot
+
+-  Bereits das base Package bringt eine große Menge von Plot Funktionen mit
+-  Das lattice Packet erweitert dessen Funktionalität
+-  Eine weit über diese Einführung hinausgehende Übersicht findet sich in Murrell, P (2006): R Graphics.
+
+## CRAN Task Views		
+		
+-  Zu einigen Themen sind alle Möglichkeiten in R zusammengestellt. ([Übersicht der Task Views](https://cran.r-project.org/web/views/))
+- Zur Zeit gibt es 35 Task Views
+- [Alle Pakete eines Task Views können mit folgendem Befehl installiert werden:](https://mran.microsoft.com/rpackages/)
+
+
+```r
+install.packages("ctv")
+library("ctv")
+install.views("Bayesian")
+```
+
+![](figure/CRANtaskViews.PNG)
+
+##  Task View zu Thema [Graphiken](https://cran.r-project.org/web/views/Graphics.html)
+
+![](figure/TaskViewGraphics.PNG)
+
+
+## Datensatz
+
+
+```r
+library(mlmRev)
+data(Chem97)
+```
+
+- [lea] Local Education Authority - a factor
+- [school] School identifier - a factor
+- [student] Student identifier - a factor
+- [score] Point score on A-level Chemistry in 1997
+- [gender] Student's gender
+- [age] Age in month, centred at 222 months or 18.5 years
+- [gcsescore] Average GCSE score of individual.
+- [gcsecnt] Average GCSE score of individual, centered at mean.
+
+
+## Histogramm - Die Funktion hist()
+
+Wir erstellen ein Histogramm der Variable gcsescore:
+
+
+```r
+?hist
+```
+
+
+
+```r
+hist(Chem97$gcsescore)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-133-1.png)<!-- -->
+
+
+## Graphik speichern
+
+- Mit dem button Export in Rstudio kann man die Grafik speichern.
+
+![](figure/GraphikSpeichern.PNG)
+
+## Befehl um Graphik zu speichern
+
+- Alternativ auch bspw. mit den Befehlen `png`, `pdf` oder `jpeg`
+
+
+```r
+png("Histogramm.png")
+hist(Chem97$gcsescore)
+dev.off()
+```
+
+## Histogramme
+
+-  Die Funktion `hist()` plottet ein Histogramm der Daten
+-  Der Funktion muss mindestens ein Beobachtungsvektor übergeben werden
+- `hist()` hat noch sehr viel mehr Argumente, die alle (sinnvolle) default values haben
+
+
+|Argument |Bedeutung            |Beispiel          |
+|:--------|:--------------------|:-----------------|
+|main     |Überschrift          |main="Hallo Welt" |
+|xlab     |x-Achsenbeschriftung |xlab="x-Werte"    |
+|ylab     |y-Achsenbeschriftung |ylab="y-Werte"    |
+|col      |Farbe                |col="blue"        |
+
+## Histogramm
+
+
+```r
+hist(Chem97$gcsescore,col="blue",
+     main="Hallo Welt",ylab="y-Werte", xlab="x-Werte")
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-135-1.png)<!-- -->
+
+Weitere Argumente:
+
+
+```r
+?plot
+# oder
+?par
+```
+
+## Barplot
+
+-	 Die Funktion `barplot()` erzeugt aus einer Häufigkeitstabelle einen Barplot
+-  Ist das übergebene Tabellen-Objekt zweidimensional wird ein bedingter Barplot erstellt
+
+
+```r
+tabScore <- table(Chem97$score)
+```
+
+
+```r
+barplot(tabScore)
+```
+
+## Barplots und barcharts
+
+
+```r
+barplot(tabScore)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-139-1.png)<!-- -->
+
+## Mehr Farben:
+
+
+```r
+barplot(tabScore,col=rgb(0,0,1))
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-140-1.png)<!-- -->
+
+## Grüne Farbe 
+
+
+```r
+barplot(tabScore,col=rgb(0,1,0))
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-141-1.png)<!-- -->
+
+## Rote Farbe 
+
+
+```r
+barplot(tabScore,col=rgb(1,0,0))
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-142-1.png)<!-- -->
+
+
+## Transparent
+
+
+```r
+barplot(tabScore,col=rgb(1,0,0,.3))
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-143-1.png)<!-- -->
+
+## Boxplot
+
+-  Einen einfachen Boxplot erstellt man mit `boxplot()`
+-  Auch `boxplot()` muss mindestens ein Beobachtungsvektor übergeben werden
+
+
+```r
+?boxplot
+```
+
+## Horizontaler Boxplot
+
+
+```r
+boxplot(Chem97$gcsescore,
+horizontal=TRUE)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-145-1.png)<!-- -->
+
+- [Erklärung zu Boxplots](http://edoc.hu-berlin.de/dissertationen/gruenwald-andreas-2005-01-17/HTML/chapter2.html)
+
+## Gruppierte Boxplots
+
+-  Ein sehr einfacher Weg, einen ersten Eindruck über bedingte Verteilungen zu bekommen ist über sog. Gruppierte notched Boxplots
+-  Dazu muss der Funktion `boxplot()` ein sog. Formel-Objekt übergeben werden
+-  Die bedingende Variable steht dabei auf der rechten Seite einer Tilde
+
+
+## Beispiel grupierter Boxplot
+
+
+```r
+boxplot(Chem97$gcsescore~Chem97$gender)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-146-1.png)<!-- -->
+
+## Alternativen zu Boxplot
+
+Violinplot 
+
+-  Baut auf Boxplot auf 
+-  Zusätzlich Informationen über Dichte der Daten 
+-  Dichte wird über Kernel Methode berechnet.
+-  weißer Punkt - Median
+-  Je weiter die Ausdehnung, desto größer ist die Dichte an dieser Stelle. 
+
+
+```r
+# Beispieldaten erzeugen
+x <- rnorm(100)
+y <- rnorm(100)
+```
+
+## Die Bibliothek `vioplot`
+
+
+```r
+library(vioplot)
+plot(x, y, xlim=c(-5,5), ylim=c(-5,5))
+vioplot(x, col="tomato", horizontal=TRUE, at=-4, 
+        add=TRUE,lty=2, rectCol="gray")
+vioplot(y, col="cyan", horizontal=FALSE, at=-4, 
+        add=TRUE,lty=2)
+```
+
+##  `vioplot` - Das Ergebnis
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-149-1.png)<!-- -->
+
+
+## Alternativen zum Boxplot
+
+
+```r
+library(beanplot)
+par(mfrow = c(1,2))
+boxplot(count~spray,data=InsectSprays,col="blue")
+beanplot(count~spray,data=InsectSprays,col="orange")
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-150-1.png)<!-- -->
+
+# Grafiken für bedingte, bi- und multivariate Verteilungen
+
+## Scatterplots
+
+- Ein einfacher two-way scatterplot kann mit der Funktion plot() erstellt werden
+-  plot() muss mindestens ein x und ein y Beobachtungsvektor übergeben werden
+-  Um die Farbe der Plot-Symbole anzupassen gibt es die Option col (Farbe als character oder numerisch)
+-  Die Plot-Symbole selbst können mit pch} (plotting character) angepasst werden (character oder numerisch)
+-  Die Achenbeschriftungen (labels) werden mit xlab und ylab definiert
+
+
+
+
+## Aufgabe - einfache Grafiken
+
+- Laden Sie den Datensatz VADeaths und erzeugen Sie den
+folgenden plot:
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-151-1.png)<!-- -->
+
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+
+
+# Zusammenhang 
+
+
+
+
+
+
+
+
+## Edgar Anderson's Iris Daten
+
+
+```r
+data(iris)
+head(iris)
+```
+
+```
+##   Sepal.Length Sepal.Width Petal.Length Petal.Width Species
+## 1          5.1         3.5          1.4         0.2  setosa
+## 2          4.9         3.0          1.4         0.2  setosa
+## 3          4.7         3.2          1.3         0.2  setosa
+## 4          4.6         3.1          1.5         0.2  setosa
+## 5          5.0         3.6          1.4         0.2  setosa
+## 6          5.4         3.9          1.7         0.4  setosa
+```
+
+petal length and width - Blütenblatt Länge und Breite
+
+sepal length and width - Kelchblatt Länge und Breite 
+
+- [Wikipedia Artikel zum IRIS Datensatz](https://en.wikipedia.org/wiki/Iris_flower_data_set)
+
+## Zusammenhang zwischen stetigen Variablen
+
+
+```r
+# Pearson Korrelationskoeffizient
+cor(iris$Sepal.Length,iris$Petal.Length)
+```
+
+```
+## [1] 0.8717538
+```
+
+- Korrelation zwischen Länge Kelchblatt und Blütenblatt 0,87
+- Der Pearson'sche Korrelationskoeffizient ist die default methode in `cor()`.
+
+## Zusammenhang zwischen mehreren Variablen
+
+
+```r
+pairs(iris[,1:4])
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-155-1.png)<!-- -->
+
+## Zusammenhang zwischen mehreren Variablen
+
+
+```r
+library("psych")
+pairs.panels(iris[1:4],bg=c("red","yellow","blue")
+[iris$Species],pch=21,main="")
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-156-1.png)<!-- -->
+
+## Verschiedene Korrelationskoeffizienten
+
+
+
+```r
+# Pearson Korrelationskoeffizient
+cor(iris[,1:4]) 
+```
+
+```
+##              Sepal.Length Sepal.Width Petal.Length Petal.Width
+## Sepal.Length    1.0000000  -0.1175698    0.8717538   0.8179411
+## Sepal.Width    -0.1175698   1.0000000   -0.4284401  -0.3661259
+## Petal.Length    0.8717538  -0.4284401    1.0000000   0.9628654
+## Petal.Width     0.8179411  -0.3661259    0.9628654   1.0000000
+```
+
+
+```r
+# Kendall's tau (Rangkorrelation)
+cor(iris[,1:4], method = "kendall") 
+```
+
+```
+##              Sepal.Length Sepal.Width Petal.Length Petal.Width
+## Sepal.Length   1.00000000 -0.07699679    0.7185159   0.6553086
+## Sepal.Width   -0.07699679  1.00000000   -0.1859944  -0.1571257
+## Petal.Length   0.71851593 -0.18599442    1.0000000   0.8068907
+## Petal.Width    0.65530856 -0.15712566    0.8068907   1.0000000
+```
+
+
+```r
+# Spearman's rho (Rangkorrelation)
+cor(iris[,1:4], method = "spearman") 
+```
+
+```
+##              Sepal.Length Sepal.Width Petal.Length Petal.Width
+## Sepal.Length    1.0000000  -0.1667777    0.8818981   0.8342888
+## Sepal.Width    -0.1667777   1.0000000   -0.3096351  -0.2890317
+## Petal.Length    0.8818981  -0.3096351    1.0000000   0.9376668
+## Petal.Width     0.8342888  -0.2890317    0.9376668   1.0000000
+```
+
+## Zusammenhang zwischen kategorialen Variablen
+
+- chisq.test() testet, ob zwei kategoriale Merkmale stochastisch unabhängig sind.
+- Getestet wird gegen die Nullhypothese der Gleichverteilung
+
+
+## Levelplot
+
+
+```r
+library("lattice")
+library("AER")
+data(BankWages)
+levelplot(table(BankWages$education,BankWages$job))
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-160-1.png)<!-- -->
+
+## Visualisierung von Zusammenhängen zwischen kategorialen Variablen
+
+
+```r
+mosaicplot(~ Sex + Age + Survived, 
+           data = Titanic, color = TRUE)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-161-1.png)<!-- -->
+
+## Shading
+
+Flächen werden entsprechend der Residuen eingefärbt:
+
+
+```r
+mosaicplot(~ Sex + Age + Survived, 
+           data = Titanic, shade = TRUE)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-162-1.png)<!-- -->
+
+## Literatur zu Zusammenhangsmaßen
+
+-  Methodensammlung mit R
+-  Beispiele zu Zusammenhangsmaßen
+-  Umsetzung in R
+
+Sachs - [Angewandte Statistik mit R](https://books.google.de/books/about/Angewandte_Statistik.html?id=S-zXmAEACAAJ&redir_esc=y)
+
+# Das lattice Paket 
+
+
+
+
+
+
+
+## Das lattice-Paket
+
+> It is designed to meet most typical graphics needs with minimal tuning, but can also be easily extended to handle most nonstandard requirements. 
+
+<http://stat.ethz.ch/R-manual/R-devel/library/lattice/html/Lattice.html>
+
+## Histogramm mit Lattice
+
+
+```r
+library("lattice");library("mlmRev")
+data(Chem97)
+histogram(~ gcsescore, data = Chem97)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-164-1.png)<!-- -->
+
+## Histogramm mit Lattice
+
+
+```r
+  histogram(~ gcsescore | factor(score),data = Chem97)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-165-1.png)<!-- -->
+
+## Die Dichte mit Lattice zeichnen
+
+
+```r
+densityplot(~ gcsescore | factor(score), Chem97, 
+	groups=gender,plot.points=FALSE,auto.key=TRUE)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-166-1.png)<!-- -->
+
+[Einführung in das Paket lattice](http://www.isid.ac.in/~deepayan/R-tutorials/labs/04_lattice_lab.pdf)
+
+## Boxplot mit Lattice zeichnen
+
+
+```r
+bwplot(factor(score) ~ gcsescore | gender, Chem97)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-167-1.png)<!-- -->
+
+## Boxplot mit Lattice zeichnen
+
+
+```r
+bwplot(gcsescore ~ gender | factor(score), Chem97,
+ layout = c(6, 1))
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-168-1.png)<!-- -->
+
+## Univariate Plots
+
+
+```r
+barchart(yield ~ variety | site, data = barley,
+         groups = year, layout = c(1,6), stack = TRUE,
+         auto.key = list(space = "right"),
+         ylab = "Barley Yield (bushels/acre)",
+         scales = list(x = list(rot = 45)))
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-169-1.png)<!-- -->
+
+
+## Densityplot
+
+
+```r
+densityplot( ~ height | voice.part, data = singer, layout = c(2, 4),  
+            xlab = "Height (inches)", bw = 5)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-170-1.png)<!-- -->
+
+## Bivariate Plots
+
+
+```r
+qq(gender ~ gcsescore | factor(score), Chem97,
+   f.value = ppoints(100), type = c("p", "g"), aspect = 1)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-171-1.png)<!-- -->
+
+## xyplot
+
+
+```r
+xyplot(Sepal.Length + Sepal.Width ~ Petal.Length + Petal.Width | Species,
+       data = iris, scales = "free", layout = c(2, 2),
+       auto.key = list(x = .6, y = .7, corner = c(0, 0)))
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-172-1.png)<!-- -->
+
+## Multivariate Plots
+
+
+```r
+splom(~iris[1:4], groups = Species, data = iris)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-173-1.png)<!-- -->
+
+
+
+```r
+super.sym <- trellis.par.get("superpose.symbol")
+splom(~iris[1:4], groups = Species, data = iris,
+      panel = panel.superpose,
+      key = list(title = "Three Varieties of Iris",
+                 columns = 3, 
+                 points = list(pch = super.sym$pch[1:3],
+                 col = super.sym$col[1:3]),
+                 text = list(c("Setosa", "Versicolor", "Virginica"))))
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-174-1.png)<!-- -->
+
+
+## parallelplot
+
+
+```r
+parallelplot(~iris[1:4] | Species, iris)
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-175-1.png)<!-- -->
+
+## Lattice Befehle
+
+- [Übersicht aller Lattice Befehle](http://www.isid.ac.in/~deepayan/R-tutorials/labs/04_lattice_lab.pdf)
+
+
+
+
+## Aufgabe - OECD Datensatz
+
+- Laden Sie den oecd-Datensatz herunter und lesen Sie ihn mit folgender Funktion ein:
+
+
+```r
+data <- read.csv("oecd.csv",header = TRUE)
+```
+
+- Überprufen Sie die Dimension der OECD-Daten.
+
+- Berechnen Sie die Mittelwerte und Varianzen der einzelnen
+Variablen mit einem geeigneten apply Befehl.
+
+- In welchem Land waren die meisten Jugendlichen mindestens
+zweimal betrunken? Wie hoch ist der maximale Prozentsatz?
+
+- In welchem Land ist die Sterblichkeit am geringsten? Wie
+hoch ist sie in diesem Land?
+
+- Erstellen Sie einen neuen Datensatz, der aufsteigend nach
+dem Einkommen geordnet ist. Speichern Sie diesen in einer
+neuen .csv Datei
+
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+
+
+    
+# Die lineare Regression 
+
+
+
+
+
+
+
+## Die lineare Regression
+
+Maindonald - [DataAnalysis](https://cran.r-project.org/doc/contrib/usingR.pdf)
+
+-  Einführung in R 
+-  Datenanalyse
+-  Statistische Modelle
+-  Inferenzkonzepte
+-  Regression mit einem Prädiktor
+-  Multiple lineare Regression
+-  Ausweitung des linearen Modells
+-  ...
+
+## Lineare Regression in R - Beispieldatensatz
+
+John H. Maindonald and W. John Braun
+
+DAAG - [Data Analysis and Graphics Data and Functions](http://cran.ms.unimelb.edu.au/web/packages/DAAG/DAAG.pdf)
+
+
+```r
+library("DAAG")
+data(roller)
+```
+
+help on roller data:
+
+
+```r
+?roller
+```
+
+## Das lineare Regressionsmodell in R
+
+Schätzen eines Regressionsmodells:
+
+
+```r
+roller.lm <- lm(depression ~ weight, data = roller)
+```
+
+So bekommt man die Schätzwerte:
+
+
+```r
+summary(roller.lm)
+```
+
+Falls das Modell ohne Intercept geschätzt werden soll:
+
+
+```r
+lm(depression ~ -1 + weight, data = roller)
+```
+
+
+## Summary des Modells
+
+
+```r
+summary(roller.lm)
+```
+
+## R arbeitet mit Objekten
+
+- `roller.lm` ist nun ein spezielles Regressions-Objekt
+- Auf dieses Objekt können nun verschiedene Funktionen angewendet werden
+
+
+```r
+predict(roller.lm) # Vorhersage
+resid(roller.lm) # Residuen
+```
+
+## Residuenplot
+
+-  Sind Annahmen des linearen Regressionsmodells verletzt? 
+-  Dies ist der Fall, wenn ein Muster abweichend von einer Linie zu erkennen ist.
+-  Hier ist der Datensatz sehr klein
+
+
+```r
+plot(roller.lm,1)
+```
+
+## Residuenplot
+
+
+```r
+plot(roller.lm,2)
+```
+
+- Wenn die Residuen normalverteilt sind sollten sie auf einer Linie liegen.
+
+## Linkliste - lineare Regression
+
+-  Regression - [r-bloggers](http://www.r-bloggers.com/r-tutorial-series-simple-linear-regression/)
+
+-  Das Komplette Buch von [Faraway](http://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)- sehr intuitiv geschrieben.
+
+-  Gute Einführung auf [Quick-R](http://www.statmethods.net/stats/regression.html)
+
+- [Multiple Regression](https://www.r-bloggers.com/multiple-regression-part-1/)
+
+
+
 

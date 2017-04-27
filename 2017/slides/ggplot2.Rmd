@@ -3,7 +3,7 @@ title: "Intro Datenanalyse mit R - ggplot2"
 author: "Jan-Philipp Kolb"
 date: "04 Mai  2017"
 output: 
-  ioslides_presentation: 
+  slidy_presentation: 
     keep_md: yes
   beamer_presentation:
     colortheme: beaver
@@ -14,7 +14,7 @@ output:
 ---
 
 
-```{r setup, include=FALSE}
+```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T)
 ```
 
