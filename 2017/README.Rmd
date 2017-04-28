@@ -22,12 +22,12 @@ Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenan
     - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Vorbereitung.md))
 
 
-- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.md) | [pdf](slides/GrundlagenR.pdf) | [rcode](slides/GrundlagenR.R)) [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.R) )
+- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.md) | [pdf](slides/GrundlagenR.pdf) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.R) )
 
     - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zuweisung.md))
 
 - Datentypen und Indizieren
-([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.md)| [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.R))
+([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.md)| [pdf](slides/Datentypen.pdf) |  [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.R))
 
 - Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.md) |
 [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.R))
