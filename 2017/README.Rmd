@@ -11,18 +11,18 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Unterlagen für den Kurs 2017. Die Foliensätze für den [ersten](https://github.com/Japhilko/IntroR/blob/master/2016/slides/pdfVersion/GESIS_R_Kurs_2016_Teil1.pdf) und [zweiten](https://github.com/Japhilko/IntroR/blob/master/2016/slides/pdfVersion/GESIS_R_Kurs_2016_Teil2.pdf) Tag sind als pdf komplett oder als Browser Version (siehe unten) in diesem Github Ordner enthalten. Der rcode in den Folien lässt sich mit den Dateien im [rcode Ordner](https://github.com/Japhilko/IntroR/tree/master/2017/rcode) nachverfolgen. 
+Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenanalyse1.md) verfügbar. Das pdf und die Browser Version für die einzelnen Teile sind ebenfalls in diesem Github Ordner enthalten. Der rcode in den Folien lässt sich mit den Dateien im [rcode Ordner](https://github.com/Japhilko/IntroR/tree/master/2017/rcode) nachverfolgen. 
 
 ## Einführung und Vorbereitung
 
 - Warum R nutzen? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/WarumR.md) |  [pdf](slides/WarumR.pdf) )
 
-- Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/FreundGUI.md) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2016/slides/GUI.pdf))
+- Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/FreundGUI.md) | [pdf](slides/FreundGUI.pdf))
 
     - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Vorbereitung.md))
 
 
-- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.md) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.R) )
+- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.md) | [pdf](slides/GrundlagenR.pdf) | [rcode](slides/GrundlagenR.R)) [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.R) )
 
     - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zuweisung.md))
 
