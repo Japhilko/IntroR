@@ -3,14 +3,14 @@ title: "Wie bekommt man Hilfe?"
 author: "Jan-Philipp Kolb"
 date: "3 Mai 2017"
 output:
-  slidy_presentation:
-    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
     fonttheme: structurebold
     highlight: espresso
     theme: CambridgeUS
+  slidy_presentation:
+    keep_md: yes
 ---
 
 ```{r, include=FALSE}
