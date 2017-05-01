@@ -3,17 +3,17 @@ title: "Lineare Regression"
 author: "Jan-Philipp Kolb"
 date: "3 Mai 2017"
 output:
-  slidy_presentation:
-    highlight: espresso
-    keep_md: yes
-  ioslides_presentation:
-    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
     fonttheme: structurebold
     highlight: espresso
     theme: CambridgeUS
+  ioslides_presentation:
+    keep_md: yes
+  slidy_presentation:
+    highlight: espresso
+    keep_md: yes
 ---
 
 

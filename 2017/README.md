@@ -26,62 +26,63 @@ Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenan
 [pdf](slides/Hilfe.pdf) |
 [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.R))
 
-- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ModularerAufbau.Rmd) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/rcode/InstallPackages.R))
+- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ModularerAufbau.md) |
+ [pdf](slides/ModularerAufbau.pdf) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/rcode/InstallPackages.R))
 
     - Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zusatzpakete.md))
 
 ## Rein und raus – Datenimport und -export
 
-- Datenimport ([Browser](slides/Import.Rmd))
+- Datenimport ([Browser](slides/Import.md) | [pdf](slides/Import.pdf) | [rcode](slides/Import.R))
 
     - Aufgabe Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Datenimport.md))
 
-- Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Export.md))
+- Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Export.md) | [pdf](slides/Export.pdf) | [rcode](slides/Export.R))
 
 - Exkurs: Datenquellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenquellen.md))
 
 
 ## Ein erster Eindruck – Was uns die Daten sagen
 
-- Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenanalyse.md))
+- Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenanalyse.md) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
 
-    - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Apply.Rmd))
+    - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Apply.md))
 
 ## Liebe auf den ersten Plot – Grafiken mit R	
 
 - Einfache Grafiken
-([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/EinfacheGrafiken.md))
+([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/EinfacheGrafiken.md) | [pdf](slides/EinfacheGrafiken.pdf) | [rcode](rcode/EinfacheGrafiken.R))
 
     - Aufgabe - Barplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Barplot.md))
     
 ## Noch mehr Grafiken - multidimensional
 
-- Zusammenhang ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Multidimensional.md))
+- Zusammenhang ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Multidimensional.md) | [pdf](slides/Multidimensional.pdf) | [rcode](rcode/Multidimensional.R))
 
-- Das lattice Paket ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/LatticePaket.md))
+- Das lattice Paket ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/LatticePaket.md) | [pdf](slides/LatticePaket.pdf) | [rcode](rcode/LatticePaket.R))
 
-    - Aufgabe - OECD Datensatz ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/slides/Aufgabe_OECDdata.Rmd))
+    - Aufgabe - OECD Datensatz ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Aufgabe_OECDdata.md))
     
     
 ## Regression – Überblick der Methoden in R
 
-- Die lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/LineareRegression.md))
+- Die lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/LineareRegression.md) | [pdf](slides/LineareRegression.pdf) | [rcode](rcode/LineareRegression.R))
 
-    - Aufgabe - lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_LineareRegression.Rmd))
+    - Aufgabe - lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_LineareRegression.md))
 
-- Die logistische Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/logistischeRegression.md))
+- Die logistische Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/logistischeRegression.md) | [pdf](slides/logistischeRegression.pdf) | [rcode](rcode/logistischeRegression.R))
 
-    - Aufgabe - Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Datenanalyse.Rmd))
+    - Aufgabe - Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Datenanalyse.md))
 
 ## Ausblick – Möglichkeiten mit R
 
-- Faktoren in R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Faktoren.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Faktoren.pdf))
+- Faktoren in R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Faktoren.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Faktoren.pdf) | [rcode](rcode/Faktoren.R))
 
-- Grafiken mit ggplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggplot2.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggplot2.pdf))
+- Grafiken mit ggplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggplot2.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggplot2.pdf) | [rcode](rcode/ggplot2.R))
 
-- Einfache Karten mit R erstellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggmap.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggmap.pdf))
+- Einfache Karten mit R erstellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggmap.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggmap.pdf) | [rcode](rcode/ggmap.R))
 
-- Regressionsdiagnostik mit R-Paket `visreg` ([Browser](slides/Regressionsdiagnostik.Rmd))
+- Regressionsdiagnostik mit R-Paket `visreg` ([Browser](slides/Regressionsdiagnostik.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Regressionsdiagnostik.pdf) | [rcode](rcode/Regressionsdiagnostik.R))
 
 - Weitere Themen im Ausblick ([Browser](slides/Ausblick.Rmd) | [pdf](slides/Ausblick.pdf))
 

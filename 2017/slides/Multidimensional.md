@@ -1,4 +1,4 @@
-# Einführung in die Datenanalyse mit R - Multidimensional
+# Intro Datenanalyse mit R - Multidimensional
 Jan-Philipp Kolb  
 3 Mai 2017  
 
@@ -53,7 +53,7 @@ cor(iris$Sepal.Length,iris$Petal.Length)
 pairs(iris[,1:4])
 ```
 
-![](Multidimensional_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
+![](Multidimensional_files/figure-slidy/unnamed-chunk-4-1.png)<!-- -->
 
 ## Zusammenhang zwischen mehreren Variablen
 
@@ -61,10 +61,10 @@ pairs(iris[,1:4])
 ```r
 library("psych")
 pairs.panels(iris[1:4],bg=c("red","yellow","blue")
-[iris$Species],pch=21,main="Iris Datensatz")
+[iris$Species],pch=21,main="")
 ```
 
-![](Multidimensional_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
+![](Multidimensional_files/figure-slidy/unnamed-chunk-5-1.png)<!-- -->
 
 ## Verschiedene Korrelationskoeffizienten
 
@@ -127,7 +127,7 @@ data(BankWages)
 levelplot(table(BankWages$education,BankWages$job))
 ```
 
-![](Multidimensional_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](Multidimensional_files/figure-slidy/unnamed-chunk-9-1.png)<!-- -->
 
 ## Visualisierung von Zusammenhängen zwischen kategorialen Variablen
 
@@ -137,7 +137,7 @@ mosaicplot(~ Sex + Age + Survived,
            data = Titanic, color = TRUE)
 ```
 
-![](Multidimensional_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](Multidimensional_files/figure-slidy/unnamed-chunk-10-1.png)<!-- -->
 
 ## Shading
 
@@ -149,7 +149,7 @@ mosaicplot(~ Sex + Age + Survived,
            data = Titanic, shade = TRUE)
 ```
 
-![](Multidimensional_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](Multidimensional_files/figure-slidy/unnamed-chunk-11-1.png)<!-- -->
 
 ## Literatur zu Zusammenhangsmaßen
 

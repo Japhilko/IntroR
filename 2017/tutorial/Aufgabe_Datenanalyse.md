@@ -10,4 +10,4 @@ Jan-Philipp Kolb
 -  Führen Sie eine Regression mit sinnvoll gewählten abhängiger und unabhängiger Variablen auf den Daten durch
 -  Erzeugen Sie einen Lattice-plot
 
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)

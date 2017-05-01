@@ -1,11 +1,6 @@
----
-title: "Aufgabe - lineare Regression"
-author: "Jan-Philipp Kolb"
-date: "4 Mai 2017"
-output: 
-  html_document: 
-    keep_md: yes
----
+# Aufgabe - lineare Regression
+Jan-Philipp Kolb  
+4 Mai 2017  
 
 ## Aufgabe - lineare Regression
 

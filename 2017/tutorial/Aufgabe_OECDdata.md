@@ -1,17 +1,13 @@
----
-title: "Aufgabe - OECD Datensatz"
-author: "Jan-Philipp Kolb"
-date: "3 Mai 2017"
-output: 
-  slidy_presentation: 
-    keep_md: yes
----
+# Aufgabe - OECD Datensatz
+Jan-Philipp Kolb  
+3 Mai 2017  
 
 ## Aufgabe - OECD Datensatz
 
 - Laden Sie den oecd-Datensatz herunter und lesen Sie ihn mit folgender Funktion ein:
 
-```{r,eval=F}
+
+```r
 data <- read.csv("oecd.csv",header = TRUE)
 ```
 
