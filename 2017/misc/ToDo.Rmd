@@ -14,5 +14,6 @@ knitr::opts_chunk$set(echo = TRUE)
 - Aufgabe lineare Regression überarbeiten
 - Lösungen anpassen und auf Github hochladen
 
+- Ausblick noch anpassen
 
 ## 
