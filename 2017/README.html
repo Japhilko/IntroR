@@ -11,7 +11,6 @@
 
 <meta name="author" content="Jan-Philipp Kolb" />
 
-<meta name="date" content="2017-04-24" />
 
 <title>Einführung in die Datenanalyse mit R</title>
 
@@ -119,29 +118,29 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Einführung in die Datenanalyse mit R</h1>
 <h4 class="author"><em>Jan-Philipp Kolb</em></h4>
-<h4 class="date"><em>24 April 2017</em></h4>
+<h4 class="date"><em>3 Mai 2017</em></h4>
 
 </div>
 
 
-<p>Unterlagen für den Kurs 2017. Die Foliensätze für den <a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/pdfVersion/GESIS_R_Kurs_2016_Teil1.pdf">ersten</a> und <a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/pdfVersion/GESIS_R_Kurs_2016_Teil2.pdf">zweiten</a> Tag sind als pdf komplett oder als Browser Version (siehe unten) in diesem Github Ordner enthalten. Der rcode in den Folien lässt sich mit den Dateien im <a href="https://github.com/Japhilko/IntroR/tree/master/2016/rcode">rcode Ordner</a> nachverfolgen.</p>
+<p>Unterlagen für den Kurs 2017. Die Foliensätze sind <a href="slides/Intro_Datenanalyse1.md">hier</a> verfügbar. Das pdf und die Browser Version für die einzelnen Teile sind ebenfalls in diesem Github Ordner enthalten. Der rcode in den Folien lässt sich mit den Dateien im <a href="https://github.com/Japhilko/IntroR/tree/master/2017/rcode">rcode Ordner</a> nachverfolgen.</p>
 <div id="einfuhrung-und-vorbereitung" class="section level2">
 <h2>Einführung und Vorbereitung</h2>
 <ul>
-<li><p>Warum R nutzen? (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/WarumR.md">Browser</a> | <a href="https://github.com/Japhilko/IntroR/raw/master/2016/slides/WarumR.pdf">pdf</a> )</p></li>
-<li><p>Dein Freund das GUI (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/FreundGUI.md">Browser</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/GUI.pdf">pdf</a>)</p>
+<li><p>Warum R nutzen? (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/WarumR.md">Browser</a> | <a href="slides/WarumR.pdf">pdf</a> )</p></li>
+<li><p>Dein Freund das GUI (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/FreundGUI.md">Browser</a> | <a href="slides/FreundGUI.pdf">pdf</a>)</p>
 <ul>
 <li>Aufgabe: Vorbereitung (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Vorbereitung.md">Browser</a>)</li>
 </ul></li>
-<li><p>Grundlagen im Umgang mit der Sprache R (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/GrundlagenR.md">Browser</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.R">rcode</a> )</p>
+<li><p>Grundlagen im Umgang mit der Sprache R (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.md">Browser</a> | <a href="slides/GrundlagenR.pdf">pdf</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.R">rcode</a> )</p>
 <ul>
 <li>Aufgabe: Zuweisungen und Funktionen (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zuweisung.md">Browser</a>)</li>
 </ul></li>
-<li><p>Datentypen und Indizieren (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.md">Browser</a>| <a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.R">rcode</a>)</p></li>
+<li><p>Datentypen und Indizieren (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.md">Browser</a>| <a href="slides/Datentypen.pdf">pdf</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.R">rcode</a>)</p></li>
 <li><p>Wie bekommt man Hilfe? (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.md">Browser</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.R">rcode</a>)</p></li>
 <li><p>Modularer Aufbau von R (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/ModularerAufbau.Rmd">Browser</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2017/rcode/InstallPackages.R">rcode</a>)</p>
 <ul>
-<li>Aufgabe Zusatzpakete (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Zusatzpakete.md">Browser</a>)</li>
+<li>Aufgabe Zusatzpakete (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zusatzpakete.md">Browser</a>)</li>
 </ul></li>
 </ul>
 </div>
@@ -150,7 +149,7 @@ $(document).ready(function () {
 <ul>
 <li><p>Datenimport (<a href="slides/Import.Rmd">Browser</a>)</p>
 <ul>
-<li>Aufgabe Datenimport (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Datenimport.md">Browser</a>)</li>
+<li>Aufgabe Datenimport (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Datenimport.md">Browser</a>)</li>
 </ul></li>
 <li><p>Datenexport (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Export.md">Browser</a>)</p></li>
 <li><p>Exkurs: Datenquellen (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenquellen.md">Browser</a>)</p></li>
@@ -161,7 +160,7 @@ $(document).ready(function () {
 <ul>
 <li><p>Datenanalyse (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenanalyse.md">Browser</a>)</p>
 <ul>
-<li>Aufgabe - Apply Funktion verwenden (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Apply.Rmd">Browser</a>)</li>
+<li>Aufgabe - Apply Funktion verwenden (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Apply.md">Browser</a>)</li>
 </ul></li>
 </ul>
 </div>
@@ -170,7 +169,7 @@ $(document).ready(function () {
 <ul>
 <li><p>Einfache Grafiken (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/EinfacheGrafiken.md">Browser</a>)</p>
 <ul>
-<li>Aufgabe - Barplot (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Barplot.md">Browser</a>)</li>
+<li>Aufgabe - Barplot (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Barplot.md">Browser</a>)</li>
 </ul></li>
 </ul>
 </div>
@@ -187,25 +186,24 @@ $(document).ready(function () {
 <div id="regression-uberblick-der-methoden-in-r" class="section level2">
 <h2>Regression – Überblick der Methoden in R</h2>
 <ul>
-<li><p>Die lineare Regression (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/LineareRegression.md">Browser</a>)</p>
+<li><p>Die lineare Regression (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/LineareRegression.md">Browser</a>)</p>
 <ul>
 <li>Aufgabe - lineare Regression (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_LineareRegression.Rmd">Browser</a>)</li>
 </ul></li>
-<li><p>Die logistische Regression (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/logistischeRegression.md">Browser</a>)</p>
+<li><p>Die logistische Regression (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/logistischeRegression.md">Browser</a>)</p>
 <ul>
-<li>Aufgabe - Datenanalyse (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/tutorial/Aufgabe_Datenanalyse.Rmd">Browser</a>)</li>
+<li>Aufgabe - Datenanalyse (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Datenanalyse.Rmd">Browser</a>)</li>
 </ul></li>
 </ul>
 </div>
 <div id="ausblick-moglichkeiten-mit-r" class="section level2">
 <h2>Ausblick – Möglichkeiten mit R</h2>
 <ul>
-<li><p>Faktoren in R (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/Faktoren.Rmd">Browser</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/Faktoren.pdf">pdf</a>)</p></li>
-<li><p>Grafiken mit ggplot (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/ggplot2.Rmd">Browser</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/ggplot2.pdf">pdf</a>)</p></li>
-<li><p>Karten erstellen mit R (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/KartenErstellen.Rmd">Browser</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/KartenErstellen.pdf">pdf</a>)</p></li>
-<li><p>Geokodierung mit dem Paket ggmap (<a href="https://github.com/Japhilko/GeoData/raw/master/2015/slides/MapTypes.pdf">pdf</a>)</p></li>
-<li><p>Regressionsdiagnostik mit R-Paket visreg (<a href="https://github.com/Japhilko/IntroR/blob/master/2016/slides/pdfVersion/GESIS_R_Kurs_2016_visreg.pdf">pdf</a>)</p></li>
-<li><p>Weitere Themen im Ausblick (<a href="https://github.com/Japhilko/GeoData/raw/master/2015/slides/Ausblick.Rmd">Browser</a> | <a href="https://github.com/Japhilko/GeoData/raw/master/2015/slides/Ausblick.pdf">pdf</a>)</p></li>
+<li><p>Faktoren in R (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Faktoren.Rmd">Browser</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/Faktoren.pdf">pdf</a>)</p></li>
+<li><p>Grafiken mit ggplot (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggplot2.Rmd">Browser</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggplot2.pdf">pdf</a>)</p></li>
+<li><p>Einfache Karten mit R erstellen (<a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggmap.Rmd">Browser</a> | <a href="https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggmap.pdf">pdf</a>)</p></li>
+<li><p>Regressionsdiagnostik mit R-Paket <code>visreg</code> (<a href="slides/Regressionsdiagnostik.Rmd">Browser</a>)</p></li>
+<li><p>Weitere Themen im Ausblick (<a href="slides/Ausblick.Rmd">Browser</a> | <a href="slides/Ausblick.pdf">pdf</a>)</p></li>
 <li><p>Beispiel einer <a href="http://rpubs.com/Japhilko82/Campsites">interaktiven Karte</a> und <a href="https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive%20maps.R">Rcode</a> um eine interaktive Karte mit leaflet zu erzeugen.</p></li>
 </ul>
 </div>

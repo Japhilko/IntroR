@@ -5,6 +5,7 @@ date: "3 Mai 2017"
 output:
   slidy_presentation:
     keep_md: yes
+    css: mycss.css
 ---
 
 # Warum R nutzen

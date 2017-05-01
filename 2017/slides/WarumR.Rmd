@@ -23,6 +23,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE,message=F,warning = F)
 ```
 
+## Grundätzliches
+
+- Meistens sind die Kenntnisse und Fähigkeiten der Teilnehmer sehr heterogen - bitte sagen, wenn es zu schnell oder langsam geht
+- Wenn Fragen sind - immer fragen
+- R macht zusammen mehr Spaß - gerne den Nachbarn fragen
 
 
 ## Gründe für die Nutzung von R
@@ -97,6 +102,7 @@ Das kann sie nicht leisten:
 -  Grundlegende datenanalytische Konzepte vermitteln
 -  Verständnis zementieren
 -  Das Trainieren abnehmen
+
 
 ## R herunterladen:
 
