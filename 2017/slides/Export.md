@@ -1,22 +1,9 @@
----
-title: "Intro Datenanalyse mit R - Datenexport"
-author: "Jan-Philipp Kolb"
-date: "3 Mai 2017"
-output:
-  slidy_presentation:
-    keep_md: yes
-  beamer_presentation:
-    colortheme: beaver
-    fig_caption: no
-    fonttheme: structurebold
-    highlight: espresso
-    theme: CambridgeUS
----
+# Intro Datenanalyse mit R - Datenexport
+Jan-Philipp Kolb  
+3 Mai 2017  
 
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
-```
+
 
 ## Datenexport
 
@@ -30,7 +17,8 @@ knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 
 ## Beispieldatensatz erzeugen
 
-```{r}
+
+```r
 A <- c(1,2,3,4)
 B <- c("A","B","C","D")
 
@@ -41,18 +29,21 @@ mydata <- data.frame(A,B)
 
 ## Überblick Daten Import/Export
 
-```{r,eval=F}
+
+```r
 save(mydata, file="mydata.RData")
 ```
 
 ## Daten in Excel Format abspeichern
 
-```{r,eval=F}
+
+```r
 write.csv(mydata,file="mydata.csv") 
 ```
 
 
-```{r,eval=F}
+
+```r
 library(xlsx)
 write.xlsx(mydata,file="mydata.xlsx") 
 ```
@@ -61,14 +52,16 @@ write.xlsx(mydata,file="mydata.xlsx")
 
 ## Daten in stata Format abspeichern
 
-```{r}
+
+```r
 library(foreign)
 write.dta(mydata,file="mydata.dta") 
 ```
 
 ## Auch zum Export eignet sich das `rio` Paket
 
-```{r,eval=F}
+
+```r
 library("rio")
 
 export(mtcars, "mtcars.csv")

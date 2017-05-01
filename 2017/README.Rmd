@@ -40,11 +40,11 @@ Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenan
 
 ## Rein und raus – Datenimport und -export
 
-- Datenimport ([Browser](slides/Import.md))
+- Datenimport ([Browser](slides/Import.md) | [pdf](slides/Import.pdf) | [rcode](slides/Import.R))
 
     - Aufgabe Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Datenimport.md))
 
-- Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Export.md))
+- Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Export.md) | [pdf](slides/Export.pdf) | [rcode](slides/Export.R))
 
 - Exkurs: Datenquellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenquellen.md))
 
