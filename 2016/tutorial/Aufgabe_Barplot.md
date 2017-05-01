@@ -9,4 +9,4 @@ folgenden plot:
 
 ![](Aufgabe_Barplot_files/figure-slidy/unnamed-chunk-1-1.png)<!-- -->
 
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)

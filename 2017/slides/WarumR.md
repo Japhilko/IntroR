@@ -9,22 +9,23 @@ Jan-Philipp Kolb
 
 ## Gründe für die Nutzung von R
 
-- Als Weg kreativ zu sein ...
-- Graphiken, Graphiken, Graphiken
-- In Kombination mit anderen Programmen nutzbar
-- Zur Verbindung von Datenstrukturen
-- Zum Automatisieren
-- Um die Intelligenz anderer Leute zu nutzen ;-)
+- Als Weg [kreativ](http://blog.revolutionanalytics.com/2015/10/r-user-groups-highlight-r-creativity.html) zu sein ...
+- [Graphiken](https://www.r-bloggers.com/3d-plots-with-ggplot2-and-plotly/), [Graphiken](http://stackoverflow.com/questions/16847377/how-to-set-the-maximum-and-minimum-values-for-a-lattice-plot), [Graphiken](http://pathview.r-forge.r-project.org/)
+- In [Kombination](https://github.com/Japhilko/RInterfaces) mit anderen Programmen nutzbar
+- Zur [Verbindung von Datenstrukturen](https://github.com/Japhilko/RInterfaces/blob/master/slides/Datenimport.md)
+- Zum [Automatisieren](https://cran.r-project.org/web/packages/MplusAutomation/MplusAutomation.pdf)
+- Um die [Intelligenz](http://files.meetup.com/1225993/BARUG_Sep2015_JPorzak_CustomerSegmentation.pdf) anderer Leute zu nutzen ;-)
 - ...
 
 
 ## Gründe
 
 - R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
-- R ist eine Skriptsprache 
+- R ist eine [Skriptsprache](https://de.wikipedia.org/wiki/Skriptsprache) 
 - Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
-- R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
 - [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
+- R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
+
 
 ## Übersicht - warum R
 
@@ -65,11 +66,11 @@ Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datam
 
 Das kann diese Schulung vermitteln:
 
-- Eine praxisnahe Einfuhrung in die statistische
+- Ein praxisnahes Intro in die statistische
 Programmiersprache R
-- Erlernen einer Programmier-Strategie
-- Guten Stil
-- Die Vorzüge graphischer Datenanalyse
+- Erlernen einer [Programmier-Strategie](https://csgillespie.github.io/efficientR/5-1-project-planning.html)
+- [Guten Stil](https://google.github.io/styleguide/Rguide.xml)
+- Die Vorzüge [graphischer Datenanalyse](https://cran.r-project.org/doc/contrib/usingR.pdf)
 
 
 ## Erwartungen und Anforderungen II
@@ -88,7 +89,7 @@ Das kann sie nicht leisten:
 ![](figure/CRAN1picture.PNG)
 
 
-## Links
+## Zum Weiterlesen
 
 - [Vergleich python und R](http://www.dataschool.io/python-or-r-for-data-science/)
 
@@ -96,13 +97,13 @@ Das kann sie nicht leisten:
 
 - [R Technologie des Jahres](http://www.r-bloggers.com/rstudio-infoworld-2015-technology-of-the-year-award-recipient/)
 
-- [Why R is Good for Business](http://www.fastcolabs.com/3030063/why-the-r-programming-language-is-good-for-business) 
+- [Warum R gut fürs Business ist](http://www.fastcolabs.com/3030063/why-the-r-programming-language-is-good-for-business) 
 
-- [Warum R auf r-bloggers](http://www.r-bloggers.com/why-use-r/)
+- [Blog mit Gründen für R auf meiner Lieblingsseite r-bloggers](http://www.r-bloggers.com/why-use-r/)
 
-- [Intro R](http://www.ats.ucla.edu/stat/r/seminars/intro.htm)
+- [Gute Einführung in R](http://www.ats.ucla.edu/stat/r/seminars/intro.htm)
 
-- [Intro R II](http://www.ats.ucla.edu/stat/r/sk/)
+- [Eine weitere Einführung in R](http://www.ats.ucla.edu/stat/r/sk/)
 
 ## Probleme mit Excel
 

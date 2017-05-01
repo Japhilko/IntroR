@@ -113,7 +113,6 @@ Das kann sie nicht leisten:
 
 ## Links
 
-- [Vergleich python und R](http://www.dataschool.io/python-or-r-for-data-science/)
 
 - [Warum man R für Data Science lernen sollte](http://www.r-bloggers.com/why-you-should-learn-r-first-for-data-science/)
 
@@ -126,6 +125,8 @@ Das kann sie nicht leisten:
 - [Intro R](http://www.ats.ucla.edu/stat/r/seminars/intro.htm)
 
 - [Intro R II](http://www.ats.ucla.edu/stat/r/sk/)
+
+- [Vergleich python und R](http://www.dataschool.io/python-or-r-for-data-science/)
 
 ## Probleme mit Excel
 
