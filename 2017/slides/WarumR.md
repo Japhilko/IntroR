@@ -9,8 +9,8 @@ Jan-Philipp Kolb
 
 ## Gründe für die Nutzung von R
 
-- Als Weg kreativ zu sein ...
-- Graphiken, Graphiken, Graphiken
+- Als Weg [kreativ](http://blog.revolutionanalytics.com/2015/10/r-user-groups-highlight-r-creativity.html) zu sein ...
+- [Graphiken](https://www.r-bloggers.com/3d-plots-with-ggplot2-and-plotly/), Graphiken, Graphiken
 - In Kombination mit anderen Programmen nutzbar
 - Zur Verbindung von Datenstrukturen
 - Zum Automatisieren
