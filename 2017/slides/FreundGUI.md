@@ -45,7 +45,7 @@ Aus den folgenden Gründen:
 
 ## Download der Unterlagen
 
-Auf [github](github.com/Japhilko/IntroR/) sind alle Unterlagen für diesen Kurs zu finden.
+Auf [github](github.com/Japhilko/IntroR/2017) sind alle Unterlagen für diesen Kurs zu finden.
 
 [Wie nutzt man github?](https://guides.github.com/activities/hello-world/)
 
@@ -57,4 +57,4 @@ Auf [github](github.com/Japhilko/IntroR/) sind alle Unterlagen für diesen Kurs 
 
 - Wie man Rstudio [nutzen kann.](https://support.rstudio.com/hc/en-us/sections/200107586-Using-RStudio)
 
-- [Das Rstudio einrichten](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio)
+- [Rstudio einrichten](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio)
