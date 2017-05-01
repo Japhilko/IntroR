@@ -3,8 +3,6 @@ title: "Intro Datenanalyse mit R - Warum R nutzen?"
 author: "Jan-Philipp Kolb"
 date: "03 Mai 2017"
 output:
-  slidy_presentation:
-    keep_md: yes
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
@@ -12,10 +10,12 @@ output:
     highlight: tango
     theme: CambridgeUS
     toc: yes
-  html_document:
-    keep_md: yes
   pdf_document:
     toc: yes
+  html_document:
+    keep_md: yes
+  slidy_presentation:
+    keep_md: yes
 ---
 
 
@@ -87,7 +87,7 @@ Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datam
 
 Das kann diese Schulung vermitteln:
 
-- Eine praxisnahe Einfuhrung in die statistische
+- Eine praxisnahe Einführung in die statistische
 Programmiersprache R
 - Erlernen einer Programmier-Strategie
 - Guten Stil
