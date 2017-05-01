@@ -16,12 +16,11 @@ output:
 - Berechnen Sie mittels dem apply()-Befehl den Mittelwert und die Varianz für jede Spalte von
 A bzw. B.
 
-- Standardisieren        ist        eine        häuge        Transformation        von        Daten;        dafür        wird        der        Mittelwert        von
-der        entsprechenden        Zeile        o der        Spalte        abgezogen        und        durch        die        entsprechende        Standardab-
+- Standardisieren ist eine häufige Transformation von        Daten;        dafür        wird        der        Mittelwert        von der entsprechenden        Zeile        oder        Spalte        abgezogen        und        durch        die        entsprechende        Standardab-
 weichung         geteilt.             Somit         b esitzen         die         Daten         einen         Mittelwert         von         0         und         eine         Standardab-
 weichung        von        1.           Standardisieren        Sie        die        Spalten        der        Matrix
 A
 .
 
 
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
