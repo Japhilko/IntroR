@@ -1,25 +1,9 @@
----
-title: "Einführung in die Datenanalyse mit R - Modularer Aufbau von R"
-author: "Jan-Philipp Kolb"
-date: "3 Mai 2017"
-output:
-  beamer_presentation:
-    colortheme: beaver
-    fig_caption: no
-    fonttheme: structurebold
-    highlight: espresso
-    theme: CambridgeUS
-  html_document:
-    keep_md: yes
-  slidy_presentation:
-    highlight: espresso
-    keep_md: yes
----
+# Einführung in die Datenanalyse mit R - Modularer Aufbau von R
+Jan-Philipp Kolb  
+3 Mai 2017  
 
 
-```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
+
 
 ## Modularer Aufbau
 
@@ -33,17 +17,11 @@ knitr::opts_chunk$set(echo = TRUE)
 - Auf CRAN werden die wichtigsten packages gehostet (im Moment 10430)
 - Weitergehende Pakete finden sich z.B. bei [bioconductor](www.bioconductor.org)
 
-```{r,eval=F,echo=F}
-# http://blog.revolutionanalytics.com/2015/06/how-many-packages-are-there-really-on-cran.html
-CRANmirror <- "http://cran.revolutionanalytics.com"
-cran <- contrib.url(repos = CRANmirror, 
-                      type = "source")
-info <- available.packages(contriburl = cran, type = "source")
-length(cran)
-```
 
 
-```{r,eval=F}
+
+
+```r
 install.packages("lme4")
 
 library(lme4)
@@ -108,7 +86,8 @@ Paket für den Import/Export - [foreign](http://cran.r-project.org/web/packages/
 
 ## Pakete von Github installieren
 
-```{r,eval=F}
+
+```r
 install.packages("devtools")
 library(devtools)
 

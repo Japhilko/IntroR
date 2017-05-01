@@ -33,13 +33,14 @@ Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenan
 [pdf](slides/Hilfe.pdf) |
 [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.R))
 
-- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ModularerAufbau.Rmd) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/rcode/InstallPackages.R))
+- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ModularerAufbau.md) |
+ [pdf](slides/ModularerAufbau.pdf) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/rcode/InstallPackages.R))
 
     - Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zusatzpakete.md))
 
 ## Rein und raus – Datenimport und -export
 
-- Datenimport ([Browser](slides/Import.Rmd))
+- Datenimport ([Browser](slides/Import.md))
 
     - Aufgabe Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Datenimport.md))
 
