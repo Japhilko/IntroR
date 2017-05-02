@@ -18,5 +18,3 @@ data(VADeaths)
 barplot(VADeaths, border = "dark blue",beside=T,
         col=c(1,2,3,4,5)) 
 ```
-
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)

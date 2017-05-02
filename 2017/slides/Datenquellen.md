@@ -22,7 +22,7 @@ Jan-Philipp Kolb
 
 ## Datenquellen
 
-- Auf dem Portal [datahub.io](http://datahub.io/) sind sehr viele Beispieldatensätze in verschiedenen Formaten abrufbar. 
+- Auf dem Portal [datahub.io](http://datahub.io/) (mit IE oder Opera öffnen) sind sehr viele Beispieldatensätze in verschiedenen Formaten abrufbar. 
 
 - Weitere Portale: [OpenGov](http://ropengov.github.io/projects/), [okfn](http://data.okfn.org/), [enigma](https://app.enigma.io/table/org.worldbank.hnp.data), 
 Amazon Web Services ([AWS](http://aws.amazon.com/de/public-data-sets/))
@@ -65,12 +65,26 @@ head(quakes)
 
 
 
+    lat     long   depth   mag   stations
+-------  -------  ------  ----  ---------
+ -20.42   181.62     562   4.8         41
+ -20.62   181.03     650   4.2         15
+ -26.00   184.10      42   5.4         43
+ -17.97   181.66     626   4.1         19
+ -20.42   181.96     649   4.0         11
+ -19.68   184.31     195   4.0         12
 
 ## Datensatz zum US Zensus
 
 
 ```r
-library(UScensus2010)
+install.packages("UScensus2010")
+```
+
+
+
+```r
+library("UScensus2010")
 ```
 
 ## Weltbank Daten
@@ -88,6 +102,18 @@ WDIsearch('gdp')[1:10,]
 ```
 
 
+indicator              name                                                                     
+---------------------  -------------------------------------------------------------------------
+BG.GSR.NFSV.GD.ZS      Trade in services (% of GDP)                                             
+BM.KLT.DINV.GD.ZS      Foreign direct investment, net outflows (% of GDP)                       
+BN.CAB.XOKA.GD.ZS      Current account balance (% of GDP)                                       
+BN.CUR.GDPM.ZS         Current account balance excluding net official capital grants (% of GDP) 
+BN.GSR.FCTY.CD.ZS      Net income (% of GDP)                                                    
+BN.KLT.DINV.CD.ZS      Foreign direct investment (% of GDP)                                     
+BN.KLT.PRVT.GD.ZS      Private capital flows, total (% of GDP)                                  
+BN.TRF.CURR.CD.ZS      Net current transfers (% of GDP)                                         
+BNCABFUNDCD_           Current Account Balance, %GDP                                            
+BX.KLT.DINV.WD.GD.ZS   Foreign direct investment, net inflows (% of GDP)                        
 
 
 ## Nutzung von WDI Daten
@@ -95,7 +121,6 @@ WDIsearch('gdp')[1:10,]
 
 ```r
 dat <-  WDI(indicator='NY.GDP.PCAP.KD', country=c('MX','CA','US'), start=1960, end=2012)
-head(dat)
 ```
 
 
@@ -141,17 +166,31 @@ uaBerlin <- get_osm(bb, source = api)
 
 
 ```r
-library(twitteR)
-library(streamR)
+install.packages("twitteR")
+install.packages("streamR")
+```
+
+
+
+
+```r
+library("twitteR")
+library("streamR")
 ```
 
 <http://www.r-bloggers.com/mapping-the-world-with-tweets-including-a-gif-without-cats-and-a-shiny-app/>
 
-## worldHires Daten
+## `worldHires` Daten
 
 
 ```r
-library(mapdata)
+install.packages("mapdata")
+```
+
+
+
+```r
+library("mapdata")
 data(worldHiresMapEnv)
 map('worldHires', col=1:10)
 ```
@@ -165,9 +204,31 @@ map('worldHires', col=1:10)
 
 
 ```r
-library(HistData)
+install.packages("HistData")
+```
+
+
+
+```r
+library("HistData")
 data(Arbuthnot)
 ```
+
+
+```r
+kable(head(Arbuthnot))
+```
+
+
+
+ Year   Males   Females   Plague   Mortality      Ratio   Total
+-----  ------  --------  -------  ----------  ---------  ------
+ 1629    5218      4683        0        8771   1.114243   9.901
+ 1630    4858      4457     1317       10554   1.089971   9.315
+ 1631    4422      4102      274        8562   1.078011   8.524
+ 1632    4994      4590        8        9535   1.088017   9.584
+ 1633    5158      4839        0        8393   1.065923   9.997
+ 1634    5035      4820        1       10400   1.044606   9.855
 
 
 ## GDELT Daten
@@ -178,13 +239,16 @@ data(Arbuthnot)
 
 
 ```r
-library(GDELTtools)
+install.packages("GDELTtools")
+```
+
+
+```r
+library("GDELTtools")
 test.filter <- list(ActionGeo_ADM1Code=c("NI", "US"), ActionGeo_CountryCode="US")
 test.results <- GetGDELT(start.date="1979-01-01", end.date="1979-12-31",
                          filter=test.filter)
 ```
-
-
 
 
 ## Andere Datenquellen

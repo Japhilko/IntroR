@@ -63,41 +63,13 @@ library(lme4)
 
 - Luhmann - [Tabelle mit vielen nützlichen Paketen](http://www.beltz.de/fileadmin/beltz/downloads/OnlinematerialienPVU/28090_Luhmann/Verwendete%20Pakete.pdf)
 
+Weitere interessante Pakete:
 
-Die wichtigsten Pakete zur Visualisierung mit R: 
-
-- [ggplot](http://ggplot2.org/)
-- [lattice](http://lattice.r-forge.r-project.org/Vignettes/src/lattice-intro/lattice-intro.pdf)
-- [Visualisierung kategorialer Daten ](http://www.statmethods.net/advgraphs/mosaic.html)
-- [Interaktive Visualisierungen](http://cran.r-project.org/web/packages/googleVis/vignettes/googleVis_examples.html)
-- [plotrix](http://www.inside-r.org/packages/cran/plotrix/docs/draw.circle)
-- [Farbpaletten in R](http://cran.r-project.org/web/packages/colorspace/vignettes/hcl-colors.pdf)
-
-
-## Pakete Regression
-
-- [R-Paket MASS](http://cran.r-project.org/web/packages/MASS/MASS.pdf)
-
-- [Autoregressive Modelle (Zeitreihen)](http://cran.r-project.org/web/packages/tsDyn/vignettes/tsDyn.pdf)
-
-- [Robuste Regressionen](http://robustbase.r-forge.r-project.org/)
-
-
-- [Nichtparametrische Regression](http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Nie+S~Racine.pdf)
-
-- [Lasso Verfahren](http://web.stanford.edu/~hastie/glmnet/glmnet_alpha.html)
-
-## Big Data
-
-- [Task View - High Performance Computing](http://cran.r-project.org/web/views/HighPerformanceComputing.html)
-
-Weitere interessante Pakete
-
-Paket für den Import/Export - [foreign](http://cran.r-project.org/web/packages/foreign/foreign.pdf)
+- Paket für den Import/Export - [foreign](http://cran.r-project.org/web/packages/foreign/foreign.pdf)
 
 - [Pakete für Survey Sampling](http://iase-web.org/documents/papers/icots8/ICOTS8_4J1_TILLE.pdf)
 
-- Paket - Latex und R (xtable) ([xtable Galerie](http://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf))
+- `xtable` Paket für die Integration von Latex und R ([xtable Galerie](http://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf))
 
 - [Paket zur Erzeugung von Dummies](http://cran.r-project.org/web/packages/dummies/dummies.pdf)
 

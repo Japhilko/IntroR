@@ -1,5 +1,5 @@
 ---
-title: "Intro Datenanalyse"
+title: "Intro Datenanalyse mit R"
 author: "Jan-Philipp Kolb"
 date: "3 und 4 Mai 2017"
 output:

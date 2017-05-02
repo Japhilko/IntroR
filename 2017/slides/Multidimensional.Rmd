@@ -82,7 +82,7 @@ cor(iris[,1:4], method = "spearman")
 
 ## Zusammenhang zwischen kategorialen Variablen
 
-- chisq.test() testet, ob zwei kategoriale Merkmale stochastisch unabhängig sind.
+- `chisq.test()` testet, ob zwei kategoriale Merkmale stochastisch unabhängig sind.
 - Getestet wird gegen die Nullhypothese der Gleichverteilung
 
 

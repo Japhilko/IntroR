@@ -1,0 +1,84 @@
+---
+title: "Lösung Aufgabe OECD Daten"
+author: "Jan-Philipp Kolb"
+date: "2 Mai 2017"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Aufgabe - OECD Datensatz
+
+- Laden Sie den oecd-Datensatz herunter und lesen Sie ihn mit folgender Funktion ein:
+
+```{r,eval=F}
+data <- read.csv("oecd.csv",header = TRUE)
+```
+
+- Überprüfen Sie die Dimension der OECD-Daten.
+
+- Berechnen Sie die Mittelwerte und Varianzen der einzelnen
+Variablen mit einem geeigneten apply Befehl.
+
+- In welchem Land waren die meisten Jugendlichen mindestens
+zweimal betrunken? Wie hoch ist der maximale Prozentsatz?
+
+- In welchem Land ist die Sterblichkeit am geringsten? Wie
+hoch ist sie in diesem Land?
+
+- Erstellen Sie einen neuen Datensatz, der aufsteigend nach
+dem Einkommen geordnet ist. Speichern Sie diesen in einer
+neuen `.csv` Datei
+
+
+## Lösung
+
+```{r}
+install.packages("rio")
+```
+
+
+```{r,eval=F}
+library("foreign")
+oecd<-read.dta(file="https://github.com/Japhilko/IntroR/blob/master/2017/data/oecd.dta")
+
+attach(oecd)
+head(oecd)
+names(oecd)
+
+dim(oecd)
+
+########################################################################
+
+sapply(oecd, mean, na.rm=TRUE)
+sapply(oecd, var, na.rm=TRUE)
+
+########################################################################
+
+Alkohol[which(Alkohol==max(Alkohol, na.rm=TRUE))]
+row.names(oecd)[which(Alkohol==max(Alkohol, na.rm=TRUE))]
+
+# wenn keine fehlenden Werte in den Daten sind analog zu: which.max/which.min
+
+########################################################################
+
+Sterblichkeit[which(Sterblichkeit==min(Sterblichkeit, na.rm=TRUE))]
+row.names(oecd)[which(Sterblichkeit==min(Sterblichkeit, na.rm=TRUE))]
+
+
+########################################################################
+
+ind<- order(Einkommen)    
+#Index der die Ränge der LÃ¤nder bezÃ¼glich des Einkommen enthÃ¤lt
+oecd2<-oecd[ind,]
+#neuer nach ind angeordneter Datensatz
+
+
+write.csv(oecd2, file="Daten/oecd2")
+
+```
+

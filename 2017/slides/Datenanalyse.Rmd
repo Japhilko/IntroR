@@ -32,9 +32,10 @@ Im base Paket sind die wichtigsten Streuungsmaße enthalten:
 -  Range: `range()`
 
 ```{r}
-ab <- rnorm(100); var(ab)
-
-sd(ab); range(ab)
+ab <- rnorm(100)
+var(ab)
+sd(ab)
+range(ab)
 ```
 
 ## Extremwerte
@@ -52,7 +53,6 @@ max(ab)
 
 ```{r}
 ab[10] <- NA
-
 var(ab)
 ```
 
@@ -69,7 +69,6 @@ var(ab,na.rm=T)
 
 ```{r}
 x <- sample(1:10,100,replace=T)
-
 table(x)
 ```
 
@@ -115,8 +114,7 @@ table(esoph$agegp,esoph$alcgp)
 ```
 
 ```{r}
-prop.table(table(esoph$agegp,
-esoph$alcgp),1)
+prop.table(table(esoph$agegp,esoph$alcgp),1)
 ```
 
 
@@ -130,11 +128,11 @@ aggregate(state.x77,by=list(state.region),mean)
 ```
 
 			
-x: ein oder mehrere Beobachtungsvektor(en) für den der Kennwert berechnet werden soll
+`x`: ein oder mehrere Beobachtungsvektor(en) für den der Kennwert berechnet werden soll
 
-by: eine oder mehrere bedingende Variable(n)
+`by`: eine oder mehrere bedingende Variable(n)
 
-FUN: die Funktion welche den Kennwert berechnet (z.B. `mean` oder `sd`)
+`FUN`: die Funktion welche den Kennwert berechnet (z.B. `mean` oder `sd`)
 			
 			
 - Die Ausgabe kann mit Hilfe von `xtabs()` in eine schöne zweidimensionale Tabelle überführt werden

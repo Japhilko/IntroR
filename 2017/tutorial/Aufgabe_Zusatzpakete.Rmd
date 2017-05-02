@@ -9,7 +9,7 @@ output:
 
 ## Aufgabe - Zusatzpakete
 
-Gehen Sie auf <cran.r-project.org> und suchen Sie in dem Bereich, wo die Pakete vorgestellt werden, nach Paketen,...
+Gehen Sie auf <https://cran.r-project.org/> und suchen Sie in dem Bereich, wo die Pakete vorgestellt werden, nach Paketen,...
 
 -  die für die deskriptive Datenanalyse geeignet sind.
 -  um Regressionen zu berechnen

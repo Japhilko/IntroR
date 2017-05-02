@@ -18,11 +18,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Verschiedene Datentypen
 
-|Datentyp  |Beschreibung                 |Beispiel    |
-|:---------|:----------------------------|:-----------|
-|numeric   |ganze und reele Zahlen       |5, 3.462    |
-|logical   |logische Werte               |FALSE, TRUE |
-|character |Buchstaben und Zeichenfolgen |"Hallo"     |
+|Datentyp  |Beschreibung                 |Beispiel      |
+|:---------|:----------------------------|:-------------|
+|numeric   |ganze und reele Zahlen       |`5, 3.462`    |
+|logical   |logische Werte               |`FALSE, TRUE` |
+|character |Buchstaben und Zeichenfolgen |`"Hallo"`     |
 
 Quelle: [R. Münnich und M. Knobelspieß](https://www.uni-trier.de/fileadmin/fb4/prof/VWL/FIN/Oekonometrie/PC-UEbung/Einfuehrung_in_R.pdf) (2007): Einführung in das statistische Programmpaket R
 
@@ -36,6 +36,12 @@ fac <- as.factor(c(1,2)) # factor
 ```
 
 Mit `str()` bekommt man den Objekttyp.
+
+```{r}
+str(fac)
+```
+
+
 
 ## Indizieren eines Vektors:
 
@@ -211,5 +217,11 @@ rep("A",10)
 ```{r}
 paste(1:4)
 paste("A", 1:6, sep = "")
+```
+
+- Ein weiteres Beispiel:
+
+```{r}
+paste0("A", 1:6)
 ```
 

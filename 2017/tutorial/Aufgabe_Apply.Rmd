@@ -7,13 +7,13 @@ output:
     keep_md: yes
 ---
 
-## Aufgabe - Apply Funktion anwenden
+## Aufgabe - `apply` Funktion anwenden
 
 - Erstellen Sie eine Matrix A mit 4 Zeilen und 25 Spalten, die die Werte 1 bis 100 enthält. Analog dazu erstellen Sie eine Matrix B mit 25 Zeilen und 4 Spalten, die die Werte 1 bis 100 enthält.
 
-- Berechnen Sie mittels dem apply()-Befehl den Mittelwert und die Varianz für jede Zeile von A bzw. B.
+- Berechnen Sie mittels dem `apply()`-Befehl den Mittelwert und die Varianz für jede Zeile von A bzw. B.
 
-- Berechnen Sie mittels dem apply()-Befehl den Mittelwert und die Varianz für jede Spalte von
+- Berechnen Sie mittels dem `apply()`-Befehl den Mittelwert und die Varianz für jede Spalte von
 A bzw. B.
 
 - Standardisieren ist eine häufige Transformation von        Daten;        dafür        wird        der        Mittelwert        von der entsprechenden        Zeile        oder        Spalte        abgezogen        und        durch        die        entsprechende        Standardab-
@@ -22,5 +22,3 @@ weichung        von        1.           Standardisieren        Sie        die   
 A
 .
 
-
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)

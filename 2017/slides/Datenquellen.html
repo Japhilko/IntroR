@@ -67,7 +67,7 @@ Jan-Philipp Kolb
 <div id="datenquellen" class="slide section level2">
 <h1>Datenquellen</h1>
 <ul>
-<li><p>Auf dem Portal <a href="http://datahub.io/">datahub.io</a> sind sehr viele Beispieldatensätze in verschiedenen Formaten abrufbar.</p></li>
+<li><p>Auf dem Portal <a href="http://datahub.io/">datahub.io</a> (mit IE oder Opera öffnen) sind sehr viele Beispieldatensätze in verschiedenen Formaten abrufbar.</p></li>
 <li><p>Weitere Portale: <a href="http://ropengov.github.io/projects/">OpenGov</a>, <a href="http://data.okfn.org/">okfn</a>, <a href="https://app.enigma.io/table/org.worldbank.hnp.data">enigma</a>, Amazon Web Services (<a href="http://aws.amazon.com/de/public-data-sets/">AWS</a>)</p></li>
 <li><p>Umweltdaten (<a href="http://www.ncdc.noaa.gov/ibtracs/index.php?name=ibtracs-data">National climatic data center</a>)</p></li>
 <li><p><a href="http://cran.r-project.org/web/packages/FAOSTAT/index.html">FAO Datenbank</a></p></li>
@@ -85,21 +85,126 @@ Jan-Philipp Kolb
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(datasets)</code></pre></div>
 <p>Beispiel Erdbeben Datensatz:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(quakes)</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">lat</th>
+<th align="right">long</th>
+<th align="right">depth</th>
+<th align="right">mag</th>
+<th align="right">stations</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">-20.42</td>
+<td align="right">181.62</td>
+<td align="right">562</td>
+<td align="right">4.8</td>
+<td align="right">41</td>
+</tr>
+<tr class="even">
+<td align="right">-20.62</td>
+<td align="right">181.03</td>
+<td align="right">650</td>
+<td align="right">4.2</td>
+<td align="right">15</td>
+</tr>
+<tr class="odd">
+<td align="right">-26.00</td>
+<td align="right">184.10</td>
+<td align="right">42</td>
+<td align="right">5.4</td>
+<td align="right">43</td>
+</tr>
+<tr class="even">
+<td align="right">-17.97</td>
+<td align="right">181.66</td>
+<td align="right">626</td>
+<td align="right">4.1</td>
+<td align="right">19</td>
+</tr>
+<tr class="odd">
+<td align="right">-20.42</td>
+<td align="right">181.96</td>
+<td align="right">649</td>
+<td align="right">4.0</td>
+<td align="right">11</td>
+</tr>
+<tr class="even">
+<td align="right">-19.68</td>
+<td align="right">184.31</td>
+<td align="right">195</td>
+<td align="right">4.0</td>
+<td align="right">12</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="datensatz-zum-us-zensus" class="slide section level2">
 <h1>Datensatz zum US Zensus</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(UScensus2010)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;UScensus2010&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;UScensus2010&quot;</span>)</code></pre></div>
 </div>
 <div id="weltbank-daten" class="slide section level2">
 <h1>Weltbank Daten</h1>
 <p><a href="https://cran.r-project.org/web/packages/WDI/index.html"><code>WDI</code></a> - World Development Indicators (World Bank) - <a href="https://github.com/vincentarelbundock/WDI">Einführung in das Paket</a></p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(WDI)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">WDIsearch</span>(<span class="st">'gdp'</span>)[<span class="dv">1</span>:<span class="dv">10</span>,]</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">indicator</th>
+<th align="left">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">BG.GSR.NFSV.GD.ZS</td>
+<td align="left">Trade in services (% of GDP)</td>
+</tr>
+<tr class="even">
+<td align="left">BM.KLT.DINV.GD.ZS</td>
+<td align="left">Foreign direct investment, net outflows (% of GDP)</td>
+</tr>
+<tr class="odd">
+<td align="left">BN.CAB.XOKA.GD.ZS</td>
+<td align="left">Current account balance (% of GDP)</td>
+</tr>
+<tr class="even">
+<td align="left">BN.CUR.GDPM.ZS</td>
+<td align="left">Current account balance excluding net official capital grants (% of GDP)</td>
+</tr>
+<tr class="odd">
+<td align="left">BN.GSR.FCTY.CD.ZS</td>
+<td align="left">Net income (% of GDP)</td>
+</tr>
+<tr class="even">
+<td align="left">BN.KLT.DINV.CD.ZS</td>
+<td align="left">Foreign direct investment (% of GDP)</td>
+</tr>
+<tr class="odd">
+<td align="left">BN.KLT.PRVT.GD.ZS</td>
+<td align="left">Private capital flows, total (% of GDP)</td>
+</tr>
+<tr class="even">
+<td align="left">BN.TRF.CURR.CD.ZS</td>
+<td align="left">Net current transfers (% of GDP)</td>
+</tr>
+<tr class="odd">
+<td align="left">BNCABFUNDCD_</td>
+<td align="left">Current Account Balance, %GDP</td>
+</tr>
+<tr class="even">
+<td align="left">BX.KLT.DINV.WD.GD.ZS</td>
+<td align="left">Foreign direct investment, net inflows (% of GDP)</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="nutzung-von-wdi-daten" class="slide section level2">
 <h1>Nutzung von WDI Daten</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st">  </span><span class="kw">WDI</span>(<span class="dt">indicator=</span><span class="st">'NY.GDP.PCAP.KD'</span>, <span class="dt">country=</span><span class="kw">c</span>(<span class="st">'MX'</span>,<span class="st">'CA'</span>,<span class="st">'US'</span>), <span class="dt">start=</span><span class="dv">1960</span>, <span class="dt">end=</span><span class="dv">2012</span>)
-<span class="kw">head</span>(dat)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">dat &lt;-<span class="st">  </span><span class="kw">WDI</span>(<span class="dt">indicator=</span><span class="st">'NY.GDP.PCAP.KD'</span>, <span class="dt">country=</span><span class="kw">c</span>(<span class="st">'MX'</span>,<span class="st">'CA'</span>,<span class="st">'US'</span>), <span class="dt">start=</span><span class="dv">1960</span>, <span class="dt">end=</span><span class="dv">2012</span>)</code></pre></div>
 </div>
 <div id="erste-grafik-mit-wdi-daten" class="slide section level2">
 <h1>Erste Grafik mit WDI Daten</h1>
@@ -128,13 +233,16 @@ uaBerlin &lt;-<span class="st"> </span><span class="kw">get_osm</span>(bb, <span
 </div>
 <div id="twittr" class="slide section level2">
 <h1>TwittR</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(twitteR)
-<span class="kw">library</span>(streamR)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;twitteR&quot;</span>)
+<span class="kw">install.packages</span>(<span class="st">&quot;streamR&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;twitteR&quot;</span>)
+<span class="kw">library</span>(<span class="st">&quot;streamR&quot;</span>)</code></pre></div>
 <p><a href="http://www.r-bloggers.com/mapping-the-world-with-tweets-including-a-gif-without-cats-and-a-shiny-app/" class="uri">http://www.r-bloggers.com/mapping-the-world-with-tweets-including-a-gif-without-cats-and-a-shiny-app/</a></p>
 </div>
 <div id="worldhires-daten" class="slide section level2">
-<h1>worldHires Daten</h1>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(mapdata)
+<h1><code>worldHires</code> Daten</h1>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;mapdata&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;mapdata&quot;</span>)
 <span class="kw">data</span>(worldHiresMapEnv)
 <span class="kw">map</span>(<span class="st">'worldHires'</span>, <span class="dt">col=</span><span class="dv">1</span>:<span class="dv">10</span>)</code></pre></div>
 </div>
@@ -144,8 +252,79 @@ uaBerlin &lt;-<span class="st"> </span><span class="kw">get_osm</span>(bb, <span
 <li><p><a href="http://www.azavea.com/blogs/newsletter/v2i3/azavea-research-historic-geocoder/">Historischer Geocoder</a></p></li>
 <li><p><a href="http://www.inside-r.org/packages/cran/HistData">Paket HistData</a></p></li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(HistData)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;HistData&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;HistData&quot;</span>)
 <span class="kw">data</span>(Arbuthnot)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">kable</span>(<span class="kw">head</span>(Arbuthnot))</code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Year</th>
+<th align="right">Males</th>
+<th align="right">Females</th>
+<th align="right">Plague</th>
+<th align="right">Mortality</th>
+<th align="right">Ratio</th>
+<th align="right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1629</td>
+<td align="right">5218</td>
+<td align="right">4683</td>
+<td align="right">0</td>
+<td align="right">8771</td>
+<td align="right">1.114243</td>
+<td align="right">9.901</td>
+</tr>
+<tr class="even">
+<td align="right">1630</td>
+<td align="right">4858</td>
+<td align="right">4457</td>
+<td align="right">1317</td>
+<td align="right">10554</td>
+<td align="right">1.089971</td>
+<td align="right">9.315</td>
+</tr>
+<tr class="odd">
+<td align="right">1631</td>
+<td align="right">4422</td>
+<td align="right">4102</td>
+<td align="right">274</td>
+<td align="right">8562</td>
+<td align="right">1.078011</td>
+<td align="right">8.524</td>
+</tr>
+<tr class="even">
+<td align="right">1632</td>
+<td align="right">4994</td>
+<td align="right">4590</td>
+<td align="right">8</td>
+<td align="right">9535</td>
+<td align="right">1.088017</td>
+<td align="right">9.584</td>
+</tr>
+<tr class="odd">
+<td align="right">1633</td>
+<td align="right">5158</td>
+<td align="right">4839</td>
+<td align="right">0</td>
+<td align="right">8393</td>
+<td align="right">1.065923</td>
+<td align="right">9.997</td>
+</tr>
+<tr class="even">
+<td align="right">1634</td>
+<td align="right">5035</td>
+<td align="right">4820</td>
+<td align="right">1</td>
+<td align="right">10400</td>
+<td align="right">1.044606</td>
+<td align="right">9.855</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="gdelt-daten" class="slide section level2">
 <h1>GDELT Daten</h1>
@@ -153,7 +332,8 @@ uaBerlin &lt;-<span class="st"> </span><span class="kw">get_osm</span>(bb, <span
 <li><a href="http://www.gdeltproject.org/">GDELT</a></li>
 <li>Nutzung von GDELT Daten (<a href="http://quantifyingmemory.blogspot.de/2013/04/mapping-gdelt-data-in-r-and-some.html">Beispiel 1</a>, <a href="http://www.kalevleetaru.com/">Beispiel 2</a>)</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(GDELTtools)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;GDELTtools&quot;</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;GDELTtools&quot;</span>)
 test.filter &lt;-<span class="st"> </span><span class="kw">list</span>(<span class="dt">ActionGeo_ADM1Code=</span><span class="kw">c</span>(<span class="st">&quot;NI&quot;</span>, <span class="st">&quot;US&quot;</span>), <span class="dt">ActionGeo_CountryCode=</span><span class="st">&quot;US&quot;</span>)
 test.results &lt;-<span class="st"> </span><span class="kw">GetGDELT</span>(<span class="dt">start.date=</span><span class="st">&quot;1979-01-01&quot;</span>, <span class="dt">end.date=</span><span class="st">&quot;1979-12-31&quot;</span>,
                          <span class="dt">filter=</span>test.filter)</code></pre></div>

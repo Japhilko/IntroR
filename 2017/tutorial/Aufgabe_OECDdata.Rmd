@@ -34,6 +34,4 @@ hoch ist sie in diesem Land?
 
 - Erstellen Sie einen neuen Datensatz, der aufsteigend nach
 dem Einkommen geordnet ist. Speichern Sie diesen in einer
-neuen .csv Datei
-
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
+neuen `.csv` Datei
