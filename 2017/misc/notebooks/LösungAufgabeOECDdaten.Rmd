@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Aufgabe - OECD Datensatz
 
-- Laden Sie den oecd-Datensatz herunter und lesen Sie ihn mit folgender Funktion ein:
+- Laden Sie den OECD-Datensatz herunter und lesen Sie ihn mit folgender Funktion ein:
 
 ```{r,eval=F}
 data <- read.csv("oecd.csv",header = TRUE)
@@ -37,48 +37,72 @@ neuen `.csv` Datei
 
 ## Lösung
 
-```{r}
+```{r,eval=F}
 install.packages("rio")
 ```
 
 
-```{r,eval=F}
-library("foreign")
-oecd<-read.dta(file="https://github.com/Japhilko/IntroR/blob/master/2017/data/oecd.dta")
+```{r}
+library("rio")
+oecd <- import("../../data/oecd.dta")
+```
 
+- mit dem folgenden Befehl muss man vorsichtig umgehen
+- besonders, wenn man mit vielen Datensätzen gleichzeitig arbeitet
+
+```{r}
 attach(oecd)
+```
+
+## Den Datensatz in augenschein nehmen
+
+```{r,eval=F}
 head(oecd)
+```
+
+```{r,echo=F}
+library(knitr)
+kable(head(oecd))
+```
+
+```{r}
 names(oecd)
-
 dim(oecd)
+```
 
-########################################################################
+## Berechnen Sie die Mittelwerte und Varianzen
 
+```{r}
 sapply(oecd, mean, na.rm=TRUE)
 sapply(oecd, var, na.rm=TRUE)
+```
 
-########################################################################
 
+## Land, Jugendliche, Alkohol
+
+```{r}
 Alkohol[which(Alkohol==max(Alkohol, na.rm=TRUE))]
 row.names(oecd)[which(Alkohol==max(Alkohol, na.rm=TRUE))]
+```
 
-# wenn keine fehlenden Werte in den Daten sind analog zu: which.max/which.min
+-  wenn keine fehlenden Werte in den Daten sind analog zu: which.max/which.min
 
-########################################################################
 
+## Wo ist die Sterblichkeit am geringsten
+
+```{r}
 Sterblichkeit[which(Sterblichkeit==min(Sterblichkeit, na.rm=TRUE))]
 row.names(oecd)[which(Sterblichkeit==min(Sterblichkeit, na.rm=TRUE))]
+```
 
+## Einen neuen Datensatz erstellen
 
-########################################################################
-
+```{r,eval=F}
 ind<- order(Einkommen)    
-#Index der die Ränge der LÃ¤nder bezÃ¼glich des Einkommen enthÃ¤lt
+#Index der die Ränge der Länder bezüglich des Einkommen enthält
 oecd2<-oecd[ind,]
 #neuer nach ind angeordneter Datensatz
-
-
-write.csv(oecd2, file="Daten/oecd2")
-
+library(foreign)
+write.csv(oecd2, file="oecd2.csv")
 ```
 

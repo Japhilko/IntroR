@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T)
 
 ![](figure/CDAagresti.PNG)
 
--  Sehr intiutiv geschriebenes Buch
+-  Sehr intuitiv geschriebenes Buch
 -  Sehr ausführliches begleitendes Skript von [Thompson](http://statweb.stanford.edu/~owen/courses/306a/Splusdiscrete2.pdf)
 -  Das Skript eignet sich um die kategoriale Datenanalyse nachzuvollziehen
 
@@ -34,9 +34,7 @@ knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T)
 
 -  Logistische Regressionen gut erklärt
 -  Beispiele mit R-code
-
     - Faraway - Extending the linear model with r
-
     - Faraway - [Practical Regression and Anova using R](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)
     
     
@@ -57,6 +55,25 @@ library("HSAUR")
 data("plasma", package = "HSAUR")
 ```
 
+```{r,eval=F}
+head(plasma)
+```
+
+```{r,echo=F}
+library(knitr)
+kable(head(plasma))
+```
+
+## Der `plasma` Datensatz
+
+```{r}
+?plasma
+```
+
+
+![](figure/plasmaData.PNG)
+
+
 ##  Logistische Regression mit R
 
 - [Kategoriale Daten: ](http://homepage.univie.ac.at/herbert.nagel/KategorialeDaten.pdf)
@@ -71,6 +88,11 @@ cdplot(ESR ~ fibrinogen, data = plasma)
 plasma_glm_1 <- glm(ESR ~ fibrinogen, data = plasma, 
                     family = binomial())
 ```
+
+```{r}
+summary(plasma_glm_1)
+```
+
 
 
 ## Weitere Beispieldaten

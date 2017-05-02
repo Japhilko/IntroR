@@ -51,10 +51,22 @@ library("DAAG")
 data(roller)
 ```
 
-help on roller data:
+
+
+Hilfe für den `roller` Datensatz:
 
 ```{r,eval=F}
 ?roller
+```
+
+```{r,eval=F}
+roller
+```
+
+
+```{r,echo=F}
+library(knitr)
+kable(roller)
 ```
 
 ## Das lineare Regressionsmodell in R

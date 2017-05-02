@@ -28,9 +28,9 @@ knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T)
 
 ![](figure/GalleryGGplot2.PNG)
 
-## [Basiseinführung `ggplot2`](www.r-bloggers.com/basic-introduction-to-ggplot2/)
+## [Einführung in `ggplot2`](www.r-bloggers.com/basic-introduction-to-ggplot2/)
 
-<www.r-bloggers.com/basic-introduction-to-ggplot2/>
+<http://www.r-bloggers.com/basic-introduction-to-ggplot2/>
 
 ```{r,eval=F}
 install.packages("ggplot2")
@@ -39,7 +39,11 @@ install.packages("ggplot2")
 
 ```{r,message=F}
 library(ggplot2)
+?ggplot2
 ```
+
+![](figure/LibraryGGplot2.PNG)
+
 
 ## Der `diamonds` Datensatz
 

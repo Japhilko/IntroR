@@ -250,7 +250,7 @@ uaBerlin &lt;-<span class="st"> </span><span class="kw">get_osm</span>(bb, <span
 <h1>Historische Daten</h1>
 <ul>
 <li><p><a href="http://www.azavea.com/blogs/newsletter/v2i3/azavea-research-historic-geocoder/">Historischer Geocoder</a></p></li>
-<li><p><a href="http://www.inside-r.org/packages/cran/HistData">Paket HistData</a></p></li>
+<li><p><a href="http://www.inside-r.org/packages/cran/HistData">Paket <code>HistData</code></a></p></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">&quot;HistData&quot;</span>)</code></pre></div>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">&quot;HistData&quot;</span>)
@@ -341,8 +341,8 @@ test.results &lt;-<span class="st"> </span><span class="kw">GetGDELT</span>(<spa
 <div id="andere-datenquellen" class="slide section level2">
 <h1>Andere Datenquellen</h1>
 <ul>
-<li><p><a href="http://www.sasanalysis.com/2013/06/the-us-airports-with-most-flight-routes.html">Die US Flughäfen und Fluglinien</a></p></li>
-<li><p>Mehr Daten <a href="http://openflights.org/data.html">hier</a></p></li>
+<li><a href="http://www.sasanalysis.com/2013/06/the-us-airports-with-most-flight-routes.html">Die US Flughäfen und Fluglinien</a></li>
+<li>Mehr Daten mit Bezug zur Luftfahrt <a href="http://openflights.org/data.html">hier</a></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">link1 &lt;-<span class="st"> &quot;http://openflights.svn.sourceforge.net/viewvc/openflights/</span>
 <span class="st">openflights/data/airports.dat&quot;</span>
@@ -352,12 +352,12 @@ link2 &lt;-<span class="st"> &quot;http://openflights.svn.sourceforge.net/viewvc
 <span class="st">openflights/data/routes.dat&quot;</span>
 route &lt;-<span class="st"> </span><span class="kw">read.csv</span>(link2, <span class="dt">header =</span> F)</code></pre></div>
 <ul>
-<li><p>Hafen Daten (<a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/">Natural earth data</a>)</p></li>
-<li><p><a href="http://www.r-bloggers.com/minimalist-maps/">Minimalistische Karten</a></p></li>
-<li><a href="https://ergebnisse.zensus2011.de/">Census results - Germany</a></li>
-<li><a href="http://www.r-bloggers.com/2011-census-open-atlas-project/">Census results - Britain</a> and <a href="http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/new-developments-for-2011-census-results/2011-census-geography/2011-census-geography-prospectus/index.html">boundaries</a></li>
-<li><p><a href="http://openflights.org/data.html">Data on airports</a> and an <a href="http://www.milanor.net/blog/?p=594">example</a> on the usage in R</p></li>
-<li><p><a href="http://www.fa-technik.adfc.de/code/opengeodb/">ADFC/opengeodb</a></p></li>
+<li>Hafen Daten (<a href="http://www.naturalearthdata.com/downloads/10m-cultural-vectors/">Natural earth data</a>)</li>
+<li><a href="http://www.r-bloggers.com/minimalist-maps/">Minimalistische Karten</a></li>
+<li><a href="https://ergebnisse.zensus2011.de/">Zensus Ergebnisse - Deutschland</a></li>
+<li><a href="http://www.r-bloggers.com/2011-census-open-atlas-project/">Zensus Ergebnisse - Großbritanien</a> und <a href="http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/new-developments-for-2011-census-results/2011-census-geography/2011-census-geography-prospectus/index.html">Grenzen</a></li>
+<li><a href="http://openflights.org/data.html">Daten zu Flughäfen</a> und ein <a href="http://www.milanor.net/blog/?p=594">Beispiel</a>.</li>
+<li><a href="http://www.fa-technik.adfc.de/code/opengeodb/">ADFC/opengeodb</a></li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">link &lt;-<span class="st"> &quot;http://www.fa-technik.adfc.de/code/opengeodb/DE9.tab&quot;</span>
 info &lt;-<span class="st"> </span><span class="kw">read.csv</span>(link,<span class="dt">sep=</span><span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>,<span class="dt">header=</span>F)</code></pre></div>
@@ -367,7 +367,7 @@ info &lt;-<span class="st"> </span><span class="kw">read.csv</span>(link,<span c
 <ul>
 <li><p><a href="http://geocommons.com/overlays/96341">ICEDS European Data Server</a></p></li>
 <li><p><a href="http://opencellid.org/">Mobilfunkdaten</a>, <a href="http://databank.worldbank.org/data/reports.aspx?source=2&amp;country=DEU&amp;series=&amp;period=">CO2 Emmissionen</a></p></li>
-<li><p>Daten für New York (<a href="https://data.cityofnewyork.us/">Daten</a>, <a href="https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi">Beispiel</a></p></li>
+<li><p>Daten für New York (<a href="https://data.cityofnewyork.us/">Daten</a>, <a href="https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi">Beispiel</a>)</p></li>
 </ul>
 </div>
 

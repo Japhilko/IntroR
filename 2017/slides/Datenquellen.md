@@ -200,7 +200,7 @@ map('worldHires', col=1:10)
 
 - [Historischer Geocoder](http://www.azavea.com/blogs/newsletter/v2i3/azavea-research-historic-geocoder/)
 
-- [Paket HistData](http://www.inside-r.org/packages/cran/HistData)
+- [Paket `HistData`](http://www.inside-r.org/packages/cran/HistData)
 
 
 ```r
@@ -255,8 +255,7 @@ test.results <- GetGDELT(start.date="1979-01-01", end.date="1979-12-31",
 
 
 - [Die US Flughäfen und Fluglinien](http://www.sasanalysis.com/2013/06/the-us-airports-with-most-flight-routes.html)
-
-- Mehr Daten [hier](http://openflights.org/data.html)
+- Mehr Daten mit Bezug zur Luftfahrt [hier](http://openflights.org/data.html)
 
 
 ```r
@@ -271,14 +270,10 @@ route <- read.csv(link2, header = F)
 
 
 - Hafen Daten ([Natural earth data](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/))
-
 - [Minimalistische Karten](http://www.r-bloggers.com/minimalist-maps/)
-
-- [Census results - Germany](https://ergebnisse.zensus2011.de/)
-- [Census results - Britain](http://www.r-bloggers.com/2011-census-open-atlas-project/) and [boundaries](http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/new-developments-for-2011-census-results/2011-census-geography/2011-census-geography-prospectus/index.html)
-- [Data on airports](http://openflights.org/data.html) and an [example](http://www.milanor.net/blog/?p=594) on the usage in R
-
-
+- [Zensus Ergebnisse - Deutschland](https://ergebnisse.zensus2011.de/)
+- [Zensus Ergebnisse -  Großbritanien](http://www.r-bloggers.com/2011-census-open-atlas-project/) und [Grenzen](http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/new-developments-for-2011-census-results/2011-census-geography/2011-census-geography-prospectus/index.html)
+- [Daten zu Flughäfen](http://openflights.org/data.html) und ein [Beispiel](http://www.milanor.net/blog/?p=594).
 - [ADFC/opengeodb](http://www.fa-technik.adfc.de/code/opengeodb/)
 
 
@@ -296,4 +291,4 @@ info <- read.csv(link,sep="\t",header=F)
 
 - [Mobilfunkdaten](http://opencellid.org/), [CO2 Emmissionen](http://databank.worldbank.org/data/reports.aspx?source=2&country=DEU&series=&period=)
 
-- Daten für New York ([Daten](https://data.cityofnewyork.us/), [Beispiel](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi)
+- Daten für New York ([Daten](https://data.cityofnewyork.us/), [Beispiel](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi))

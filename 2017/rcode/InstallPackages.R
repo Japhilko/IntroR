@@ -15,8 +15,11 @@ install.packages("faraway")
 install.packages("MASS")
 install.packages("mlmRev")
 
-
 install.packages("xlsx")
+
+install.packages("UScensus2010")
+install.packages("HistData")
+
 
 # Graphical User Interface
 

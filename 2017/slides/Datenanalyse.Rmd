@@ -24,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE,warning=F,message=F)
 
 ## Streuungsmaße
 
-Im base Paket sind die wichtigsten Streuungsmaße enthalten:
+In Basis R sind die wichtigsten Streuungsmaße enthalten:
 
 -  Varianz: `var()`
 -  Standardabweichung: `sd()`
@@ -101,7 +101,7 @@ table(esoph$agegp)
 - `prop.table()` liefert die relativen Häufigkeiten
 - Wird die Funktion  außerhalb einer `table()` Funktion geschrieben erhält man die relativen Häufigkeiten bezogen auf alle Zellen
 
-Die Funktion prop.table()
+Die Funktion ``prop.table()`
 
 ```{r,eval=T}
 table(esoph$agegp,esoph$alcgp)

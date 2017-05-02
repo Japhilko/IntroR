@@ -212,7 +212,7 @@ date()
 ```
 
 ```
-## [1] "Tue May 02 16:57:24 2017"
+## [1] "Tue May 02 21:06:09 2017"
 ```
 
 
@@ -221,7 +221,7 @@ sessionInfo()
 ```
 
 ```
-## R version 3.3.2 (2016-10-31)
+## R version 3.3.3 (2017-03-06)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
 ## Running under: Windows 7 x64 (build 7601) Service Pack 1
 ## 
@@ -234,9 +234,9 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] backports_1.0.4 magrittr_1.5    rprojroot_1.1   tools_3.3.2    
-##  [5] htmltools_0.3.5 yaml_2.1.14     Rcpp_0.12.9     stringi_1.1.2  
-##  [9] rmarkdown_1.3   knitr_1.15.1    stringr_1.2.0   digest_0.6.11  
+##  [1] backports_1.0.5 magrittr_1.5    rprojroot_1.2   tools_3.3.3    
+##  [5] htmltools_0.3.5 yaml_2.1.13     Rcpp_0.12.6     stringi_1.1.1  
+##  [9] rmarkdown_1.4   knitr_1.15.1    stringr_1.2.0   digest_0.6.12  
 ## [13] evaluate_0.10
 ```
 
@@ -1477,7 +1477,7 @@ map('worldHires', col=1:10)
 
 - [Historischer Geocoder](http://www.azavea.com/blogs/newsletter/v2i3/azavea-research-historic-geocoder/)
 
-- [Paket HistData](http://www.inside-r.org/packages/cran/HistData)
+- [Paket `HistData`](http://www.inside-r.org/packages/cran/HistData)
 
 
 ```r
@@ -1532,8 +1532,7 @@ test.results <- GetGDELT(start.date="1979-01-01", end.date="1979-12-31",
 
 
 - [Die US Flughäfen und Fluglinien](http://www.sasanalysis.com/2013/06/the-us-airports-with-most-flight-routes.html)
-
-- Mehr Daten [hier](http://openflights.org/data.html)
+- Mehr Daten mit Bezug zur Luftfahrt [hier](http://openflights.org/data.html)
 
 
 ```r
@@ -1548,14 +1547,10 @@ route <- read.csv(link2, header = F)
 
 
 - Hafen Daten ([Natural earth data](http://www.naturalearthdata.com/downloads/10m-cultural-vectors/))
-
 - [Minimalistische Karten](http://www.r-bloggers.com/minimalist-maps/)
-
-- [Census results - Germany](https://ergebnisse.zensus2011.de/)
-- [Census results - Britain](http://www.r-bloggers.com/2011-census-open-atlas-project/) and [boundaries](http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/new-developments-for-2011-census-results/2011-census-geography/2011-census-geography-prospectus/index.html)
-- [Data on airports](http://openflights.org/data.html) and an [example](http://www.milanor.net/blog/?p=594) on the usage in R
-
-
+- [Zensus Ergebnisse - Deutschland](https://ergebnisse.zensus2011.de/)
+- [Zensus Ergebnisse -  Großbritanien](http://www.r-bloggers.com/2011-census-open-atlas-project/) und [Grenzen](http://www.ons.gov.uk/ons/guide-method/census/2011/census-data/2011-census-prospectus/new-developments-for-2011-census-results/2011-census-geography/2011-census-geography-prospectus/index.html)
+- [Daten zu Flughäfen](http://openflights.org/data.html) und ein [Beispiel](http://www.milanor.net/blog/?p=594).
 - [ADFC/opengeodb](http://www.fa-technik.adfc.de/code/opengeodb/)
 
 
@@ -1573,7 +1568,7 @@ info <- read.csv(link,sep="\t",header=F)
 
 - [Mobilfunkdaten](http://opencellid.org/), [CO2 Emmissionen](http://databank.worldbank.org/data/reports.aspx?source=2&country=DEU&series=&period=)
 
-- Daten für New York ([Daten](https://data.cityofnewyork.us/), [Beispiel](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi)
+- Daten für New York ([Daten](https://data.cityofnewyork.us/), [Beispiel](https://data.cityofnewyork.us/City-Government/Parking-Violations-Issued-Fiscal-Year-2014-August-/jt7v-77mi))
 
 
 #  Datenanalyse 
@@ -1588,7 +1583,7 @@ info <- read.csv(link,sep="\t",header=F)
 
 ## Streuungsmaße
 
-Im base Paket sind die wichtigsten Streuungsmaße enthalten:
+In Basis R sind die wichtigsten Streuungsmaße enthalten:
 
 -  Varianz: `var()`
 -  Standardabweichung: `sd()`
@@ -1597,7 +1592,8 @@ Im base Paket sind die wichtigsten Streuungsmaße enthalten:
 
 
 ```r
-ab <- rnorm(100); var(ab)
+ab <- rnorm(100)
+var(ab)
 ```
 
 ```
@@ -1605,11 +1601,15 @@ ab <- rnorm(100); var(ab)
 ```
 
 ```r
-sd(ab); range(ab)
+sd(ab)
 ```
 
 ```
 ## [1] 1.042062
+```
+
+```r
+range(ab)
 ```
 
 ```
@@ -1643,7 +1643,6 @@ max(ab)
 
 ```r
 ab[10] <- NA
-
 var(ab)
 ```
 
@@ -1670,7 +1669,6 @@ var(ab,na.rm=T)
 
 ```r
 x <- sample(1:10,100,replace=T)
-
 table(x)
 ```
 
@@ -1743,7 +1741,7 @@ table(esoph$agegp)
 - `prop.table()` liefert die relativen Häufigkeiten
 - Wird die Funktion  außerhalb einer `table()` Funktion geschrieben erhält man die relativen Häufigkeiten bezogen auf alle Zellen
 
-Die Funktion prop.table()
+Die Funktion ``prop.table()`
 
 
 ```r
@@ -1770,8 +1768,7 @@ table(esoph$agegp,esoph$alcgp)
 
 
 ```r
-prop.table(table(esoph$agegp,
-esoph$alcgp),1)
+prop.table(table(esoph$agegp,esoph$alcgp),1)
 ```
 
 ```
@@ -1810,11 +1807,11 @@ aggregate(state.x77,by=list(state.region),mean)
 ```
 
 			
-x: ein oder mehrere Beobachtungsvektor(en) für den der Kennwert berechnet werden soll
+`x`: ein oder mehrere Beobachtungsvektor(en) für den der Kennwert berechnet werden soll
 
-by: eine oder mehrere bedingende Variable(n)
+`by`: eine oder mehrere bedingende Variable(n)
 
-FUN: die Funktion welche den Kennwert berechnet (z.B. `mean` oder `sd`)
+`FUN`: die Funktion welche den Kennwert berechnet (z.B. `mean` oder `sd`)
 			
 			
 - Die Ausgabe kann mit Hilfe von `xtabs()` in eine schöne zweidimensionale Tabelle überführt werden
@@ -1952,13 +1949,13 @@ tapply(ApplyDat$Income,
 
 
 
-## Aufgabe - Apply Funktion anwenden
+## Aufgabe - `apply` Funktion anwenden
 
 - Erstellen Sie eine Matrix A mit 4 Zeilen und 25 Spalten, die die Werte 1 bis 100 enthält. Analog dazu erstellen Sie eine Matrix B mit 25 Zeilen und 4 Spalten, die die Werte 1 bis 100 enthält.
 
-- Berechnen Sie mittels dem apply()-Befehl den Mittelwert und die Varianz für jede Zeile von A bzw. B.
+- Berechnen Sie mittels dem `apply()`-Befehl den Mittelwert und die Varianz für jede Zeile von A bzw. B.
 
-- Berechnen Sie mittels dem apply()-Befehl den Mittelwert und die Varianz für jede Spalte von
+- Berechnen Sie mittels dem `apply()`-Befehl den Mittelwert und die Varianz für jede Spalte von
 A bzw. B.
 
 - Standardisieren ist eine häufige Transformation von        Daten;        dafür        wird        der        Mittelwert        von der entsprechenden        Zeile        oder        Spalte        abgezogen        und        durch        die        entsprechende        Standardab-
@@ -1967,8 +1964,6 @@ weichung        von        1.           Standardisieren        Sie        die   
 A
 .
 
-
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
 
 
 # Einfache Grafiken
@@ -2203,14 +2198,6 @@ boxplot(Chem97$gcsescore~Chem97$gender)
 
 ## Alternativen zu Boxplot
 
-Violinplot 
-
--  Baut auf Boxplot auf 
--  Zusätzlich Informationen über Dichte der Daten 
--  Dichte wird über Kernel Methode berechnet.
--  weißer Punkt - Median
--  Je weiter die Ausdehnung, desto größer ist die Dichte an dieser Stelle. 
-
 
 ```r
 # Beispieldaten erzeugen
@@ -2218,7 +2205,14 @@ x <- rnorm(100)
 y <- rnorm(100)
 ```
 
-## Die Bibliothek `vioplot`
+`vioplot` 
+
+-  Baut auf Boxplot auf 
+-  Zusätzlich Informationen über Dichte der Daten 
+-  Dichte wird über Kernel Methode berechnet.
+-  weißer Punkt - Median
+-  Je weiter die Ausdehnung, desto größer ist die Dichte an dieser Stelle. 
+
 
 
 ```r
@@ -2230,9 +2224,7 @@ vioplot(y, col="cyan", horizontal=FALSE, at=-4,
         add=TRUE,lty=2)
 ```
 
-##  `vioplot` - Das Ergebnis
-
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-164-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-163-1.png)<!-- -->
 
 
 ## Alternativen zum Boxplot
@@ -2245,17 +2237,15 @@ boxplot(count~spray,data=InsectSprays,col="blue")
 beanplot(count~spray,data=InsectSprays,col="orange")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-165-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-164-1.png)<!-- -->
 
-# Grafiken für bedingte, bi- und multivariate Verteilungen
+## Grafiken für bedingte, bi- und multivariate Verteilungen - Scatterplots
 
-## Scatterplots
-
-- Ein einfacher two-way scatterplot kann mit der Funktion plot() erstellt werden
--  plot() muss mindestens ein x und ein y Beobachtungsvektor übergeben werden
--  Um die Farbe der Plot-Symbole anzupassen gibt es die Option col (Farbe als character oder numerisch)
--  Die Plot-Symbole selbst können mit pch} (plotting character) angepasst werden (character oder numerisch)
--  Die Achenbeschriftungen (labels) werden mit xlab und ylab definiert
+- Ein einfacher two-way scatterplot kann mit der Funktion `plot()` erstellt werden
+-  `plot()` muss mindestens ein x und ein y Beobachtungsvektor übergeben werden
+-  Um die Farbe der Plot-Symbole anzupassen gibt es die Option `col` (Farbe als character oder numerisch)
+-  Die Plot-Symbole selbst können mit `pch` (plotting character) angepasst werden (character oder numerisch)
+-  Die Achenbeschriftungen (labels) werden mit `xlab` und `ylab` definiert
 
 
 
@@ -2265,9 +2255,7 @@ beanplot(count~spray,data=InsectSprays,col="orange")
 - Laden Sie den Datensatz `VADeaths` und erzeugen Sie den
 folgenden plot:
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-166-1.png)<!-- -->
-
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-165-1.png)<!-- -->
 
 
 # Zusammenhang 
@@ -2325,7 +2313,7 @@ cor(iris$Sepal.Length,iris$Petal.Length)
 pairs(iris[,1:4])
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-170-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-169-1.png)<!-- -->
 
 ## Zusammenhang zwischen mehreren Variablen
 
@@ -2336,7 +2324,7 @@ pairs.panels(iris[1:4],bg=c("red","yellow","blue")
 [iris$Species],pch=21,main="")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-171-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-170-1.png)<!-- -->
 
 ## Verschiedene Korrelationskoeffizienten
 
@@ -2385,7 +2373,7 @@ cor(iris[,1:4], method = "spearman")
 
 ## Zusammenhang zwischen kategorialen Variablen
 
-- chisq.test() testet, ob zwei kategoriale Merkmale stochastisch unabhängig sind.
+- `chisq.test()` testet, ob zwei kategoriale Merkmale stochastisch unabhängig sind.
 - Getestet wird gegen die Nullhypothese der Gleichverteilung
 
 
@@ -2399,7 +2387,7 @@ data(BankWages)
 levelplot(table(BankWages$education,BankWages$job))
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-175-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-174-1.png)<!-- -->
 
 ## Visualisierung von Zusammenhängen zwischen kategorialen Variablen
 
@@ -2409,7 +2397,7 @@ mosaicplot(~ Sex + Age + Survived,
            data = Titanic, color = TRUE)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-176-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-175-1.png)<!-- -->
 
 ## Shading
 
@@ -2421,7 +2409,7 @@ mosaicplot(~ Sex + Age + Survived,
            data = Titanic, shade = TRUE)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-177-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-176-1.png)<!-- -->
 
 ## Literatur zu Zusammenhangsmaßen
 
@@ -2449,12 +2437,13 @@ Sachs - [Angewandte Statistik mit R](https://books.google.de/books/about/Angewan
 
 
 ```r
-library("lattice");library("mlmRev")
+library("lattice")
+library("mlmRev")
 data(Chem97)
 histogram(~ gcsescore, data = Chem97)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-179-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-178-1.png)<!-- -->
 
 ## Histogramm mit Lattice
 
@@ -2463,7 +2452,7 @@ histogram(~ gcsescore, data = Chem97)
   histogram(~ gcsescore | factor(score),data = Chem97)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-180-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-179-1.png)<!-- -->
 
 ## Die Dichte mit Lattice zeichnen
 
@@ -2473,7 +2462,7 @@ densityplot(~ gcsescore | factor(score), Chem97,
 	groups=gender,plot.points=FALSE,auto.key=TRUE)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-181-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-180-1.png)<!-- -->
 
 [Einführung in das Paket lattice](http://www.isid.ac.in/~deepayan/R-tutorials/labs/04_lattice_lab.pdf)
 
@@ -2484,7 +2473,7 @@ densityplot(~ gcsescore | factor(score), Chem97,
 bwplot(factor(score) ~ gcsescore | gender, Chem97)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-182-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-181-1.png)<!-- -->
 
 ## Boxplot mit Lattice zeichnen
 
@@ -2494,7 +2483,7 @@ bwplot(gcsescore ~ gender | factor(score), Chem97,
  layout = c(6, 1))
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-183-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-182-1.png)<!-- -->
 
 ## Univariate Plots
 
@@ -2507,7 +2496,7 @@ barchart(yield ~ variety | site, data = barley,
          scales = list(x = list(rot = 45)))
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-184-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-183-1.png)<!-- -->
 
 
 ## Densityplot
@@ -2518,7 +2507,7 @@ densityplot( ~ height | voice.part, data = singer, layout = c(2, 4),
             xlab = "Height (inches)", bw = 5)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-185-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-184-1.png)<!-- -->
 
 ## Bivariate Plots
 
@@ -2528,7 +2517,7 @@ qq(gender ~ gcsescore | factor(score), Chem97,
    f.value = ppoints(100), type = c("p", "g"), aspect = 1)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-186-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-185-1.png)<!-- -->
 
 ## xyplot
 
@@ -2539,7 +2528,7 @@ xyplot(Sepal.Length + Sepal.Width ~ Petal.Length + Petal.Width | Species,
        auto.key = list(x = .6, y = .7, corner = c(0, 0)))
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-187-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-186-1.png)<!-- -->
 
 ## Multivariate Plots
 
@@ -2548,7 +2537,7 @@ xyplot(Sepal.Length + Sepal.Width ~ Petal.Length + Petal.Width | Species,
 splom(~iris[1:4], groups = Species, data = iris)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-188-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-187-1.png)<!-- -->
 
 
 
@@ -2563,7 +2552,7 @@ splom(~iris[1:4], groups = Species, data = iris,
                  text = list(c("Setosa", "Versicolor", "Virginica"))))
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-189-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-188-1.png)<!-- -->
 
 
 ## parallelplot
@@ -2573,7 +2562,7 @@ splom(~iris[1:4], groups = Species, data = iris,
 parallelplot(~iris[1:4] | Species, iris)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-190-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-189-1.png)<!-- -->
 
 ## Lattice Befehle
 
@@ -2604,9 +2593,7 @@ hoch ist sie in diesem Land?
 
 - Erstellen Sie einen neuen Datensatz, der aufsteigend nach
 dem Einkommen geordnet ist. Speichern Sie diesen in einer
-neuen .csv Datei
-
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
+neuen `.csv` Datei
 
 
     
@@ -2649,12 +2636,34 @@ library("DAAG")
 data(roller)
 ```
 
-help on roller data:
+
+
+Hilfe für den `roller` Datensatz:
 
 
 ```r
 ?roller
 ```
+
+
+```r
+roller
+```
+
+
+
+ weight   depression
+-------  -----------
+    1.9            2
+    3.1            1
+    3.3            5
+    4.8            5
+    5.3           20
+    6.1           20
+    6.4           23
+    7.6           10
+    9.8           30
+   12.4           25
 
 ## Das lineare Regressionsmodell in R
 
@@ -2778,7 +2787,7 @@ resid(roller.lm) # Residuen
 plot(roller.lm,1)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-201-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-202-1.png)<!-- -->
 
 ## Residuenplot
 
@@ -2787,7 +2796,7 @@ plot(roller.lm,1)
 plot(roller.lm,2)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-202-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-203-1.png)<!-- -->
 
 - Wenn die Residuen normalverteilt sind sollten sie auf einer Linie liegen.
 
@@ -2816,31 +2825,17 @@ Beschrieben wird Wegstrecke, dreier Spielzeugautos die in unterschiedlichen Wink
 - distance: Zurückgelegte Strecke des Spielzeugautos
 - car: Autotyp (1, 2 oder 3)
 
-(a) Lesen Sie        den        Datensatz `toycars` in einen        dataframe
-data ein und        wandeln        Sie        die
-Variable car des Datensatzes        in        einen        Faktor  (`as.factor`) um.
+(a) Lesen Sie den  Datensatz `toycars` in einen dataframe `data` ein und  wandeln Sie die Variable `car` des Datensatzes  in  einen Faktor  (`as.factor`) um.
 
-(b)    Erstellen          Sie          drei          Boxplots,          die          die          zurückgelegte          Strecke          getrennt          nach          dem          Faktor car darstellen.
+(b) Erstellen  Sie  drei Boxplots,  die die zurückgelegte Strecke  getrennt  nach  dem Faktor car darstellen.
 
-(c) Schätzen         Sie         für
-jedes
-der         3         Autos
-separat
-die         Parameter         des         folgenden         linearen         Mo dells
-mit        Hilfe        der        Funktion lm()
+(c) Schätzen Sie für die Autos die Parameter  des folgenden linearen Modells mit  Hilfe der Funktion `lm()`
 
 $$ distance_i= \beta_0 + \beta_1 \cdot angle_i + \epsilon_i$$
 
-(d) Überprüfen           Sie           deskriptiv           die           Anpassung           der           drei           Modelle,            indem           Sie           die           Regressionger-
-ade          in          einen          Plot          von
-distance
-gegen
-angle
-einfügen. Deutet          das
+(d) Überprüfen  Sie deskriptiv  die Anpassung der drei  Modelle,  indem Sie die Regressiongerade  in  einen Plot  von `distance` gegen `angle` einfügen. Deutet das
 $$ R^2 $$ jeweils auf eine gute Modellanpassung hin?
 
-
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
 
 
 # Die logistische Regression 
@@ -2856,7 +2851,7 @@ $$ R^2 $$ jeweils auf eine gute Modellanpassung hin?
 
 ![](figure/CDAagresti.PNG)
 
--  Sehr intiutiv geschriebenes Buch
+-  Sehr intuitiv geschriebenes Buch
 -  Sehr ausführliches begleitendes Skript von [Thompson](http://statweb.stanford.edu/~owen/courses/306a/Splusdiscrete2.pdf)
 -  Das Skript eignet sich um die kategoriale Datenanalyse nachzuvollziehen
 
@@ -2866,9 +2861,7 @@ $$ R^2 $$ jeweils auf eine gute Modellanpassung hin?
 
 -  Logistische Regressionen gut erklärt
 -  Beispiele mit R-code
-
     - Faraway - Extending the linear model with r
-
     - Faraway - [Practical Regression and Anova using R](https://cran.r-project.org/doc/contrib/Faraway-PRA.pdf)
     
     
@@ -2891,6 +2884,32 @@ library("HSAUR")
 data("plasma", package = "HSAUR")
 ```
 
+
+```r
+head(plasma)
+```
+
+
+ fibrinogen   globulin  ESR      
+-----------  ---------  ---------
+       2.52         38  ESR < 20 
+       2.56         31  ESR < 20 
+       2.19         33  ESR < 20 
+       2.18         31  ESR < 20 
+       3.41         37  ESR < 20 
+       2.46         36  ESR < 20 
+
+## Der `plasma` Datensatz
+
+
+```r
+?plasma
+```
+
+
+![](figure/plasmaData.PNG)
+
+
 ##  Logistische Regression mit R
 
 - [Kategoriale Daten: ](http://homepage.univie.ac.at/herbert.nagel/KategorialeDaten.pdf)
@@ -2900,7 +2919,7 @@ data("plasma", package = "HSAUR")
 cdplot(ESR ~ fibrinogen, data = plasma)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-206-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-210-1.png)<!-- -->
 
 ## [Logistische Regression](http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html) mit R
 
@@ -2909,6 +2928,37 @@ cdplot(ESR ~ fibrinogen, data = plasma)
 plasma_glm_1 <- glm(ESR ~ fibrinogen, data = plasma, 
                     family = binomial())
 ```
+
+
+```r
+summary(plasma_glm_1)
+```
+
+```
+## 
+## Call:
+## glm(formula = ESR ~ fibrinogen, family = binomial(), data = plasma)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -0.9298  -0.5399  -0.4382  -0.3356   2.4794  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(>|z|)  
+## (Intercept)  -6.8451     2.7703  -2.471   0.0135 *
+## fibrinogen    1.8271     0.9009   2.028   0.0425 *
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 30.885  on 31  degrees of freedom
+## Residual deviance: 24.840  on 30  degrees of freedom
+## AIC: 28.84
+## 
+## Number of Fisher Scoring iterations: 5
+```
+
 
 
 ## Weitere Beispieldaten
@@ -3135,7 +3185,7 @@ table(lets[1:5])
 ```
 ## 
 ## a b c d e f g h i j k l m n o p q r s t u v w x y z 
-## 0 0 0 0 0 0 0 0 2 0 0 1 0 0 0 0 0 0 1 0 1 0 0 0 0 0
+## 0 0 0 0 0 0 0 0 0 0 1 0 0 2 0 1 0 0 0 0 1 0 0 0 0 0
 ```
 
 
@@ -3156,9 +3206,9 @@ table(lets[1:5])
 
 ![](figure/GalleryGGplot2.PNG)
 
-## [Basiseinführung `ggplot2`](www.r-bloggers.com/basic-introduction-to-ggplot2/)
+## [Einführung in `ggplot2`](www.r-bloggers.com/basic-introduction-to-ggplot2/)
 
-<www.r-bloggers.com/basic-introduction-to-ggplot2/>
+<http://www.r-bloggers.com/basic-introduction-to-ggplot2/>
 
 
 ```r
@@ -3169,7 +3219,11 @@ install.packages("ggplot2")
 
 ```r
 library(ggplot2)
+?ggplot2
 ```
+
+![](figure/LibraryGGplot2.PNG)
+
 
 ## Der `diamonds` Datensatz
 
@@ -3200,7 +3254,7 @@ head(diamonds)
 qplot(depth, data=diamonds)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-228-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-233-1.png)<!-- -->
 
 
 ## Ein Balkendiagramm
@@ -3210,7 +3264,7 @@ qplot(depth, data=diamonds)
 qplot(cut, depth, data=diamonds)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-229-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-234-1.png)<!-- -->
 
 ## Ein weiteres Balkendiagramm
 
@@ -3219,7 +3273,7 @@ qplot(cut, depth, data=diamonds)
 qplot(factor(cyl), data=mtcars,geom="bar")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-230-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-235-1.png)<!-- -->
 
 
 ## Boxplot
@@ -3229,7 +3283,7 @@ qplot(factor(cyl), data=mtcars,geom="bar")
 qplot(data=diamonds,x=cut,y=depth,geom="boxplot")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-231-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-236-1.png)<!-- -->
 
 
 ## Scatterplot
@@ -3240,7 +3294,7 @@ qplot(data=diamonds,x=cut,y=depth,geom="boxplot")
 qplot(carat, depth, data=diamonds)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-232-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-237-1.png)<!-- -->
 
 
 ## Farbe hinzu:
@@ -3250,7 +3304,7 @@ qplot(carat, depth, data=diamonds)
 qplot(carat, depth, data=diamonds,color=cut)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-233-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-238-1.png)<!-- -->
 
 
 ## Trendlinie hinzufügen
@@ -3261,7 +3315,7 @@ myGG<-qplot(data=diamonds,x=carat,y=depth,color=carat)
 myGG + stat_smooth(method="lm")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-234-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-239-1.png)<!-- -->
 
 ## Graphik drehen
 
@@ -3271,7 +3325,7 @@ qplot(factor(cyl), data=mtcars, geom="bar") +
 coord_flip()
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-235-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-240-1.png)<!-- -->
 
 
 ## Wie nutzt man ggplot
@@ -3283,7 +3337,7 @@ coord_flip()
 ggplot(diamonds, aes(clarity, fill=cut)) + geom_bar()
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-236-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-241-1.png)<!-- -->
 
 
 
@@ -3317,7 +3371,7 @@ p <- ggplot(diamonds,aes(carat, depth,colour = cut)) +
 p + colScale
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-239-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-244-1.png)<!-- -->
 
 
 ## Speichern mit ggsave
@@ -3402,7 +3456,7 @@ Und schon kann die erste Karte erstellt werden:
 qmap("Mannheim")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-245-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-250-1.png)<!-- -->
 
 
 
@@ -3414,7 +3468,7 @@ BBT <- qmap("Berlin Brandenburger Tor")
 BBT
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-247-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-252-1.png)<!-- -->
 
 
 ## Karte für einen ganzen Staat
@@ -3424,7 +3478,7 @@ BBT
 qmap("Germany")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-248-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-253-1.png)<!-- -->
 
 - Wir brauchen ein anderes *zoom level*
 
@@ -3439,7 +3493,7 @@ qmap("Germany")
 qmap("Germany", zoom = 6)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-249-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-254-1.png)<!-- -->
 
 
 
@@ -3485,7 +3539,7 @@ qmap("baylor university", zoom = 14)
 qmap("Mannheim", zoom = 12)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-253-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-258-1.png)<!-- -->
 
 ## Näher rankommen
 
@@ -3494,7 +3548,7 @@ qmap("Mannheim", zoom = 12)
 qmap('Mannheim', zoom = 13)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-254-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-259-1.png)<!-- -->
 
 
 ## Ganz nah dran
@@ -3504,7 +3558,7 @@ qmap('Mannheim', zoom = 13)
 qmap('Mannheim', zoom = 20)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-255-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-260-1.png)<!-- -->
 
 
 ## ggmap - maptype satellite
@@ -3514,7 +3568,7 @@ qmap('Mannheim', zoom = 20)
 qmap('Mannheim', zoom = 14, maptype="satellite")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-256-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-261-1.png)<!-- -->
 
 ## ggmap - maptype satellite zoom 20
 
@@ -3523,7 +3577,7 @@ qmap('Mannheim', zoom = 14, maptype="satellite")
 qmap('Mannheim', zoom = 20, maptype="hybrid")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-257-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-262-1.png)<!-- -->
 
 
 ## ggmap - maptype hybrid
@@ -3533,7 +3587,7 @@ qmap('Mannheim', zoom = 20, maptype="hybrid")
 qmap("Mannheim", zoom = 14, maptype="hybrid")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-258-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-263-1.png)<!-- -->
 
 
 ## Terrain/physical maps
@@ -3549,7 +3603,7 @@ qmap("Mannheim", zoom = 14, maptype="hybrid")
 qmap('Schriesheim', zoom = 14,maptype="terrain")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-259-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-264-1.png)<!-- -->
 
 ## Abstrahierte Karten ([http://www.designfaves.com](http://www.designfaves.com/2014/03/abstracted-maps-reveal-cities-personalities))
 
@@ -3570,7 +3624,7 @@ qmap('Schriesheim', zoom = 14,maptype="terrain")
 qmap('Mannheim', zoom = 14,maptype="watercolor",source="stamen")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-260-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-265-1.png)<!-- -->
 
 
 ## ggmap - source stamen
@@ -3581,7 +3635,7 @@ qmap('Mannheim', zoom = 14,
  maptype="toner",source="stamen")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-261-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-266-1.png)<!-- -->
 
 
 ## ggmap - maptype toner-lite
@@ -3592,7 +3646,7 @@ qmap('Mannheim', zoom = 14,
  maptype="toner-lite",source="stamen")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-262-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-267-1.png)<!-- -->
 
 ## ggmap - maptype toner-hybrid
 
@@ -3602,7 +3656,7 @@ qmap('Mannheim', zoom = 14,
  maptype="toner-hybrid",source="stamen")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-263-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-268-1.png)<!-- -->
 
 
 ## ggmap - maptype terrain-lines
@@ -3613,7 +3667,7 @@ qmap('Mannheim', zoom = 14,
  maptype="terrain-lines",source="stamen")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-264-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-269-1.png)<!-- -->
 
 
 ## Graphiken speichern
@@ -3763,7 +3817,7 @@ geom_point(aes(x = lon, y = lat),
 data = ListPOI)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-274-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-279-1.png)<!-- -->
 
 ## Punkte in der Karte
 
@@ -3774,7 +3828,7 @@ geom_point(aes(x = lon, y = lat),col="red",
 data = ListPOI)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-275-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-280-1.png)<!-- -->
 
 
 ## ggmap - verschiedene Farben
@@ -3787,7 +3841,7 @@ geom_point(aes(x = lon, y = lat,col=color),
 data = ListPOI)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-276-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-281-1.png)<!-- -->
 
 ## ggmap - größere Punkte
 
@@ -3799,7 +3853,7 @@ geom_point(aes(x = lon, y = lat,col=color,size=size),
 data = ListPOI)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-277-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-282-1.png)<!-- -->
 
 
 ## Eine Route von Google maps bekommen
@@ -3826,7 +3880,7 @@ qmap("Mannheim Hbf", zoom = 14) +
   )
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-279-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-284-1.png)<!-- -->
 
 Wie fügt man Punkte hinzu
 
@@ -3907,7 +3961,7 @@ abline(mod1)
 segments(x1, y, x1, pre, col="red")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-283-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-288-1.png)<!-- -->
 
 
 ## Das `visreg`-Paket 
@@ -3933,7 +3987,7 @@ fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
 visreg(fit)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-286-1.png)<!-- -->![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-286-2.png)<!-- -->![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-286-3.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-291-1.png)<!-- -->![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-291-2.png)<!-- -->![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-291-3.png)<!-- -->
 
 ## [Und dann mit `visreg` visualisiert.](http://myweb.uiowa.edu/pbreheny/publications/visreg.pdf)
 
@@ -3951,7 +4005,7 @@ visreg(fit, "Wind", type = "contrast")
 visreg(fit, "Wind", type = "contrast")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-288-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-293-1.png)<!-- -->
 
 
 ## Das `visreg`-Paket 
@@ -3963,7 +4017,7 @@ visreg(fit, "Wind", type = "contrast")
 visreg(fit, "Wind", type = "conditional")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-289-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-294-1.png)<!-- -->
 
 
 ## Regression mit Faktoren
@@ -3988,7 +4042,7 @@ visreg(fit.heat, "Heat", type = "contrast")
 visreg(fit.heat, "Heat", type = "conditional")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-291-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-296-1.png)<!-- -->
 
 
 ## Das Paket visreg - Interaktionen
@@ -4007,7 +4061,7 @@ fit <- lm(Ozone ~ Solar.R + Wind * Heat, data = airquality)
 visreg(fit, "Wind", by = "Heat",layout=c(3,1))
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-293-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-298-1.png)<!-- -->
 
 
 ## Das Paket `visreg` - Interaktionen overlay
@@ -4018,7 +4072,7 @@ fit <- lm(Ozone ~ Solar.R + Wind * Heat, data = airquality)
 visreg(fit, "Wind", by="Heat", overlay=TRUE, partial=FALSE)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-294-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-299-1.png)<!-- -->
 
 ## Das Paket `visreg` - `visreg2d`
 
@@ -4028,7 +4082,7 @@ fit2 <- lm(Ozone ~ Solar.R + Wind * Temp, data = airquality)
 visreg2d(fit2, "Wind", "Temp", plot.type = "image")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-295-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-300-1.png)<!-- -->
 
 ## Das Paket visreg - surface
 
@@ -4037,7 +4091,7 @@ visreg2d(fit2, "Wind", "Temp", plot.type = "image")
 visreg2d(fit2, "Wind", "Temp", plot.type = "persp")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-296-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-301-1.png)<!-- -->
 
 
 # Weitere Themen im Ausblick 

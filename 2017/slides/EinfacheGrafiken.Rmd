@@ -213,7 +213,13 @@ boxplot(Chem97$gcsescore~Chem97$gender)
 
 ## Alternativen zu Boxplot
 
-Violinplot 
+```{r}
+# Beispieldaten erzeugen
+x <- rnorm(100)
+y <- rnorm(100)
+```
+
+`vioplot` 
 
 -  Baut auf Boxplot auf 
 -  Zusätzlich Informationen über Dichte der Daten 
@@ -221,26 +227,8 @@ Violinplot
 -  weißer Punkt - Median
 -  Je weiter die Ausdehnung, desto größer ist die Dichte an dieser Stelle. 
 
-```{r}
-# Beispieldaten erzeugen
-x <- rnorm(100)
-y <- rnorm(100)
-```
 
-## Die Bibliothek `vioplot`
-
-```{r,message=F,eval=F}
-library(vioplot)
-plot(x, y, xlim=c(-5,5), ylim=c(-5,5))
-vioplot(x, col="tomato", horizontal=TRUE, at=-4, 
-        add=TRUE,lty=2, rectCol="gray")
-vioplot(y, col="cyan", horizontal=FALSE, at=-4, 
-        add=TRUE,lty=2)
-```
-
-##  `vioplot` - Das Ergebnis
-
-```{r,message=F,echo=F}
+```{r,message=F}
 library(vioplot)
 plot(x, y, xlim=c(-5,5), ylim=c(-5,5))
 vioplot(x, col="tomato", horizontal=TRUE, at=-4, 
@@ -259,12 +247,10 @@ boxplot(count~spray,data=InsectSprays,col="blue")
 beanplot(count~spray,data=InsectSprays,col="orange")
 ```
 
-# Grafiken für bedingte, bi- und multivariate Verteilungen
+## Grafiken für bedingte, bi- und multivariate Verteilungen - Scatterplots
 
-## Scatterplots
-
-- Ein einfacher two-way scatterplot kann mit der Funktion plot() erstellt werden
--  plot() muss mindestens ein x und ein y Beobachtungsvektor übergeben werden
--  Um die Farbe der Plot-Symbole anzupassen gibt es die Option col (Farbe als character oder numerisch)
--  Die Plot-Symbole selbst können mit pch} (plotting character) angepasst werden (character oder numerisch)
--  Die Achenbeschriftungen (labels) werden mit xlab und ylab definiert
+- Ein einfacher two-way scatterplot kann mit der Funktion `plot()` erstellt werden
+-  `plot()` muss mindestens ein x und ein y Beobachtungsvektor übergeben werden
+-  Um die Farbe der Plot-Symbole anzupassen gibt es die Option `col` (Farbe als character oder numerisch)
+-  Die Plot-Symbole selbst können mit `pch` (plotting character) angepasst werden (character oder numerisch)
+-  Die Achenbeschriftungen (labels) werden mit `xlab` und `ylab` definiert

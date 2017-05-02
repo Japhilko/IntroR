@@ -28,11 +28,21 @@ x1 <- rnorm(N)
 y <- runif(N)
 ```
 
+```{r}
+par(mfrow=c(1,2))
+plot(density(x1))
+plot(density(y))
+```
+
+
+
 ## Modellvorhersage machen
 
 ```{r}
 mod1 <- lm(y~x1)
 pre <- predict(mod1)
+y
+pre
 ```
 
 ## Regressionsdiagnostik mit Basis-R
@@ -43,6 +53,14 @@ abline(mod1)
 segments(x1, y, x1, pre, col="red")
 ```
 
+## Beispieldaten Luftqualität
+
+```{r,eval=F}
+library(datasets)
+?airquality
+```
+
+![](figure/DataAirquality.PNG)
 
 ## Das `visreg`-Paket 
 
@@ -56,6 +74,7 @@ install.packages("visreg")
 ```{r}
 library(visreg)
 fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
+summary(fit)
 ```
 
 ## Visualisierung
@@ -68,7 +87,7 @@ visreg(fit)
 
 - Zweites Argument -  Spezifikation erklärende Variable für Visualisierung
 
-```{r,eval=F}
+```{r}
 visreg(fit, "Wind", type = "contrast")
 ```
 
@@ -97,6 +116,7 @@ airquality$Heat <- cut(airquality$Temp, 3,
 	labels=c("Cool", "Mild", "Hot"))
 fit.heat <- lm(Ozone ~ Solar.R + Wind + Heat, 
 	data = airquality)
+summary(fit.heat)
 ```
 
 ## Effekte von Faktoren
@@ -115,6 +135,7 @@ visreg(fit.heat, "Heat", type = "conditional")
 airquality$Heat <- cut(airquality$Temp, 3, 
 labels=c("Cool", "Mild", "Hot"))
 fit <- lm(Ozone ~ Solar.R + Wind * Heat, data = airquality)
+summary(fit)
 ```
 
 ## Steuern der Graphikausgabe mittels `layout`

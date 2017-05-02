@@ -9,7 +9,7 @@ output:
     fonttheme: structurebold
     highlight: espresso
     theme: CambridgeUS
-  html_document: 
+  slidy_presentation: 
     keep_md: yes
 ---
 
