@@ -18,11 +18,26 @@ output:
 knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=F)
 ```
 
-## Mehr User Interface - Der R-commander
+## [Mehr User Interface](http://www.linuxlinks.com/article/20110306113701179/GUIsforR.html) - Der R-commander
 
 ```{r,eval=F}
 library("Rcmdr")
 ```
+
+- Ein anderes Beispiel:
+
+```{r,eval=F}
+install.packages(c("JGR","Deducer","DeducerExtras"))
+```
+
+```{r,eval=F}
+library("JGR")
+JGR()
+```
+
+![](figure/Jaguar.PNG)
+
+- Allerdings ist es gerade der interessante Punkt an R, dass es eine Skriptsprache ist
 
 <!--
 ![pic](http://1.f.ix.de/imagine/swvz-programme/EDRGMX5wp6SR4pvMwUnHittNACM/content/R-Commander.jpg)
@@ -43,12 +58,25 @@ install.packages("iplots",dep=TRUE)
 library(iplots)
 ```
 
+- Der Datensatz
 
 ```{r,eval=F}
 cyl.f <- factor(mtcars$cyl)
 gear.f <- factor(mtcars$factor)
 attach(mtcars)
+```
+
+## Ein erstes interaktives Histogramm
+
+```{r,eval=F}
 ihist(mpg) # histogram
+```
+
+![](figure/ihist.PNG)
+
+## Mehr interaktive Graphiken
+
+```{r}
 ibar(carb) # barchart
 iplot(mpg, wt) # scatter plot
 ibox(mtcars[c("qsec","disp","hp")]) # boxplots
@@ -57,35 +85,24 @@ imosaic(cyl.f,gear.f) # mosaic plot
 ```
 
 
-## R-Paket rggobi
+## [Tabellen für Publikationen](https://www.r-statistics.com/2013/01/stargazer-package-for-beautiful-latex-tables-from-r-statistical-models-output/)
 
 ```{r,eval=F}
-library(rggobi)
-g <- ggobi(mydata) 
+install.packages("stargazer")
 ```
 
-## Interaktion mit plots
-
-```{r,eval=F}
-attach(mydata)
-plot(x, y) # scatterplot
-identify(x, y, labels=row.names(mydata)) # identify points
-coords <- locator(type="l") # add lines
-coords # display list 
-```
-
-
-
-## Tabellen für Publikationen
 
 ```{r,eval=F}
 library(stargazer)
 stargazer(attitude)
 ```
 
+![](https://i2.wp.com/www.r-statistics.com/wp-content/uploads/2013/01/stargazer_summ_stat.jpg?w=561)
+
 <!--
 ![pic](http://i1.wp.com/www.r-statistics.com/wp-content/uploads/2013/01/stargazer_regression.jpg?zoom=1.5&resize=448%2C518)
 -->
+
 ## Tabellen mit dem R-Paket knitr
 
 ```{r,eval=F}
@@ -104,4 +121,5 @@ Folien zum [Workshop](https://github.com/Japhilko/npRegression/tree/master/slide
 ```{r,eval=F}
 library(splines)
 ```
+
 

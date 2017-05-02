@@ -20,3 +20,27 @@ knitr::opts_chunk$set(echo = TRUE)
 <!--
 https://github.com/Japhilko/IntroR/blob/master/2017/slides/ ?raw=true
 -->
+
+
+## R-Paket `rggobi`
+
+```{r,eval=F}
+install.packages("rggobi")
+```
+
+
+```{r,eval=F}
+library("rggobi")
+g <- ggobi(mydata) 
+```
+
+## Interaktion mit plots
+
+```{r,eval=F}
+attach(mydata)
+plot(x, y) # scatterplot
+identify(x, y, labels=row.names(mydata)) # identify points
+coords <- locator(type="l") # add lines
+coords # display list 
+```
+

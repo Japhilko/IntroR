@@ -1,0 +1,28 @@
+Vielen Dank für die Aufmerksamkeit  
+========================================================
+author: 
+date: 
+autosize: true
+font-family: 'Impact'
+
+Vielen Dank für die Aufmerksamkeit
+========================================================
+
+Fragen gerne per Email an:
+
+Jan-Philipp.Kolb@gesis.org
+
+
+Slide With Code
+========================================================
+
+```{r}
+summary(cars)
+```
+
+Slide With Plot
+========================================================
+
+```{r, echo=FALSE}
+plot(cars)
+```

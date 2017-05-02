@@ -164,3 +164,7 @@ output:
 ## Beispiel einer [interaktiven Karte](http://rpubs.com/Japhilko82/Campsites) 
 
 [interaktiven Karte](http://rpubs.com/Japhilko82/Campsites)  und [Rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive%20maps.R) um eine interaktive Karte mit leaflet zu erzeugen.
+
+## 
+
+![](figure/Aufmerksamkeit.PNG)

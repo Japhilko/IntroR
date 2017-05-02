@@ -3,7 +3,7 @@ title: "Aufgabe - Barplot"
 author: "Jan-Philipp Kolb"
 date: "3 Mai 2017"
 output: 
-  html_document:
+  slidy_presentation:
     keep_md: yes
 ---
 

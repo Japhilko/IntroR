@@ -212,7 +212,7 @@ date()
 ```
 
 ```
-## [1] "Tue May 02 21:06:09 2017"
+## [1] "Tue May 02 22:10:17 2017"
 ```
 
 
@@ -390,7 +390,7 @@ sample(b,1)
 ```
 
 ```
-## [1] 1
+## [1] 2
 ```
 
 
@@ -3944,12 +3944,37 @@ x1 <- rnorm(N)
 y <- runif(N)
 ```
 
+
+```r
+par(mfrow=c(1,2))
+plot(density(x1))
+plot(density(y))
+```
+
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-287-1.png)<!-- -->
+
+
+
 ## Modellvorhersage machen
 
 
 ```r
 mod1 <- lm(y~x1)
 pre <- predict(mod1)
+y
+```
+
+```
+## [1] 0.36805523 0.62756978 0.13117752 0.60794259 0.08109645
+```
+
+```r
+pre
+```
+
+```
+##         1         2         3         4         5 
+## 0.4232270 0.3582645 0.4386449 0.4490439 0.1466612
 ```
 
 ## Regressionsdiagnostik mit Basis-R
@@ -3961,8 +3986,17 @@ abline(mod1)
 segments(x1, y, x1, pre, col="red")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-288-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-289-1.png)<!-- -->
 
+## Beispieldaten Luftqualität
+
+
+```r
+library(datasets)
+?airquality
+```
+
+![](figure/DataAirquality.PNG)
 
 ## Das `visreg`-Paket 
 
@@ -3978,6 +4012,31 @@ install.packages("visreg")
 ```r
 library(visreg)
 fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
+summary(fit)
+```
+
+```
+## 
+## Call:
+## lm(formula = Ozone ~ Solar.R + Wind + Temp, data = airquality)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -40.485 -14.219  -3.551  10.097  95.619 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(>|t|)    
+## (Intercept) -64.34208   23.05472  -2.791  0.00623 ** 
+## Solar.R       0.05982    0.02319   2.580  0.01124 *  
+## Wind         -3.33359    0.65441  -5.094 1.52e-06 ***
+## Temp          1.65209    0.25353   6.516 2.42e-09 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 21.18 on 107 degrees of freedom
+##   (42 observations deleted due to missingness)
+## Multiple R-squared:  0.6059,	Adjusted R-squared:  0.5948 
+## F-statistic: 54.83 on 3 and 107 DF,  p-value: < 2.2e-16
 ```
 
 ## Visualisierung
@@ -3987,7 +4046,7 @@ fit <- lm(Ozone ~ Solar.R + Wind + Temp, data = airquality)
 visreg(fit)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-291-1.png)<!-- -->![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-291-2.png)<!-- -->![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-291-3.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-293-1.png)<!-- -->![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-293-2.png)<!-- -->![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-293-3.png)<!-- -->
 
 ## [Und dann mit `visreg` visualisiert.](http://myweb.uiowa.edu/pbreheny/publications/visreg.pdf)
 
@@ -3998,6 +4057,8 @@ visreg(fit)
 visreg(fit, "Wind", type = "contrast")
 ```
 
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-294-1.png)<!-- -->
+
 ## Visualisierung mit dem Paket `visreg`
 
 
@@ -4005,7 +4066,7 @@ visreg(fit, "Wind", type = "contrast")
 visreg(fit, "Wind", type = "contrast")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-293-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-295-1.png)<!-- -->
 
 
 ## Das `visreg`-Paket 
@@ -4017,7 +4078,7 @@ visreg(fit, "Wind", type = "contrast")
 visreg(fit, "Wind", type = "conditional")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-294-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-296-1.png)<!-- -->
 
 
 ## Regression mit Faktoren
@@ -4030,6 +4091,32 @@ airquality$Heat <- cut(airquality$Temp, 3,
 	labels=c("Cool", "Mild", "Hot"))
 fit.heat <- lm(Ozone ~ Solar.R + Wind + Heat, 
 	data = airquality)
+summary(fit.heat)
+```
+
+```
+## 
+## Call:
+## lm(formula = Ozone ~ Solar.R + Wind + Heat, data = airquality)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -33.473 -12.794  -2.686   8.461 107.035 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(>|t|)    
+## (Intercept) 48.27682    8.83072   5.467 3.07e-07 ***
+## Solar.R      0.06524    0.02145   3.042  0.00296 ** 
+## Wind        -3.49803    0.59042  -5.925 3.94e-08 ***
+## HeatMild     9.05367    4.88257   1.854  0.06648 .  
+## HeatHot     43.13970    5.98618   7.207 8.79e-11 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 19.9 on 106 degrees of freedom
+##   (42 observations deleted due to missingness)
+## Multiple R-squared:  0.6554,	Adjusted R-squared:  0.6424 
+## F-statistic:  50.4 on 4 and 106 DF,  p-value: < 2.2e-16
 ```
 
 ## Effekte von Faktoren
@@ -4042,7 +4129,7 @@ visreg(fit.heat, "Heat", type = "contrast")
 visreg(fit.heat, "Heat", type = "conditional")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-296-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-298-1.png)<!-- -->
 
 
 ## Das Paket visreg - Interaktionen
@@ -4052,6 +4139,34 @@ visreg(fit.heat, "Heat", type = "conditional")
 airquality$Heat <- cut(airquality$Temp, 3, 
 labels=c("Cool", "Mild", "Hot"))
 fit <- lm(Ozone ~ Solar.R + Wind * Heat, data = airquality)
+summary(fit)
+```
+
+```
+## 
+## Call:
+## lm(formula = Ozone ~ Solar.R + Wind * Heat, data = airquality)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -34.472 -11.640  -1.919   7.403 102.428 
+## 
+## Coefficients:
+##               Estimate Std. Error t value Pr(>|t|)    
+## (Intercept)    4.48042   17.38219   0.258 0.797102    
+## Solar.R        0.07634    0.02137   3.572 0.000538 ***
+## Wind           0.05854    1.34860   0.043 0.965458    
+## HeatMild      56.72928   18.53110   3.061 0.002805 ** 
+## HeatHot       94.68619   18.61619   5.086 1.63e-06 ***
+## Wind:HeatMild -4.11933    1.57108  -2.622 0.010054 *  
+## Wind:HeatHot  -4.88125    1.74358  -2.800 0.006101 ** 
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 19.28 on 104 degrees of freedom
+##   (42 observations deleted due to missingness)
+## Multiple R-squared:  0.6825,	Adjusted R-squared:  0.6642 
+## F-statistic: 37.26 on 6 and 104 DF,  p-value: < 2.2e-16
 ```
 
 ## Steuern der Graphikausgabe mittels `layout`
@@ -4061,7 +4176,7 @@ fit <- lm(Ozone ~ Solar.R + Wind * Heat, data = airquality)
 visreg(fit, "Wind", by = "Heat",layout=c(3,1))
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-298-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-300-1.png)<!-- -->
 
 
 ## Das Paket `visreg` - Interaktionen overlay
@@ -4072,7 +4187,7 @@ fit <- lm(Ozone ~ Solar.R + Wind * Heat, data = airquality)
 visreg(fit, "Wind", by="Heat", overlay=TRUE, partial=FALSE)
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-299-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-301-1.png)<!-- -->
 
 ## Das Paket `visreg` - `visreg2d`
 
@@ -4082,7 +4197,7 @@ fit2 <- lm(Ozone ~ Solar.R + Wind * Temp, data = airquality)
 visreg2d(fit2, "Wind", "Temp", plot.type = "image")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-300-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-302-1.png)<!-- -->
 
 ## Das Paket visreg - surface
 
@@ -4091,7 +4206,7 @@ visreg2d(fit2, "Wind", "Temp", plot.type = "image")
 visreg2d(fit2, "Wind", "Temp", plot.type = "persp")
 ```
 
-![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-301-1.png)<!-- -->
+![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-303-1.png)<!-- -->
 
 
 # Weitere Themen im Ausblick 
@@ -4101,12 +4216,29 @@ visreg2d(fit2, "Wind", "Temp", plot.type = "persp")
 
 
 
-## Mehr User Interface - Der R-commander
+## [Mehr User Interface](http://www.linuxlinks.com/article/20110306113701179/GUIsforR.html) - Der R-commander
 
 
 ```r
 library("Rcmdr")
 ```
+
+- Ein anderes Beispiel:
+
+
+```r
+install.packages(c("JGR","Deducer","DeducerExtras"))
+```
+
+
+```r
+library("JGR")
+JGR()
+```
+
+![](figure/Jaguar.PNG)
+
+- Allerdings ist es gerade der interessante Punkt an R, dass es eine Skriptsprache ist
 
 <!--
 ![pic](http://1.f.ix.de/imagine/swvz-programme/EDRGMX5wp6SR4pvMwUnHittNACM/content/R-Commander.jpg)
@@ -4129,13 +4261,28 @@ install.packages("iplots",dep=TRUE)
 library(iplots)
 ```
 
+- Der Datensatz
 
 
 ```r
 cyl.f <- factor(mtcars$cyl)
 gear.f <- factor(mtcars$factor)
 attach(mtcars)
+```
+
+## Ein erstes interaktives Histogramm
+
+
+```r
 ihist(mpg) # histogram
+```
+
+![](figure/ihist.PNG)
+
+## Mehr interaktive Graphiken
+
+
+```r
 ibar(carb) # barchart
 iplot(mpg, wt) # scatter plot
 ibox(mtcars[c("qsec","disp","hp")]) # boxplots
@@ -4144,28 +4291,13 @@ imosaic(cyl.f,gear.f) # mosaic plot
 ```
 
 
-## R-Paket rggobi
+## [Tabellen für Publikationen](https://www.r-statistics.com/2013/01/stargazer-package-for-beautiful-latex-tables-from-r-statistical-models-output/)
 
 
 ```r
-library(rggobi)
-g <- ggobi(mydata) 
+install.packages("stargazer")
 ```
 
-## Interaktion mit plots
-
-
-```r
-attach(mydata)
-plot(x, y) # scatterplot
-identify(x, y, labels=row.names(mydata)) # identify points
-coords <- locator(type="l") # add lines
-coords # display list 
-```
-
-
-
-## Tabellen für Publikationen
 
 
 ```r
@@ -4173,9 +4305,12 @@ library(stargazer)
 stargazer(attitude)
 ```
 
+![](https://i2.wp.com/www.r-statistics.com/wp-content/uploads/2013/01/stargazer_summ_stat.jpg?w=561)
+
 <!--
 ![pic](http://i1.wp.com/www.r-statistics.com/wp-content/uploads/2013/01/stargazer_regression.jpg?zoom=1.5&resize=448%2C518)
 -->
+
 ## Tabellen mit dem R-Paket knitr
 
 
@@ -4198,6 +4333,11 @@ library(splines)
 ```
 
 
+
 ## Beispiel einer [interaktiven Karte](http://rpubs.com/Japhilko82/Campsites) 
 
 [interaktiven Karte](http://rpubs.com/Japhilko82/Campsites)  und [Rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive%20maps.R) um eine interaktive Karte mit leaflet zu erzeugen.
+
+## 
+
+![](figure/Aufmerksamkeit.PNG)
