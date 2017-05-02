@@ -3,6 +3,12 @@ title: "Aufgabe - lineare Regression"
 author: "Jan-Philipp Kolb"
 date: "4 Mai 2017"
 output: 
+  beamer_presentation:
+    colortheme: beaver
+    fig_caption: no
+    fonttheme: structurebold
+    highlight: espresso
+    theme: CambridgeUS
   html_document: 
     keep_md: yes
 ---
@@ -19,11 +25,9 @@ Beschrieben wird Wegstrecke, dreier Spielzeugautos die in unterschiedlichen Wink
 - distance: Zurückgelegte Strecke des Spielzeugautos
 - car: Autotyp (1, 2 oder 3)
 
-(a) Lesen Sie        den        Datensatz
-`toycars` in einen        dataframe
-data
-ein        und        wandeln        Sie        die
-Variable car des        Datensatzes        in        einen        Faktor  (`as.factor`)        um.
+(a) Lesen Sie        den        Datensatz `toycars` in einen        dataframe
+data ein und        wandeln        Sie        die
+Variable car des Datensatzes        in        einen        Faktor  (`as.factor`) um.
 
 (b)    Erstellen          Sie          drei          Boxplots,          die          die          zurückgelegte          Strecke          getrennt          nach          dem          Faktor car darstellen.
 

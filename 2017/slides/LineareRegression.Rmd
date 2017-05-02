@@ -1,7 +1,7 @@
 ---
 title: "Lineare Regression"
 author: "Jan-Philipp Kolb"
-date: "3 Mai 2017"
+date: "4 Mai 2017"
 output:
   beamer_presentation:
     colortheme: beaver

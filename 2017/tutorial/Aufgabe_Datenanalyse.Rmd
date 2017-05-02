@@ -3,6 +3,12 @@ title: "Aufgabe - Datenanalyse"
 author: "Jan-Philipp Kolb"
 date: "4 Mai 2017"
 output: 
+  beamer_presentation:
+    colortheme: beaver
+    fig_caption: no
+    fonttheme: structurebold
+    highlight: espresso
+    theme: CambridgeUS
   html_document: 
     keep_md: yes
 ---

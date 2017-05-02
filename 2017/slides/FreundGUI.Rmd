@@ -59,14 +59,6 @@ Aus den folgenden Gründen:
 ![rstudio](http://www.milanor.net/blog/wp-content/uploads/2013/07/0_overall.jpg)
 
 
-## Download der Unterlagen
-
-Auf [github](github.com/Japhilko/IntroR/) sind alle Unterlagen für diesen Kurs zu finden.
-
-[Wie nutzt man github?](https://guides.github.com/activities/hello-world/)
-
-
-
 ## Rstudio
 
 - Sechs [Gründe](http://www.r-bloggers.com/top-6-reasons-you-need-to-be-using-rstudio/) Rstudio zu nutzen.
@@ -74,3 +66,11 @@ Auf [github](github.com/Japhilko/IntroR/) sind alle Unterlagen für diesen Kurs 
 - Wie man Rstudio [nutzen kann.](https://support.rstudio.com/hc/en-us/sections/200107586-Using-RStudio)
 
 - [Das Rstudio einrichten](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio)
+
+
+## Download der Unterlagen
+
+Auf [github](https://github.com/Japhilko/IntroR/tree/master/2017) sind alle Unterlagen für diesen Kurs zu finden.
+
+
+[Wie nutzt man github?](https://guides.github.com/activities/hello-world/)

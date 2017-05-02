@@ -1,6 +1,6 @@
-# Intro Datenanalyse 1
+# Intro Datenanalyse
 Jan-Philipp Kolb  
-3 Mai 2017  
+3 und 4 Mai 2017  
 
 # Warum R nutzen
 
@@ -9,23 +9,28 @@ Jan-Philipp Kolb
 
 
 
+## Grundätzliches
+
+- Meistens sind die Kenntnisse und Fähigkeiten der Teilnehmer sehr heterogen - bitte sagen, wenn es zu schnell oder langsam geht
+- Wenn Fragen sind - immer fragen
+- R macht zusammen mehr Spaß - gerne den Nachbarn fragen
 
 
 ## Gründe für die Nutzung von R
 
-- Als Weg kreativ zu sein ...
-- Graphiken, Graphiken, Graphiken
-- In Kombination mit anderen Programmen nutzbar
-- Zur Verbindung von Datenstrukturen
-- Zum Automatisieren
-- Um die Intelligenz anderer Leute zu nutzen ;-)
+- [Als Weg kreativ zu sein ...](http://blog.revolutionanalytics.com/2015/10/r-user-groups-highlight-r-creativity.html)
+- [Graphiken](http://matthewlincoln.net/2014/12/20/adjacency-matrix-plots-with-r-and-ggplot2.html), [Graphiken](https://www.r-bloggers.com/3d-plots-with-ggplot2-and-plotly/), [Graphiken](https://procomun.wordpress.com/2011/03/18/splomr/)
+- [In Kombination mit anderen Programmen nutzbar](https://github.com/Japhilko/RInterfaces)
+- Zur [Verbindung von Datenstrukturen](https://github.com/Japhilko/RInterfaces/blob/master/slides/Datenimport.md)
+- [Zum Automatisieren](https://cran.r-project.org/web/packages/MplusAutomation/index.html)
+- [Um die Intelligenz anderer Leute zu nutzen ;-)](https://www.r-bloggers.com/)
 - ...
 
 
 ## Gründe
 
 - R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
-- R ist eine Skriptsprache 
+- R ist eine [Skriptsprache](https://de.wikipedia.org/wiki/Skriptsprache)
 - Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
 - R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
 - [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
@@ -57,11 +62,11 @@ Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datam
 ![](figure/CRANdownloads.PNG)
 
 
-## R Nutzer rund um die Welt
+## [R Nutzer rund um die Welt](http://revolution-computing.typepad.com/)
 
 ![R Welt](http://revolution-computing.typepad.com/.a/6a010534b1db25970b0191035099d8970c-pi)
 
-## Wo sind die aktivsten Nutzer?
+## [Wo sind die aktivsten Nutzer?](http://spatial.ly/)
 
 ![Aktivität Nutzer](http://spatial.ly/wp-content/uploads/2013/06/r_activity.png)
 
@@ -69,7 +74,7 @@ Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datam
 
 Das kann diese Schulung vermitteln:
 
-- Eine praxisnahe Einfuhrung in die statistische
+- Eine praxisnahe Einführung in die statistische
 Programmiersprache R
 - Erlernen einer Programmier-Strategie
 - Guten Stil
@@ -85,6 +90,7 @@ Das kann sie nicht leisten:
 -  Verständnis zementieren
 -  Das Trainieren abnehmen
 
+
 ## R herunterladen:
 
 <http://www.r-project.org/>
@@ -94,7 +100,6 @@ Das kann sie nicht leisten:
 
 ## Links
 
-- [Vergleich python und R](http://www.dataschool.io/python-or-r-for-data-science/)
 
 - [Warum man R für Data Science lernen sollte](http://www.r-bloggers.com/why-you-should-learn-r-first-for-data-science/)
 
@@ -107,6 +112,8 @@ Das kann sie nicht leisten:
 - [Intro R](http://www.ats.ucla.edu/stat/r/seminars/intro.htm)
 
 - [Intro R II](http://www.ats.ucla.edu/stat/r/sk/)
+
+- [Vergleich python und R](http://www.dataschool.io/python-or-r-for-data-science/)
 
 ## Probleme mit Excel
 
@@ -171,14 +178,6 @@ Aus den folgenden Gründen:
 ![rstudio](http://www.milanor.net/blog/wp-content/uploads/2013/07/0_overall.jpg)
 
 
-## Download der Unterlagen
-
-Auf [github](github.com/Japhilko/IntroR/) sind alle Unterlagen für diesen Kurs zu finden.
-
-[Wie nutzt man github?](https://guides.github.com/activities/hello-world/)
-
-
-
 ## Rstudio
 
 - Sechs [Gründe](http://www.r-bloggers.com/top-6-reasons-you-need-to-be-using-rstudio/) Rstudio zu nutzen.
@@ -186,6 +185,14 @@ Auf [github](github.com/Japhilko/IntroR/) sind alle Unterlagen für diesen Kurs 
 - Wie man Rstudio [nutzen kann.](https://support.rstudio.com/hc/en-us/sections/200107586-Using-RStudio)
 
 - [Das Rstudio einrichten](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio)
+
+
+## Download der Unterlagen
+
+Auf [github](https://github.com/Japhilko/IntroR/tree/master/2017) sind alle Unterlagen für diesen Kurs zu finden.
+
+
+[Wie nutzt man github?](https://guides.github.com/activities/hello-world/)
 
 
 
@@ -205,7 +212,7 @@ date()
 ```
 
 ```
-## [1] "Mon May 01 10:56:26 2017"
+## [1] "Tue May 02 15:07:41 2017"
 ```
 
 
@@ -214,7 +221,7 @@ sessionInfo()
 ```
 
 ```
-## R version 3.3.3 (2017-03-06)
+## R version 3.3.2 (2016-10-31)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
 ## Running under: Windows 7 x64 (build 7601) Service Pack 1
 ## 
@@ -227,9 +234,9 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] backports_1.0.5 magrittr_1.5    rprojroot_1.2   tools_3.3.3    
-##  [5] htmltools_0.3.5 yaml_2.1.13     Rcpp_0.12.6     stringi_1.1.1  
-##  [9] rmarkdown_1.4   knitr_1.15.1    stringr_1.2.0   digest_0.6.12  
+##  [1] backports_1.0.4 magrittr_1.5    rprojroot_1.1   tools_3.3.2    
+##  [5] htmltools_0.3.5 yaml_2.1.14     Rcpp_0.12.9     stringi_1.1.2  
+##  [9] rmarkdown_1.3   knitr_1.15.1    stringr_1.2.0   digest_0.6.11  
 ## [13] evaluate_0.10
 ```
 
@@ -1537,7 +1544,7 @@ ab <- rnorm(100); var(ab)
 ```
 
 ```
-## [1] 1.038828
+## [1] 0.9624874
 ```
 
 ```r
@@ -1545,11 +1552,11 @@ sd(ab); range(ab)
 ```
 
 ```
-## [1] 1.019229
+## [1] 0.9810644
 ```
 
 ```
-## [1] -2.605375  2.287268
+## [1] -2.400452  2.017723
 ```
 
 ## Extremwerte
@@ -1560,7 +1567,7 @@ min(ab)
 ```
 
 ```
-## [1] -2.605375
+## [1] -2.400452
 ```
 
 ```r
@@ -1568,7 +1575,7 @@ max(ab)
 ```
 
 ```
-## [1] 2.287268
+## [1] 2.017723
 ```
 
 
@@ -1595,7 +1602,7 @@ var(ab,na.rm=T)
 ```
 
 ```
-## [1] 1.047013
+## [1] 0.9668413
 ```
 
 ## Häufigkeiten und gruppierte Kennwerte
@@ -1613,7 +1620,7 @@ table(x)
 ```
 ## x
 ##  1  2  3  4  5  6  7  8  9 10 
-## 11  7  8 18 12 14 12  6  7  5
+##  7  9  6  9 13  9 11 14 10 12
 ```
 
 ## Tabellieren - weiteres Beispiel
@@ -1636,7 +1643,7 @@ table(x)
 ```
 ## x
 ##  1  2  3  4  5  6  7  8  9 10 
-## 11  7  8 18 12 14 12  6  7  5
+##  7  9  6  9 13  9 11 14 10 12
 ```
 
 ```r
@@ -1646,16 +1653,16 @@ table(x,musician)
 ```
 ##     musician
 ## x    no yes
-##   1   5   6
-##   2   2   5
-##   3   3   5
-##   4  12   6
-##   5   5   7
-##   6   7   7
-##   7   7   5
-##   8   4   2
-##   9   5   2
-##   10  3   2
+##   1   4   3
+##   2   3   6
+##   3   4   2
+##   4   5   4
+##   5   7   6
+##   6   5   4
+##   7   6   5
+##   8  12   2
+##   9   5   5
+##   10  5   7
 ```
 
 ## Eine weitere Tabelle
@@ -1768,7 +1775,7 @@ apply(ApplyDat,1,mean)
 ```
 
 ```
-## [1] 0.2661733 0.8821604 1.5531216 1.9851276
+## [1] 0.2691871 0.7648620 0.6313255 1.3922380
 ```
 
 ```r
@@ -1776,7 +1783,7 @@ apply(ApplyDat,2,mean)
 ```
 
 ```
-## [1] 2.5000000 0.3861112 0.6288260
+## [1]  2.5000000  0.4098934 -0.6166840
 ```
 
 
@@ -1788,7 +1795,7 @@ apply(ApplyDat,1,var)
 ```
 
 ```
-## [1] 0.6151602 0.9444468 1.7010837 3.4915952
+## [1] 0.4313303 1.4724412 4.5165599 5.6617628
 ```
 
 ```r
@@ -1796,7 +1803,7 @@ apply(ApplyDat,1,sd)
 ```
 
 ```
-## [1] 0.7843215 0.9718265 1.3042560 1.8685811
+## [1] 0.6567574 1.2134419 2.1252200 2.3794459
 ```
 
 ```r
@@ -1804,9 +1811,9 @@ apply(ApplyDat,1,range)
 ```
 
 ```
-##            [,1]      [,2]      [,3]      [,4]
-## [1,] -0.5603964 0.2379599 0.4677558 0.3092514
-## [2,]  1.0000000 2.0000000 3.0000000 4.0000000
+##           [,1]       [,2]      [,3]       [,4]
+## [1,] -0.271618 -0.4256527 -1.108526 -0.6609398
+## [2,]  1.000000  2.0000000  3.000000  4.0000000
 ```
 
 ```r
@@ -1844,11 +1851,11 @@ ApplyDat
 
 ```
 ##     Income Sex
-## 1 1699.346   1
-## 2 1569.008   1
-## 3 1236.976   2
-## 4 1740.503   2
-## 5 1067.514   1
+## 1 1251.726   2
+## 2 1818.838   2
+## 3 1125.818   1
+## 4 1259.250   2
+## 5 1012.900   2
 ```
 
 ## Beispiel Funktion tapply
@@ -1861,7 +1868,7 @@ tapply(ApplyDat$Income,ApplyDat$Sex,mean)
 
 ```
 ##        1        2 
-## 1445.289 1488.739
+## 1125.818 1335.678
 ```
 
 ```r
@@ -1871,10 +1878,10 @@ tapply(ApplyDat$Income,
 
 ```
 ## $`1`
-## [1] 1699.346 1569.008 1067.514
+## [1] 1125.818
 ## 
 ## $`2`
-## [1] 1236.976 1740.503
+## [1] 1251.726 1818.838 1259.250 1012.900
 ```
 
 ## Links Datenanalyse
@@ -1897,15 +1904,14 @@ tapply(ApplyDat$Income,
 - Berechnen Sie mittels dem apply()-Befehl den Mittelwert und die Varianz für jede Spalte von
 A bzw. B.
 
-- Standardisieren        ist        eine        häuge        Transformation        von        Daten;        dafür        wird        der        Mittelwert        von
-der        entsprechenden        Zeile        o der        Spalte        abgezogen        und        durch        die        entsprechende        Standardab-
+- Standardisieren ist eine häufige Transformation von        Daten;        dafür        wird        der        Mittelwert        von der entsprechenden        Zeile        oder        Spalte        abgezogen        und        durch        die        entsprechende        Standardab-
 weichung         geteilt.             Somit         b esitzen         die         Daten         einen         Mittelwert         von         0         und         eine         Standardab-
 weichung        von        1.           Standardisieren        Sie        die        Spalten        der        Matrix
 A
 .
 
 
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
 
 
 # Einfache Grafiken
@@ -2199,12 +2205,12 @@ beanplot(count~spray,data=InsectSprays,col="orange")
 
 ## Aufgabe - einfache Grafiken
 
-- Laden Sie den Datensatz VADeaths und erzeugen Sie den
+- Laden Sie den Datensatz `VADeaths` und erzeugen Sie den
 folgenden plot:
 
 ![](Intro_Datenanalyse1_files/figure-slidy/unnamed-chunk-158-1.png)<!-- -->
 
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
 
 
 # Zusammenhang 
@@ -2528,7 +2534,7 @@ parallelplot(~iris[1:4] | Species, iris)
 data <- read.csv("oecd.csv",header = TRUE)
 ```
 
-- Überprufen Sie die Dimension der OECD-Daten.
+- Überprüfen Sie die Dimension der OECD-Daten.
 
 - Berechnen Sie die Mittelwerte und Varianzen der einzelnen
 Variablen mit einem geeigneten apply Befehl.
@@ -2543,7 +2549,7 @@ hoch ist sie in diesem Land?
 dem Einkommen geordnet ist. Speichern Sie diesen in einer
 neuen .csv Datei
 
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
 
 
     
@@ -2743,8 +2749,9 @@ plot(roller.lm,2)
 
 ## Aufgabe - lineare Regression
 
+<!--
 [Mietspiegel München](http://data.ub.uni-muenchen.de/2/)
-
+-->
 
 Beschrieben wird Wegstrecke, dreier Spielzeugautos die in unterschiedlichen Winkeln Rampe herunterfuhren.
 
@@ -2752,11 +2759,9 @@ Beschrieben wird Wegstrecke, dreier Spielzeugautos die in unterschiedlichen Wink
 - distance: Zurückgelegte Strecke des Spielzeugautos
 - car: Autotyp (1, 2 oder 3)
 
-(a) Lesen        Sie        den        Datensatz
-toycars        in        einen        dataframe
-data
-ein        und        wandeln        Sie        die
-Variable car des        Datensatzes        in        einen        Faktor        (as.factor)        um.
+(a) Lesen Sie        den        Datensatz `toycars` in einen        dataframe
+data ein und        wandeln        Sie        die
+Variable car des Datensatzes        in        einen        Faktor  (`as.factor`) um.
 
 (b)    Erstellen          Sie          drei          Boxplots,          die          die          zurückgelegte          Strecke          getrennt          nach          dem          Faktor car darstellen.
 
@@ -2778,7 +2783,7 @@ einfügen. Deutet          das
 $$ R^2 $$ jeweils auf eine gute Modellanpassung hin?
 
 
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
 
 
 # Die logistische Regression 
@@ -2923,7 +2928,7 @@ house.plr<-polr(Sat~Infl,weights=Freq,data=housing)
 -  Führen Sie eine Regression mit sinnvoll gewählten abhängiger und unabhängiger Variablen auf den Daten durch
 -  Erzeugen Sie einen Lattice-plot
 
-[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2016/README.md)
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)
 
 
 # Faktoren in R 
@@ -3072,8 +3077,8 @@ table(lets[1:5])
 
 ```
 ## 
-## a b c d e f g h i j k l m n o p q r s t u v w x y z 
-## 0 0 0 0 0 1 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+## a b c d e f h i j k l m n o p q r s t u v x y z 
+## 0 0 0 0 0 0 0 1 2 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0
 ```
 
 

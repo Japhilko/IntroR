@@ -24,4 +24,6 @@ install.packages("Rcmdr")
 
 install.packages("raster")
 
+install.packages("visreg")
 
+install.packages("iplots")

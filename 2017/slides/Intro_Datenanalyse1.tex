@@ -24,7 +24,7 @@
 \usepackage[margin=1in]{geometry}
 \usepackage{hyperref}
 \hypersetup{unicode=true,
-            pdftitle={Intro Datenanalyse 1},
+            pdftitle={Intro Datenanalyse},
             pdfauthor={Jan-Philipp Kolb},
             pdfborder={0 0 0},
             breaklinks=true}
@@ -114,7 +114,7 @@
 }
 
 \setlength{\droptitle}{-2em}
-  \title{Intro Datenanalyse 1}
+  \title{Intro Datenanalyse}
   \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
   \author{Jan-Philipp Kolb}
@@ -122,13 +122,30 @@
   \postauthor{\par}
   \predate{\centering\large\emph}
   \postdate{\par}
-  \date{27 April 2017}
+  \date{3 und 4 Mai 2017}
 
 
 \begin{document}
 \maketitle
 
+{
+\setcounter{tocdepth}{2}
+\tableofcontents
+}
 \section{Warum R nutzen}\label{warum-r-nutzen}
+
+\subsection{Grundätzliches}\label{grundatzliches}
+
+\begin{itemize}
+\tightlist
+\item
+  Meistens sind die Kenntnisse und Fähigkeiten der Teilnehmer sehr
+  heterogen - bitte sagen, wenn es zu schnell oder langsam geht
+\item
+  Wenn Fragen sind - immer fragen
+\item
+  R macht zusammen mehr Spaß - gerne den Nachbarn fragen
+\end{itemize}
 
 \subsection{Gründe für die Nutzung von
 R}\label{grunde-fur-die-nutzung-von-r}
@@ -243,7 +260,7 @@ Das kann diese Schulung vermitteln:
 \begin{itemize}
 \tightlist
 \item
-  Eine praxisnahe Einfuhrung in die statistische Programmiersprache R
+  Eine praxisnahe Einführung in die statistische Programmiersprache R
 \item
   Erlernen einer Programmier-Strategie
 \item
@@ -283,9 +300,6 @@ Das kann sie nicht leisten:
 
 \begin{itemize}
 \item
-  \href{http://www.dataschool.io/python-or-r-for-data-science/}{Vergleich
-  python und R}
-\item
   \href{http://www.r-bloggers.com/why-you-should-learn-r-first-for-data-science/}{Warum
   man R für Data Science lernen sollte}
 \item
@@ -300,6 +314,9 @@ Das kann sie nicht leisten:
   \href{http://www.ats.ucla.edu/stat/r/seminars/intro.htm}{Intro R}
 \item
   \href{http://www.ats.ucla.edu/stat/r/sk/}{Intro R II}
+\item
+  \href{http://www.dataschool.io/python-or-r-for-data-science/}{Vergleich
+  python und R}
 \end{itemize}
 
 \subsection{Probleme mit Excel}\label{probleme-mit-excel}
@@ -400,14 +417,6 @@ Aus den folgenden Gründen:
 \caption{rstudio}
 \end{figure}
 
-\subsection{Download der Unterlagen}\label{download-der-unterlagen}
-
-Auf \href{github.com/Japhilko/IntroR/}{github} sind alle Unterlagen für
-diesen Kurs zu finden.
-
-\href{https://guides.github.com/activities/hello-world/}{Wie nutzt man
-github?}
-
 \subsection{Rstudio}\label{rstudio}
 
 \begin{itemize}
@@ -423,6 +432,14 @@ github?}
   \href{https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio}{Das
   Rstudio einrichten}
 \end{itemize}
+
+\subsection{Download der Unterlagen}\label{download-der-unterlagen}
+
+Auf \href{https://github.com/Japhilko/IntroR/tree/master/2017}{github}
+sind alle Unterlagen für diesen Kurs zu finden.
+
+\href{https://guides.github.com/activities/hello-world/}{Wie nutzt man
+github?}
 
 \subsection{Aufgabe - Vorbereitung}\label{aufgabe---vorbereitung}
 
@@ -453,7 +470,7 @@ github?}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] "Thu Apr 27 22:51:49 2017"
+## [1] "Tue May 02 12:48:06 2017"
 \end{verbatim}
 
 \begin{Shaded}
@@ -463,7 +480,7 @@ github?}
 \end{Shaded}
 
 \begin{verbatim}
-## R version 3.3.3 (2017-03-06)
+## R version 3.3.2 (2016-10-31)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
 ## Running under: Windows 7 x64 (build 7601) Service Pack 1
 ## 
@@ -476,9 +493,9 @@ github?}
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] backports_1.0.5 magrittr_1.5    rprojroot_1.2   tools_3.3.3    
-##  [5] htmltools_0.3.5 yaml_2.1.13     Rcpp_0.12.6     stringi_1.1.1  
-##  [9] rmarkdown_1.4   knitr_1.15.1    stringr_1.2.0   digest_0.6.12  
+##  [1] backports_1.0.4 magrittr_1.5    rprojroot_1.1   tools_3.3.2    
+##  [5] htmltools_0.3.5 yaml_2.1.14     Rcpp_0.12.9     stringi_1.1.2  
+##  [9] rmarkdown_1.3   knitr_1.15.1    stringr_1.2.0   digest_0.6.11  
 ## [13] evaluate_0.10
 \end{verbatim}
 
@@ -2114,7 +2131,7 @@ Im base Paket sind die wichtigsten Streuungsmaße enthalten:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 1.162227
+## [1] 0.9148144
 \end{verbatim}
 
 \begin{Shaded}
@@ -2124,11 +2141,11 @@ Im base Paket sind die wichtigsten Streuungsmaße enthalten:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 1.078066
+## [1] 0.9564593
 \end{verbatim}
 
 \begin{verbatim}
-## [1] -2.794774  2.819060
+## [1] -2.059865  2.391989
 \end{verbatim}
 
 \subsection{Extremwerte}\label{extremwerte}
@@ -2140,7 +2157,7 @@ Im base Paket sind die wichtigsten Streuungsmaße enthalten:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] -2.794774
+## [1] -2.059865
 \end{verbatim}
 
 \begin{Shaded}
@@ -2150,7 +2167,7 @@ Im base Paket sind die wichtigsten Streuungsmaße enthalten:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 2.81906
+## [1] 2.391989
 \end{verbatim}
 
 \subsection{Fehlende Werte}\label{fehlende-werte}
@@ -2182,7 +2199,7 @@ Bei fehlenden Werten muss ein weiteres Argument mitgegeben werden:
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 1.170786
+## [1] 0.917908
 \end{verbatim}
 
 \subsection{Häufigkeiten und gruppierte
@@ -2210,7 +2227,7 @@ Kennwerte}\label{haufigkeiten-und-gruppierte-kennwerte}
 \begin{verbatim}
 ## x
 ##  1  2  3  4  5  6  7  8  9 10 
-##  5 13 12  8  8 11 10  8 15 10
+##  8  9 12  9  8 14  6 14  8 12
 \end{verbatim}
 
 \subsection{Tabellieren - weiteres
@@ -2237,7 +2254,7 @@ Beispiel}\label{tabellieren---weiteres-beispiel}
 \begin{verbatim}
 ## x
 ##  1  2  3  4  5  6  7  8  9 10 
-##  5 13 12  8  8 11 10  8 15 10
+##  8  9 12  9  8 14  6 14  8 12
 \end{verbatim}
 
 \begin{Shaded}
@@ -2249,16 +2266,16 @@ Beispiel}\label{tabellieren---weiteres-beispiel}
 \begin{verbatim}
 ##     musician
 ## x    no yes
-##   1   2   3
-##   2   7   6
-##   3   7   5
-##   4   4   4
-##   5   7   1
-##   6   4   7
-##   7   4   6
-##   8   5   3
-##   9   5  10
-##   10  6   4
+##   1   5   3
+##   2   5   4
+##   3   6   6
+##   4   6   3
+##   5   6   2
+##   6   7   7
+##   7   2   4
+##   8   4  10
+##   9   4   4
+##   10  9   3
 \end{verbatim}
 
 \subsection{Eine weitere Tabelle}\label{eine-weitere-tabelle}
@@ -2396,7 +2413,7 @@ Funktion}\label{beispieldatensatz---apply-funktion}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.5295290 0.2869179 1.4069044 1.7877371
+## [1] 0.3017396 0.8851795 1.0814802 1.7478401
 \end{verbatim}
 
 \begin{Shaded}
@@ -2406,7 +2423,7 @@ Funktion}\label{beispieldatensatz---apply-funktion}
 \end{Shaded}
 
 \begin{verbatim}
-## [1]  2.50000000  0.52509412 -0.01677773
+## [1]  2.50000000  0.54304978 -0.03087023
 \end{verbatim}
 
 \subsection{Die Funktion apply}\label{die-funktion-apply}
@@ -2418,7 +2435,7 @@ Funktion}\label{beispieldatensatz---apply-funktion}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.1666969 3.8852438 1.9035104 3.7316080
+## [1] 0.3995513 1.0250492 3.1003167 3.8099497
 \end{verbatim}
 
 \begin{Shaded}
@@ -2428,7 +2445,7 @@ Funktion}\label{beispieldatensatz---apply-funktion}
 \end{Shaded}
 
 \begin{verbatim}
-## [1] 0.4082854 1.9711022 1.3796776 1.9317370
+## [1] 0.6321007 1.0124471 1.7607716 1.9519092
 \end{verbatim}
 
 \begin{Shaded}
@@ -2438,9 +2455,9 @@ Funktion}\label{beispieldatensatz---apply-funktion}
 \end{Shaded}
 
 \begin{verbatim}
-##           [,1]      [,2]      [,3]      [,4]
-## [1,] 0.2680306 -1.867412 0.6036271 0.4345679
-## [2,] 1.0000000  2.000000 3.0000000 4.0000000
+##            [,1]       [,2]       [,3]      [,4]
+## [1,] -0.2314438 0.02292402 -0.4606845 0.5457233
+## [2,]  1.0000000 2.00000000  3.0000000 4.0000000
 \end{verbatim}
 
 \begin{Shaded}
@@ -2494,11 +2511,11 @@ apply}\label{argumente-der-funktion-apply}
 
 \begin{verbatim}
 ##     Income Sex
-## 1 1263.427   2
-## 2 1279.395   2
-## 3 1338.848   1
-## 4 1099.643   2
-## 5 1288.614   2
+## 1 1585.486   2
+## 2 1376.690   2
+## 3 1451.833   1
+## 4 1346.355   2
+## 5 1564.398   1
 \end{verbatim}
 
 \subsection{Beispiel Funktion tapply}\label{beispiel-funktion-tapply}
@@ -2511,7 +2528,7 @@ apply}\label{argumente-der-funktion-apply}
 
 \begin{verbatim}
 ##        1        2 
-## 1338.848 1232.770
+## 1508.116 1436.177
 \end{verbatim}
 
 \begin{Shaded}
@@ -2523,10 +2540,10 @@ apply}\label{argumente-der-funktion-apply}
 
 \begin{verbatim}
 ## $`1`
-## [1] 1338.848
+## [1] 1451.833 1564.398
 ## 
 ## $`2`
-## [1] 1263.427 1279.395 1099.643 1288.614
+## [1] 1585.486 1376.690 1346.355
 \end{verbatim}
 
 \subsection{Links Datenanalyse}\label{links-datenanalyse}
@@ -2558,14 +2575,14 @@ anwenden}\label{aufgabe---apply-funktion-anwenden}
   Berechnen Sie mittels dem apply()-Befehl den Mittelwert und die
   Varianz für jede Spalte von A bzw. B.
 \item
-  Standardisieren ist eine häuge Transformation von Daten; dafür wird
-  der Mittelwert von der entsprechenden Zeile o der Spalte abgezogen und
+  Standardisieren ist eine häufige Transformation von Daten; dafür wird
+  der Mittelwert von der entsprechenden Zeile oder Spalte abgezogen und
   durch die entsprechende Standardab- weichung geteilt. Somit b esitzen
   die Daten einen Mittelwert von 0 und eine Standardab- weichung von 1.
   Standardisieren Sie die Spalten der Matrix A .
 \end{itemize}
 
-\href{https://github.com/Japhilko/IntroR/blob/master/2016/README.md}{Zurück
+\href{https://github.com/Japhilko/IntroR/blob/master/2017/README.md}{Zurück
 zur Gliederung.}
 
 \section{Einfache Grafiken}\label{einfache-grafiken}
@@ -2994,12 +3011,13 @@ Grafiken}\label{aufgabe---einfache-grafiken}
 \begin{itemize}
 \tightlist
 \item
-  Laden Sie den Datensatz VADeaths und erzeugen Sie den folgenden plot:
+  Laden Sie den Datensatz \texttt{VADeaths} und erzeugen Sie den
+  folgenden plot:
 \end{itemize}
 
 \includegraphics{Intro_Datenanalyse1_files/figure-latex/unnamed-chunk-158-1.pdf}
 
-\href{https://github.com/Japhilko/IntroR/blob/master/2016/README.md}{Zurück
+\href{https://github.com/Japhilko/IntroR/blob/master/2017/README.md}{Zurück
 zur Gliederung.}
 
 \section{Zusammenhang}\label{zusammenhang}
@@ -3377,7 +3395,7 @@ zeichnen}\label{boxplot-mit-lattice-zeichnen-1}
 
 \begin{itemize}
 \item
-  Überprufen Sie die Dimension der OECD-Daten.
+  Überprüfen Sie die Dimension der OECD-Daten.
 \item
   Berechnen Sie die Mittelwerte und Varianzen der einzelnen Variablen
   mit einem geeigneten apply Befehl.
@@ -3392,7 +3410,7 @@ zeichnen}\label{boxplot-mit-lattice-zeichnen-1}
   Einkommen geordnet ist. Speichern Sie diesen in einer neuen .csv Datei
 \end{itemize}
 
-\href{https://github.com/Japhilko/IntroR/blob/master/2016/README.md}{Zurück
+\href{https://github.com/Japhilko/IntroR/blob/master/2017/README.md}{Zurück
 zur Gliederung.}
 
 \section{Die lineare Regression}\label{die-lineare-regression}
@@ -3635,8 +3653,6 @@ Regression}\label{linkliste---lineare-regression}
 \subsection{Aufgabe - lineare
 Regression}\label{aufgabe---lineare-regression}
 
-\href{http://data.ub.uni-muenchen.de/2/}{Mietspiegel München}
-
 Beschrieben wird Wegstrecke, dreier Spielzeugautos die in
 unterschiedlichen Winkeln Rampe herunterfuhren.
 
@@ -3653,9 +3669,9 @@ unterschiedlichen Winkeln Rampe herunterfuhren.
 \begin{enumerate}
 \def\labelenumi{(\alph{enumi})}
 \item
-  Lesen Sie den Datensatz toycars in einen dataframe data ein und
-  wandeln Sie die Variable car des Datensatzes in einen Faktor
-  (as.factor) um.
+  Lesen Sie den Datensatz \texttt{toycars} in einen dataframe data ein
+  und wandeln Sie die Variable car des Datensatzes in einen Faktor
+  (\texttt{as.factor}) um.
 \item
   Erstellen Sie drei Boxplots, die die zurückgelegte Strecke getrennt
   nach dem Faktor car darstellen.
@@ -3677,7 +3693,7 @@ unterschiedlichen Winkeln Rampe herunterfuhren.
   hin?
 \end{enumerate}
 
-\href{https://github.com/Japhilko/IntroR/blob/master/2016/README.md}{Zurück
+\href{https://github.com/Japhilko/IntroR/blob/master/2017/README.md}{Zurück
 zur Gliederung.}
 
 \section{Die logistische Regression}\label{die-logistische-regression}
@@ -3914,7 +3930,7 @@ Regression}\label{linkliste---logistische-regression}
   Erzeugen Sie einen Lattice-plot
 \end{itemize}
 
-\href{https://github.com/Japhilko/IntroR/blob/master/2016/README.md}{Zurück
+\href{https://github.com/Japhilko/IntroR/blob/master/2017/README.md}{Zurück
 zur Gliederung.}
 
 \section{Faktoren in R}\label{faktoren-in-r}
@@ -4078,8 +4094,8 @@ Definition}\label{weitere-moglichkeit-der-definition}
 
 \begin{verbatim}
 ## 
-## a b c d e f g h i j k l m n o p q r s t u v w x y z 
-## 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 1 1 1 0 0 0 0 0 0
+## a b c d e f g h i k l m n o p q r s t u v w x y z 
+## 0 0 0 0 0 1 0 0 2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
 \end{verbatim}
 
 \section{Grafiken mit ggplot}\label{grafiken-mit-ggplot}

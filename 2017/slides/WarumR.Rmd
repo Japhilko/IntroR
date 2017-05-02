@@ -32,19 +32,19 @@ knitr::opts_chunk$set(echo = TRUE,message=F,warning = F)
 
 ## Gründe für die Nutzung von R
 
-- Als Weg kreativ zu sein ...
-- Graphiken, Graphiken, Graphiken
-- In Kombination mit anderen Programmen nutzbar
-- Zur Verbindung von Datenstrukturen
-- Zum Automatisieren
-- Um die Intelligenz anderer Leute zu nutzen ;-)
+- [Als Weg kreativ zu sein ...](http://blog.revolutionanalytics.com/2015/10/r-user-groups-highlight-r-creativity.html)
+- [Graphiken](http://matthewlincoln.net/2014/12/20/adjacency-matrix-plots-with-r-and-ggplot2.html), [Graphiken](https://www.r-bloggers.com/3d-plots-with-ggplot2-and-plotly/), [Graphiken](https://procomun.wordpress.com/2011/03/18/splomr/)
+- [In Kombination mit anderen Programmen nutzbar](https://github.com/Japhilko/RInterfaces)
+- Zur [Verbindung von Datenstrukturen](https://github.com/Japhilko/RInterfaces/blob/master/slides/Datenimport.md)
+- [Zum Automatisieren](https://cran.r-project.org/web/packages/MplusAutomation/index.html)
+- [Um die Intelligenz anderer Leute zu nutzen ;-)](https://www.r-bloggers.com/)
 - ...
 
 
 ## Gründe
 
 - R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
-- R ist eine Skriptsprache 
+- R ist eine [Skriptsprache](https://de.wikipedia.org/wiki/Skriptsprache)
 - Gute Möglichkeiten für die [Visualisierung](http://research.stowers-institute.org/efg/R/) ([Link](http://www.sr.bham.ac.uk/~ajrs/R/r-gallery.html) )
 - R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
 - [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
@@ -75,11 +75,11 @@ Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datam
 ![](figure/CRANdownloads.PNG)
 
 
-## R Nutzer rund um die Welt
+## [R Nutzer rund um die Welt](http://revolution-computing.typepad.com/)
 
 ![R Welt](http://revolution-computing.typepad.com/.a/6a010534b1db25970b0191035099d8970c-pi)
 
-## Wo sind die aktivsten Nutzer?
+## [Wo sind die aktivsten Nutzer?](http://spatial.ly/)
 
 ![Aktivität Nutzer](http://spatial.ly/wp-content/uploads/2013/06/r_activity.png)
 

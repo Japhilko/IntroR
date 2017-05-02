@@ -1,16 +1,16 @@
 ---
-title: "Einführung in die Datenanalyse mit R - Faktoren"
+title: "EinfÃ¼hrung in die Datenanalyse mit R - Faktoren"
 author: "Jan-Philipp Kolb"
 date: "4 Mai 2017"
-output: 
-  slidy_presentation: 
-    keep_md: yes
+output:
   beamer_presentation:
     colortheme: beaver
     fig_caption: no
     fonttheme: structurebold
     highlight: espresso
     theme: CambridgeUS
+  slidy_presentation:
+    keep_md: yes
 ---
 
 
