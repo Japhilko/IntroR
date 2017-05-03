@@ -27,12 +27,22 @@ http://www.uni-leipzig.de/~zuber/teaching/ws12/r-kurs/praxis/U2.R
 -->
 
 
+```r
+A <- matrix(seq(1,100), nrow = 4)
+dim(A)
+```
+
 ```
 ## [1]  4 25
 ```
 
 ## Matrix B erstellen
 
+
+```r
+B <- matrix(seq(1,100), ncol = 4)
+dim(B)
+```
 
 ```
 ## [1] 25  4
@@ -41,8 +51,18 @@ http://www.uni-leipzig.de/~zuber/teaching/ws12/r-kurs/praxis/U2.R
 ## Mittelwert und die Varianz für jede Zeile von A
 
 
+```r
+meanA <- apply(X=A, MARGIN=1, FUN=mean)
+meanA
+```
+
 ```
 ## [1] 49 50 51 52
+```
+
+```r
+varA <- apply(X=A, MARGIN=1, FUN=var)
+varA
 ```
 
 ```
@@ -52,9 +72,19 @@ http://www.uni-leipzig.de/~zuber/teaching/ws12/r-kurs/praxis/U2.R
 ## Mittelwert und die Varianz für jede Zeile von B
 
 
+```r
+meanB <- apply(X=B, MARGIN=1, FUN=mean)
+meanB
+```
+
 ```
 ##  [1] 38.5 39.5 40.5 41.5 42.5 43.5 44.5 45.5 46.5 47.5 48.5 49.5 50.5 51.5
 ## [15] 52.5 53.5 54.5 55.5 56.5 57.5 58.5 59.5 60.5 61.5 62.5
+```
+
+```r
+varB <- apply(X=B, MARGIN=1, FUN=var)
+varB
 ```
 
 ```
@@ -67,9 +97,19 @@ http://www.uni-leipzig.de/~zuber/teaching/ws12/r-kurs/praxis/U2.R
 ## Mittelwert und die Varianz für jede Spalte von A
 
 
+```r
+meanA <- apply(X=A, MARGIN=2, FUN=mean)
+meanA
+```
+
 ```
 ##  [1]  2.5  6.5 10.5 14.5 18.5 22.5 26.5 30.5 34.5 38.5 42.5 46.5 50.5 54.5
 ## [15] 58.5 62.5 66.5 70.5 74.5 78.5 82.5 86.5 90.5 94.5 98.5
+```
+
+```r
+varA <- apply(X=A, MARGIN=2, FUN=var)
+varA
 ```
 
 ```
@@ -82,8 +122,18 @@ http://www.uni-leipzig.de/~zuber/teaching/ws12/r-kurs/praxis/U2.R
 ## Mittelwert und die Varianz für jede Spalte von B
 
 
+```r
+meanB <- apply(X=B, MARGIN=2, FUN=mean)
+meanB
+```
+
 ```
 ## [1] 13 38 63 88
+```
+
+```r
+varB <- apply(X=B, MARGIN=2, FUN=var)
+varB
 ```
 
 ```
@@ -93,12 +143,27 @@ http://www.uni-leipzig.de/~zuber/teaching/ws12/r-kurs/praxis/U2.R
 ## Standardisieren der Spalten von A
 
 
+```r
+mA <- rbind(meanA,meanA,meanA,meanA)
+vA <- rbind(varA,varA,varA,varA)
+stdA<- (A-mA)/sqrt(vA)
+```
 
 ## Überprüfen ob die Spalten wirklich standardisiert sind
 
 
+```r
+check1  <- apply(X=stdA, MARGIN=2, FUN=mean)
+check2 <- apply(X=stdA, MARGIN=2, FUN=var)
+check1
+```
+
 ```
 ##  [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+```
+
+```r
+check2
 ```
 
 ```
