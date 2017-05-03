@@ -89,6 +89,7 @@ Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenan
 
 - Einfache Karten mit R erstellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggmap.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggmap.pdf) | [rcode](rcode/ggmap.R))
 
+
 - Regressionsdiagnostik mit R-Paket `visreg` ([Browser](slides/Regressionsdiagnostik.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Regressionsdiagnostik.pdf) | [rcode](rcode/Regressionsdiagnostik.R))
 
 - Weitere Themen im Ausblick ([Browser](slides/Ausblick.Rmd) | [pdf](slides/Ausblick.pdf))
