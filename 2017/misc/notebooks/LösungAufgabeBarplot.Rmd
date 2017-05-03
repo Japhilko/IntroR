@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = T)
 ```
 
 ## Aufgabe - einfache Grafiken
@@ -31,4 +31,9 @@ data(VADeaths)
 barplot(VADeaths, border = "dark blue",beside=T,
         col=c(1,2,3,4,5)) 
 ```
+
+
+####################
+
+
 

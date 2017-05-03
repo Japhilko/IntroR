@@ -13,5 +13,13 @@ folgenden plot:
 
 ## Lösung Barplot Aufgabe
 
+
+```r
+library(datasets)
+data(VADeaths)
+barplot(VADeaths, border = "dark blue",beside=T,
+        col=c(1,2,3,4,5)) 
+```
+
 ![](LösungAufgabeBarplot_files/figure-slidy/unnamed-chunk-3-1.png)<!-- -->
 
