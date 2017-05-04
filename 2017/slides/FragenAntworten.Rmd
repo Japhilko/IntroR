@@ -9,7 +9,7 @@ output:
 ---
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 ```
 
 ## Aufgekommene Fragen
@@ -20,6 +20,9 @@ knitr::opts_chunk$set(echo = TRUE)
 - D - Wie schreibt man Werte in Balkendiagramme? 
 - E - Wie fügt man KI`s zu einem Balkendiagramm hinzu?
 - F - Wie kann man eine Legende zu einer Basisgraphik hinzufügen?
+- G - Wie kann man die Beschriftung in lattice Graphiken ändern?
+- H - Wie ändert man die Reihenfolge der Gitter?
+- I - Wie kann man sich einen Plot einteilen?
 
 ## A - [Die am meisten genutzten Pakete](http://www.kdnuggets.com/2015/06/top-20-r-packages.html)
 
@@ -113,16 +116,19 @@ plot(x,y,col=z,pch=20)
 legend("topright",c("Kategorie A","Kategorie B","Kategorie C"),text.col = 1:3)
 ```
 
-## Text in lattice Graphik Beschriftung
+## G - Text in lattice Graphik Beschriftung
 
 ```{r}
 library(lattice)
 library(mlmRev)
 data(Chem97)
-histogram(~ gcsescore | factor(score),data = Chem97)
+
+Chem97cat <- paste("gender",Chem97$gender,"score",Chem97$score)
+
+histogram(~ gcsescore | factor(Chem97cat),data = Chem97)
 ```
 
-## Reihenfolge der Gitterfenster ändern
+## H - Reihenfolge der Gitterfenster ändern
 
 ```{r}
 histogram(~ gcsescore | factor(score),data = Chem97,
@@ -132,7 +138,7 @@ index.cond=list(c(4,1,2,3,5,6)))
 - [Quick R - Lattice Graphiken](http://www.statmethods.net/advgraphs/trellis.html)
 
 
-## [Das Graphikfenster einteilen](http://sphaerula.com/legacy/R/multiplePlotFigure.html)
+## I - [Das Graphikfenster einteilen](http://sphaerula.com/legacy/R/multiplePlotFigure.html)
 
 ```{r,eval=F}
 get( getOption( "device" ) )()
