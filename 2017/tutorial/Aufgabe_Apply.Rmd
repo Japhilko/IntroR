@@ -17,7 +17,7 @@ output:
 A bzw. B.
 
 - Standardisieren ist eine häufige Transformation von        Daten;        dafür        wird        der        Mittelwert        von der entsprechenden        Zeile        oder        Spalte        abgezogen        und        durch        die        entsprechende        Standardab-
-weichung         geteilt.             Somit         b esitzen         die         Daten         einen         Mittelwert         von         0         und         eine         Standardab-
+weichung         geteilt.             Somit         besitzen         die         Daten         einen         Mittelwert         von         0         und         eine         Standardab-
 weichung        von        1.           Standardisieren        Sie        die        Spalten        der        Matrix
 A
 .
