@@ -65,7 +65,7 @@ install.packages("Rcmdr")
 library("Rcmdr")
 ```
 
-Bob Munich - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datamgmt/statistics/r/documents/r_for_sas_spss_users.pdf)
+Bob Muenchen - [R for SPSS and SAS Users ](https://science.nature.nps.gov/im/datamgmt/statistics/r/documents/r_for_sas_spss_users.pdf)
 
 ![](figure/Rcommanderex.PNG)
 
