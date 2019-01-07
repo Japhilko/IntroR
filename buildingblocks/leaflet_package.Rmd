@@ -244,3 +244,11 @@ m1
 
 ![Als Website speichern](`r paste0(filepath,"figure/snapshot2.png")`)
 
+## Links und Quellen
+
+- [**R-bloggers**](http://www.r-bloggers.com/the-leaflet-package-for-online-mapping-in-r/) Artikel zu Leaflet
+
+- [**Einführung in Leaflet für R**](https://rstudio.github.io/leaflet/)
+
+- [**Offline Karten mit RgoogleMaps und leaflet**](https://blog.hwr-berlin.de/codeandstats/category/scientific-software/r/)
+

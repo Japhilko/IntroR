@@ -1,0 +1,79 @@
+---
+title: "Das mapview Paket"
+author: "Jan-Philipp Kolb"
+date: "7 Januar 2019"
+output: html_document
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
+
+## Das Paket `mapview` - Beispieldatensatz Franken
+
+```{r,eval=htmlpres}
+library(mapview)
+
+mapview(franconia)
+```
+
+![](`r paste0(filepath,"figure/franconia.PNG")`)
+
+
+## GADM und `mapview`
+
+```{r,eval=htmlpres}
+mapview(leaflet::gadmCHE)
+```
+
+![](`r paste0(filepath,"figure/gadm_mapview.PNG")`)
+
+## Das Paket `mapview` - Funktion `editMap`
+
+<!--
+folgendes stammt aus dem Helpfile
+-->
+
+```{r,eval=htmlpres}
+library(mapedit)
+lf <- mapview()
+drawing <- lf %>%
+  editMap()
+```
+
+![](`r paste0(filepath,"figure/editmap.PNG")`)
+
+
+## Das Paket `mapview`
+
+```{r}
+(load("../data/spatsamp_68239.RData"))
+```
+
+```{r,eval=htmlpres}
+mapview(spatsamp)
+```
+
+![](`r paste0(filepath,"figure/spatsamp.PNG")`)
+
+```{r,eval=F,echo=F}
+library(sf)
+locations_sf <- st_as_sf(locations, coords = c("lon", "lat"), crs = 4326)
+```
+
+
+```{r,eval=F,echo=F}
+install.packages("lwgeom")
+```
+
+## Links und Quellen
+
+
+- [**Github Ordner für das lwan Paket**](https://github.com/ropensci/lawn)
+
+<!--
+https://github.com/tyrasd/osmtogeojson
+-->
+
+

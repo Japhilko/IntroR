@@ -1,21 +1,9 @@
 # Jan-Philipp Kolb
 # Mon Jan 07 11:44:06 2019
 
-install.packages("readtext")
-library(readtext)
 
-new.folder <- "D:/Daten/GitHub/IntroR/buildingblocks/"
-new.folder.fig <- paste0(new.folder,"/figure/")
-
-setwd(new.folder)
-
-myfiles <- c("GESISPanel.Rmd","ErgebnisseExportieren.Rmd","leaflet_package.Rmd","intror.Rmd")
-
-i <- 4
-myfile <- myfiles[i]
-
-txt <- readLines(myfile)
-
+###############################################
+# functions
 
 prep_picnames <- function(txt){
   ind <- agrep("![]",txt)
@@ -28,10 +16,27 @@ prep_picnames <- function(txt){
   return(pics3)
 }
 
+###############################################
+# set paths
+
+new.folder <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+new.folder.fig <- paste0(new.folder,"/figure/")
+
+setwd(new.folder)
+
+myfiles <- c("GESISPanel.Rmd","ErgebnisseExportieren.Rmd","leaflet_package.Rmd","intror.Rmd","mapview.Rmd",
+             "rmodular.Rmd","hilfe_bekommen.Rmd","import.Rmd","datenverarbeiten.Rmd","intro_geo.Rmd","tmap.Rmd")
+
+i <- length(myfiles)
+myfile <- myfiles[i]
+
+txt <- readLines(myfile)
+
 pics3 <- prep_picnames(txt)
 
 setwd("D:/Daten/GitHub/r_intro_gp18/slides/")
 setwd("D:/Daten/GitHub/geocourse/slides/")
+setwd("D:/Daten/GitHub/geohealth/slides/")
 
 file.copy(pics3, new.folder.fig)
 
@@ -50,6 +55,10 @@ file.copy(pics3, new.folder.fig)
 
 ###############################################
 # code snippets
+
+# install.packages("readtext")
+library(readtext)
+
 
 pics2 <- gsub("\\!\\[\\]\\(","",pics)
 pics3 <- gsub("\\)","",pics2)
