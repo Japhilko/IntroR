@@ -13,19 +13,41 @@ prep_picnames <- function(txt){
   pics3 <- gsub("filepath,\"","",pics3)
   pics3 <- gsub("\\)","",pics3)
   pics3 <- gsub("\")`)","",pics3)
+  pics3 <- pics3[-agrep("https",pics3)]
   return(pics3)
 }
 
 ###############################################
 # set paths
 
-new.folder <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+sysInfo <- Sys.info()
+
+if (sysInfo["nodename"]=="MAL15037"){
+  new.folder <- "D:/Eigene Dateien/Dokumente/GitHub/IntroR/buildingblocks"
+  path_wherepicslive <- "D:/GitHub/geocourse/slides/"
+}
+
+if (sysInfo["nodename"]=="SVMARDP07"){
+  new.folder <- "D:/Daten/GitHub/IntroR/buildingblocks/"   
+  path_wherepicslive <- "D:/Daten/GitHub/r_intro_gp18/slides/" 
+  path_wherepicslive <- "D:/Daten/GitHub/geocourse/slides/"
+  path_wherepicslive <- "D:/Daten/GitHub/geohealth/slides/"
+}
+
+if (sysInfo["nodename"]=="MAC14077"){
+  new.folder <- "D:/Daten/GitHub/IntroR/buildingblocks/" 
+  path_wherepicslive <- "D:/Daten/GitHub/geocourse/slides/"
+}
+
+
+
 new.folder.fig <- paste0(new.folder,"/figure/")
 
 setwd(new.folder)
 
 myfiles <- c("GESISPanel.Rmd","ErgebnisseExportieren.Rmd","leaflet_package.Rmd","intror.Rmd","mapview.Rmd",
-             "rmodular.Rmd","hilfe_bekommen.Rmd","import.Rmd","datenverarbeiten.Rmd","intro_geo.Rmd","tmap.Rmd")
+             "rmodular.Rmd","hilfe_bekommen.Rmd","import.Rmd","datenverarbeiten.Rmd","intro_geo.Rmd","tmap.Rmd",
+             "shapefiles.Rmd")
 
 i <- length(myfiles)
 myfile <- myfiles[i]
@@ -34,9 +56,8 @@ txt <- readLines(myfile)
 
 pics3 <- prep_picnames(txt)
 
-setwd("D:/Daten/GitHub/r_intro_gp18/slides/")
-setwd("D:/Daten/GitHub/geocourse/slides/")
-setwd("D:/Daten/GitHub/geohealth/slides/")
+
+setwd(path_wherepicslive)
 
 file.copy(pics3, new.folder.fig)
 
