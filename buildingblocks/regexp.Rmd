@@ -1,0 +1,27 @@
+---
+title: "Regular Expressions"
+author: "Jan-Philipp Kolb"
+date: "8 Januar 2019"
+output: beamer_presentation
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## [Beginnend mit...](https://www.rdocumentation.org/packages/gdata/versions/2.18.0/topics/startsWith)
+
+- Alle strings finden, die mit einem Muster beginnen
+
+```{r}
+library(gdata)
+sd_word1 <- c("University of Duisburg-Essen", "Prof. Dr. Rainer Schnell"  ,  "University of Duisburg-Essen","Duisburg University" )
+startsWith(sd_word1,"University")
+```
+
+## [Beginnend mit... bis zum Ende](http://r.789695.n4.nabble.com/Match-beginning-and-end-of-string-grepl-td4696363.html)
+
+```{r}
+gsub("University.*","",sd_word1)
+```
+
