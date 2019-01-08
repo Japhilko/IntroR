@@ -60,9 +60,3 @@ five_cities <- metro[sample(length(metro), 5), ]
 rev_geocode_OSM(x=48,y=8)
 ```
 
-
-```{r,cache=T,message=F,eval=googleEX}
-revgeocode(c(48,8))
-```
-
-
