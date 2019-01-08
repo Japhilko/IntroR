@@ -36,7 +36,11 @@ if (sysInfo["nodename"]=="SVMARDP07"){
 
 if (sysInfo["nodename"]=="MAC14077"){
   new.folder <- "D:/Daten/GitHub/IntroR/buildingblocks/" 
+  path_wherepicslive <- "D:/Daten/GitHub/r_intro_gp18/slides/" 
   path_wherepicslive <- "D:/Daten/GitHub/geocourse/slides/"
+  path_wherepicslive <- "D:/Daten/GitHub/geohealth/slides/"
+  path_wherepicslive <- "D:/Daten/GitHub/RInterfaces/slides/"
+  path_wherepicslive <- "D:/Daten/GitHub/GeoData/2017/slides/"
 }
 
 
@@ -47,7 +51,7 @@ setwd(new.folder)
 
 myfiles <- c("GESISPanel.Rmd","ErgebnisseExportieren.Rmd","leaflet_package.Rmd","intror.Rmd","mapview.Rmd",
              "rmodular.Rmd","hilfe_bekommen.Rmd","import.Rmd","datenverarbeiten.Rmd","intro_geo.Rmd","tmap.Rmd",
-             "shapefiles.Rmd")
+             "shapefiles.Rmd","Rmarkdown.Rmd","maptools.Rmd")
 
 i <- length(myfiles)
 myfile <- myfiles[i]

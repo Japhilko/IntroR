@@ -25,7 +25,7 @@ info <- available.packages(contriburl = cran, type = "source")
 - Viele Funktionen sind in Basis-R enthalten. 
 - Viele spezifische Funktionen sind in zusätzliche Bibliotheken integriert.
 - R kann modular durch sogenannte Pakete oder Bibliotheken erweitert werden.
-- Die wichtigsten Pakete, die auf CRAN gehostet werden (`r nrow(info)` at `r format(Sys.time(), "%a %b %d")`)
+- Die wichtigsten Pakete, die auf CRAN gehostet werden (`r nrow(info)` at `r format(Sys.time(), "%a %d %b %Y")`)
 - Weitere Pakete findet man z.B. unter [**bioconductor**](www.bioconductor.org)
 
 ## [Übersicht R-Pakete](https://www.youtube.com/watch?v=kKI9--Opmso)
@@ -54,12 +54,9 @@ library(raster)
 ![Existing packages](figure/packages3.PNG)
 
 
-## Übersicht über viele nützliche Pakete:
+## Übersicht Pakete:
 
 - Luhmann - [**Übersicht mit vielen nützlichen Paketen**](http://www.beltz.de/fileadmin/beltz/downloads/OnlinematerialienPVU/28090_Luhmann/Verwendete%20Pakete.pdf)
-
-### Weitere interessante Pakete:
-
 - Mit dem Paket `leaflet` kann man interaktive Karten erstellen.
 - Das Paket `tmap` zur Erstellung von thematischen Karten.
 - [**Paket `maptools` um Karten zu erzeugen**](http://www.r-bloggers.com/tag/maptools/)
@@ -115,13 +112,13 @@ install_github("hadley/maptools")
 
 - Entdecke Pakete, die kürzlich auf den [**CRAN**](https://mran.microsoft.com/packages/) Server hochgeladen wurden
 
-- Nutze eine Shiny Web-App, die [**Pakete anzeigt, die kürzlich von CRAN**](https://gallery.shinyapps.io/cran-gauge/) heruntergeladen wurden.
+- Nutze eine Shiny Web-App, in der [**Pakete angezeigt werden, die kürzlich von CRAN**](https://gallery.shinyapps.io/cran-gauge/) heruntergeladen wurden.
 
 - Werfe einen Blick auf eine [**Quick-Liste nützlicher Pakete**](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
 
 - ...., oder auf eine Liste mit den [**besten Paketen für die Datenverarbeitung und -analyse**](http://www.computerworld.com/article/2921176/business-intelligence/great-r-packages-for-data-import-wrangling-visualization.html),.....
 
-- ...., oder schaue unter [**die 50 meistgenutzten Pakete**](https://www.r-bloggers.com/the-50-most-used-r-packages/)
+- ...., oder sieh Dir [**die 50 meistgenutzten Pakete**](https://www.r-bloggers.com/the-50-most-used-r-packages/) an.
 
 
 
@@ -146,7 +143,7 @@ Geh bspw. auf <https://cran.r-project.org/> und suche nach Paketen...
 - die sich für interaktive Karten eignen.
 - mit denen man thematische Karten erstellen kann
 - mit denen man die räumliche Distanz berechnen kann
-- mit denen man eine Satelitenkarte bekommen kann
+- mit denen man eine Satellitenkarte bekommen kann
 
 
 <!--

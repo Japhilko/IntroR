@@ -1,0 +1,17 @@
+---
+title: "Zeitangaben formatieren"
+author: "Jan-Philipp Kolb"
+date: "8 Januar 2019"
+output: beamer_presentation
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## [Datumswerte](https://www.statmethods.net/input/dates.html)
+
+```{r}
+format(Sys.time(), "%a %d %b %Y")
+```
+

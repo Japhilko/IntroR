@@ -10,32 +10,15 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Kleine Vorstellungsrunde
-
+<!--
 - Wo kommt Ihr her?
 - Wo arbeitet oder studiert Ihr?
+-->
+
 - Wie beurteilt Ihr Eure Fähigkeiten mit R?
 - Habt Ihr Erfahrungen mit anderen Programmiersprachen / Statistiksoftware? Wenn ja welche?
 - Was sind Eure Erwartungen für diesen Kurs? 
 
-## Informationen vorab
-
-Normalerweise gibt es große Unterschiede bei Vorkenntnissen und Fähigkeiten, insbesondere bei diesem Kurs.
-
-- Bitte gebt Bescheid, wenn es zu schnell oder zu langsam geht oder etwas unklar geblieben ist.
-- Wenn es Fragen gibt - immer fragen
-- Wenn Ihr etwas hinzuzufügen habt - sehr gerne
-- In diesem Kurs gibt es viele [**Übungen**](http://web.math.ku.dk/~helle/R-intro/exercises.pdf), denn das Programmieren / die Nutzung von Geodaten in R lernt man am Ende (wie vieles) nur allein.
-- Ich habe viele [**Beispiele**](https://www.showmeshiny.com/) - probiert sie aus 
-- R macht mehr Spaß zusammen - arbeitet zusammen!
-
-## Disclaimer
-
-- Zum Import, zur Verarbeitung und Visualisierung gibt es bereits sehr viele Pakete.
-- Das Gebiet entwickelt sich sehr schnell.
-- Es ist nicht möglich alles davon in diesem Kurs vorzustellen.
-- Ich möchte anhand einiger interessanter Beispiele einen Einblick darin geben, was alles möglich ist. 
-
- 
 
 ## Disclaimer/ Informationen vorab
 
@@ -46,3 +29,12 @@ Normalerweise gibt es große Unterschiede bei Vorkenntnissen und Fähigkeiten - 
 - Ich habe viele [**Beispiele**](https://www.showmeshiny.com/) - probiert sie aus 
 - R macht mehr Spaß zusammen - arbeitet zusammen!
 
+
+## Disclaimer
+
+- Zum Import, zur Verarbeitung und Visualisierung gibt es bereits sehr viele Pakete.
+- Das Gebiet entwickelt sich sehr schnell.
+- Es ist nicht möglich alles davon in diesem Kurs vorzustellen.
+- Ich möchte anhand einiger interessanter Beispiele einen Einblick darin geben, was alles möglich ist. 
+
+ 

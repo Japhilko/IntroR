@@ -173,7 +173,7 @@ R-project + "was ich schon immer wissen wollte"
 
 - [**Eine Liste mit den wichtigsten R-Befehlen**](https://www.personality-project.org/r/r.commands.html)
 
-## Aufgabe A2A [**Hilfe bekommen**](http://web.math.ku.dk/~helle/R-intro/exercises.pdf)
+## Aufgabe: [**Hilfe bekommen**](http://web.math.ku.dk/~helle/R-intro/exercises.pdf)
 
 ### LABORATORY FOR APPLIED STATISTICS: Intro to R - [**Exercises**](http://web.math.ku.dk/~helle/R-intro/exercises.pdf) für diese Aufgabe
 
