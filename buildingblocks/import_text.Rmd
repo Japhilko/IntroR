@@ -1,0 +1,21 @@
+---
+title: "Textdateien importieren"
+author: "Jan-Philipp Kolb"
+date: "9 Januar 2019"
+output: beamer_presentation
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## [Texte von PDF importieren](https://medium.com/@CharlesBordet/how-to-extract-and-clean-data-from-pdf-files-in-r-da11964e252e)
+
+```{r,eval=F}
+library(pdftools)
+download.file("https://github.com/Huitziii/crispy-pdf/raw/master/71_PV.62.pdf",
+              "./71_PV.62.pdf")
+text <- pdf_text("./71_PV.62.pdf")
+```
+
+

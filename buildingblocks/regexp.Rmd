@@ -25,3 +25,9 @@ startsWith(sd_word1,"University")
 gsub("University.*","",sd_word1)
 ```
 
+## [Leerzeichen zu Beginn und am Ende ersetzen](https://stat.ethz.ch/R-manual/R-devel/library/base/html/trimws.html)
+
+```{r}
+trimws("  hallo welt  ")
+```
+

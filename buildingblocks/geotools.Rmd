@@ -60,3 +60,17 @@ five_cities <- metro[sample(length(metro), 5), ]
 rev_geocode_OSM(x=48,y=8)
 ```
 
+## Eine Karte für einen bestimmten Ort bekommen
+
+```{r,eval=F}
+library("OpenStreetMap")
+
+map <- openmap(c(48.791510,9.809462),
+               c(48.801510,9.829462),
+               type="osm")
+plot(map)
+```
+
+## Die Karte für Schwäbisch Gmünd
+
+![](figure/PH_SG.pdf)
