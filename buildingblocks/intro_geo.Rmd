@@ -17,7 +17,6 @@ output:
 ```{r setupIntro, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,message=F,warning=F,cache=F)
 filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
-
 ```
 
 ## [Laws of Spatial Sience](http://de.slideshare.net/rheimann04/big-social-data-the-spatial-turn-in-big-data)

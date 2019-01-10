@@ -18,7 +18,13 @@ knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T,warning=F,message=F)
 ```
 
 ```{r,echo=F}
-GESIS <- F
+sysInfo <- Sys.info()
+if(Sys.info()["nodename"] == "MAC14077"){
+  GESIS <- T
+}else{
+  GESIS <- F
+}
+
 athome <- !GESIS
 ```
 

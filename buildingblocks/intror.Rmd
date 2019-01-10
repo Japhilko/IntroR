@@ -10,7 +10,13 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ```{r,echo=F}
-GESIS <- F
+sysInfo <- Sys.info()
+if(Sys.info()["nodename"] == "MAC14077"){
+  GESIS <- T
+}else{
+  GESIS <- F
+}
+
 athome <- !GESIS
 ```
 
@@ -115,7 +121,8 @@ Aus den folgenden Gründen:
 3+2
 ```
 
-- Wenn noch kein Skript geöffnet im oberen linken Teil von Rstudio geöffnet ist, gehe zum Menü und öffne ein neues Skript. Checks das Datum mit `date()` und die R version mit `sessionInfo()`.
+- Erzeuge ein neues R Script (Ctrl + Shift + N)
+- Das Datum bekommt man mit der Funktion  `date()` und die R Version mit `sessionInfo()`.
 
 ```{R,eval=F}
 date()

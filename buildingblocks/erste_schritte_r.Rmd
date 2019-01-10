@@ -10,7 +10,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r,echo=F}
-GESIS <- F
+sysInfo <- Sys.info()
+if(Sys.info()["nodename"] == "MAC14077"){
+  GESIS <- T
+}else{
+  GESIS <- F
+}
+
 athome <- !GESIS
 ```
 
@@ -109,9 +115,9 @@ var(b)
 
 -->
 
-## Übung - Zuweisungen und Funktionen
+## Übung - Zuweisungen
 
-Erstellen Sie einen Vektor `b` mit den Zahlen von 1 bis 5 und berechnen Sie....
+Erstelle einen Vektor `b` mit den Zahlen von 1 bis 5 und berechne....
 
 1. den Mittelwert
 

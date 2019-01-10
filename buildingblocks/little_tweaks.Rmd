@@ -1,0 +1,21 @@
+---
+title: "Little Tweaks"
+author: "Jan-Philipp Kolb"
+date: "10 Januar 2019"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Sehen ob ein Objekt existiert
+
+```{r}
+# https://stackoverflow.com/questions/9368900/how-to-check-if-object-variable-is-defined-in-r
+exists("GESIS")
+GESIS <- T
+exists("GESIS")
+```
+
+

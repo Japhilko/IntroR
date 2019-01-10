@@ -1,0 +1,68 @@
+---
+title: "Motivation geografische Perspektive"
+author: "Jan-Philipp Kolb"
+date: "10 Januar 2019"
+output: beamer_presentation
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r,echo=F}
+sysInfo <- Sys.info()
+if(Sys.info()["nodename"] == "MAC14077"){
+  GESIS <- T
+}else{
+  GESIS <- F
+}
+
+athome <- !GESIS
+```
+
+
+```{r,echo=F,eval=GESIS}
+filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
+
+```{r,echo=F,eval=athome}
+filepath <- "D:/GitHub/IntroR/buildingblocks/"
+```
+
+
+
+## Warum die Darstellung in Karten
+
+- Darstellung in Karten ermöglicht besseres Verständnis von sozialwissenschaftlicher Phänomene - Attraktiver Output
+
+- Durch die INSPIRE Richtlinie und *Collaborative Mapping* wächst der verfügbare Bestand an Geodaten.
+
+- Daten sind oft frei verfügbar im Internet (z.B. Nutzung von APIs)
+- Allerdings sind die Daten oft wenig strukturiert, heterogen oder nicht zur räumlichen Visualisierung vorgesehen
+- beinhalten aber implizit  geographische Informationen (Web 2.0)
+- Oftmals sind wenig oder keine Metadaten vorhanden
+
+
+
+## [Das Thema Geodatenlandschaft](https://www.ratswd.de/dl/downloads/RatSWD_Geodatenbericht.pdf)
+
+![](`r paste0(filepath,"figure/BildRatSWDBericht.png")`)
+
+
+## Was heißt das für diesen Kurs
+
+### Vorgestellt werden:
+
+- Möglichkeiten für den Download, den Import, die Verarbeitung und die Visualisierung von Geodaten 
+
+
+
+<!--
+Die Daten auf OSM werden unter der Open Database License (ODbL) 1.0 freigegeben. Das ermöglicht eine Mehrfachverwendung der Daten \citep{schmidt2013extraction}. Die Studie von \cite{barrington2017world} zeigt, dass die Datenqualität von OSM in vielen Ländern bereits ausreichend ist, um sie für wissenschaftliche und analytische Zwecke zu nutzen.
+Siehe zum Beispiel das Projekt Simulation of Urban MObility (SUMO) (\citealt{behrisch2011sumo}). Viel mehr Forschung, die in verschiedenen Ländern durchgeführt wird, ist unter \cite{wiki:research} aufgeführt.
+-->
+
+- Quellen für Geodaten
+- Eine Programmierschnittstelle (APIs) um die Daten zu bekommen
+- R-Pakete um diese Daten zu verarbeiten und zu visualisieren
+

@@ -1,0 +1,134 @@
+---
+title: "OpenStreetMap"
+author: "Jan-Philipp Kolb"
+date: "10 Januar 2019"
+output: beamer_presentation
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r,echo=F}
+sysInfo <- Sys.info()
+if(Sys.info()["nodename"] == "MAC14077"){
+  GESIS <- T
+}else{
+  GESIS <- F
+}
+
+athome <- !GESIS
+```
+
+
+```{r,echo=F,eval=GESIS}
+filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
+
+```{r,echo=F,eval=athome}
+filepath <- "D:/GitHub/IntroR/buildingblocks/"
+```
+
+
+## OpenStreetMap
+
+![](`r paste0(filepath,"figure/Openstreetmap_logo.svg.png")`)
+
+<!--
+OpenStreetMap + medicine
+
+https://journals.plos.org/plosmedicine/article/figure?id=10.1371/journal.pmed.1002460.g001
+
+OpenStreetMap + geohealth
+
+http://jiscg3.blogspot.com/2011/08/open-geo-health-workshop.html
+-->
+
+## [DE:Key:healthcare](https://wiki.openstreetmap.org/wiki/DE:Key:healthcare)
+
+```{r,eval=F}
+#paste0(filepath,"figure/key_healthcare.PNG")
+erg <- list.files(path = "../../",pattern = "key_healthcare.PNG",recursive = T)
+# erg <- list.files(path = "D:/Daten/GitHub/","key_healthcare.PNG",recursive = T)
+pos = grep('GitHub', filepath)
+ind_ <- gregexpr(pattern ='GitHub',filepath)
+wherepiclives <- paste0(substr(filepath,1,ind_[[1]][1]-1),"GitHub/",erg)
+```
+
+<!--
+-->
+
+![](`r paste0(filepath,"figure/key_healthcare.PNG")`)
+
+
+
+
+
+
+## Orte für die Blutspende
+
+```{r,eval=F}
+
+wpiclives <- function(picname,filepath){
+  erg <- list.files(path = "../../",pattern = picname,recursive = T)
+  pos = grep('GitHub', filepath)
+  ind_ <- gregexpr(pattern ='GitHub',filepath)
+  wherepiclives <- paste0(substr(filepath,1,ind_[[1]][1]-1),"GitHub/",erg)
+  return(wherepiclives)
+}
+
+picdir <- wpiclives(picname="healthcare_blood_donation.PNG",filepath)
+# erg <- list.files(path = "D:/Daten/GitHub/","key_healthcare.PNG",recursive = T)
+```
+
+![](`r paste0(filepath,"figure/healthcare_blood_donation.PNG")`)
+
+
+
+```{r,eval=F}
+erg <- list.files(path = "../../",pattern = "healthcare_blood_donation.PNG",recursive = T)
+pos = grep('GitHub', filepath)
+ind_ <- gregexpr(pattern ='GitHub',filepath)
+wherepiclives <- paste0(substr(filepath,1,ind_[[1]][1]-1),"GitHub/",erg)
+```
+
+
+```{r,eval=F,echo=F}
+dat_osm <- extract_osm_objects(key='healthcare',
+value="blood_donation",bbox=bbox)
+```
+
+## [Die Nutzung von Overpass](https://overpass-turbo.eu/)
+
+```
+node
+  [healthcare=blood_donation]
+  ({{bbox}});
+out;
+```
+
+## Alternativmediziner
+
+```
+node
+  [healthcare=alternative]
+  ({{bbox}});
+out;
+```
+
+
+
+<!--
+https://twitter.com/coraloha/status/1068326799086510080
+
+https://github.com/tim-salabim/mvl/blob/master/logo_script.R#L35
+
+http://www.soest.hawaii.edu/wessel/gshhg/
+
+
+https://github.com/jmlondon/ptolemy
+https://github.com/hypertidy/ceramic
+https://github.com/mdsumner/tasmapr/blob/master/README.md
+https://atriplex.info/blog/
+
+-->

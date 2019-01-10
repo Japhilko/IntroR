@@ -23,10 +23,15 @@ show_solution <- F
 ```
 
 ```{r,echo=F}
-GESIS <- F
+sysInfo <- Sys.info()
+if(Sys.info()["nodename"] == "MAC14077"){
+  GESIS <- T
+}else{
+  GESIS <- F
+}
+
 athome <- !GESIS
 ```
-
 
 ```{r,echo=F,eval=GESIS}
 filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"

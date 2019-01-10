@@ -7,9 +7,28 @@ output: html_document
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
-
 ```
+
+```{r,echo=F}
+sysInfo <- Sys.info()
+if(Sys.info()["nodename"] == "MAC14077"){
+  GESIS <- T
+}else{
+  GESIS <- F
+}
+
+athome <- !GESIS
+```
+
+
+```{r,echo=F,eval=GESIS}
+filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
+
+```{r,echo=F,eval=athome}
+filepath <- "D:/GitHub/IntroR/buildingblocks/"
+```
+
 
 
 ## Das Paket `geojsonR`

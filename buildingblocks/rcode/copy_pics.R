@@ -13,7 +13,10 @@ prep_picnames <- function(txt){
   pics3 <- gsub("filepath,\"","",pics3)
   pics3 <- gsub("\\)","",pics3)
   pics3 <- gsub("\")`)","",pics3)
-  pics3 <- pics3[-agrep("https",pics3)]
+  ind_https <- agrep("https",pics3)
+  if (length(ind_https)!=0){
+    pics3 <- pics3[-ind_https]  
+  }
   return(pics3)
 }
 
@@ -30,8 +33,8 @@ if (sysInfo["nodename"]=="MAL15037"){
 if (sysInfo["nodename"]=="SVMARDP07"){
   new.folder <- "D:/Daten/GitHub/IntroR/buildingblocks/"   
   path_wherepicslive <- "D:/Daten/GitHub/r_intro_gp18/slides/" 
-  path_wherepicslive <- "D:/Daten/GitHub/geocourse/slides/"
   path_wherepicslive <- "D:/Daten/GitHub/geohealth/slides/"
+  path_wherepicslive <- "D:/Daten/GitHub/geocourse/slides/"
 }
 
 if (sysInfo["nodename"]=="MAC14077"){
@@ -51,7 +54,7 @@ setwd(new.folder)
 
 myfiles <- c("GESISPanel.Rmd","ErgebnisseExportieren.Rmd","leaflet_package.Rmd","intror.Rmd","mapview.Rmd",
              "rmodular.Rmd","hilfe_bekommen.Rmd","import.Rmd","datenverarbeiten.Rmd","intro_geo.Rmd","tmap.Rmd",
-             "shapefiles.Rmd","Rmarkdown.Rmd","maptools.Rmd")
+             "shapefiles.Rmd","Rmarkdown.Rmd","maptools.Rmd","OpenStreetMap.Rmd")
 
 i <- length(myfiles)
 myfile <- myfiles[i]
