@@ -18,6 +18,21 @@ knitr::opts_chunk$set(echo = TRUE,cache=T,eval=T,warning=F,message=F)
 ```
 
 ```{r,echo=F}
+GESIS <- F
+athome <- !GESIS
+```
+
+
+```{r,echo=F,eval=GESIS}
+filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
+
+```{r,echo=F,eval=athome}
+filepath <- "D:/GitHub/IntroR/buildingblocks/"
+```
+
+
+```{r,echo=F}
 library(knitr)
 library(sp)
 ```

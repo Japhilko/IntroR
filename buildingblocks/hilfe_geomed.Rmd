@@ -19,8 +19,22 @@ output:
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r,echo=F}
+GESIS <- F
+athome <- !GESIS
+```
+
+
+```{r,echo=F,eval=GESIS}
 filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
 ```
+
+```{r,echo=F,eval=athome}
+filepath <- "D:/GitHub/IntroR/buildingblocks/"
+```
+
 
 ## Wie bekomme ich Hilfe?
 

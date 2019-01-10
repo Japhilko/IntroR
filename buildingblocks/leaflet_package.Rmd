@@ -16,7 +16,19 @@ output:
 knitr::opts_chunk$set(echo = T,cache=T,warning=F)
 htmlpres <- F
 library(knitr)
+```
+
+```{r,echo=F}
+GESIS <- F
+athome <- !GESIS
+```
+
+```{r,echo=F,eval=GESIS}
 filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
+
+```{r,echo=F,eval=athome}
+filepath <- "D:/GitHub/IntroR/buildingblocks/"
 ```
 
 

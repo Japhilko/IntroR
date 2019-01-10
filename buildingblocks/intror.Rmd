@@ -7,10 +7,21 @@ output: beamer_presentation
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
+
+```{r,echo=F}
+GESIS <- F
+athome <- !GESIS
 ```
 
 
+```{r,echo=F,eval=GESIS}
+filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
+
+```{r,echo=F,eval=athome}
+filepath <- "D:/GitHub/IntroR/buildingblocks/"
+```
 
 ## Gründe R zu nutzen...
 

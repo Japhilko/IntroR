@@ -17,14 +17,24 @@ output:
 ```{r setup_shapefiles, include=FALSE}
 knitr::opts_chunk$set(echo = T,cache=T,fig.height=4,message=F,warning=F)
 library(knitr)
-GESIS <- T
-athome <- !GESIS
 
 ONB_ex <- T
 spatsampI <-F
 show_solution <- F
-filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
 
+```{r,echo=F}
+GESIS <- F
+athome <- !GESIS
+```
+
+
+```{r,echo=F,eval=GESIS}
+filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
+
+```{r,echo=F,eval=athome}
+filepath <- "D:/GitHub/IntroR/buildingblocks/"
 ```
 
 

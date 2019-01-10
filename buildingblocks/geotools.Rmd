@@ -9,6 +9,21 @@ output: beamer_presentation
 knitr::opts_chunk$set(echo = T)
 ```
 
+```{r,echo=F}
+GESIS <- F
+athome <- !GESIS
+```
+
+
+```{r,echo=F,eval=GESIS}
+filepath <- "D:/Daten/GitHub/IntroR/buildingblocks/"
+```
+
+```{r,echo=F,eval=athome}
+filepath <- "D:/GitHub/IntroR/buildingblocks/"
+```
+
+
 ## Geokodierung
 
 ### [Wikipedia - Geocoding](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#blockquotes)
