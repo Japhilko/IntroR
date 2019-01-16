@@ -289,7 +289,7 @@ install.packages("spData")
 
 ### Vektordaten werden für den Betrachter dargestellt durch:
 
-- Polygone sind als (eine Reihe von) verbundenen Prunkten mit gleichem Start- und Endpunkt definiert. Die Ausrichtung verläuft gegen den Uhrzeigersinn
+- Polygone sind als (eine Reihe von) verbundenen Punkten mit gleichem Start- und Endpunkt definiert. Die Ausrichtung verläuft gegen den Uhrzeigersinn
 
 ![](`r paste0(filepath,"figure/DreiObjektTypen.PNG")`)
 
