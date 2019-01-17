@@ -451,3 +451,12 @@ https://www.r-bloggers.com/visualizing-gis-data-with-r-and-open-street-map/
 % https://developers.google.com/maps/documentation/geocoding/intro?csw=1
 
 -->
+
+
+## [Rqgis](file:///D:/Daten/GitLab/Paper/geosmdata/lit/RJ-2017-067.pdf)
+
+<!--
+RQGIS: Integrating R with QGIS for statistical geocomputing
+-->
+
+![](figure/rqgis_involvedpackages.PNG)
