@@ -95,3 +95,8 @@ plot(map)
 ## Die Karte für Schwäbisch Gmünd
 
 ![](figure/PH_SG.pdf)
+
+
+## Links
+
+- [Parallelizing raster operations(https://www.r-bloggers.com/are-you-parallelizing-your-raster-operations-you-should/)

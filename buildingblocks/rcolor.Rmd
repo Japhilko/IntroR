@@ -1,0 +1,12 @@
+---
+title: "Farbe im Leben"
+author: "Jan-Philipp Kolb"
+date: "18 Januar 2019"
+output: beamer_presentation
+---
+
+```{r setupcolor, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## [colorspace: New Tools for Colors and Palettes](https://www.r-bloggers.com/colorspace-new-tools-for-colors-and-palettes/)
