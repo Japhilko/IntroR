@@ -176,6 +176,10 @@ R-project + "was ich schon immer wissen wollte"
 
 ![](`r paste0(filepath,"figure/cheatsheets.PNG")`)
 
+<!--
+Basic regular expressions in R
+-->
+
 ## [**Quick R**](http://www.statmethods.net/interface/help.html)
 
 - Immer mit vielen Beispielen und Hilfen bezüglich eines Themas
