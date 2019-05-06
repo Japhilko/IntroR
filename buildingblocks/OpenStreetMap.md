@@ -50,12 +50,12 @@ output:
 
 > OpenStreetMap (OSM) ist ein kollaboratives Projekt um eine editierbare Weltkarte zu erzeugen.
 
-![](D:/Daten/GitHub/IntroR/buildingblocks/figure/overview_osm.PNG)
+![](D:/GitHub/IntroR/buildingblocks/figure/overview_osm.PNG)
 
 
 ## [Openstreetmap Tags](https://wiki.openstreetmap.org/wiki/Tags)
 
-![](D:/Daten/GitHub/IntroR/buildingblocks/figure/kv_scheme.PNG)
+![](D:/GitHub/IntroR/buildingblocks/figure/kv_scheme.PNG)
 
 - Mit dem `key` wird eine Kategorie bezeichnet. 
 - Der `value` wird zur Beschreibung der jeweiligen Form verwendet.
@@ -64,7 +64,7 @@ output:
 
 ## [OSM Map Features](http://wiki.openstreetmap.org/wiki/DE:Map_Features)
 
-![http://wiki.openstreetmap.org/wiki/DE:Map_Features](D:/Daten/GitHub/IntroR/buildingblocks/figure/osm_mapfeatures.png)
+![http://wiki.openstreetmap.org/wiki/DE:Map_Features](D:/GitHub/IntroR/buildingblocks/figure/osm_mapfeatures.png)
 
 
 ## Objekttypen in OSM
@@ -101,7 +101,7 @@ Hippolyte Pruvost and Peter Mooney: Exploring Data Model Relations in OpenStreet
 ### [**Martijn van Exel**](https://www.slideshare.net/mvexel/openstreetmap-9819440) - nodes and ways
 
 
-![](D:/Daten/GitHub/IntroR/buildingblocks/figure/Nodes_ways.PNG))
+![](D:/GitHub/IntroR/buildingblocks/figure/Nodes_ways.PNG))
 
 <!--
 ![](figure/threetypes_osm.png)
@@ -113,7 +113,7 @@ Hippolyte Pruvost and Peter Mooney: Exploring Data Model Relations in OpenStreet
 
 
 
-![](D:/Daten/GitHub/IntroR/buildingblocks/figure/relations.PNG))
+![](D:/GitHub/IntroR/buildingblocks/figure/relations.PNG))
 
 
 ## Möglichkeiten die OSM-Daten zu bekommen
@@ -128,7 +128,7 @@ Hippolyte Pruvost and Peter Mooney: Exploring Data Model Relations in OpenStreet
 
 - Ausschnitte von OpenStreetMap für einzelne Städte ([**metro extracts**](https://mapzen.com/data/metro-extracts/))
 
-![](D:/Daten/GitHub/IntroR/buildingblocks/figure/metroextracts.png))
+![](D:/GitHub/IntroR/buildingblocks/figure/metroextracts.png))
 
 
 ## Download von OpenStreetMap Daten - Geofabrik
@@ -138,7 +138,7 @@ Hippolyte Pruvost and Peter Mooney: Exploring Data Model Relations in OpenStreet
 - Eine Alternative zum Downlaod von großen OSM-Ausschnitten ist die [**Geofabrik**](http://download.geofabrik.de/)-Seite.  
 - Hier lassen sich ebenfalls aktuelle Ausschnitte aber auch Shapefiles herunterladen.
 
-![](D:/Daten/GitHub/IntroR/buildingblocks/figure/Geofabrik.PNG))
+![](D:/GitHub/IntroR/buildingblocks/figure/Geofabrik.PNG))
 
 
 <!--
@@ -168,7 +168,7 @@ Das shapefile Format ist ein beliebtes Format räumlicher Vektordaten für geogr
 <!--
 ![](figure/What-is-PostgreSQL.png)
 -->
-![](D:/Daten/GitHub/IntroR/buildingblocks/figure/aquadatastudio_postgresql_visual_table_editing.png))
+![](D:/GitHub/IntroR/buildingblocks/figure/aquadatastudio_postgresql_visual_table_editing.png))
 <!--
 https://filehippo.com/de/download_postgresql/
 http://www.postgresqltutorial.com/what-is-postgresql/
@@ -188,16 +188,17 @@ http://www.postgresqltutorial.com/what-is-postgresql/
 CREATE EXTENSION postgis;
 ```
 
-![](D:/Daten/GitHub/IntroR/buildingblocks/figure/PostGIS_logo.png))
+![](D:/GitHub/IntroR/buildingblocks/figure/PostGIS_logo.png))
 
 
-## Programm zum Import der OSM Daten in PostgreSQL- osm2pgsql
+## Programm zum Import der OSM Daten in PostgreSQL - osm2pgsql
 
 - Läuft unter Linux deutlich besser
-- so könnte bspw. ein Import in PostgreSQL aussehen:
+- Man kann entweder das Planet file oder Ausschnitte (im Beispiel für Berlin) herunterladen und direkt in die PostgreSQL Datenbank importieren.
+- so könnte bspw. ein Import aussehen:
 
 ```
-osm2pgsql -c -d osmBerlin --slim -C  -k  berlin-latest.osm.pbf
+osm2pgsql -c -d osmBerlin --slim -C -k berlin-latest.osm.pbf
 ```
 
 ## Verbindung zwischen R und Postrgesql
@@ -222,14 +223,15 @@ library("RPostgreSQL")
 - Erstellen, bearbeiten, anzeigen, analysieren räumlicher Information unter Windows, Mac, Linux, BSD (bald auch Android) 
 - Mit QGIS kann bspw auch der WMS/WCS oder WFS-Dienst des IÖR-Monitors genutzt werden. 
 
-![](figure/Bilder_qgis.PNG)
+![](D:/GitHub/IntroR/buildingblocks/figure/Bilder_qgis.PNG))
 
 
 ## Nutze bspw. [QGIS](http://www.qgis.org/de/site/) um Shapefiles zu extrahieren
 
 - [Plugin OpenLayers](http://www.qgistutorials.com/de/docs/downloading_osm_data.html)
 
-![qgis](figure/stamen_watercolor1.png)
+![](D:/GitHub/IntroR/buildingblocks/figure/stamen_watercolor1.png))
+
 <!--
 https://underdark.files.wordpress.com/2012/07/stamen_watercolor1.png?w=700
 -->

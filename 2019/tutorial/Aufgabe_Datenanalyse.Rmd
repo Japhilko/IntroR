@@ -1,0 +1,24 @@
+---
+title: "Aufgabe - Datenanalyse"
+author: "Jan-Philipp Kolb"
+date: "4 Mai 2017"
+output: 
+  beamer_presentation:
+    colortheme: beaver
+    fig_caption: no
+    fonttheme: structurebold
+    highlight: espresso
+    theme: CambridgeUS
+  slidy_presentation: 
+    keep_md: yes
+---
+
+## Aufgabe - Datenanalyse
+
+-  Laden Sie einen Datensatz Ihrer Wahl - entweder einen eigenen oder einen der vorgestellten Datensätze
+-  Berechnen Sie einfache Statistiken auf den wichtigsten Variablen (Mittelwert, Median, Standardabweichung)
+-  Erzeugen Sie eine zweidimensionale Häufigkeitstabelle
+-  Führen Sie eine Regression mit sinnvoll gewählten abhängiger und unabhängiger Variablen auf den Daten durch
+-  Erzeugen Sie einen Lattice-plot
+
+[Zurück zur Gliederung.](https://github.com/Japhilko/IntroR/blob/master/2017/README.md)

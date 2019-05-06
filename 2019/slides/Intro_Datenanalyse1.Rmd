@@ -1,0 +1,170 @@
+---
+title: "Intro Datenanalyse mit R"
+author: "Jan-Philipp Kolb"
+date: "3 und 4 Mai 2017"
+output:
+  slidy_presentation:
+    keep_md: yes
+    css: mycss.css
+  pdf_document: 
+    keep_tex: yes
+    toc: yes
+---
+
+# Warum R nutzen
+
+```{r child = 'WarumR.Rmd'}
+```
+
+# Dein Freund das GUI
+
+```{r child = 'FreundGUI.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_Vorbereitung.Rmd'}
+```
+
+# Grundlagen im Umgang mit der Sprache R
+
+```{r child = 'GrundlagenR.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_Zuweisung.Rmd'}
+```
+
+# Datentypen und Indizieren
+
+```{r child = 'Datentypen.Rmd'}
+```
+
+# Wie bekommt man Hilfe?
+
+```{r child = 'Hilfe.Rmd'}
+```
+
+# Modularer Aufbau von R
+
+
+```{r child = 'ModularerAufbau.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_Zusatzpakete.Rmd'}
+```
+
+
+# Datenimport 
+
+```{r child = 'Import.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_Datenimport.Rmd'}
+```
+
+
+#  Datenexport 
+
+```{r child = 'Export.Rmd'}
+```
+
+
+# Exkurs: Datenquellen 
+
+```{r child = 'Datenquellen.Rmd'}
+```
+
+
+#  Datenanalyse 
+
+
+```{r child = 'Datenanalyse.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_Apply.Rmd'}
+```
+
+
+# Einfache Grafiken
+
+```{r child = 'EinfacheGrafiken.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_Barplot.Rmd'}
+```
+
+
+# Zusammenhang 
+
+```{r child = 'Multidimensional.Rmd'}
+```
+
+# Das lattice Paket 
+
+```{r child = 'LatticePaket.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_OECDdata.Rmd'}
+```
+
+
+    
+# Die lineare Regression 
+
+```{r child = 'LineareRegression.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_LineareRegression.Rmd'}
+```
+
+
+# Die logistische Regression 
+
+```{r child = 'logistischeRegression.Rmd'}
+```
+
+
+
+```{r child = '../tutorial/Aufgabe_Datenanalyse.Rmd'}
+```
+
+
+# Faktoren in R 
+
+```{r child = 'Faktoren.Rmd'}
+```
+
+# Grafiken mit ggplot 
+
+```{r child = 'ggplot2.Rmd'}
+```
+
+# Einfache Karten mit R erstellen 
+
+```{r child = 'ggmap.Rmd'}
+```
+
+
+# Regressionsdiagnostik mit R-Paket `visreg` 
+
+```{r child = 'Regressionsdiagnostik.Rmd'}
+```
+
+# Weitere Themen im Ausblick 
+
+```{r child = 'Ausblick.Rmd'}
+```
+
+## Beispiel einer [interaktiven Karte](http://rpubs.com/Japhilko82/Campsites) 
+
+[interaktiven Karte](http://rpubs.com/Japhilko82/Campsites)  und [Rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive%20maps.R) um eine interaktive Karte mit leaflet zu erzeugen.
+
+## 
+
+![](figure/Aufmerksamkeit.PNG)

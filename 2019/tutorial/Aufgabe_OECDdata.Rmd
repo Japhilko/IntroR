@@ -1,0 +1,37 @@
+---
+title: "Aufgabe - OECD Datensatz"
+author: "Jan-Philipp Kolb"
+date: "3 Mai 2017"
+output: 
+  beamer_presentation:
+    colortheme: beaver
+    fig_caption: no
+    fonttheme: structurebold
+    highlight: espresso
+    theme: CambridgeUS
+  slidy_presentation: 
+    keep_md: yes
+---
+
+## Aufgabe - OECD Datensatz
+
+- Laden Sie den oecd-Datensatz herunter und lesen Sie ihn mit folgender Funktion ein:
+
+```{r,eval=F}
+data <- read.csv("oecd.csv",header = TRUE)
+```
+
+- Überprüfen Sie die Dimension der OECD-Daten.
+
+- Berechnen Sie die Mittelwerte und Varianzen der einzelnen
+Variablen mit einem geeigneten apply Befehl.
+
+- In welchem Land waren die meisten Jugendlichen mindestens
+zweimal betrunken? Wie hoch ist der maximale Prozentsatz?
+
+- In welchem Land ist die Sterblichkeit am geringsten? Wie
+hoch ist sie in diesem Land?
+
+- Erstellen Sie einen neuen Datensatz, der aufsteigend nach
+dem Einkommen geordnet ist. Speichern Sie diesen in einer
+neuen `.csv` Datei

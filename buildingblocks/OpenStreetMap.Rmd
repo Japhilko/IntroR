@@ -26,7 +26,9 @@ Ex <- T
 sysInfo <- Sys.info()
 if(Sys.info()["nodename"] == "MAC14077"){
   GESIS <- T
-}else{
+}
+
+if (Sys.info()["nodename"] == "MAL15037"){
   GESIS <- F
 }
 
@@ -195,6 +197,8 @@ http://www.postgresqltutorial.com/what-is-postgresql/
 - Sehr empfehlenswert: Arbeiten mit [**pgAdmin**](https://www.pgadmin.org/)
 - Beispiel: um Verknüpfung zu einer Datenbank herzustellen - Doppelklick auf den Server in pgAdmin
 
+![](`r paste0(filepath,"figure/pgadmin.png)")`)
+
 
 ## PostGIS für PostgreSQL
 
@@ -207,13 +211,14 @@ CREATE EXTENSION postgis;
 ![](`r paste0(filepath,"figure/PostGIS_logo.png)")`)
 
 
-## Programm zum Import der OSM Daten in PostgreSQL- osm2pgsql
+## Programm zum Import der OSM Daten in PostgreSQL - osm2pgsql
 
 - Läuft unter Linux deutlich besser
-- so könnte bspw. ein Import in PostgreSQL aussehen:
+- Man kann entweder das Planet file oder Ausschnitte (im Beispiel für Berlin) herunterladen und direkt in die PostgreSQL Datenbank importieren.
+- so könnte bspw. ein Import aussehen:
 
 ```
-osm2pgsql -c -d osmBerlin --slim -C  -k  berlin-latest.osm.pbf
+osm2pgsql -c -d osmBerlin --slim -C -k berlin-latest.osm.pbf
 ```
 
 ## Verbindung zwischen R und Postrgesql

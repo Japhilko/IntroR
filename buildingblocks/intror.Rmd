@@ -132,6 +132,9 @@ date()
 sessionInfo()
 ```
 
+<!--
 
+https://cran.r-project.org/web/packages/margins/vignettes/Introduction.html
+-->
 
 

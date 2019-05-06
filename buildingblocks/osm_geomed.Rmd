@@ -13,7 +13,9 @@ knitr::opts_chunk$set(echo = FALSE)
 sysInfo <- Sys.info()
 if(Sys.info()["nodename"] == "MAC14077"){
   GESIS <- T
-}else{
+}
+
+if (Sys.info()["nodename"] == "MAL15037"){
   GESIS <- F
 }
 
@@ -46,7 +48,7 @@ http://jiscg3.blogspot.com/2011/08/open-geo-health-workshop.html
 
 ## [DE:Key:healthcare](https://wiki.openstreetmap.org/wiki/DE:Key:healthcare)
 
-```{r,eval=F}
+```{r,eval=F,echo=F}
 #paste0(filepath,"figure/key_healthcare.PNG")
 erg <- list.files(path = "../../",pattern = "key_healthcare.PNG",recursive = T)
 # erg <- list.files(path = "D:/Daten/GitHub/","key_healthcare.PNG",recursive = T)
@@ -67,7 +69,7 @@ wherepiclives <- paste0(substr(filepath,1,ind_[[1]][1]-1),"GitHub/",erg)
 
 ## Orte für die Blutspende
 
-```{r,eval=F}
+```{r,eval=F,echo=F}
 
 wpiclives <- function(picname,filepath){
   erg <- list.files(path = "../../",pattern = picname,recursive = T)
@@ -83,9 +85,7 @@ picdir <- wpiclives(picname="healthcare_blood_donation.PNG",filepath)
 
 ![](`r paste0(filepath,"figure/healthcare_blood_donation.PNG")`)
 
-
-
-```{r,eval=F}
+```{r,eval=F,echo=F}
 erg <- list.files(path = "../../",pattern = "healthcare_blood_donation.PNG",recursive = T)
 pos = grep('GitHub', filepath)
 ind_ <- gregexpr(pattern ='GitHub',filepath)
@@ -107,6 +107,8 @@ node
 out;
 ```
 
+![](`r paste0(filepath,"figure/blood_donation.PNG")`)
+
 ## Alternativmediziner
 
 ```
@@ -116,6 +118,7 @@ node
 out;
 ```
 
+![](`r paste0(filepath,"figure/Alternativmediziner_osm.PNG")`)
 
 
 <!--

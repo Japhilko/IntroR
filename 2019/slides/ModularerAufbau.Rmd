@@ -1,0 +1,93 @@
+---
+title: "Einführung in die Datenanalyse mit R - Modularer Aufbau von R"
+author: "Jan-Philipp Kolb"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  beamer_presentation: 
+    colortheme: rose
+    fonttheme: structurebold
+    highlight: pygments
+    theme: Darmstadt
+  slidy_presentation: 
+    keep_md: yes
+---
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Modularer Aufbau
+
+![](figure/Packages.PNG)
+
+## Modularer Aufbau
+
+- Viele Funktionen sind im Basis-R enthalten 
+- Viele spezifische Funktionen sind in zusätzlichen Bibliotheken integriert
+- R kann modular erweitert werden durch sog. packages bzw. libraries
+- Auf CRAN werden die wichtigsten packages gehostet (im Moment 10430)
+- Weitergehende Pakete finden sich z.B. bei [bioconductor](www.bioconductor.org)
+
+```{r,eval=F,echo=F}
+# http://blog.revolutionanalytics.com/2015/06/how-many-packages-are-there-really-on-cran.html
+CRANmirror <- "http://cran.revolutionanalytics.com"
+cran <- contrib.url(repos = CRANmirror, 
+                      type = "source")
+info <- available.packages(contriburl = cran, type = "source")
+length(cran)
+```
+
+
+```{r,eval=F}
+install.packages("lme4")
+
+library(lme4)
+```
+
+## Installation von Paketen mit RStudio
+
+![](figure/PaketeRstudio.PNG)
+
+
+## Vorhandene Pakete und Installation
+
+![](figure/packages3.PNG)
+
+
+## Übersicht viele nützliche Pakete:
+
+- Luhmann - [Tabelle mit vielen nützlichen Paketen](http://www.beltz.de/fileadmin/beltz/downloads/OnlinematerialienPVU/28090_Luhmann/Verwendete%20Pakete.pdf)
+
+Weitere interessante Pakete:
+
+- Paket für den Import/Export - [foreign](http://cran.r-project.org/web/packages/foreign/foreign.pdf)
+
+- [Pakete für Survey Sampling](http://iase-web.org/documents/papers/icots8/ICOTS8_4J1_TILLE.pdf)
+
+- `xtable` Paket für die Integration von Latex und R ([xtable Galerie](http://cran.r-project.org/web/packages/xtable/vignettes/xtableGallery.pdf))
+
+- [Paket zur Erzeugung von Dummies](http://cran.r-project.org/web/packages/dummies/dummies.pdf)
+
+- [Multivariate Normalverteilung](http://cran.r-project.org/web/packages/mvtnorm/index.html)
+
+
+- [Paket für Karten](http://www.r-bloggers.com/tag/maptools/)
+
+## Pakete von Github installieren
+
+```{r,eval=F}
+install.packages("devtools")
+library(devtools)
+
+install_github("hadley/ggplot2")
+```
+
+
+
+## Wie bekomme ich einen Überblick
+
+- [Explore Packages Currently on CRAN
+](https://mran.microsoft.com/packages/)
+
+- [Pakete die in letzter Zeit von CRAN heruntergeladen wurden](https://gallery.shinyapps.io/cran-gauge/)

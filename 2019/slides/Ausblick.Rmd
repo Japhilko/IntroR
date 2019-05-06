@@ -1,0 +1,124 @@
+---
+title: "IntroDatenanalyse mit R - Ausblick"
+author: "Jan-Philipp Kolb"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  beamer_presentation: 
+    colortheme: rose
+    fonttheme: structurebold
+    highlight: pygments
+    theme: Darmstadt
+  slidy_presentation: 
+    keep_md: yes
+---
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=F)
+```
+
+## [Mehr User Interface](http://www.linuxlinks.com/article/20110306113701179/GUIsforR.html) - Der R-commander
+
+```{r,eval=F}
+library("Rcmdr")
+```
+
+- Ein anderes Beispiel:
+
+```{r,eval=F}
+install.packages(c("JGR","Deducer","DeducerExtras"))
+```
+
+```{r,eval=F}
+library("JGR")
+JGR()
+```
+
+![](figure/Jaguar.PNG)
+
+- Allerdings ist es gerade der interessante Punkt an R, dass es eine Skriptsprache ist
+
+<!--
+![pic](http://1.f.ix.de/imagine/swvz-programme/EDRGMX5wp6SR4pvMwUnHittNACM/content/R-Commander.jpg)
+-->
+
+
+## [Interaktive Grafiken mit R](http://www.statmethods.net/advgraphs/interactive.html)
+
+Das Paket `iplots`
+
+```{r,eval=F}
+install.packages("iplots",dep=TRUE)
+```
+
+- Das Paket laden:
+
+```{r}
+library(iplots)
+```
+
+- Der Datensatz
+
+```{r,eval=F}
+cyl.f <- factor(mtcars$cyl)
+gear.f <- factor(mtcars$factor)
+attach(mtcars)
+```
+
+## Ein erstes interaktives Histogramm
+
+```{r,eval=F}
+ihist(mpg) # histogram
+```
+
+![](figure/ihist.PNG)
+
+## Mehr interaktive Graphiken
+
+```{r}
+ibar(carb) # barchart
+iplot(mpg, wt) # scatter plot
+ibox(mtcars[c("qsec","disp","hp")]) # boxplots
+ipcp(mtcars[c("mpg","wt","hp")]) # parallel coordinates
+imosaic(cyl.f,gear.f) # mosaic plot 
+```
+
+
+## [Tabellen für Publikationen](https://www.r-statistics.com/2013/01/stargazer-package-for-beautiful-latex-tables-from-r-statistical-models-output/)
+
+```{r,eval=F}
+install.packages("stargazer")
+```
+
+
+```{r,eval=F}
+library(stargazer)
+stargazer(attitude)
+```
+
+![](https://i2.wp.com/www.r-statistics.com/wp-content/uploads/2013/01/stargazer_summ_stat.jpg?w=561)
+
+<!--
+![pic](http://i1.wp.com/www.r-statistics.com/wp-content/uploads/2013/01/stargazer_regression.jpg?zoom=1.5&resize=448%2C518)
+-->
+
+## Tabellen mit dem R-Paket knitr
+
+```{r,eval=F}
+library(knitr)
+kable(head(iris), format = "latex")
+```
+
+![pic](http://i.stack.imgur.com/OaHkm.png)
+
+## Nichtlineare Regression
+
+Folien zum [Workshop](https://github.com/Japhilko/npRegression/tree/master/slides):
+
+<https://github.com/Japhilko/npRegression/tree/master/slides>
+
+```{r,eval=F}
+library(splines)
+```
+
+

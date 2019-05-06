@@ -22,7 +22,9 @@ library(knitr)
 sysInfo <- Sys.info()
 if(Sys.info()["nodename"] == "MAC14077"){
   GESIS <- T
-}else{
+}
+
+if (Sys.info()["nodename"] == "MAL15037"){
   GESIS <- F
 }
 

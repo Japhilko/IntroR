@@ -1,0 +1,72 @@
+---
+title: "Intro Datenanalyse mit R - Dein Freund das GUI"
+author: "Jan-Philipp Kolb"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  beamer_presentation: 
+    colortheme: rose
+    fonttheme: structurebold
+    highlight: pygments
+    theme: Darmstadt
+  slidy_presentation: 
+    keep_md: yes
+---
+
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,message=F,warning = F)
+```
+
+
+
+## Open Source Programm R
+
+-  R ist eine freie, nicht-kommerzielle Implementierung der Programmiersprache S (von AT&T Bell Laboratories entwickelt)
+- Freie Beteiligung - modularer Aufbau (immer mehr Erweiterungspakete)
+
+- Der Download ist auf dieser Seite möglich:
+
+<https://cran.r-project.org/>
+
+
+![](figure/BasisR.PNG)
+
+
+## Graphisches User Interface
+
+Aber die meisten Menschen nutzen einen Editor oder ein graphical user interface (GUI).
+
+Aus den folgenden Gründen:
+
+- Syntax highlighting
+- Auto-Vervollständigung
+- Bessere Übersicht über Graphiken, Bibliotheken
+
+## Verschiedene GUIs
+
+- [Gedit](https://projects.gnome.org/gedit/) mit R-spezifischen Add-ons für Linux
+
+- [Emacs](http://www.gnu.org/software/emacs/)
+
+- [TinnR](http://www.sciviews.org/Tinn-R/)
+
+- Ich nutze [Rstudio!](https://www.rstudio.com/)
+
+![rstudio](figure/0_overall.jpg)
+
+
+## Rstudio
+
+- Sechs [Gründe](http://www.r-bloggers.com/top-6-reasons-you-need-to-be-using-rstudio/) Rstudio zu nutzen.
+
+- Wie man Rstudio [nutzen kann.](https://support.rstudio.com/hc/en-us/sections/200107586-Using-RStudio)
+
+- [Das Rstudio einrichten](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio)
+
+
+## Download der Unterlagen
+
+Auf [github](https://github.com/Japhilko/IntroR/tree/master/2017) sind alle Unterlagen für diesen Kurs zu finden.
+
+
+[Wie nutzt man github?](https://guides.github.com/activities/hello-world/)
