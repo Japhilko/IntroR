@@ -1,7 +1,7 @@
 ---
 title: "Einführung in die Datenanalyse mit R"
 author: "Jan-Philipp Kolb"
-date: "3 Mai 2017"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
   html_document: 
     keep_md: yes
@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenanalyse1.md) verfügbar. Das pdf und die Browser Version für die einzelnen Teile sind ebenfalls in diesem Github Ordner enthalten. Der rcode in den Folien lässt sich mit den Dateien im [rcode Ordner](https://github.com/Japhilko/IntroR/tree/master/2019/rcode) nachverfolgen. 
+Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenanalyse1.md) verfügbar. Das pdf und die Browser Version für die einzelnen Teile sind ebenfalls in diesem Github Ordner enthalten. Der rcode in den Folien lässt sich mit den Dateien im [rcode Ordner](https://github.com/Japhilko/IntroR/tree/master/2019/rcode) nachverfolgen. 
 
 ## Einführung und Vorbereitung
 
@@ -38,7 +38,11 @@ Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenan
 
     - Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Zusatzpakete.md))
 
+
 ## Rein und raus – Datenimport und -export
+
+- Das GESIS Panel ([pdf](slides/GESISPanel.pdf))
+
 
 - Datenimport ([Browser](slides/Import.md) | [pdf](slides/Import.pdf) | [rcode](slides/Import.R))
 
@@ -46,12 +50,9 @@ Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenan
 
 - Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Export.md) | [pdf](slides/Export.pdf) | [rcode](slides/Export.R))
 
-- Exkurs: Datenquellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Datenquellen.md))
-
-
 ## Ein erster Eindruck – Was uns die Daten sagen
 
-- Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Datenanalyse.md) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
+- Datenanalyse ([Browser](slides/DatenVerarbeitung.Rmd) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
 
     - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Apply.md))
 
@@ -83,10 +84,12 @@ Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenan
 
 ## Ausblick – Möglichkeiten mit R
 
+
+- Exkurs: Datenquellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Datenquellen.md))
+
+
 - Faktoren in R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Faktoren.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Faktoren.pdf) | [rcode](rcode/Faktoren.R))
 
 - Grafiken mit ggplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggplot2.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggplot2.pdf) | [rcode](rcode/ggplot2.R))
-
-- Weitere Themen im Ausblick ([Browser](slides/Ausblick.Rmd) | [pdf](slides/Ausblick.pdf))
 
 - Beispiel einer [interaktiven Karte](http://rpubs.com/Japhilko82/Campsites) und [Rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive%20maps.R) um eine interaktive Karte mit leaflet zu erzeugen.
