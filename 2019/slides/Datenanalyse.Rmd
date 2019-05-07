@@ -1,7 +1,7 @@
 ---
 title: "Intro Datenanalyse mit R"
 author: "Jan-Philipp Kolb"
-date: "3 Mai 2017"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   beamer_presentation:
     colortheme: beaver
@@ -62,29 +62,45 @@ Bei fehlenden Werten muss ein weiteres Argument mitgegeben werden:
 var(ab,na.rm=T)
 ```
 
+## Beispieldatensatz Tourismus
+
+### Daten importieren
+
+```{r}
+dat <- rio::import("http://offenedaten.frankfurt.de/dataset/48a91262-1d86-42ce-bab0-070313ab32f6/resource/5d7ec8ca-76a7-4546-9027-8e69b623e05a/download/tourismus.xls")
+```
+
+```{r}
+anteil_international9 <- dat$`Tourismus Anteil der Gäste aus dem Ausland 2009`
+diff_9 <-dat$`Tourismus Veränderung der Anzahl der Gäste 2009`
+```
+
+
+### Kategorien bilden
+
+```{r}
+tourismus_kat4 <- cut(anteil_international9,4)
+tourismus_kat3 <- cut(diff_9,3)
+```
+
+
 ## Häufigkeiten und gruppierte Kennwerte
 
 -  Eine Auszählung der Häufigkeiten der Merkmale einer Variable liefert `table()`
 -  Mit `table()` sind auch Kreuztabellierungen möglich indem zwei Variablen durch Komma getrennt werden: `table(x,y)` liefert Häufigkeiten von `y` für gegebene Ausprägungen von `x`
 
 ```{r}
-x <- sample(1:10,100,replace=T)
-table(x)
+table(tourismus_kat4)
 ```
 
 ## Tabellieren - weiteres Beispiel
-
-```{r}
-musician <- sample(c("yes","no"),100,replace=T)
-```
 
 ```{r,eval=F}
 ?table
 ```
 
 ```{r}
-table(x)
-table(x,musician)
+table(tourismus_kat4,tourismus_kat3)
 ```
 
 ## Eine weitere Tabelle

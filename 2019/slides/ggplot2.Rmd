@@ -1,21 +1,20 @@
 ---
 title: "Intro Datenanalyse mit R - ggplot2"
 author: "Jan-Philipp Kolb"
-date: "04 Mai  2017"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
-  slidy_presentation: 
-    keep_md: yes
-  beamer_presentation:
+  beamer_presentation: 
     colortheme: beaver
-    fig_caption: no
     fonttheme: structurebold
     highlight: espresso
     theme: CambridgeUS
+  slidy_presentation: 
+    keep_md: yes
 ---
 
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T)
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T,cache=T)
 ```
 
 
@@ -39,8 +38,12 @@ install.packages("ggplot2")
 
 ```{r,message=F}
 library(ggplot2)
+```
+
+```{r,eval=F}
 ?ggplot2
 ```
+
 
 ![](figure/LibraryGGplot2.PNG)
 
@@ -65,6 +68,10 @@ kable(head(diamonds))
 ```{r,message=F}
 # histogram
 qplot(depth, data=diamonds)
+```
+
+```{r}
+diamonds <- diamonds[sample(1:nrow(diamonds),5000),]
 ```
 
 

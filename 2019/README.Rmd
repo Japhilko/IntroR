@@ -26,8 +26,6 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenan
 
     - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Zuweisung.md))
 
-- Datentypen und Indizieren
-([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Datentypen.md)| [pdf](slides/Datentypen.pdf) |  [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/rcode/Datentypen.R))
 
 - Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Hilfe.md) |
 [pdf](slides/Hilfe.pdf) |
@@ -37,7 +35,6 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenan
  [pdf](slides/ModularerAufbau.pdf) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/rcode/InstallPackages.R))
 
     - Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Zusatzpakete.md))
-
 
 ## Rein und raus – Datenimport und -export
 
@@ -51,6 +48,10 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenan
 - Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Export.md) | [pdf](slides/Export.pdf) | [rcode](slides/Export.R))
 
 ## Ein erster Eindruck – Was uns die Daten sagen
+
+- Indizieren
+([Browser](slides/datenanalyse_ffm.Rmd)| [pdf](slides/datenanalyse_ffm) |  [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/rcode/datenanalyse_ffm.R))
+
 
 - Datenanalyse ([Browser](slides/DatenVerarbeitung.Rmd) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
 

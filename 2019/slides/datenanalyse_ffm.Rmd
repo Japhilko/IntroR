@@ -1,0 +1,130 @@
+---
+title: "Datenanalyse"
+author: "Jan-Philipp Kolb"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  beamer_presentation: 
+    colortheme: beaver
+    fonttheme: structurebold
+    highlight: haddock
+    theme: Singapore
+---
+
+```{r setupdatenanalyse, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,cache=T,warning=F,message = F)
+```
+
+
+## Aufgabe Import von Daten
+
+- Gehe auf das Portal für [**offene Daten der Stadt Frankfurt**](http://www.offenedaten.frankfurt.de/dataset)
+
+![](figure/offenedaten_ffm.PNG)
+
+- Importiere den Datensatz für Beschäftigte mit einer geeigneten Funktion.
+
+
+
+## Die Daten einlesen
+
+```{r}
+link <- "http://offenedaten.frankfurt.de/dataset/50968551-b445-42a9-9288-563784f5768e/resource/c5e0a891-42c0-4259-84c7-afa01621477f/download/zprojekteopen-datadatenamt-12beschaftigtebeschaftigte-2009-2012.xls"
+
+dat <- rio::import(link)
+```
+
+
+
+```{r importmzdata,eval=F,echo=F}
+static_link <- "http://www.statistik.at/web_de/static/"
+file <- "mz_2013_sds_-_datensatz_080469.sav"
+dat <- rio::import(paste0(static_link,file),
+                   to.data.frame=T)
+```
+
+## Einen Überblick über die Daten bekommen
+
+```{r,eval=F}
+head(dat)
+```
+
+```{r,echo=F}
+library(knitr)
+kable(head(dat))
+```
+
+## Einen ersten Eindruck der Daten bekommen
+
+```{r}
+library(dplyr)
+glimpse(dat)
+```
+
+## Indizieren 
+
+### Nur die erste Spalte
+
+```{r,eval=F}
+dat[,2]
+```
+
+```{r,echo=F}
+head(dat[,2])
+```
+
+### Gleiches Ergebnis
+
+```{r,eval=F}
+dat$Stadtteil
+```
+
+```{r,echo=F}
+head(dat$Stadtteil)
+```
+
+## Eine Beobachtung anschauen
+
+### Nur die erste Reihe
+
+```{r,eval=F}
+dat[1,]
+```
+
+```{r,echo=F}
+head(dat[1,])
+```
+
+### Die ersten vier Elemente der ersten Reihe
+
+```{r}
+dat[1,1:4]
+```
+
+## Die Daten zusammenfassen
+
+```{r}
+summary(dat[3])
+```
+
+## Eine Auswahl treffen
+
+### `r colnames(dat)[3]` - mehr als 3000 
+
+```{r}
+dat$Stadtteil[dat[,3]>2000]
+```
+
+### `r colnames(dat)[4]` - weniger als 1000 
+
+```{r}
+dat$Stadtteil[dat[,4]<1000]
+```
+
+## Mehrere Bedingungen miteinander verknüpfen
+
+### Spalte 23 - `r colnames(dat)[23]`
+
+```{r}
+dat$Stadtteil[dat[,4]<1000 & dat[,23] > 300]
+```
+

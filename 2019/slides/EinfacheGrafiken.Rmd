@@ -21,6 +21,7 @@ output:
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,message=F,warning = F)
+library(knitr)
 ```
 
 
@@ -60,6 +61,29 @@ install.views("Bayesian")
 ![](figure/TaskViewGraphics.PNG)
 
 
+## Grafiken für bedingte, bi- und multivariate Verteilungen - Scatterplots
+
+- Funktion `plot()` ist eine generische Funktion - bspw. kann ein einfacher Scatterplot erstellt werden
+-  Für einen solchen muss `plot()` ein x und ein y Beobachtungsvektor übergeben werden
+-  Um die Farbe der Plot-Symbole anzupassen gibt es die Option `col` (Farbe als character oder numerisch)
+-  Die Plot-Symbole selbst können mit `pch` (plotting character) angepasst werden (character oder numerisch)
+-  Die Achenbeschriftungen (labels) werden mit `xlab` und `ylab` definiert
+
+## Beispiel - Beschäftigten Datensatz
+
+```{r,echo=F}
+link <- "http://offenedaten.frankfurt.de/dataset/50968551-b445-42a9-9288-563784f5768e/resource/c5e0a891-42c0-4259-84c7-afa01621477f/download/zprojekteopen-datadatenamt-12beschaftigtebeschaftigte-2009-2012.xls"
+
+dat <- rio::import(link)
+```
+
+```{r}
+plot(dat[,7],dat[,4],ylab=colnames(dat)[4],
+     xlab=colnames(dat)[7],pch=20,cex=2,col="purple")
+```
+
+
+
 ## Datensatz
 
 ```{r,message=F}
@@ -81,13 +105,12 @@ data(Chem97)
 
 Wir erstellen ein Histogramm der Variable gcsescore:
 
-```{r,eval=F}
-?hist
+```{r,fig.height=4}
+hist(Chem97$gcsescore)
 ```
 
-
-```{r}
-hist(Chem97$gcsescore)
+```{r,eval=F}
+?hist
 ```
 
 
@@ -113,13 +136,16 @@ dev.off()
 -  Der Funktion muss mindestens ein Beobachtungsvektor übergeben werden
 - `hist()` hat noch sehr viel mehr Argumente, die alle (sinnvolle) default values haben
 
+```{r,echo=F}
+ab <- data.frame(rbind(c("main","Überschrift","main='Hallo Welt'"),
+c("xlab","x-Achsenbeschriftung","xlab='x-Werte'"),
+c("ylab","y-Achsenbeschriftung","ylab='y-Werte'"),
+c("col","Farbe","col='blue'")))
 
-|Argument |Bedeutung            |Beispiel          |
-|:--------|:--------------------|:-----------------|
-|main     |Überschrift          |main="Hallo Welt" |
-|xlab     |x-Achsenbeschriftung |xlab="x-Werte"    |
-|ylab     |y-Achsenbeschriftung |ylab="y-Werte"    |
-|col      |Farbe                |col="blue"        |
+colnames(ab)<- c("Argument ","Bedeutung","Beispiel")
+kable(ab)
+```
+
 
 ## Histogramm
 
@@ -213,13 +239,7 @@ boxplot(Chem97$gcsescore~Chem97$gender)
 
 ## Alternativen zu Boxplot
 
-```{r}
-# Beispieldaten erzeugen
-x <- rnorm(100)
-y <- rnorm(100)
-```
-
-`vioplot` 
+### `vioplot` 
 
 -  Baut auf Boxplot auf 
 -  Zusätzlich Informationen über Dichte der Daten 
@@ -227,13 +247,20 @@ y <- rnorm(100)
 -  weißer Punkt - Median
 -  Je weiter die Ausdehnung, desto größer ist die Dichte an dieser Stelle. 
 
+```{r}
+# Beispieldaten erzeugen
+x <- rnorm(1000)
+y <- rexp(1000,1)
+```
+
+## Beispiel `vioplot`
 
 ```{r,message=F}
 library(vioplot)
-plot(x, y, xlim=c(-5,5), ylim=c(-5,5))
-vioplot(x, col="tomato", horizontal=TRUE, at=-4, 
+plot(x, y, xlim=c(-2,5), ylim=c(-5,5))
+vioplot(x, col="tomato", horizontal=TRUE, at=-2, 
         add=TRUE,lty=2, rectCol="gray")
-vioplot(y, col="cyan", horizontal=FALSE, at=-4, 
+vioplot(y, col="cyan", horizontal=FALSE, at=4.5, 
         add=TRUE,lty=2)
 ```
 
@@ -247,10 +274,3 @@ boxplot(count~spray,data=InsectSprays,col="blue")
 beanplot(count~spray,data=InsectSprays,col="orange")
 ```
 
-## Grafiken für bedingte, bi- und multivariate Verteilungen - Scatterplots
-
-- Ein einfacher two-way scatterplot kann mit der Funktion `plot()` erstellt werden
--  `plot()` muss mindestens ein x und ein y Beobachtungsvektor übergeben werden
--  Um die Farbe der Plot-Symbole anzupassen gibt es die Option `col` (Farbe als character oder numerisch)
--  Die Plot-Symbole selbst können mit `pch` (plotting character) angepasst werden (character oder numerisch)
--  Die Achenbeschriftungen (labels) werden mit `xlab` und `ylab` definiert

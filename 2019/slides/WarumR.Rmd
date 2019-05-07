@@ -71,7 +71,7 @@ Outstanding Graphs
  - ... Breite und aktive Community - [**Man kann die Intelligenz anderer Leute nutzen ;-)**](https://www.r-bloggers.com/)
 
 
-
+<!--
 ## Gründe
 
 - R ist [frei verfügbar](http://www.inside-r.org/why-use-r). Es kann umsonst [runtergeladen](http://mirrors.softliste.de/cran/) werden.
@@ -80,7 +80,7 @@ Outstanding Graphs
 - R wird immer [populärer](https://twitter.com/josiahjdavis/status/559778930476220418)
 - [Popularität von R](http://blog.revolutionanalytics.com/popularity/)
 
-<!--
+
 ## Übersicht - warum R
 
 ![](http://d287f0h5fel5hu.cloudfront.net/blog/wp-content/uploads/2013/06/bar-learn-r-img11.png)
@@ -111,7 +111,30 @@ Outstanding Graphs
 -->
 
 
-## [R sollte genutzt werden, weil andere Programme Fehler provozieren:](https://www.bloomberg.com/news/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history)
+## [R Nutzung ...](https://www.bloomberg.com/news/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history)
+
+### [Weil andere Programme Fehler provozieren können](https://www.bloomberg.com/news/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history)
+
+![](figure/RheinhartRogoff.PNG)
+
+
+<!--
+Weil andere Programme große Fehler haben:
+-->
+
+## [Excel bugs](http://blog.revolutionanalytics.com/2013/02/did-an-excel-error-bring-down-the-london-whale.html)
+
+### [Datum in Excel](https://coffeehouse.dataone.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/)
+
+![](figure/Abandon.PNG)
+
+### [Probleme mit Excel](http://www.biomedcentral.com/1471-2105/5/80)
+
+![](figure/ExcelProblems.PNG)
+
+
+
+### Weil [**andere Programme**](https://www.bloomberg.com/news/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history) Fehler provozieren können:
 
 ![](figure/RheinhartRogoff.PNG)
 
@@ -143,19 +166,6 @@ Outstanding Graphs
 
 - [Vergleich python und R](http://www.dataschool.io/python-or-r-for-data-science/)
 
-## Probleme mit Excel
-
-Weil andere Programme große Fehler haben:
-
-- [Excel bug](http://blog.revolutionanalytics.com/2013/02/did-an-excel-error-bring-down-the-london-whale.html)
-
-- [Datum in Excel](https://coffeehouse.dataone.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/)
-
-![](figure/Abandon.PNG)
-
-## [Probleme mit Excel](http://www.biomedcentral.com/1471-2105/5/80)
-
-![](figure/ExcelProblems.PNG)
 
 ## [Vergleich mit anderen Programmen](https://www.inwt-statistics.de/blog-artikel-lesen/Statistik-Software-R_SAS_SPSS_STATA_im_Vergleich.html)
 

@@ -1,89 +1,97 @@
-# Einführung in die Datenanalyse mit R
-Jan-Philipp Kolb  
-3 Mai 2017  
+---
+title: "Einführung in die Datenanalyse mit R"
+author: "Jan-Philipp Kolb"
+date: "06 Mai, 2019"
+output: 
+  html_document: 
+    keep_md: yes
+---
 
 
 
-Unterlagen für den Kurs 2017. Die Foliensätze sind [hier](slides/Intro_Datenanalyse1.md) verfügbar. Das pdf und die Browser Version für die einzelnen Teile sind ebenfalls in diesem Github Ordner enthalten. Der rcode in den Folien lässt sich mit den Dateien im [rcode Ordner](https://github.com/Japhilko/IntroR/tree/master/2017/rcode) nachverfolgen. 
+Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenanalyse1.md) verfügbar. Das pdf und die Browser Version für die einzelnen Teile sind ebenfalls in diesem Github Ordner enthalten. Der rcode in den Folien lässt sich mit den Dateien im [rcode Ordner](https://github.com/Japhilko/IntroR/tree/master/2019/rcode) nachverfolgen. 
 
 ## Einführung und Vorbereitung
 
-- Warum R nutzen? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/WarumR.md) |  [pdf](slides/WarumR.pdf) )
+- Warum R nutzen? ([Browser](slides/WarumR.md) |  [pdf](slides/WarumR.pdf) )
 
-- Dein Freund das GUI ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/FreundGUI.md) | [pdf](slides/FreundGUI.pdf))
+- Dein Freund das GUI ([Browser](slides/FreundGUI.md) | [pdf](slides/FreundGUI.pdf))
 
-    - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Vorbereitung.md))
+    - Aufgabe: Vorbereitung ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Vorbereitung.md))
 
 
-- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.md) | [pdf](slides/GrundlagenR.pdf) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/GrundlagenR.R) )
+- Grundlagen im Umgang mit der Sprache R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/GrundlagenR.md) | [pdf](slides/GrundlagenR.pdf) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/slides/GrundlagenR.R) )
 
-    - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zuweisung.md))
+    - Aufgabe: Zuweisungen und Funktionen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Zuweisung.md))
+
+
+- Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Hilfe.md) |
+[pdf](slides/Hilfe.pdf) |
+[rcode](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Hilfe.R))
+
+
 
 - Datentypen und Indizieren
-([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datentypen.md)| [pdf](slides/Datentypen.pdf) |  [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/rcode/Datentypen.R))
+([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Datentypen.md)| [pdf](slides/Datentypen.pdf) |  [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/rcode/Datentypen.R))
 
-- Wie bekommt man Hilfe? ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.md) |
-[pdf](slides/Hilfe.pdf) |
-[rcode](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Hilfe.R))
 
-- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ModularerAufbau.md) |
- [pdf](slides/ModularerAufbau.pdf) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2017/rcode/InstallPackages.R))
+- Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/ModularerAufbau.md) |
+ [pdf](slides/ModularerAufbau.pdf) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/rcode/InstallPackages.R))
 
-    - Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Zusatzpakete.md))
+    - Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Zusatzpakete.md))
+
 
 ## Rein und raus – Datenimport und -export
 
+- Das GESIS Panel ([pdf](slides/GESISPanel.pdf))
+
+
 - Datenimport ([Browser](slides/Import.md) | [pdf](slides/Import.pdf) | [rcode](slides/Import.R))
 
-    - Aufgabe Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Datenimport.md))
+    - Aufgabe Datenimport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Datenimport.md))
 
-- Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Export.md) | [pdf](slides/Export.pdf) | [rcode](slides/Export.R))
-
-- Exkurs: Datenquellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenquellen.md))
-
+- Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Export.md) | [pdf](slides/Export.pdf) | [rcode](slides/Export.R))
 
 ## Ein erster Eindruck – Was uns die Daten sagen
 
-- Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Datenanalyse.md) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
+- Datenanalyse ([Browser](slides/DatenVerarbeitung.Rmd) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
 
-    - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Apply.md))
+    - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Apply.md))
 
 ## Liebe auf den ersten Plot – Grafiken mit R	
 
 - Einfache Grafiken
-([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/EinfacheGrafiken.md) | [pdf](slides/EinfacheGrafiken.pdf) | [rcode](rcode/EinfacheGrafiken.R))
+([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/EinfacheGrafiken.md) | [pdf](slides/EinfacheGrafiken.pdf) | [rcode](rcode/EinfacheGrafiken.R))
 
-    - Aufgabe - Barplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Barplot.md))
+    - Aufgabe - Barplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Barplot.md))
     
 ## Noch mehr Grafiken - multidimensional
 
-- Zusammenhang ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Multidimensional.md) | [pdf](slides/Multidimensional.pdf) | [rcode](rcode/Multidimensional.R))
+- Zusammenhang ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Multidimensional.md) | [pdf](slides/Multidimensional.pdf) | [rcode](rcode/Multidimensional.R))
 
-- Das lattice Paket ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/LatticePaket.md) | [pdf](slides/LatticePaket.pdf) | [rcode](rcode/LatticePaket.R))
+- Das lattice Paket ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/LatticePaket.md) | [pdf](slides/LatticePaket.pdf) | [rcode](rcode/LatticePaket.R))
 
-    - Aufgabe - OECD Datensatz ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Aufgabe_OECDdata.md))
+    - Aufgabe - OECD Datensatz ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Aufgabe_OECDdata.md))
     
     
 ## Regression – Überblick der Methoden in R
 
-- Die lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/LineareRegression.md) | [pdf](slides/LineareRegression.pdf) | [rcode](rcode/LineareRegression.R))
+- Die lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/LineareRegression.md) | [pdf](slides/LineareRegression.pdf) | [rcode](rcode/LineareRegression.R))
 
-    - Aufgabe - lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_LineareRegression.md))
+    - Aufgabe - lineare Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_LineareRegression.md))
 
-- Die logistische Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/logistischeRegression.md) | [pdf](slides/logistischeRegression.pdf) | [rcode](rcode/logistischeRegression.R))
+- Die logistische Regression ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/logistischeRegression.md) | [pdf](slides/logistischeRegression.pdf) | [rcode](rcode/logistischeRegression.R))
 
     - Aufgabe - Datenanalyse ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/tutorial/Aufgabe_Datenanalyse.md))
 
 ## Ausblick – Möglichkeiten mit R
 
+
+- Exkurs: Datenquellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Datenquellen.md))
+
+
 - Faktoren in R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Faktoren.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Faktoren.pdf) | [rcode](rcode/Faktoren.R))
 
 - Grafiken mit ggplot ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggplot2.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggplot2.pdf) | [rcode](rcode/ggplot2.R))
-
-- Einfache Karten mit R erstellen ([Browser](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggmap.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/ggmap.pdf) | [rcode](rcode/ggmap.R))
-
-- Regressionsdiagnostik mit R-Paket `visreg` ([Browser](slides/Regressionsdiagnostik.Rmd) | [pdf](https://github.com/Japhilko/IntroR/blob/master/2017/slides/Regressionsdiagnostik.pdf) | [rcode](rcode/Regressionsdiagnostik.R))
-
-- Weitere Themen im Ausblick ([Browser](slides/Ausblick.Rmd) | [pdf](slides/Ausblick.pdf))
 
 - Beispiel einer [interaktiven Karte](http://rpubs.com/Japhilko82/Campsites) und [Rcode](https://raw.githubusercontent.com/Japhilko/GeoData/master/2015/rcode/SpatMA_Interactive%20maps.R) um eine interaktive Karte mit leaflet zu erzeugen.

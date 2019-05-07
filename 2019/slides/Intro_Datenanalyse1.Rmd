@@ -30,6 +30,8 @@ output:
 ```{r child = '../tutorial/Aufgabe_Vorbereitung.Rmd'}
 ```
 
+
+
 # Grundlagen im Umgang mit der Sprache R
 
 ```{r child = 'GrundlagenR.Rmd'}
@@ -39,11 +41,6 @@ output:
 ```{r child = '../tutorial/Aufgabe_Zuweisung.Rmd'}
 ```
 
-# Datentypen und Indizieren
-
-```{r child = 'Datentypen.Rmd'}
-```
-
 # Wie bekommt man Hilfe?
 
 ```{r child = 'Hilfe.Rmd'}
@@ -51,61 +48,24 @@ output:
 
 # Modularer Aufbau von R
 
-
 ```{r child = 'ModularerAufbau.Rmd'}
 ```
 
-
 ```{r child = '../tutorial/Aufgabe_Zusatzpakete.Rmd'}
 ```
-
 
 # Datenimport 
 
 ```{r child = 'Import.Rmd'}
 ```
 
-
-```{r child = '../tutorial/Aufgabe_Datenimport.Rmd'}
-```
-
-
 #  Datenexport 
 
 ```{r child = 'Export.Rmd'}
 ```
 
-#  Datenanalyse 
+# Indizieren
 
-
-```{r child = 'Datenanalyse.Rmd'}
+```{r child = 'datenanalyse_ffm.Rmd'}
 ```
 
-
-```{r child = '../tutorial/Aufgabe_Apply.Rmd'}
-```
-
-
-# Einfache Grafiken
-
-```{r child = 'EinfacheGrafiken.Rmd'}
-```
-
-
-```{r child = '../tutorial/Aufgabe_Barplot.Rmd'}
-```
-
-
-# Zusammenhang 
-
-```{r child = 'Multidimensional.Rmd'}
-```
-
-# Das lattice Paket 
-
-```{r child = 'LatticePaket.Rmd'}
-```
-
-
-```{r child = '../tutorial/Aufgabe_OECDdata.Rmd'}
-```

@@ -18,15 +18,16 @@ output:
 
 
 ```{r, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T)
+knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T,cache=T,fig.width=10, fig.height=4)
 pres <- T
+# https://sebastiansauer.github.io/figure_sizing_knitr/
 ```
 
 
 
-## Die lineare Regression
+## [Die lineare Regression](https://cran.r-project.org/doc/contrib/usingR.pdf)
 
-Maindonald - [DataAnalysis](https://cran.r-project.org/doc/contrib/usingR.pdf)
+### John H. Maindonald and W. John Braun - [**Data Analysis and Graphics Data and Functions**](http://cran.ms.unimelb.edu.au/web/packages/DAAG/DAAG.pdf)
 
 -  Einführung in R 
 -  Datenanalyse
@@ -39,30 +40,23 @@ Maindonald - [DataAnalysis](https://cran.r-project.org/doc/contrib/usingR.pdf)
 
 ## Lineare Regression in R - Beispieldatensatz
 
-John H. Maindonald and W. John Braun
-
-DAAG - [Data Analysis and Graphics Data and Functions](http://cran.ms.unimelb.edu.au/web/packages/DAAG/DAAG.pdf)
-
-```{r,eval=F}
-install.packages("DAAG")
-```
-
 
 ```{r}
-library("DAAG")
-data(roller)
+data(mtcars)
 ```
 
 
 
-Hilfe für den `roller` Datensatz:
+### Hilfe für den `mtcars` Datensatz:
 
 ```{r,eval=F}
-?roller
+?mtcars
 ```
 
-```{r,eval=F}
-roller
+```{r,echo=F}
+mtcars2 <- mtcars
+mtcars2$model <- row.names(mtcars2) 
+kable(head(mtcars2[,c(1:6,ncol(mtcars2))]),row.names = F)
 ```
 
 
@@ -82,14 +76,6 @@ displacement - Hubraum
 -	 am	-  Transmission (0 = automatic, 1 = manual)
 -	 gear	-  Number of forward gears
 -	 carb -	 Number of carburetors
-
-
-## Datensatz `mtcars`
-
-```{r,echo=F}
-library(knitr)
-kable(mtcars)
-```
 
 
 ## Verteilungen für zwei Variablen von `mtcars`
@@ -149,8 +135,7 @@ resid(m3) # Residuen
 ## Residuenplot
 
 -  Sind Annahmen des linearen Regressionsmodells verletzt? 
--  Dies ist der Fall, wenn ein Muster abweichend von einer Linie zu erkennen ist.
--  Hier ist der Datensatz sehr klein
+-  Dies ist der Fall, wenn ein Muster abweichend von einer Linie zu erkennen ist. (Hier ist der Datensatz sehr klein)
 
 ```{r}
 plot(m3,1)
@@ -158,11 +143,13 @@ plot(m3,1)
 
 ## Residuenplot
 
+- Wenn Residuen normalverteilt sind sollten sie auf Linie sein.
+
 ```{r}
 plot(m3,2)
 ```
 
-- Wenn die Residuen normalverteilt sind sollten sie auf einer Linie liegen.
+
 
 
 
@@ -207,7 +194,7 @@ https://www.r-bloggers.com/interpreting-interaction-coefficient-in-r-part1-lm/
 
 ## Ein Modell mit Interaktionseffekt
 
--`disp`	-  Hubraum
+### `disp`	-  Hubraum
 
 <!--
 drat - Hinterachsenübersetzung
@@ -252,19 +239,19 @@ interact_plot(fitiris, pred = "Petal.Width", modx = "Species")
 library(interplot)
 ```
 
-```{r,eval=F,echo=F}
+```{r}
 interplot(m = m3d, var1 = "disp", var2 = "wt", hist = TRUE) +
   aes(color = "pink") + theme(legend.position="none") +   
   geom_hline(yintercept = 0, linetype = "dashed")
 ```
 
+## Noch ein interplot
+
 - Effekt wird auf die y-Achse geplottet - `wt` auf der x-Achse
 
-```{r,eval=F}
-interplot(m = m3a, var1 = "wt", var2 = "disp", hist = TRUE)  
+```{r}
+interplot(m = m3d, var1 = "wt", var2 = "disp", hist = TRUE)  
 ```
-
-![](figure/interplot_wt_disp.PNG)
 
 - Eine detailliertere Beschreibung ist in der [**`interplot` Vignette**](https://cran.r-project.org/web/packages/interplot/vignettes/interplot-vignette.html) zu bekommen.
 
@@ -315,7 +302,7 @@ plot(m3,1)
 plot(m3,2)
 ```
 
-- Wenn die Residuen normalverteilt sind, dann sollten sie auf der gleichen Linie liegen.
+- Bei Normalverteilung liegen Residuen auf gleicher Linie
 
 
 

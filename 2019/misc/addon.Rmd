@@ -1,0 +1,120 @@
+---
+title: "Add on slides"
+author: "Jan-Philipp Kolb"
+date: "6 5 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+# Grundlagen im Umgang mit der Sprache R
+
+```{r child = 'GrundlagenR.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_Zuweisung.Rmd'}
+```
+
+# Wie bekommt man Hilfe?
+
+```{r child = 'Hilfe.Rmd'}
+```
+
+
+# Datentypen und Indizieren
+
+```{r child = 'Datentypen.Rmd'}
+```
+
+
+# Datenimport 
+
+```{r child = 'Import.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_Datenimport.Rmd'}
+```
+
+
+#  Datenexport 
+
+```{r child = 'Export.Rmd'}
+```
+
+#  Datenanalyse 
+
+
+```{r child = 'Datenanalyse.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_Apply.Rmd'}
+```
+
+
+# Einfache Grafiken
+
+```{r child = 'EinfacheGrafiken.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_Barplot.Rmd'}
+```
+
+
+# Zusammenhang 
+
+```{r child = 'Multidimensional.Rmd'}
+```
+
+# Das lattice Paket 
+
+```{r child = 'LatticePaket.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_OECDdata.Rmd'}
+```
+
+
+
+
+# Die lineare Regression 
+
+```{r child = 'LineareRegression.Rmd'}
+```
+
+
+```{r child = '../tutorial/Aufgabe_LineareRegression.Rmd'}
+```
+
+
+# Die logistische Regression 
+
+```{r child = 'logistischeRegression.Rmd'}
+```
+
+
+
+```{r child = '../tutorial/Aufgabe_Datenanalyse.Rmd'}
+```
+
+
+# Faktoren in R 
+
+```{r child = 'Faktoren.Rmd'}
+```
+
+<!--
+# Grafiken mit ggplot 
+
+```{r child = 'ggplot2.Rmd'}
+```
+-->
+
