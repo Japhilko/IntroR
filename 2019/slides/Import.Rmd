@@ -278,7 +278,7 @@ install.packages("datasets.load")
 devtools::install_github("lbusett/insert_table")
 ```
 
-![](figure/inserttable.PNG)
+![](figure/inserttable.PNG){ height=50% }
 
 ##  Übung - Importieren von Daten
 

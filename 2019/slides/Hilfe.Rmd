@@ -90,13 +90,13 @@ demo(nlm)
 
 ## Die Funktion `apropos`
 
-- durchsucht alles über den angegebenen String:
+- findet alles, was den angegebenen String enthält:
 
 ```{r}
 apropos("lm")
 ```
 
-- Funktion kann auch mit [**regulären Ausdrücken**](https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck) verwendet werden...
+- Auch [**reguläre Ausdrücken**](https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck) können verwendet werden...
 
 
 ```{r,eval=F}

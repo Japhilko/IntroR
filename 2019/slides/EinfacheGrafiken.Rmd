@@ -69,15 +69,50 @@ install.views("Bayesian")
 -  Die Plot-Symbole selbst können mit `pch` (plotting character) angepasst werden (character oder numerisch)
 -  Die Achenbeschriftungen (labels) werden mit `xlab` und `ylab` definiert
 
-## Beispiel - Beschäftigten Datensatz
+## Beispiel - `iris` Datensatz 
 
-```{r,echo=F}
+```{r,echo=F,eval=F}
 link <- "http://offenedaten.frankfurt.de/dataset/50968551-b445-42a9-9288-563784f5768e/resource/c5e0a891-42c0-4259-84c7-afa01621477f/download/zprojekteopen-datadatenamt-12beschaftigtebeschaftigte-2009-2012.xls"
 
 dat <- rio::import(link)
 ```
 
+```{r,eval=F,echo=F}
+save(dat,file="../data/beschaeftigte_ffm.RData")
+```
+
+
 ```{r}
+data(iris)
+```
+
+```{r}
+head(iris)
+```
+
+
+## Ein erster Scatterplot
+
+
+```{r}
+plot(iris$Sepal.Length,iris$Sepal.Width)
+```
+
+## Andere Farbe und Punkttyp
+
+```{r}
+plot(iris$Sepal.Length,iris$Sepal.Width,pch=20,col="purple")
+```
+
+## Beschriftung hinzufügen
+
+```{r}
+plot(iris$Sepal.Length,iris$Sepal.Width,pch=20,col="purple",main="Iris dataset",xlab="Sepal Length",ylab="Sepal Width")
+```
+
+
+
+```{r,eval=F,echo=F}
 plot(dat[,7],dat[,4],ylab=colnames(dat)[4],
      xlab=colnames(dat)[7],pch=20,cex=2,col="purple")
 ```

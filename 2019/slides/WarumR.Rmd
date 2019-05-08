@@ -152,19 +152,23 @@ Weil andere Programme große Fehler haben:
 ## Links
 
 
-- [Warum man R für Data Science lernen sollte](http://www.r-bloggers.com/why-you-should-learn-r-first-for-data-science/)
+- R-bloggers - [**Warum man R für Data Science lernen sollte?**](http://www.r-bloggers.com/why-you-should-learn-r-first-for-data-science/)
 
-- [R Technologie des Jahres](http://www.r-bloggers.com/rstudio-infoworld-2015-technology-of-the-year-award-recipient/)
+- R-bloggers - [**R Technologie des Jahres**](http://www.r-bloggers.com/rstudio-infoworld-2015-technology-of-the-year-award-recipient/)
 
-- [Why R is Good for Business](http://www.fastcolabs.com/3030063/why-the-r-programming-language-is-good-for-business) 
+- R-bloggers - [**Warum man R nutzen sollte**](http://www.r-bloggers.com/why-use-r/)
 
-- [Warum R auf r-bloggers](http://www.r-bloggers.com/why-use-r/)
+- [**Warum die Nutzung von R gut für das Geschäft ist?**](http://www.fastcolabs.com/3030063/why-the-r-programming-language-is-good-for-business) 
 
-- [Intro R](http://www.ats.ucla.edu/stat/r/seminars/intro.htm)
+- [**Vergleich zwischen Python und R**](http://www.dataschool.io/python-or-r-for-data-science/)
 
-- [Intro R II](http://www.ats.ucla.edu/stat/r/sk/)
 
-- [Vergleich python und R](http://www.dataschool.io/python-or-r-for-data-science/)
+
+### Einführungen in R
+
+- [**Intro R**](http://www.ats.ucla.edu/stat/r/seminars/intro.htm) - Kurs der UCLA
+
+- [**Intro R**](http://www.ats.ucla.edu/stat/r/sk/) - Zweiter Teil des Kurses
 
 
 ## [Vergleich mit anderen Programmen](https://www.inwt-statistics.de/blog-artikel-lesen/Statistik-Software-R_SAS_SPSS_STATA_im_Vergleich.html)

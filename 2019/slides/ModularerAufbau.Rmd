@@ -3,7 +3,7 @@ title: "Einführung in die Datenanalyse mit R - Modularer Aufbau von R"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
-  beamer_presentation: 
+  beamer_presentation:
     colortheme: rose
     fonttheme: structurebold
     highlight: pygments
@@ -38,7 +38,11 @@ info <- available.packages(contriburl = cran, type = "source")
 
 ## Übersicht R-Pakete
 
-![Overview R-packages](figure/Packages.PNG)
+<!--
+https://sebastiansauer.github.io/figure_sizing_knitr/
+-->
+
+![Overview R-packages](figure/Packages.PNG){ height=50% }
 
 ## Installation von Paketen
 
@@ -137,11 +141,3 @@ install.views("Bayesian")
 
 ![](figure/CRANtaskViews.PNG)
 
-## A1C Übung -  zusätzliche Pakete
-
-Geht auf <https://cran.r-project.org/> und sucht nach Paketen...
-
-- die sich für die deskriptive Datenanalyse eignen.
-- mit denen man fremde Datensätze einlesen kann (z.B. SPSS data)
-- mit denen man Lasso Regressionen rechnen kann
-- mit denen man große Datenmengen bearbeiten kann
