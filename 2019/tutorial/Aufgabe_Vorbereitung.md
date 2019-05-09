@@ -1,6 +1,11 @@
-# Aufgabe: Vorbereitung
-Jan-Philipp Kolb  
-3 Mai 2017  
+---
+title: 'Aufgabe: Vorbereitung'
+author: "Jan-Philipp Kolb"
+date: "09 Mai, 2019"
+output: 
+  html_document: 
+    keep_md: yes
+---
 
 ## Aufgabe - Vorbereitung
 
@@ -17,7 +22,7 @@ date()
 ```
 
 ```
-## [1] "Mon May 01 22:07:53 2017"
+## [1] "Thu May 09 13:58:03 2019"
 ```
 
 
@@ -26,9 +31,11 @@ sessionInfo()
 ```
 
 ```
-## R version 3.3.3 (2017-03-06)
+## R version 3.5.1 (2018-07-02)
 ## Platform: x86_64-w64-mingw32/x64 (64-bit)
 ## Running under: Windows 7 x64 (build 7601) Service Pack 1
+## 
+## Matrix products: default
 ## 
 ## locale:
 ## [1] LC_COLLATE=German_Germany.1252  LC_CTYPE=German_Germany.1252   
@@ -39,8 +46,8 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] backports_1.0.5 magrittr_1.5    rprojroot_1.2   tools_3.3.3    
-##  [5] htmltools_0.3.5 yaml_2.1.13     Rcpp_0.12.6     stringi_1.1.1  
-##  [9] rmarkdown_1.4   knitr_1.15.1    stringr_1.2.0   digest_0.6.12  
-## [13] evaluate_0.10
+##  [1] compiler_3.5.1  magrittr_1.5    tools_3.5.1     htmltools_0.3.6
+##  [5] yaml_2.2.0      Rcpp_1.0.1      stringi_1.4.3   rmarkdown_1.12 
+##  [9] knitr_1.22      stringr_1.4.0   xfun_0.6        digest_0.6.18  
+## [13] evaluate_0.13
 ```

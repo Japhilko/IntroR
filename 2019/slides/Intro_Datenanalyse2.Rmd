@@ -1,5 +1,5 @@
 ---
-title: "Untitled"
+title: "Intro Datenanalyse mit R - zweiter Teil"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:

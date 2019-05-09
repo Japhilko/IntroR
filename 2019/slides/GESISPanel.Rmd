@@ -3,18 +3,19 @@ title: "Die GESIS Panel Daten"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  beamer_presentation:
-    colortheme: beaver
-    fonttheme: structurebold
-    highlight: tango
+  beamer_presentation: 
+    colortheme: dolphin
+    fonttheme: structuresmallcapsserif
     fig_caption: no
+    fig_height: 3
+    fig_width: 5
+    highlight: zenburn
+    theme: Dresden
+  pdf_document: 
     keep_tex: yes
-    theme: CambridgeUS
-  pdf_document:
     toc: yes
-  html_document:
-    keep_md: yes
-  slidy_presentation:
+  slidy_presentation: 
+    css: mycss.css
     keep_md: yes
 ---
 
@@ -46,7 +47,7 @@ install.packages("flextable")
 ```
 
 
-- Wahrscheinlichkeitsbasiertes  Access Panel für Individuen: - Allgemeine Bevölkerung in Deutschland, Deutschsprachhige Bevölkerung, 18-70 Jahre
+- Wahrscheinlichkeitsbasiertes  Access Panel für Personen: - Allgemeine Bevölkerung in Deutschland, deutschsprachig, im Alter von 18-70 Jahren
 - Panelisten wurden aus den Melderegistern rekrutiert  - (270 Sampling Points) 
 7599 face-to-face Interviews (CAPI)
 - Ungefähr 5000 Panelisten (Basis Stichprobe / erste Kohorte 2014)
@@ -70,7 +71,7 @@ install.packages("flextable")
 
 ![](figure/filenamesGP2.PNG)
 
-## Einen ersten Eindruck von den Daten bekommen
+## Erster Eindruck der Daten
 
 ```{r,eval=F}
 cdbdat_path <- "J:/Work/GESISPanel_DATA/01_post_processing/c01/f_2018/fd/03_codebook/data/"
@@ -103,7 +104,7 @@ save(att_dat,file="../data/att_dat_gpcampusfile.RData")
 load("../data/att_dat_gpcampusfile.RData")
 ```
 
-```{r}
+```{r,eval=F}
 set.seed(323)
 indvar <- sample(1:length(att_dat$names),4)
 ```
@@ -122,6 +123,20 @@ save(cnames,file="../data/gpcf_cnames.RData")
 load("../data/gpcf_cnames.RData")
 ```
 
+```{r,eval=F,echo=F}
+set.seed(234)
+exdat_gp <- dat[sample(1:length(att_dat$names)),indvar]
+save(exdat_gp,file="../data/exdat_gpcf.RData")
+```
+
+```{r,echo=F}
+load("../data/exdat_gpcf.RData")
+```
+
+```{r,echo=F}
+indvar <- match(c("bezf070a", "bdao032a", "bdao048a", "bfam056a"),cnames)
+```
+
 
 
 - `r cnames[indvar[1]]` - `r att_dat$var.labels[indvar[1]]`
@@ -134,26 +149,18 @@ load("../data/gpcf_cnames.RData")
 - `a11c019a` - Zufriedenheit Leben in Wohnort
 -->
 
-```{r,eval=F,echo=F}
-set.seed(234)
-exdat_gp <- dat[sample(1:length(att_dat$names)),indvar]
-save(exdat_gp,file="../data/exdat_gpcf.RData")
-```
-
-```{r,echo=F}
-load("../data/exdat_gpcf.RData")
-```
 
 
 ```{r}
-kable(exdat_gp, row.names = F)
+kable(exdat_gp[1:6,], row.names = F)
 ```
 
 
 ## Die Variablennamen im GESIS Panel
 
+<!--
 ### Beispiel für die Zusammensetzung der Variablennamen
-
+-->
 
 
 ```{r}
@@ -294,17 +301,20 @@ save(studies_df,file="../data/gpcf_studies_df.RData")
 load("../data/gpcf_studies_df.RData")
 ```
 
+![](figure/gpstudies_puf.PNG){ height=190% }
+
+```{r,eval=F,echo=F}
+DT::datatable(studies_df)
+```
 
 ```{r,echo=F}
 kable(studies_df)
 ```
 
 
-```{r,eval=F,echo=F}
-DT::datatable(studies_df)
-```
-
 ![](figure/GPstudies_CampusFile.PNG)
+
+
 
 ## Die Missing Codes im GESIS Panel
 
@@ -393,14 +403,14 @@ lname <- att_dat$var.labels[which(att_dat$names==xname)]
 ![](figure/cdb_bbak102a.PNG)
 
 
-## Eine Übersicht über das GESIS Panel (Campus File)
+## Übersicht GESIS Panel (Campus File)
 
 ### [**Dashboard zum Überblick**](http://rpubs.com/Japhilko82/overview_gp)
 
-![](figure/Dashboard_gesispanel.PNG)
+![](figure/Dashboard_gesispanel.PNG){ height=150% }
 
 ##  Aufgabe - Download der GESIS Panel Daten
 
-- Suche bei einer Suchmaschine nach GESIS Panel Campus file oder
-- gehe auf die Seiten des GESIS Datenbestandskatalogs und
+- Suche bei einer [**Suchmaschine**](https://duckduckgo.com/) nach GESIS Panel Campus file oder
+- gehe auf die Seiten des [**GESIS Datenbestandskatalogs**](https://dbk.gesis.org/dbksearch/SDesc2.asp?DB=D&no=5666) und
 - lade die `**14.dta` Datei des GESIS Panel Campus file herunter.

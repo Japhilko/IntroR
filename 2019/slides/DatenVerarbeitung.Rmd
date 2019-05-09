@@ -292,7 +292,7 @@ tail(duration,n=10)
 ```
 
 
-## B1A Aufgabe  - eine Funktion erweitern
+## Aufgabe  - eine Funktion erweitern
 
 ### Erweitert die Funktion so, 
 
@@ -302,16 +302,12 @@ tail(duration,n=10)
 
 ## Der Befehl `complete.cases()`
 
-### Beispiel Datensatz
-
 ```{r}
+# Beispiel Datensatz
 mydata <- data.frame(A=c(1,NA,9,6),B=c("A","B",1,NA))
 ```
 
-
-### Der Befehl `complete.cases()` 
-
-- gibt einen logischen Vektor zurück, der angibt, welche Fälle vollständig sind.
+- Der Befehl `complete.cases()` gibt einen logischen Vektor zurück, der angibt, welche Fälle vollständig sind.
 
 ```{r,eval=T}
 # Datenzeilen mit fehlenden Werten auflisten 
@@ -433,7 +429,7 @@ gpdat[duration>18 | SEX=="Männlich",]
 ```
 
 
-## Die Verwendung von Sequenzen bei der Indizierung
+## Sequenzen bei der Indizierung
 
 ```{r,eval=F}
 library("readstata13")
@@ -442,7 +438,7 @@ datf <- read.dta13("../data/ZA5666_v1-0-0_Stata14.dta",
 ```
 
 ```{r}
-datf[15:23,10:14]
+datf[15:20,10:14]
 ```
 
 
@@ -569,7 +565,7 @@ head(recode(dat$a11c020a,"'Eher unzufrieden'='A';else='B'"))
 
 
 
-## B1B Aufgabe  - Value Labels neu kodieren
+## Aufgabe  - Value Labels neu kodieren
 
 - Übersetze die Deutschen Werte Labels der Variablen `bbzc022a` ins Englische (Man kann dafür https://www.deepl.com/ verwenden).
 - Benenne die Ausprägungen der Variable so um, dass sie die englischen Value Label enthält.
@@ -639,7 +635,8 @@ for (i in 1:ncol(dat)){
 }
 ```
 
-## B1C Übung  - [Schleifen schreiben](https://www.r-exercises.com/2016/06/01/scripting-loops-in-r/)
+<!--
+## Übung  - [Schleifen schreiben](https://www.r-exercises.com/2016/06/01/scripting-loops-in-r/)
 
 ### Übungen von www.r-exercises.com
 
@@ -671,7 +668,8 @@ break
 ```
 
 
-## B1D Übung  - [Eine `while` Schleife](https://www.r-exercises.com/2016/06/01/scripting-loops-in-r/)
+
+## Übung  - [Eine `while` Schleife](https://www.r-exercises.com/2016/06/01/scripting-loops-in-r/)
 
 
 ### Übungen von www.r-exercises.com
@@ -689,6 +687,7 @@ commands
 
 - Mit, `i <- 1`, schreibe eine `while()`-Schleife loop die die ungeraden Zahlen von 1 bis 7 ausgibt.
 
+-->
 
 ## Die `apply` Familie
 

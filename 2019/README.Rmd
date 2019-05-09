@@ -49,11 +49,12 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenan
 
 - Das GESIS Panel ([pdf](slides/GESISPanel.pdf))
 
+<!--
 - Indizieren
 ([Browser](slides/datenanalyse_ffm.Rmd)| [pdf](slides/datenanalyse_ffm) |  [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/rcode/datenanalyse_ffm.R))
+-->
 
-
-- Datenanalyse ([Browser](slides/DatenVerarbeitung.Rmd) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
+- Datenverarbeitung ([Browser](slides/DatenVerarbeitung.Rmd) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
 
     - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Apply.md))
 

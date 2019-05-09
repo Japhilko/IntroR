@@ -1,6 +1,11 @@
-# Aufgabe Zuweisungen
-Jan-Philipp Kolb  
-3 Mai 2017  
+---
+title: "Aufgabe Zuweisungen"
+author: "Jan-Philipp Kolb"
+date: "09 Mai, 2019"
+output: 
+  slidy_presentation: 
+    keep_md: yes
+---
 
 
 ## Aufgabe - Zuweisungen und Funktionen

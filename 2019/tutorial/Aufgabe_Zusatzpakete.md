@@ -1,12 +1,22 @@
-# Aufgabe Zusatzpakete
-Jan-Philipp Kolb  
-3 Mai 2017  
+---
+title: "Aufgabe Zusatzpakete"
+author: "Jan-Philipp Kolb"
+date: "09 Mai, 2019"
+output: 
+  html_document: 
+    keep_md: yes
+---
 
 ## Aufgabe - Zusatzpakete
 
-Gehen Sie auf <cran.r-project.org> und suchen Sie in dem Bereich, wo die Pakete vorgestellt werden, nach Paketen,...
+Gehe bspw. auf <https://cran.r-project.org/> (oder auf andere Seiten) und suche nach Paketen,...
 
--  die für die deskriptive Datenanalyse geeignet sind.
--  um Regressionen zu berechnen
--  um fremde Datensätze einzulesen (z.B. SPSS-Daten)
--  um mit großen Datenmengen umzugehen
+-  um Daten zu visualisieren
+-  um Daten zu manipulieren 
+- für die Modellierung (bspw. Regressionen)
+-  um Ergebnisse zu berichten (bspw. in einem pdf oder auf einer Website)
+
+<!--
+
+https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages
+-->
