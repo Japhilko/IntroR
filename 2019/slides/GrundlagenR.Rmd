@@ -2,13 +2,20 @@
 title: "Grundlagen R"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: 
+output:
   beamer_presentation: 
-    colortheme: rose
-    fonttheme: structurebold
-    highlight: pygments
-    theme: Darmstadt
+    colortheme: dolphin
+    fonttheme: structuresmallcapsserif
+    fig_caption: no
+    fig_height: 3
+    fig_width: 5
+    highlight: zenburn
+    theme: Dresden
+  pdf_document: 
+    keep_tex: yes
+    toc: yes
   slidy_presentation: 
+    css: mycss.css
     keep_md: yes
 ---
 
@@ -64,7 +71,7 @@ Diese Funktionen brauchen nur ein Argument.
 
 ## Funktionen mit mehr Argumenten
 
-Andere Funktionen brauchen mehr:
+Andere Funktionen brauchen mehr Argumente:
 
 |Argument   |Bedeutung         |Beispiel       |
 |:----------|:-----------------|:--------------|

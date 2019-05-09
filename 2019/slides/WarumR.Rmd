@@ -2,13 +2,20 @@
 title: "Intro Datenanalyse mit R - Warum R eine gute Wahl ist?"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: 
+output:
   beamer_presentation: 
-    colortheme: rose
-    fonttheme: structurebold
-    highlight: pygments
-    theme: Darmstadt
+    colortheme: dolphin
+    fonttheme: structuresmallcapsserif
+    fig_caption: no
+    fig_height: 3
+    fig_width: 5
+    highlight: zenburn
+    theme: Dresden
+  pdf_document: 
+    keep_tex: yes
+    toc: yes
   slidy_presentation: 
+    css: mycss.css
     keep_md: yes
 ---
 
@@ -34,6 +41,17 @@ Normalerweise gibt es große Unterschiede bei Vorkenntnissen und Fähigkeiten - 
 - In diesem Kurs gibt es viele [**Übungen**](http://web.math.ku.dk/~helle/R-intro/exercises.pdf), denn das Programmieren / die Nutzung von R lernt man am Ende nur allein.
 - Ich habe viele [**Beispiele**](https://www.showmeshiny.com/) - probiert sie aus 
 - R macht mehr Spaß zusammen - arbeitet zusammen!
+
+
+## Unterlagen zu diesem Kurs
+
+- Die Foliensätze sind komplett auf github zu finden:
+
+https://github.com/Japhilko/IntroR/tree/master/2019
+
+- Die Unterlagen werden dort auch verfügbar bleiben
+- Wer möchte, kann den Foliensatz ausgedruckt bekommen?
+
 
 ## Erwartungen und Anforderungen
 
@@ -113,33 +131,38 @@ Outstanding Graphs
 
 ## [R Nutzung ...](https://www.bloomberg.com/news/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history)
 
-### [Weil andere Programme Fehler provozieren können](https://www.bloomberg.com/news/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history)
 
+### Weil [**andere Programme**](https://www.bloomberg.com/news/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history) Fehler provozieren können:
+
+<!--
+### Wegen Fehleranfälligkeit anderer Programme
 ![](figure/RheinhartRogoff.PNG)
+-->
+
+- [Reinhart/Rogoff Paper](https://www.bloomberg.com/news/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history) - [**Star-Ökonom beklagt Hexenjagd nach Excel-Panne**](https://www.spiegel.de/wirtschaft/soziales/excel-panne-von-kenneth-rogoff-das-war-ein-massaker-a-929248.html)
 
 
 <!--
 Weil andere Programme große Fehler haben:
 -->
 
-## [Excel bugs](http://blog.revolutionanalytics.com/2013/02/did-an-excel-error-bring-down-the-london-whale.html)
+- [**Probleme mit der Rundung bei Excel**](https://www.quora.com/What-are-some-horrible-bugs-in-MS-Excel)
 
-### [Datum in Excel](https://coffeehouse.dataone.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/)
 
+- [**Große Verluste an Börse könnten 2012 durch Excel Fehler verursacht worden sein**](http://blog.revolutionanalytics.com/2013/02/did-an-excel-error-bring-down-the-london-whale.html)
+
+- [**Probleme mit den Datumsangaben in Excel**](https://coffeehouse.dataone.org/2014/04/09/abandon-all-hope-ye-who-enter-dates-in-excel/)
+
+<!--
 ![](figure/Abandon.PNG)
+-->
 
-### [Probleme mit Excel](http://www.biomedcentral.com/1471-2105/5/80)
 
+- [**Probleme mit Excel bei der Nutzung in Bioinformatik Anwendung**](http://www.biomedcentral.com/1471-2105/5/80)
+
+<!--
 ![](figure/ExcelProblems.PNG)
-
-
-
-### Weil [**andere Programme**](https://www.bloomberg.com/news/articles/2013-04-18/faq-reinhart-rogoff-and-the-excel-error-that-changed-history) Fehler provozieren können:
-
-![](figure/RheinhartRogoff.PNG)
-
-
-
+-->
 
 
 ## R herunterladen:

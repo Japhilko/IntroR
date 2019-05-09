@@ -1,0 +1,2802 @@
+\documentclass[ignorenonframetext,]{beamer}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+\usetheme[]{CambridgeUS}
+\usecolortheme{beaver}
+\usefonttheme{structurebold}
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\newif\ifbibliography
+\hypersetup{
+            pdftitle={Die GESIS Panel Daten},
+            pdfauthor={Jan-Philipp Kolb},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight0.8\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
+% Prevent slide breaks in the middle of a paragraph:
+\widowpenalties 1 10000
+\raggedbottom
+
+\AtBeginPart{
+  \let\insertpartnumber\relax
+  \let\partname\relax
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \let\insertsectionnumber\relax
+    \let\sectionname\relax
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \let\insertsubsectionnumber\relax
+  \let\subsectionname\relax
+  \frame{\subsectionpage}
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+
+\title{Die GESIS Panel Daten}
+\author{Jan-Philipp Kolb}
+\date{09 Mai, 2019}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{Das GESIS Panel}
+
+\begin{itemize}
+\tightlist
+\item
+  Wahrscheinlichkeitsbasiertes Access Panel für Individuen: - Allgemeine
+  Bevölkerung in Deutschland, Deutschsprachhige Bevölkerung, 18-70 Jahre
+\item
+  Panelisten wurden aus den Melderegistern rekrutiert - (270 Sampling
+  Points) 7599 face-to-face Interviews (CAPI)
+\item
+  Ungefähr 5000 Panelisten (Basis Stichprobe / erste Kohorte 2014)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Das GESIS Panel Campus File}
+
+\includegraphics{figure/gpdata.PNG}
+
+\end{frame}
+
+\begin{frame}[fragile]{Download data}
+
+\begin{itemize}
+\tightlist
+\item
+  Übersichtsseite:
+  \href{https://www.gesis.org/gesis-panel/data/}{\textbf{GESIS Panel
+  Campus File}}
+\item
+  Registrierung notwendig
+\end{itemize}
+
+\begin{block}{Links für den Download:}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://dbk.gesis.org/dbksearch/download.asp?db=D\&id=62367}{\textbf{Download
+  \texttt{.csv}}}
+\item
+  \href{https://dbk.gesis.org/dbksearch/download.asp?db=D\&id=62369}{\textbf{Download
+  \texttt{.sav}}}
+\item
+  \href{https://dbk.gesis.org/dbksearch/download.asp?db=D\&id=62371}{\textbf{Download
+  \texttt{**14.dta}}}
+\end{itemize}
+
+\includegraphics{figure/filenamesGP2.PNG}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Einen ersten Eindruck von den Daten bekommen}
+
+\begin{itemize}
+\tightlist
+\item
+  bbzc008a - Politische Partizipation: Mit Freunden über Politik
+  diskutiert
+\item
+  bfzi024a - Umfragen GESIS GM: Zu oft gebeten teilzunehmen
+\item
+  bezq014a - Teilnahmegerät
+\item
+  baah116a - Redefreiheit (baah142a=1)
+\end{itemize}
+
+\begin{tabular}{l|l|l|l}
+\hline
+bezf070a & bdao032a & bdao048a & bfam056a\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Unit nonresponse\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Sehr oft\\
+\hline
+Missing by filter & Unit nonresponse & Unit nonresponse & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Missing by filter & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Seltener als einmal im Monat & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Not in panel & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Not reached & Nicht genannt & Nie & Not in panel\\
+\hline
+Ja & Nicht genannt & Mindestens einmal im Monat & Unit nonresponse\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Nein & Genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Mehrmals im Monat & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Mehrmals im Monat & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Unit nonresponse & Nicht genannt & Seltener als einmal im Monat & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Item nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Item nonresponse\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr selten\\
+\hline
+Unit nonresponse & Genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Item nonresponse & Nicht genannt & Täglich & Item nonresponse\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Gelegentlich\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Item nonresponse & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Mindestens einmal im Monat & Eher oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Unit nonresponse & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Item nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Item nonresponse & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Item nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Genannt & Nie & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Eher selten\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Item nonresponse & Sehr selten\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Unit nonresponse & Genannt & Nie & Eher selten\\
+\hline
+Missing by filter & Genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Genannt & Nie & Not reached\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Genannt & Mindestens einmal im Monat & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Genannt & Mehrmals im Monat & Eher selten\\
+\hline
+Missing by filter & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Unit nonresponse & Nicht genannt & Item nonresponse & Eher oft\\
+\hline
+Nein & Nicht genannt & Mindestens einmal im Monat & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Item nonresponse & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Genannt & Mehrmals im Monat & Gelegentlich\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Not reached\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Missing by filter & Genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Nicht genannt & Nie & Not in panel\\
+\hline
+Missing by filter & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Item nonresponse & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Mindestens einmal im Monat & Gelegentlich\\
+\hline
+Nein & Genannt & Nie & Sehr selten\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Item nonresponse & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Unit nonresponse & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Missing by filter & Genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Mehrmals im Monat & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Mehrmals im Monat & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Genannt & Nie & Sehr selten\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Mehrmals im Monat & Eher oft\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Missing by filter & Genannt & Nie & Eher selten\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Genannt & Nie & Sehr selten\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Sehr selten\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Genannt & Nie & Sehr selten\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Mindestens einmal im Monat & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Sehr selten\\
+\hline
+Nein & Genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Item nonresponse & Genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Eher selten\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Seltener als einmal im Monat & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Genannt & Nie & Eher selten\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Nicht genannt & Nie & Not in panel\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Missing by filter & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Sehr selten\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Not in panel & Nicht genannt & Nie & Not in panel\\
+\hline
+Ja & Genannt & Mindestens einmal im Monat & Eher oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Nein & Genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Mindestens einmal im Monat & Sehr oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Genannt & Mindestens einmal im Monat & Eher oft\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Seltener als einmal im Monat & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Unit nonresponse & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Item nonresponse & Genannt & Mindestens einmal im Monat & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Not reached & Not reached & Not reached\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Genannt & Seltener als einmal im Monat & Sehr selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Not reached & Not reached & Not reached\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Item nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Item nonresponse & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Mindestens einmal im Monat & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Sehr selten\\
+\hline
+Nein & Nicht genannt & Item nonresponse & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Unit nonresponse & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Item nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Nein & Genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Genannt & Seltener als einmal im Monat & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Missing by filter & Unit nonresponse & Unit nonresponse & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Eher selten\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Sehr selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Unit nonresponse & Genannt & Nie & Unit nonresponse\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Eher selten\\
+\hline
+Not in panel & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Unit nonresponse & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Missing by filter & Genannt & Nie & Item nonresponse\\
+\hline
+Not in panel & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Genannt & Mindestens einmal im Monat & Eher selten\\
+\hline
+Nein & Genannt & Nie & Item nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Eher selten\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Not reached & Not reached & Unit nonresponse\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Sehr selten\\
+\hline
+Item nonresponse & Genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Mindestens einmal im Monat & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Genannt & Seltener als einmal im Monat & Sehr selten\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Missing by filter & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Genannt & Nie & Gelegentlich\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Sehr selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Missing by filter & Unit nonresponse & Unit nonresponse & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Genannt & Nie & Eher oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Mehrmals im Monat & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Gelegentlich\\
+\hline
+Ja & Genannt & Mehrmals im Monat & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Mindestens einmal im Monat & Eher selten\\
+\hline
+Not in panel & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Missing by filter & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Gelegentlich\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Item nonresponse & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Eher selten\\
+\hline
+Ja & Nicht genannt & Mehrmals im Monat & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Not reached & Not reached & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Not in panel & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Not in panel & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Mindestens einmal im Monat & Eher oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Mindestens einmal im Monat & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Sehr selten\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Item nonresponse\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr selten\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Item nonresponse & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Missing by filter & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Genannt & Nie & Sehr selten\\
+\hline
+Nein & Genannt & Nie & Unit nonresponse\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Unit nonresponse & Nicht genannt & Mindestens einmal im Monat & Sehr selten\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Item nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Missing by filter & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Mehrmals im Monat & Unit nonresponse\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Mindestens einmal im Monat & Sehr oft\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Mehrmals die Woche & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Sehr selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Item nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Nein & Genannt & Seltener als einmal im Monat & Sehr selten\\
+\hline
+Missing by filter & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Genannt & Seltener als einmal im Monat & Gelegentlich\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Unit nonresponse & Genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Nicht genannt & Seltener als einmal im Monat & Eher selten\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Mehrmals im Monat & Gelegentlich\\
+\hline
+Ja & Genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher selten\\
+\hline
+Nein & Genannt & Nie & Eher oft\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Eher oft\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Unit nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Seltener als einmal im Monat & Sehr oft\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Not in panel & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Genannt & Nie & Sehr oft\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Missing by filter & Nicht genannt & Seltener als einmal im Monat & Eher selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Unit nonresponse & Genannt & Nie & Unit nonresponse\\
+\hline
+Missing by filter & Unit nonresponse & Unit nonresponse & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Ja & Genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Unit nonresponse & Genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Ja & Genannt & Nie & Eher selten\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr oft\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Missing by filter & Nicht genannt & Nie & Eher oft\\
+\hline
+Item nonresponse & Nicht genannt & Nie & Unit nonresponse\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Unit nonresponse & Unit nonresponse & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Eher selten\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Not in panel & Not in panel & Not in panel & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Nein & Nicht genannt & Nie & Sehr selten\\
+\hline
+Unit nonresponse & Genannt & Nie & Unit nonresponse\\
+\hline
+Ja & Nicht genannt & Nie & Gelegentlich\\
+\hline
+Ja & Unit nonresponse & Unit nonresponse & Unit nonresponse\\
+\hline
+Nein & Nicht genannt & Nie & Eher oft\\
+\hline
+Ja & Nicht genannt & Nie & Sehr selten\\
+\hline
+Nein & Nicht genannt & Nie & Sehr oft\\
+\hline
+Unit nonresponse & Unit nonresponse & Unit nonresponse & Not in panel\\
+\hline
+Nein & Nicht genannt & Nie & Gelegentlich\\
+\hline
+\end{tabular}
+
+\end{frame}
+
+\begin{frame}[fragile]{Die Variablennamen im GESIS Panel}
+
+\begin{block}{Beispiel für die Zusammensetzung der Variablennamen}
+
+\begin{verbatim}
+## [1] "bezf044a" "bdze018a" "bdao036b" "bfzi029a" "bezg091a"
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Die ersten beiden Buchstaben enthalten die Welle:
+\end{itemize}
+
+\begin{tabular}{r|l|l}
+\hline
+year & waves & numbers\\
+\hline
+2013 & aa,ab,ac & 1-3\\
+\hline
+2014 & ba,bb,bc,bd,be,bf & 4-9\\
+\hline
+2015 & ca,cb,cc,cd,ce,cf & 10-15\\
+\hline
+2016 & da,db,dc,dd,de,df & 16-21\\
+\hline
+2017 & ea,eb,ec,ed,ee,ef & 22-27\\
+\hline
+2018 & fa,fb,fc,fd,fe,ff & 28-33\\
+\hline
+2019 & ga,gb & 34-35\\
+\hline
+\end{tabular}
+
+\begin{itemize}
+\tightlist
+\item
+  Bis zum jetzigen Zeitpunkt sind 35 gelaufen
+\end{itemize}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Die Variablennamen im GESIS Panel II}
+
+\begin{itemize}
+\tightlist
+\item
+  Die Stellen drei und vier geben Information über die Studie:
+\end{itemize}
+
+\includegraphics{figure/examplestudies.PNG}
+
+\begin{itemize}
+\item
+  Die Stellen fünf, sechs und sieben indizieren die Variablennummer
+\item
+  Die letzte Stelle enthält die Information, ob es sich um eine
+  originale Variable (a) oder eine synthetische Variable handelt
+  (b,c,d,e,\ldots{})
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{Variablennamen im GESIS Panel}
+
+\begin{block}{Beispiel Geburtsdatum - \texttt{cfzh072c}}
+
+\begin{verbatim}
+## [1] "cfzh072c"
+\end{verbatim}
+
+\begin{verbatim}
+## [1] "Welle:  cf"
+\end{verbatim}
+
+\begin{verbatim}
+## [1] "Studie:  zh"
+\end{verbatim}
+
+\begin{verbatim}
+## [1] "Variablen Nr.:  072"
+\end{verbatim}
+
+\begin{verbatim}
+## [1] "Synthetische Variable?:  c"
+\end{verbatim}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}{Die Variablen im Campus File}
+
+\url{https://rpubs.com/Japhilko82/VarsGesisPanel}
+
+\includegraphics{figure/rpubs_varspuf.PNG}
+
+\end{frame}
+
+\begin{frame}[fragile]{Wellen im Campus File}
+
+\begin{itemize}
+\tightlist
+\item
+  Welche Wellen sind im Campus file?
+\item
+  Anzahl Variablen pro Welle im Campus File:
+\end{itemize}
+
+\begin{verbatim}
+## waves
+##  a1  ba  bb  bc  bd  be  bf  z0 
+## 171 171 154 155 224 185 128   4
+\end{verbatim}
+
+\end{frame}
+
+\begin{frame}{Studien im Campus File}
+
+\begin{tabular}{l|l|l}
+\hline
+  & Name & Code\\
+\hline
+9 & GESIS Panel Core Study Module - Subjective Well-being & zb\\
+\hline
+10 & Environmental Spatial Strategies & ag\\
+\hline
+11 & Cross-National Replication of Question Design Experiments & ah\\
+\hline
+12 & Survey Evaluation Items & ai\\
+\hline
+13 & GESIS Panel Core Study Module - Survey Administration Variables & za\\
+\hline
+14 & GESIS Panel Core Study Module - Monitoring quality: survey experience \& mode characteristics & zq\\
+\hline
+15 & GESIS Panel Core Study Module - Social and Political Participation & zc\\
+\hline
+16 & Critical Elections in the European Union & aj\\
+\hline
+17 & International panel comparison study & ak\\
+\hline
+18 & Standardization of the Positive and Negative Affect Schedule (PANAS) & al\\
+\hline
+19 & GESIS Panel Core Study Module - Environmental attitudes and behavior & zd\\
+\hline
+20 & Short version of the Metacognitive Prospective Memory Battery (MPMBs) & am\\
+\hline
+21 & Leisure travel and subjective well-being & an\\
+\hline
+22 & GESIS Panel Core Study Module - Personality and Personal Values & ze\\
+\hline
+23 & Social and individual predictors of Doing Beauty & ao\\
+\hline
+24 & Citizens Conception of Democracy and their Political Participation & ap\\
+\hline
+25 & GESIS Panel Core Study Module - Media Usage & zf\\
+\hline
+26 & GESIS Panel Longitudinal Core Study Module - Annual Update of Socio-Demography & zh\\
+\hline
+27 & GESIS Panel Core Study Module - Work and Leisure & zg\\
+\hline
+28 & Pro-environmental Behavior in High Cost Situations & aq\\
+\hline
+29 & GESIS Panel Core Study Module - Panel survey participation evaluation \& mode preferences & zi\\
+\hline
+30 & Policy preferences for inheritance taxes and motives of intergenerational transfers & ar\\
+\hline
+\end{tabular}
+
+\includegraphics{figure/GPstudies_CampusFile.PNG}
+
+\end{frame}
+
+\begin{frame}{Die Missing Codes im GESIS Panel}
+
+\begin{table}[H]
+\centering\begingroup\fontsize{7}{9}\selectfont
+
+\begin{tabular}{r|l|l}
+\hline
+Value & Value.label & Remark\\
+\hline
+-11 & Not invited & only in recruitment waves - when profile survey not finished\\
+\hline
+-22 & Not in panel & not willing to join the panel after recruitment or signing off\\
+\hline
+-33 & Unit nonresponse & invited but not participating in corresponding wave\\
+\hline
+-44 & Missing by m.o.p. & mode of participation (m.o.p.): online or offline\\
+\hline
+-55 & Missing by technical error & e.g. questionnaire programming error\\
+\hline
+-66 & Missing by design & experimental variation\\
+\hline
+-77 & Not reached & only in online mode: panelist has not seen the item\\
+\hline
+-88 & Missing by filter & filtered item\\
+\hline
+-99 & Item nonresponse & due to nonresponse by the respondent\\
+\hline
+-111 & Ambiguous answer & ambiguous answers in questionnaire\\
+\hline
+\end{tabular}
+\endgroup{}
+\end{table}
+
+\end{frame}
+
+\begin{frame}{Zufriedenheit Leben in Wohnort (a11c019a)}
+
+\includegraphics{GESISPanel_files/figure-beamer/unnamed-chunk-38-1.pdf}
+
+\end{frame}
+
+\begin{frame}{Das Codebuch}
+
+\begin{itemize}
+\tightlist
+\item
+  Das Codebuch kann man
+  \href{https://www.gesis.org/gesis-panel/documentation/}{\textbf{hier}}
+  bekommen.
+\end{itemize}
+
+\includegraphics{figure/cdb_bbak102a.PNG}
+
+\end{frame}
+
+\begin{frame}{Eine Übersicht über das GESIS Panel (Campus File)}
+
+\begin{block}{\href{http://rpubs.com/Japhilko82/overview_gp}{\textbf{Dashboard
+zum Überblick}}}
+
+\includegraphics{figure/Dashboard_gesispanel.PNG}
+
+\end{block}
+
+\end{frame}
+
+\begin{frame}[fragile]{A3A Aufgabe - Download der GESIS Panel Daten}
+
+\begin{itemize}
+\tightlist
+\item
+  Suche bei einer Suchmaschine nach GESIS Panel Campus file oder
+\item
+  gehe auf die Seiten des GESIS Datenbestandskatalogs und
+\item
+  lade die \texttt{**14.dta} Datei des GESIS Panel Campus file herunter.
+\end{itemize}
+
+\end{frame}
+
+\end{document}
