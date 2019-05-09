@@ -2,13 +2,20 @@
 title: "Grundlagen R"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: 
+output:
   beamer_presentation: 
-    colortheme: rose
-    fonttheme: structurebold
-    highlight: pygments
-    theme: Darmstadt
+    colortheme: dolphin
+    fonttheme: structuresmallcapsserif
+    fig_caption: no
+    fig_height: 3
+    fig_width: 5
+    highlight: zenburn
+    theme: Dresden
+  pdf_document: 
+    keep_tex: yes
+    toc: yes
   slidy_presentation: 
+    css: mycss.css
     keep_md: yes
 ---
 
@@ -20,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## R ist eine Objekt-orientierte Sprache
 
-Vektoren und Zuweisungen
+### Vektoren und Zuweisungen
 
 -  R ist eine Objekt-orientierte Sprache
 -  `<-` ist der Zuweisungsoperator
@@ -34,14 +41,14 @@ b <- c(1,2) # erzeugt ein Objekt mit den Zahlen 1 und 2
 mean(b) # berechnet den Mittelwert
 ```
 
+## Objektstruktur
+
 Mit den folgenden Funktionen können wir etwas über die Eigenschaften des Objekts lernen:
 
 ```{r}
 length(b) # b hat die Länge 2
 ```
 
-
-## Objektstruktur
 
 ```{r}
 str(b) # b ist ein numerischer Vektor
@@ -64,7 +71,7 @@ Diese Funktionen brauchen nur ein Argument.
 
 ## Funktionen mit mehr Argumenten
 
-Andere Funktionen brauchen mehr:
+Andere Funktionen brauchen mehr Argumente:
 
 |Argument   |Bedeutung         |Beispiel       |
 |:----------|:-----------------|:--------------|

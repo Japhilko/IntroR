@@ -20,11 +20,11 @@ output:
 
 ```{r, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T, fig.height=4,cache=T)
-athome <- T
-GESIS <- !athome
 ```
 
 ```{r,echo=F}
+athome <- F
+GESIS <- !athome
 showsolut=F
 ```
 
@@ -192,7 +192,7 @@ wie "die Kinder im Haushalt in der Altersgruppe 0" interpretiert werden.
 - Wir müssen den inversen Logit verwenden, um etwas auszusagen.
 
 Werte für die Log-odds von `r sum_glm1$coefficients[2,1]`  sind das Gleiche, wie die Wahrscheinlichkeit: 
-`r ilogit(sum_glm1$coefficients[2,1])`.
+`r faraway::ilogit(sum_glm1$coefficients[2,1])`.
 
 ```{r}
 faraway::ilogit(sum_glm1$coefficients[1,1])

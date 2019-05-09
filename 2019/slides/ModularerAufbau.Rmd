@@ -2,13 +2,20 @@
 title: "Einführung in die Datenanalyse mit R - Modularer Aufbau von R"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: 
+output:
   beamer_presentation: 
-    colortheme: rose
-    fonttheme: structurebold
-    highlight: pygments
-    theme: Darmstadt
+    colortheme: dolphin
+    fonttheme: structuresmallcapsserif
+    fig_caption: no
+    fig_height: 3
+    fig_width: 5
+    highlight: zenburn
+    theme: Dresden
+  pdf_document: 
+    keep_tex: yes
+    toc: yes
   slidy_presentation: 
+    css: mycss.css
     keep_md: yes
 ---
 
@@ -31,14 +38,26 @@ info <- available.packages(contriburl = cran, type = "source")
 
 
 - Viele Funktionen sind in Basis-R enthalten. 
-- Viele spezifische Funktionen sind in zusätzliche Bibliotheken integriert.
+- Spezifische Funktionen sind in zusätzlichen Paketen integriert.
 - R kann modular durch sogenannte Pakete oder Bibliotheken erweitert werden.
-- Die wichtigsten Pakete, die auf CRAN gehostet werden (`r nrow(info)` at `r format(Sys.time(), "%a %b %d")`)
+- Die wichtigsten Pakete werden auf CRAN gehostet (`r nrow(info)` Pakete am `r format(Sys.time(), "%d %B %Y")`)
+<!--
+https://www.statmethods.net/input/dates.html
+-->
 - Weitere Pakete findet man z.B. unter [**bioconductor**](www.bioconductor.org)
+
+## [Entwicklung - Zahl der R-Pakete](https://www.r-bloggers.com/scraping-cran-with-rvest/)
+
+![](figure/howmanyrpackages.png)
+
 
 ## Übersicht R-Pakete
 
-![Overview R-packages](figure/Packages.PNG)
+<!--
+https://sebastiansauer.github.io/figure_sizing_knitr/
+-->
+
+![Overview R-packages](figure/Packages.PNG){ height=50% }
 
 ## Installation von Paketen
 
@@ -64,11 +83,11 @@ library(lme4)
 
 ## Übersicht über viele nützliche Pakete:
 
-- Luhmann - [**Table with many useful packages**](http://www.beltz.de/fileadmin/beltz/downloads/OnlinematerialienPVU/28090_Luhmann/Verwendete%20Pakete.pdf)
+- Luhmann - [**Tabelle mit vielen nützlichen Paketen**](http://www.beltz.de/fileadmin/beltz/downloads/OnlinematerialienPVU/28090_Luhmann/Verwendete%20Pakete.pdf)
 
 ### Weitere interessante Pakete:
 
-- Paket für Import/Export - [**`foreign`**](http://cran.r-project.org/web/packages/foreign/foreign.pdf)
+- Pakete für den Import/Export - [**`foreign`**](http://cran.r-project.org/web/packages/foreign/foreign.pdf), [**`rio`**](https://cran.r-project.org/web/packages/rio/vignettes/rio.html), [**`readstata13`**](https://cran.r-project.org/web/packages/readstata13/readme/README.html)
 
 - [**`sampling`-Paket für die Stichprobenziehung**](http://iase-web.org/documents/papers/icots8/ICOTS8_4J1_TILLE.pdf)
 
@@ -78,10 +97,10 @@ library(lme4)
 
 - [**Paket `mvtnorm` um eine multivariate Normalverteilung zu erhalten. **](http://cran.r-project.org/web/packages/mvtnorm/index.html)
 
-- [**Paket `maptools` um Karten zu erzeugen**](http://www.r-bloggers.com/tag/maptools/)
+- Pakete [**`maptools`**](http://www.r-bloggers.com/tag/maptools/), [**`sf`**](https://cran.r-project.org/web/packages/sf/vignettes/sf1.html) und [**`leaflet`**](https://rstudio.github.io/leaflet/) um mit geografischen Daten zu arbeiten und (interaktive) Karten zu erzeugen
 
 
-## Pakete aus verschiedenen Quellen installieren
+## Installation R-Pakete - Quellen
 
 ### Pakete vom CRAN Server installieren
 
@@ -96,14 +115,11 @@ source("https://bioconductor.org/biocLite.R")
 biocLite(c("GenomicFeatures", "AnnotationDbi"))
 ```
 
-
-
 ### Pakete von Github installieren
 
 ```{r,eval=F}
 install.packages("devtools")
 library(devtools)
-
 install_github("hadley/ggplot2")
 ```
 
@@ -117,17 +133,17 @@ install_github("hadley/ggplot2")
 
 - Werfe einen Blick auf eine [**Quick-Liste nützlicher Pakete**](https://support.rstudio.com/hc/en-us/articles/201057987-Quick-list-of-useful-R-packages)
 
-- ...., oder auf eine Liste mit den [**besten Paketen für die Datenverarbeitung und -analyse**](http://www.computerworld.com/article/2921176/business-intelligence/great-r-packages-for-data-import-wrangling-visualization.html),.....
+- eine Liste mit den [**besten Paketen für die Datenverarbeitung und -analyse**](http://www.computerworld.com/article/2921176/business-intelligence/great-r-packages-for-data-import-wrangling-visualization.html)
 
-- ...., oder schaue unter [**die 50 meistgenutzten Pakete**](https://www.r-bloggers.com/the-50-most-used-r-packages/)
+- [**die 50 meistgenutzten Pakete**](https://www.r-bloggers.com/the-50-most-used-r-packages/)
 
 
 
 ## CRAN Task Views		
 		
 - Bezüglich mancher Themen gibt es einen Überblick über alle wichtigen Pakete - ([**CRAN Task Views**](https://cran.r-project.org/web/views/))
-- Momentan gibt es 35 Task Views.
-- Alle Pakete einer Task-View können mit folgendem Befehl installiert werden: [**command:**](https://mran.microsoft.com/rpackages/)
+- Momentan gibt es 40 Task Views.
+- Alle Pakete einer Task-View können mit folgendem [**Befehl**](https://mran.microsoft.com/rpackages/) installiert werden: 
 
 ```{r,eval=F}
 install.packages("ctv")
@@ -137,11 +153,3 @@ install.views("Bayesian")
 
 ![](figure/CRANtaskViews.PNG)
 
-## A1C Übung -  zusätzliche Pakete
-
-Geht auf <https://cran.r-project.org/> und sucht nach Paketen...
-
-- die sich für die deskriptive Datenanalyse eignen.
-- mit denen man fremde Datensätze einlesen kann (z.B. SPSS data)
-- mit denen man Lasso Regressionen rechnen kann
-- mit denen man große Datenmengen bearbeiten kann

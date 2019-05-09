@@ -2,13 +2,20 @@
 title: "Intro Datenanalyse mit R - Dein Freund das GUI"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: 
+output:
   beamer_presentation: 
-    colortheme: rose
-    fonttheme: structurebold
-    highlight: pygments
-    theme: Darmstadt
+    colortheme: dolphin
+    fonttheme: structuresmallcapsserif
+    fig_caption: no
+    fig_height: 3
+    fig_width: 5
+    highlight: zenburn
+    theme: Dresden
+  pdf_document: 
+    keep_tex: yes
+    toc: yes
   slidy_presentation: 
+    css: mycss.css
     keep_md: yes
 ---
 
@@ -59,16 +66,15 @@ Aus den folgenden Gründen:
 
 - Sechs [**Gründe**](http://www.r-bloggers.com/top-6-reasons-you-need-to-be-using-rstudio/) Rstudio zu nutzen.
 
-- Wie man Rstudio [**nutzen kann.**](https://support.rstudio.com/hc/en-us/sections/200107586-Using-RStudio)
+- Wie man Rstudio [**nutzen kann.**](https://support.rstudio.com/hc/en-us/sections/200107586-Using-RStudio) - kleine Artikel zu verschiedenen Themen - bspw. Debugging, Paketmanagement oder Shortcuts.
 
-- [**Rstudio einrichten**](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio)
+- [**RStudio einrichten**](https://support.rstudio.com/hc/en-us/articles/200549016-Customizing-RStudio) - Im Menü gibt es unter Tools > Optionen eine Reihe von Einstellungen - wozu diese gut sind, wird in diesem Artikel erklärt.  
 
-- [**Einführung in RStudio**](https://dss.princeton.edu/training/RStudio101.pdf)
-
+- [**Einführung in RStudio**](https://dss.princeton.edu/training/RStudio101.pdf) - hier werden die ersten Schritte in RStudio ausführlich erklärt. 
 <!--
 https://datascienceplus.com/introduction-to-rstudio/
 -->
 
-- [**RStudio Cheatsheet**](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf)
+- [**RStudio Cheatsheet**](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf) - Übersichtliche Darstellung von Funktionen in RStudio
 
 

@@ -41,6 +41,7 @@ if (sysInfo["nodename"]=="SVMARDP07"){
 
 if (sysInfo["nodename"]=="MAC14077"){
   new.folder <- "D:/Daten/GitHub/IntroR/buildingblocks/" 
+  new.folder <- "D:/Daten/GitHub/IntroR/2019/slides/"
   path_wherepicslive <- "D:/Daten/GitHub/r_intro_gp18/slides/" 
   path_wherepicslive <- "D:/Daten/GitHub/geocourse/slides/"
   path_wherepicslive <- "D:/Daten/GitHub/geohealth/slides/"
@@ -55,7 +56,7 @@ new.folder.fig <- paste0(new.folder,"/figure/")
 
 setwd(new.folder)
 
-myfiles <- c("Import.Rmd","LineareRegression.Rmd")
+myfiles <- c("Import.Rmd","LineareRegression.Rmd","DatenVerarbeitung.Rmd","GESISPanel.Rmd")
 
 i <- length(myfiles)
 myfile <- myfiles[i]

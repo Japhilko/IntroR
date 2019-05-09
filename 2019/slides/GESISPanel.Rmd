@@ -3,20 +3,25 @@ title: "Die GESIS Panel Daten"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  beamer_presentation:
-    colortheme: beaver
-    fonttheme: structurebold
-    highlight: tango
+  beamer_presentation: 
+    colortheme: dolphin
+    fonttheme: structuresmallcapsserif
     fig_caption: no
+    fig_height: 3
+    fig_width: 5
+    highlight: zenburn
+    theme: Dresden
+  pdf_document: 
     keep_tex: yes
-    theme: CambridgeUS
-  pdf_document:
     toc: yes
-  html_document:
-    keep_md: yes
-  slidy_presentation:
+  slidy_presentation: 
+    css: mycss.css
     keep_md: yes
 ---
+
+
+## Das GESIS Panel 
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE,warning = F,message = F)
@@ -26,6 +31,8 @@ athome <- !GESIS
 library(magrittr)
 library(kableExtra)
 library(dplyr)
+library(knitr)
+
 ```
 
 ```{r,eval=F,echo=F}
@@ -40,9 +47,7 @@ install.packages("flextable")
 ```
 
 
-## Das GESIS Panel 
-
-- Wahrscheinlichkeitsbasiertes  Access Panel für Individuen: - Allgemeine Bevölkerung in Deutschland, Deutschsprachhige Bevölkerung, 18-70 Jahre
+- Wahrscheinlichkeitsbasiertes  Access Panel für Personen: - Allgemeine Bevölkerung in Deutschland, deutschsprachig, im Alter von 18-70 Jahren
 - Panelisten wurden aus den Melderegistern rekrutiert  - (270 Sampling Points) 
 7599 face-to-face Interviews (CAPI)
 - Ungefähr 5000 Panelisten (Basis Stichprobe / erste Kohorte 2014)
@@ -66,57 +71,99 @@ install.packages("flextable")
 
 ![](figure/filenamesGP2.PNG)
 
-## Einen ersten Eindruck von den Daten bekommen
+## Erster Eindruck der Daten
 
 ```{r,eval=F}
-setwd("J:/Work/GESISPanel_DATA/01_post_processing/c01/e_2017/ee/03_codebook/data")
-cdb_dat <- readstata13::read.dta13("ee_Codebook+Scheme_20180213.dta")
+cdbdat_path <- "J:/Work/GESISPanel_DATA/01_post_processing/c01/f_2018/fd/03_codebook/data/"
+dirnamen <- list.files(cdbdat_path)
+ind_cdbs <- agrep("_Codebook+Scheme_",dirnamen)
+
+cdb_dat <- readstata13::read.dta13(paste0(cdbdat_path,dirnamen[ind_cdbs]))
 ```
 
 ```{r loadstata14, cache=T,eval=F}
-dat <- readstata13::read.dta13("../data/ZA5666_v1-0-0_Stata14.dta")
+
+dat <- readstata13::read.dta13("D:/Daten/GitLab/IntroDataAnalysis/data/ZA5666_v1-0-0_Stata14.dta")
 ```
 
 ```{r,eval=GESIS}
-setwd("J:/Work/GESISPanel_DATA/01_post_processing/campus_file/b_2014/")
-dat <- readstata13::read.dta13("campus_file_b_2014_20170307.dta")
+campfile <- "J:/Work/GESISPanel_DATA/01_post_processing/campus_file/b_2014/"
+dat <- readstata13::read.dta13(paste0(campfile,"campus_file_b_2014_20170307.dta"))
 ```
 
-```{r,eval=GESIS}
+```{r,eval=F}
 att_dat <- attributes(dat)
-set.seed(323)
-indvar <- sample(1:nrow(dat),4)
 # att_dat$var.labels[indvar[1]]
 ```
 
+```{r,eval=F,echo=F}
+save(att_dat,file="../data/att_dat_gpcampusfile.RData")
+```
+
+```{r,echo=F}
+load("../data/att_dat_gpcampusfile.RData")
+```
+
+```{r,eval=F}
+set.seed(323)
+indvar <- sample(1:length(att_dat$names),4)
+```
 
 
 ```{r,echo=F}
 library(knitr)
 ```
 
-- `r colnames(dat)[indvar[1]]` - `r att_dat$var.labels[indvar[1]]`
-- `r colnames(dat)[indvar[2]]` - `r att_dat$var.labels[indvar[2]]`
-- `r colnames(dat)[indvar[3]]` - `r att_dat$var.labels[indvar[3]]`
-- `r colnames(dat)[indvar[4]]` - `r att_dat$var.labels[indvar[4]]`
+```{r,eval=F,echo=F}
+cnames <- colnames(dat)
+save(cnames,file="../data/gpcf_cnames.RData")
+```
+
+```{r,echo=F}
+load("../data/gpcf_cnames.RData")
+```
+
+```{r,eval=F,echo=F}
+set.seed(234)
+exdat_gp <- dat[sample(1:length(att_dat$names)),indvar]
+save(exdat_gp,file="../data/exdat_gpcf.RData")
+```
+
+```{r,echo=F}
+load("../data/exdat_gpcf.RData")
+```
+
+```{r,echo=F}
+indvar <- match(c("bezf070a", "bdao032a", "bdao048a", "bfam056a"),cnames)
+```
+
+
+
+- `r cnames[indvar[1]]` - `r att_dat$var.labels[indvar[1]]`
+- `r cnames[indvar[2]]` - `r att_dat$var.labels[indvar[2]]`
+- `r cnames[indvar[3]]` - `r att_dat$var.labels[indvar[3]]`
+- `r cnames[indvar[4]]` - `r att_dat$var.labels[indvar[4]]`
 
 <!--
 - `z000005z` - [**Digital Object Identifier (doi)**](https://de.wikipedia.org/wiki/Digital_Object_Identifier)
 - `a11c019a` - Zufriedenheit Leben in Wohnort
 -->
 
-```{r,eval=GESIS}
-kable(head(dat[1:6,indvar]), row.names = F)
-```
 
+
+```{r}
+kable(exdat_gp[1:6,], row.names = F)
+```
 
 
 ## Die Variablennamen im GESIS Panel
 
+<!--
 ### Beispiel für die Zusammensetzung der Variablennamen
+-->
+
 
 ```{r}
-cnames <- colnames(dat)
 # tail_dat <- tail(cnames)
 tail_dat <- cnames[sample(1:length(cnames),5)]
 tail_dat
@@ -130,17 +177,18 @@ study_info <- substr(tail_dat,3,4)
 - Die ersten beiden Buchstaben enthalten die Welle:
 
 ```{r,eval=T}
-waves <- paste0(rep(letters[1:6],each=6),rep(letters[1:6],6))
-years <- rep(2013:2018,each=6)
+waves <- paste0(rep(letters[1:7],each=6),rep(letters[1:6],7))
+waves <- waves[-which(waves%in%c("ad", "ae", "af"))]
+years <- rep(2013:2019,each=6)
 # kable(data.frame(waves,years))
-recent_wave <- "fd"
+recent_wave <- "gb"
 num_waves <- which(waves==recent_wave)
 ```
 
 ```{r}
-year <- 2013:2018
-waves <- c("aa,ab,ac","ba,bb,bc,bd,be,bf","ca,cb,cc,cd,ce,cf","da,db,dc,dd,de,df","ea,eb,ec,ed,ee,ef","fa,fb,fc,fd,fe,ff")
-numbers <- c("1-3","4-9","10-15","16-21","22-27","28-33")
+year <- 2013:2019
+waves <- c("aa,ab,ac","ba,bb,bc,bd,be,bf","ca,cb,cc,cd,ce,cf","da,db,dc,dd,de,df","ea,eb,ec,ed,ee,ef","fa,fb,fc,fd,fe,ff","ga,gb")
+numbers <- c("1-3","4-9","10-15","16-21","22-27","28-33","34-35")
 kable(data.frame(year,waves,numbers),row.names = F)
 ```
 
@@ -148,7 +196,7 @@ kable(data.frame(year,waves,numbers),row.names = F)
 - Bis zum jetzigen Zeitpunkt sind `r num_waves` gelaufen
 -->
 
-- Bis zum jetzigen Zeitpunkt sind 32 gelaufen
+- Bis zum jetzigen Zeitpunkt sind `r num_waves` gelaufen
 
 ## Die Variablennamen im GESIS Panel II
 
@@ -219,7 +267,6 @@ knitr::kable(tab_spatial)
 - Anzahl Variablen pro Welle im Campus File:
 
 ```{r,echo=F}
-cnames <- colnames(dat)
 waves <- substr(cnames,1,2)
 table(waves)
 ```
@@ -230,36 +277,44 @@ table(waves)
 studies <- unique(substr(cnames,3,4))
 ```
 
-```{r,eval=GESIS}
+```{r,eval=F}
 setwd("J:/Work/GESISPanel/02_panel/04_studies/")
 stud_dat <- xlsx::read.xlsx2("study_overview.xlsx",1)
 ```
 
-```{r,eval=GESIS}
-setwd("D:/Daten/GitLab/GesisPanel/data/")
-studies_dat <- xlsx::read.xlsx2("Studies.xlsx",1)
+```{r,eval=F}
+studdat_path <- "D:/Daten/GitLab/GesisPanel/data/"
+studies_dat <- xlsx::read.xlsx2(paste0(studdat_path,"Studies.xlsx"),1)
 ```
 
 
 
-```{r}
-library(knitr)
+```{r,eval=F}
 ind_study <- match(studies,studies_dat$Studycode)
 studies_df <- data.frame(Name=as.character(studies_dat$Studytitle[ind_study]),
                          Code=studies)
 studies_df <- studies_df[complete.cases(studies_df),]
+save(studies_df,file="../data/gpcf_studies_df.RData")
 ```
 
+```{r,echo=F}
+load("../data/gpcf_studies_df.RData")
+```
+
+![](figure/gpstudies_puf.PNG){ height=190% }
+
 ```{r,eval=F,echo=F}
+DT::datatable(studies_df)
+```
+
+```{r,echo=F}
 kable(studies_df)
 ```
 
 
-```{r,eval=F,ech=F}
-DT::datatable(studies_df)
-```
-
 ![](figure/GPstudies_CampusFile.PNG)
+
+
 
 ## Die Missing Codes im GESIS Panel
 
@@ -303,7 +358,7 @@ paste("Welle: ",substr(exvar,1,2))
 
 ## The attributes of the GP dataset
 
-```{r}
+```{r,eval=F}
 att_dat <- attributes(dat)
 names(att_dat)
 ```
@@ -318,10 +373,21 @@ ind_xname <- which(att_dat$names==xname)
 
 ## `r att_dat$var.labels[ind_xname]` (`r xname`)
 
+
+```{r,echo=F,eval=F}
+tab_a11c019a <-  table(dat$a11c019a)
+save(tab_a11c019a,file="../data/gpcf_tab_a11c019a.RData")
+```
+
+```{r,echo=F}
+load("../data/gpcf_tab_a11c019a.RData")
+```
+
+
 ```{r,eval=T,echo=F}
 library(lattice)
 # att_dat$var.labels[which(att_dat$names==xname)]
-barchart(table(dat$a11c019a),col=c("#228B22"))
+barchart(tab_a11c019a,col=c("#228B22"))
 ```
 
 ```{r,eval=F,echo=F}
@@ -337,14 +403,14 @@ lname <- att_dat$var.labels[which(att_dat$names==xname)]
 ![](figure/cdb_bbak102a.PNG)
 
 
-## Eine Übersicht über das GESIS Panel (Campus File)
+## Übersicht GESIS Panel (Campus File)
 
 ### [**Dashboard zum Überblick**](http://rpubs.com/Japhilko82/overview_gp)
 
-![](figure/Dashboard_gesispanel.PNG)
+![](figure/Dashboard_gesispanel.PNG){ height=150% }
 
-##  A3A Aufgabe - Download der GESIS Panel Daten
+##  Aufgabe - Download der GESIS Panel Daten
 
-- Suche bei einer Suchmaschine nach GESIS Panel Campus file oder
-- gehe auf die Seiten des GESIS Datenbestandskatalogs und
+- Suche bei einer [**Suchmaschine**](https://duckduckgo.com/) nach GESIS Panel Campus file oder
+- gehe auf die Seiten des [**GESIS Datenbestandskatalogs**](https://dbk.gesis.org/dbksearch/SDesc2.asp?DB=D&no=5666) und
 - lade die `**14.dta` Datei des GESIS Panel Campus file herunter.

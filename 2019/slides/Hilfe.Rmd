@@ -2,13 +2,20 @@
 title: "Wie bekommt man Hilfe?"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output: 
+output:
   beamer_presentation: 
-    colortheme: rose
-    fonttheme: structurebold
-    highlight: pygments
-    theme: Darmstadt
+    colortheme: dolphin
+    fonttheme: structuresmallcapsserif
+    fig_caption: no
+    fig_height: 3
+    fig_width: 5
+    highlight: zenburn
+    theme: Dresden
+  pdf_document: 
+    keep_tex: yes
+    toc: yes
   slidy_presentation: 
+    css: mycss.css
     keep_md: yes
 ---
 
@@ -90,13 +97,13 @@ demo(nlm)
 
 ## Die Funktion `apropos`
 
-- durchsucht alles über den angegebenen String:
+- findet alles, was den angegebenen String enthält:
 
 ```{r}
 apropos("lm")
 ```
 
-- Funktion kann auch mit [**regulären Ausdrücken**](https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck) verwendet werden...
+- Auch [**reguläre Ausdrücken**](https://de.wikipedia.org/wiki/Regul%C3%A4rer_Ausdruck) können verwendet werden...
 
 
 ```{r,eval=F}
@@ -133,7 +140,7 @@ R-project + "was ich schon immer wissen wollte"
 
 ## [**Stackoverflow**](http://stackoverflow.com/)
 
--  Für alle Fragen zum programmieren
+-  Für alle Fragen zum Programmieren
 -  Ist nicht auf R fokussiert - aber es gibt [**viele Diskussionen zu R-Fragen**](https://stackoverflow.com/tags/r/info)
 -  Sehr detailierte Diskussionen
 
@@ -152,7 +159,7 @@ R-project + "was ich schon immer wissen wollte"
 
 ## [**Quick R**](http://www.statmethods.net/interface/help.html)
 
-- Immer mit vielen Beispielen und Hilfen bezüglich eines Themas
+- Viele Beispiele und Hilfe bezüglich eines Themas
 - Beispiel: [**Quick R - Getting Help**](http://www.statmethods.net/interface/help.html)
 
 ![](figure/quickR.PNG)
@@ -172,9 +179,9 @@ R-project + "was ich schon immer wissen wollte"
 
 ### Hilfe für `which.min` 
 
-- Versuchen Sie den Befehl `?which.min`. Dies öffnet eine Hilfeseite im unteren rechten Fenster von RStudio. Was macht die Funktion?
+- Tippe den Befehl `?which.min` in die Konsole. Dies öffnet eine Hilfeseite im unteren rechten Fenster von RStudio. Wofür kann man die Funktion `which.min` nutzen?
 
-- Sie müssen den Namen der Funktion kennen, um die Hilfeseite wie oben beschrieben zu öffnen. Manchmal (oft, sogar) kennen Sie den Namen der R-Funktionen nicht; dann kann Ihnen eine [**Suchmaschine**](https://duckduckgo.com/) helfen. Versuchen Sie zum Beispiel, den Text `R minimum vector` zu suchen.
+- Der Name der Funktion muss bekannt sein, um die Hilfeseite so zu öffnen. Manchmal (oft, sogar) kennen man den Namen der R-Funktionen nicht; dann kann eine [**Suchmaschine**](https://duckduckgo.com/) helfen. Suche bspw. mit den Begriffen `R minimum vector`.
 
 ###
 

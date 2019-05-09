@@ -27,10 +27,14 @@ knitr::opts_chunk$set(echo = TRUE,cache=T,warning=F,message = F)
 
 ## Die Daten einlesen
 
-```{r}
-link <- "http://offenedaten.frankfurt.de/dataset/50968551-b445-42a9-9288-563784f5768e/resource/c5e0a891-42c0-4259-84c7-afa01621477f/download/zprojekteopen-datadatenamt-12beschaftigtebeschaftigte-2009-2012.xls"
+```{r importffmdata, tidy=T}
+l1 <- "http://offenedaten.frankfurt.de/dataset/"
+l2 <- "50968551-b445-42a9-9288-563784f5768e/resource/"
+l3 <- "c5e0a891-42c0-4259-84c7-afa01621477f/download/"
+l4 <- "zprojekteopen-datadatenamt-12"
+l5 <- "beschaftigtebeschaftigte-2009-2012.xls"
 
-dat <- rio::import(link)
+dat <- rio::import(paste0(l1,l2,l3,l4,l5))
 ```
 
 
@@ -48,10 +52,13 @@ dat <- rio::import(paste0(static_link,file),
 head(dat)
 ```
 
-```{r,echo=F}
+```{r,echo=F,eval=F}
 library(knitr)
 kable(head(dat))
 ```
+
+![](figure/stadtteildata.PNG){ width=80% }
+
 
 ## Einen ersten Eindruck der Daten bekommen
 

@@ -1,7 +1,7 @@
 ---
 title: "Aufgabe Datenimport"
 author: "Jan-Philipp Kolb"
-date: "3 Mai 2017"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   slidy_presentation:
     highlight: espresso

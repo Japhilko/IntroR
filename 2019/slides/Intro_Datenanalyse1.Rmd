@@ -1,12 +1,15 @@
 ---
-title: "Intro Datenanalyse mit R"
+title: "Intro Datenanalyse mit R - erster Teil"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
   beamer_presentation: 
     colortheme: dolphin
     fonttheme: structuresmallcapsserif
-    highlight: espresso
+    fig_caption: no
+    fig_height: 3
+    fig_width: 5
+    highlight: zenburn
     theme: Dresden
   pdf_document: 
     keep_tex: yes

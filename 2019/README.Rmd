@@ -15,7 +15,7 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenan
 
 ## Einführung und Vorbereitung
 
-- Warum R nutzen? ([Browser](slides/WarumR.md) |  [pdf](slides/WarumR.pdf) )
+- Warum R eine gute Wahl ist. ([Browser](slides/WarumR.md) |  [pdf](slides/WarumR.pdf) )
 
 - Dein Freund das GUI ([Browser](slides/FreundGUI.md) | [pdf](slides/FreundGUI.pdf))
 
@@ -38,8 +38,6 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenan
 
 ## Rein und raus – Datenimport und -export
 
-- Das GESIS Panel ([pdf](slides/GESISPanel.pdf))
-
 
 - Datenimport ([Browser](slides/Import.md) | [pdf](slides/Import.pdf) | [rcode](slides/Import.R))
 
@@ -49,11 +47,14 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenan
 
 ## Ein erster Eindruck – Was uns die Daten sagen
 
+- Das GESIS Panel ([pdf](slides/GESISPanel.pdf))
+
+<!--
 - Indizieren
 ([Browser](slides/datenanalyse_ffm.Rmd)| [pdf](slides/datenanalyse_ffm) |  [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/rcode/datenanalyse_ffm.R))
+-->
 
-
-- Datenanalyse ([Browser](slides/DatenVerarbeitung.Rmd) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
+- Datenverarbeitung ([Browser](slides/DatenVerarbeitung.Rmd) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
 
     - Aufgabe - Apply Funktion verwenden ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Apply.md))
 
