@@ -41,13 +41,6 @@ Datenverarbeitung / Datenanalyse
 ```
 
 
-# Aufgabe Datenanalyse
-
-```{r child = '../tutorial/Aufgabe_Datenanalyse.Rmd'}
-```
-
-
-
 # Einfache Graphiken erstellen
 
 ```{r child = 'EinfacheGrafiken.Rmd'}

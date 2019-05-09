@@ -692,7 +692,7 @@ commands
 ## Die `apply` Familie
 
 ```{r}
-(ApplyDat <- cbind(1:4,runif(4),rnorm(4))) # Example data set
+(ApplyDat <- cbind(1:4,runif(4),rnorm(4))) #Example 
 ```
 
 ```{r}
@@ -736,7 +736,7 @@ tapply(ApplyDat$Income,
 - Andere Befehle können auch verwendet werden..... auch selbst geschriebene 
 
 
-## B1E Übung  - `tapply()` Befehl verwenden
+## Übung  - `tapply()` Befehl verwenden
 
 - Finde heraus, welche Variable Informationen über die Altersgruppe enthält.
 
@@ -763,7 +763,7 @@ install.packages("reshape")
 ### Beispiel Datensatz 
 
 ```{r}
-(mydata <- data.frame(id=rep(1:2,each=2), # sample dataset
+(mydata <- data.frame(id=rep(1:2,each=2), 
                      time=rep(c(1,2),2),
                      x1 = c(5,3,6,2),
                      x2 = c(6,5,1,4)))
@@ -774,7 +774,7 @@ install.packages("reshape")
 
 ```{r}
 library(reshape)
-melt(mydata, id=c("id","time")) #  
+melt(mydata, id=c("id","time"))   
 ```
 
 <!--
@@ -800,8 +800,17 @@ library(tibble)
 
 ```{r}
 data(iris)
+```
+
+
+```{r,eval=F}
 head(iris)
 ```
+
+```{r,echo=F}
+head(iris[,1:4])
+```
+
 
 - petal length and width - Länge und Breite der Blütenblätter
 
@@ -858,7 +867,7 @@ att_dat$var.labels[which(colnames(dat)=="a11c024a")]
 tab <- table(dat$a11c025a,dat$a11c024a)
 ```
 
-## Tabelle anschauen
+## Kreuztabelle anschauen
 
 ### Variablen
 
@@ -867,7 +876,7 @@ tab <- table(dat$a11c025a,dat$a11c024a)
 
 ### Tabelle
 
-1[](figure/Tabelle_a11_jung.PNG)
+![](figure/Tabelle_a11_jung.PNG)
 
 ## Beziehung zwischen kategorialen Variablen
 
@@ -884,9 +893,9 @@ chisq.test(tab)
 https://support.minitab.com/de-de/minitab/18/help-and-how-to/modeling-statistics/regression/how-to/fit-binary-logistic-model/methods-and-formulas/diagnostic-measures/
 -->
 
-## B1F Übung - eine interaktive Tabelle
+## Übung - eine interaktive Tabelle
 
-- Lade den Datensatz `dat_cf2.RData` vom [**Github Verzeichnis**](https://github.com/Japhilko/r_intro_gp18) herunter.
+- Lade den Datensatz `dat_cf2.RData` vom [**Github Verzeichnis**](https://github.com/Japhilko/IntroR/2019/data/) herunter.
 - Importiere den Datensatz in R 
 - Erstelle eine interaktive Tabelle mit den folgenden Befehlen:
 
@@ -895,7 +904,7 @@ library(DT)
 DT::datatable(dat_cf2)
 ```
 
-- Prüfe, welche zusätzlichen Argumente der Funktion `datatable` für Dich nützlich sind.
+- Probiere witere Argumente der Funktion `datatable` aus.
 
 
 
