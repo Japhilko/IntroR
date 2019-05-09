@@ -96,18 +96,22 @@ head(iris)
 
 ```{r}
 plot(iris$Sepal.Length,iris$Sepal.Width)
+
 ```
 
 ## Andere Farbe und Punkttyp
 
 ```{r}
-plot(iris$Sepal.Length,iris$Sepal.Width,pch=20,col="purple")
+plot(iris$Sepal.Length,iris$Sepal.Width,pch=20,
+     col="purple")
 ```
 
 ## Beschriftung hinzufügen
 
 ```{r}
-plot(iris$Sepal.Length,iris$Sepal.Width,pch=20,col="purple",main="Iris dataset",xlab="Sepal Length",ylab="Sepal Width")
+plot(iris$Sepal.Length,iris$Sepal.Width,pch=20,
+     col="purple",main="Iris dataset",xlab="Sepal Length",
+     ylab="Sepal Width")
 ```
 
 
@@ -290,7 +294,19 @@ y <- rexp(1000,1)
 
 ## Beispiel `vioplot`
 
-```{r,message=F}
+```{r,message=F,eval=F}
+library(vioplot)
+plot(x, y, xlim=c(-2,5), ylim=c(-5,5))
+vioplot(x, col="tomato", horizontal=TRUE, at=-2, 
+        add=TRUE,lty=2, rectCol="gray")
+vioplot(y, col="cyan", horizontal=FALSE, at=4.5, 
+        add=TRUE,lty=2)
+```
+
+
+## Beispiel `vioplot`
+
+```{r,message=F,echo=F}
 library(vioplot)
 plot(x, y, xlim=c(-2,5), ylim=c(-5,5))
 vioplot(x, col="tomato", horizontal=TRUE, at=-2, 
