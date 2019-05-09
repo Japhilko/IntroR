@@ -30,3 +30,7 @@ install.packages("raster")
 install.packages("visreg")
 
 install.packages("iplots")
+
+install.packages("sjPlot")
+install.packages("sjmisc")
+install.packages("Rcpp")

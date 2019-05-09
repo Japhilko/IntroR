@@ -1,0 +1,45 @@
+---
+title: "Ausblick"
+author: "Jan-Philipp Kolb"
+date: "9 5 2019"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## [Das Paket `swirl`](https://swirlstats.com/)
+
+![](figure/swirl.PNG)
+
+## Der Start mit `swirl`
+
+```{r}
+library(swirl)
+```
+
+```{r,eval=F}
+swirl()
+```
+
+![](figure/swirl_start.PNG)
+
+
+<!--
+https://www.r-bloggers.com/likert-plots-and-grouped-likert-plots-rstats/
+
+https://www.r-bloggers.com/why-use-rtutor-for-interactive-tutorials-if-there-is-rstudios-learnr/
+
+https://www.r-bloggers.com/visualising-bias-and-unbiasedness/
+-->
+
+## Einen Likert plot erzeugen
+
+```{r}
+library(sjPlot)
+library(sjmisc)
+data(efc)
+```
+
+

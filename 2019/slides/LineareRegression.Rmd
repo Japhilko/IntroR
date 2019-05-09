@@ -469,23 +469,24 @@ visreg2d(m6, "wt", "hp", plot.type = "persp")
 
 ## B3A Aufgabe lineare Regression
 
-Der Datensatz `toycars` beschreibt die Route von drei Spielzeugautos, die Rampen in verschiedenen Winkeln absteigen.
+Der Datensatz `toycars` beschreibt die Route von drei Spielzeugautos, die Rampen in verschiedenen Winkeln runterfahren.
 
-- angle: Rampenwinkel
-- distance: Entfernung die von dem Spielzeugauto zurück gelegt wird. 
-- car: Autotyp (1, 2 or 3)
+- `angle`: Rampenwinkel
+- `distance`: Entfernung die von dem Spielzeugauto zurück gelegt wird. 
+- `car`: Autotyp (1, 2 or 3)
 
 a) Lese den Datensatz `toycars` ein  und konvertiere die Variable `car` des Datensatzes in einen Faktor (`as.factor`).
+
 (b) Erstelle drei Box-Plots, in denen die von den Autotypen zurückgelegte Strecke visualisiert wird.
 
-## B3A Aufgabe lineare Regression II
+## Aufgabe lineare Regression II
 
 
-(c) Schätze für jeden Autotyp getrennt die Parameter des folgenden linearen Modell; nutze dafür die Funktion `lm()` 
+(c) Schätze für jeden Autotyp die Parameter des folgenden linearen Modell; nutze dafür die Funktion `lm()` 
 
 $$ distance_i= \beta_0 + \beta_1 \cdot angle_i + \epsilon_i$$
 
-(d) Überprüfe die Anpassung des Modells indem Du die drei Regressionslinien in den Scatterplot einzeichnest (`distance` gegen `angle`). Spricht das $$ R^2 $$ für eine gute Modellanpassung?
+(d) Überprüfe die Anpassung des Modells indem Du die drei Regressionslinien in den Scatterplot einzeichnest (`distance` gegen `angle`). Spricht das $ R^2 $ für eine gute Modellanpassung?
 
 
 ## Einen schönen Output mit dem Paket [**`stargazer`**](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf)
