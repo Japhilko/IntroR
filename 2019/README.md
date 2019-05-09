@@ -1,7 +1,7 @@
 ---
 title: "Einführung in die Datenanalyse mit R"
 author: "Jan-Philipp Kolb"
-date: "06 Mai, 2019"
+date: "09 Mai, 2019"
 output: 
   html_document: 
     keep_md: yes
@@ -29,17 +29,10 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenan
 [pdf](slides/Hilfe.pdf) |
 [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Hilfe.R))
 
-
-
-- Datentypen und Indizieren
-([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Datentypen.md)| [pdf](slides/Datentypen.pdf) |  [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/rcode/Datentypen.R))
-
-
 - Modularer Aufbau von R ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/ModularerAufbau.md) |
  [pdf](slides/ModularerAufbau.pdf) | [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/rcode/InstallPackages.R))
 
     - Aufgabe Zusatzpakete ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/tutorial/Aufgabe_Zusatzpakete.md))
-
 
 ## Rein und raus – Datenimport und -export
 
@@ -53,6 +46,10 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_Datenan
 - Datenexport ([Browser](https://github.com/Japhilko/IntroR/blob/master/2019/slides/Export.md) | [pdf](slides/Export.pdf) | [rcode](slides/Export.R))
 
 ## Ein erster Eindruck – Was uns die Daten sagen
+
+- Indizieren
+([Browser](slides/datenanalyse_ffm.Rmd)| [pdf](slides/datenanalyse_ffm) |  [rcode](https://github.com/Japhilko/IntroR/blob/master/2019/rcode/datenanalyse_ffm.R))
+
 
 - Datenanalyse ([Browser](slides/DatenVerarbeitung.Rmd) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
 
