@@ -1,0 +1,16 @@
+base
+knitr
+Matrix
+lme4
+mlmRev
+sm
+zoo
+vioplot
+beanplot
+ggplot2
+abind
+MASS
+arm
+interplot
+visreg
+readstata13

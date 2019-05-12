@@ -1,5 +1,5 @@
 ---
-title: "Intro Datenanalyse mit R - zweiter Teil"
+title: "Intro Datenanalyse mit R - dritter Teil"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
@@ -17,16 +17,6 @@ output:
 knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 ```
 
-
-# Einfache Graphiken erstellen
-
-```{r child = 'EinfacheGrafiken.Rmd'}
-```
-
-# Aufgabe Balkendiagramm
-
-```{r child = '../tutorial/Aufgabe_Barplot.Rmd'}
-```
 
 # Die lineare Regression 
 

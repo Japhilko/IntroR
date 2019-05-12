@@ -3,18 +3,19 @@ title: "Einführung in die Datenanalyse mit R  - Einfache Grafiken"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output:
-  beamer_presentation:
-    colortheme: rose
+  beamer_presentation: 
+    colortheme: dolphin
+    fonttheme: structuresmallcapsserif
     fig_caption: no
     fig_height: 3
     fig_width: 5
-    fonttheme: structurebold
-    highlight: espresso
-    theme: CambridgeUS
-  html_document:
-    keep_md: yes
-  slidy_presentation:
-    highlight: espresso
+    highlight: zenburn
+    theme: Dresden
+  pdf_document: 
+    keep_tex: yes
+    toc: yes
+  slidy_presentation: 
+    css: mycss.css
     keep_md: yes
 ---
 
@@ -110,8 +111,8 @@ plot(iris$Sepal.Length,iris$Sepal.Width,pch=20,
 
 ```{r}
 plot(iris$Sepal.Length,iris$Sepal.Width,pch=20,
-     col="purple",main="Iris dataset",xlab="Sepal Length",
-     ylab="Sepal Width")
+     col="purple",main="Iris dataset",
+     xlab="Sepal Length",ylab="Sepal Width")
 ```
 
 
@@ -144,7 +145,7 @@ data(Chem97)
 
 Wir erstellen ein Histogramm der Variable gcsescore:
 
-```{r,fig.height=4}
+```{r,fig.width=4}
 hist(Chem97$gcsescore)
 ```
 
@@ -188,7 +189,7 @@ kable(ab)
 
 ## Histogramm
 
-```{r}
+```{r fighist, fig.width = 4, fig.asp = .62}
 hist(Chem97$gcsescore,col="blue",
      main="Hallo Welt",ylab="y-Werte", xlab="x-Werte")
 ```

@@ -22,8 +22,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE,warning=F,message=F,eval=T, fig.height=4,cache=T)
 ```
 
-```{r,echo=F}
-athome <- F
+```{r setparams,echo=F}
+athome <- T
 GESIS <- !athome
 showsolut=F
 ```
@@ -142,10 +142,20 @@ cdplot(children ~ age)
 muss spezifiziert 
 
 
+## Umgang mit fehlenden Werten
+
+```{r}
+dat1 <- data.frame(children,age)
+dat1 <- na.omit(dat1)
+```
+
+
+
+
 ## [Logistische Regression](http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html) mit R
 
 ```{r}
-glm_1 <- glm(children ~ age, 
+glm_1 <- glm(children ~ age,data=dat1, 
                     family = binomial())
 ```
 
@@ -223,9 +233,9 @@ Daraus folgt...
 fit_prob <- exp(predict(glm_1))/(1+exp(predict(glm_1)))
 
 library(ggplot2)
-dfex <- data.frame(age,fit_prob)
-ggplot(aes(x=age, y=fit_prob))  +
-  geom_line(aes(x=age, y=fit_prob))
+dfex <- data.frame(age=dat1$age,fit_prob)
+ggplot(aes(x=age, y=fit_prob),data=dfex)  +
+  geom_line(aes(x=age, y=fit_prob),data=dfex)
 ```
 
 Es resultiert eine Sigmoid-Kurve, anstatt einer Gerade mit konstanter Steigungsrate wie bei der linearen Regression.
@@ -441,6 +451,13 @@ mod_plr<-polr(a11c020a ~ a11d096b ,data=dat)
 ```
 -->
 
+<!--
+Aufgabe logistische Regression
+
+https://tutorials.iq.harvard.edu/R/Rstatistics/Rstatistics.html#exercise_2:_logistic_regression
+-->
+
+
 ## Linkliste - logistische Regression
 
 -  Einführung in die [**logistische Regression**](http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html)
@@ -453,3 +470,8 @@ mod_plr<-polr(a11c020a ~ a11d096b ,data=dat)
 
 - [**Kategoriale Daten:**](http://homepage.univie.ac.at/herbert.nagel/KategorialeDaten.pdf) - [**Durchführung logistische Regression in R**](https://www.r-bloggers.com/how-to-perform-a-logistic-regression-in-r/)
 
+
+<!--
+Augabe logistische Regression
+https://tutorials.iq.harvard.edu/R/Rstatistics/Rstatistics.html#exercise_2:_logistic_regression
+-->

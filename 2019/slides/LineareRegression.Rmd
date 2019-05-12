@@ -2,13 +2,15 @@
 title: "Lineare Regression"
 author: "Jan-Philipp Kolb"
 date: "`r format(Sys.time(), '%d %B, %Y')`"
-output:
-  beamer_presentation:
-    colortheme: beaver
+output: 
+  beamer_presentation: 
+    colortheme: dolphin
     fig_caption: no
-    fonttheme: structurebold
-    highlight: espresso
-    theme: CambridgeUS
+    fig_height: 3
+    fig_width: 5
+    fonttheme: structuresmallcapsserif
+    highlight: zenburn
+    theme: Dresden
   ioslides_presentation:
     keep_md: yes
   slidy_presentation:
@@ -231,13 +233,41 @@ interact_plot(fitiris, pred = "Petal.Width", modx = "Species")
 ```
 
 
-## Das Paket `interplot`
+## Ein genauerer Blick auf Interaktionseffekte
 
+```{r}
+m_cyl <- lm(mpg ~ wt * cyl, data = mtcars)
+```
 
+### Das Paket `interplot`
 
 ```{r}
 library(interplot)
 ```
+
+```{r,eval=F}
+interplot(m = m_cyl, var1 = "cyl", var2 = "wt")
+```
+
+- var1 - die Variable für die der Koeffizient geplottet werden soll
+- var2 - Variable auf die der Koeffizient konditional ist
+
+### Fragestellung für Beispiel
+
+Wir wollen wissen, wie sich das Gewicht eines Autos auf den Koeffizienten für die Anzahl der Zylinder auswirkt. Zu erklärende Variable ist die Laufleistung.
+
+## Interaktionseffekt visualisieren
+
+```{r,echo=F}
+interplot(m = m_cyl, var1 = "cyl", var2 = "wt")
+```
+
+Die Darstellung zeigt, dass mit zunehmendem Fahrzeuggewicht (x-Achse) auch die Größe des Koeffizienten der Anzahl der Zylinder zunimmt (y-Achse). 
+
+<!--
+Die Beschriftung in der rechten unteren Ecke zeigt die Konfidenzintervalle der Differenz zwischen den konditionierten Effekten der Anzahl der Zylinder bei den Minimal- und Maximalwerten des Gewichts. (Der Intervallbereich kann über die Option ci eingestellt werden.)
+
+## 
 
 ```{r}
 interplot(m = m3d, var1 = "disp", var2 = "wt", hist = TRUE) +
@@ -252,6 +282,7 @@ interplot(m = m3d, var1 = "disp", var2 = "wt", hist = TRUE) +
 ```{r}
 interplot(m = m3d, var1 = "wt", var2 = "disp", hist = TRUE)  
 ```
+-->
 
 - Eine detailliertere Beschreibung ist in der [**`interplot` Vignette**](https://cran.r-project.org/web/packages/interplot/vignettes/interplot-vignette.html) zu bekommen.
 
@@ -467,7 +498,7 @@ visreg2d(m6, "wt", "hp", plot.type = "persp")
 ```
 
 
-## B3A Aufgabe lineare Regression
+## Aufgabe lineare Regression
 
 Der Datensatz `toycars` beschreibt die Route von drei Spielzeugautos, die Rampen in verschiedenen Winkeln runterfahren.
 
@@ -475,7 +506,7 @@ Der Datensatz `toycars` beschreibt die Route von drei Spielzeugautos, die Rampen
 - `distance`: Entfernung die von dem Spielzeugauto zurück gelegt wird. 
 - `car`: Autotyp (1, 2 or 3)
 
-a) Lese den Datensatz `toycars` ein  und konvertiere die Variable `car` des Datensatzes in einen Faktor (`as.factor`).
+(a) Lese den Datensatz `toycars` ein  und konvertiere die Variable `car` des Datensatzes in einen Faktor (`as.factor`).
 
 (b) Erstelle drei Box-Plots, in denen die von den Autotypen zurückgelegte Strecke visualisiert wird.
 
