@@ -121,11 +121,12 @@ table(children)
 
 ## Conditional Density Plot (GESIS Panel)
 
-```{r}
+```{r,eval=F}
 cdplot(children ~ age)
 ```
 
 
+![](figure/cdplot_children_age)
 
 ## Binäre abhängige Variablen im `glm`
 
@@ -154,10 +155,20 @@ dat1 <- na.omit(dat1)
 
 ## [Logistische Regression](http://ww2.coastal.edu/kingw/statistics/R-tutorials/logistic.html) mit R
 
-```{r}
+```{r,eval=F}
 glm_1 <- glm(children ~ age,data=dat1, 
                     family = binomial())
 ```
+
+```{r,eval=F,echo=F}
+save(glm_1,file="../data/glm_1.RData")
+```
+
+```{r,echo=FALSE}
+load("../data/glm_1.RData")
+```
+
+
 
 ```{r}
 sum_glm1 <- summary(glm_1)
@@ -316,7 +327,7 @@ sum_glm1$deviance
 ## [Mc Fadden’s $R^2$](https://www.r-bloggers.com/evaluating-logistic-regression-models/
 )
 
-```{r}
+```{r,eval=F}
 library(pscl)
 pR2(glm_1) 
 ```
@@ -382,17 +393,27 @@ table(satisfactionplace)
 
 ## Ein anderes Modell
 
-```{r,eval=T,echo=T}
+```{r,eval=F,echo=T}
 glm_2 <- glm(children ~ age + satisfactionplace*region, 
                     family = binomial())
 ```
+
+```{r,eval=F,echo=F}
+save(glm_2,file="../data/glm_2.RData")
+```
+
+```{r,echo=F}
+library(pscl)
+load("../data/glm_2.RData")
+```
+
 
 ```{r,eval=F,echo=F}
 # https://www.r-bloggers.com/evaluating-logistic-regression-models/
 anova(glm_2, test="Chisq")
 ```
 
-```{r}
+```{r,eval=F}
 pseudor2 <- pR2(glm_2) 
 pseudor2["McFadden"]
 ```
@@ -423,16 +444,34 @@ table(datf$bczd001a)
 
 - Logistisches Modell mit einem Probit Link:
 
-```{r}
+```{r,eval=F}
 probitmod <- glm(children ~ age, 
 	family=binomial(link=probit))
 ```
+
+```{r,eval=F,echo=F}
+save(probitmod,file="../data/probitmod.RData")
+```
+
+```{r,echo=F}
+load("../data/probitmod.RData")
+```
+
 
 - Regression mit Zähldaten:
 
 ```{r}
 modp <- glm(Tatoos ~ age,family=poisson)
 ```
+
+```{r,eval=F,echo=F}
+save(modp,file="../data/modp.RData")
+```
+
+```{r,echo=F}
+load("../data/modp.RData")
+```
+
 
 - Proportional Odds logistic Regression aus dem Paket `MASS`:
 

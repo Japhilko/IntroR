@@ -43,3 +43,6 @@ data(efc)
 ```
 
 
+<!--
+https://r4ds.had.co.nz/graphics-for-communication.html#saving-your-plots
+-->

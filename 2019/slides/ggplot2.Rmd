@@ -183,3 +183,8 @@ ggsave("Graphik.jpg")
 - Noam Ross - [Quick Introduction to ggplot2](http://www.noamross.net/blog/2012/10/5/ggplot-introduction.html)
 
 - [Plugin ggplot2](https://www.r-bloggers.com/rcmdrplugin-kmggplot2_0-2-4-is-on-cran/)
+
+
+<!--
+https://www.r-bloggers.com/detailed-guide-to-the-bar-chart-in-r-with-ggplot/
+-->
