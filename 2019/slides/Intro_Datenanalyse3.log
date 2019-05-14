@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.7)  9 MAY 2019 20:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.2.7)  14 MAY 2019 06:21
 entering extended mode
 **./Intro_Datenanalyse3.tex
 (Intro_Datenanalyse3.tex
@@ -1680,17 +1680,17 @@ Package longtable Warning: Column widths have changed
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-6-1.pdf, id=58, 722.7pt 
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-8-1.pdf, id=58, 722.7pt 
 x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-6-1.pdf Graphic fil
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-8-1.pdf Graphic fil
 e (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-6-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-8-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-6-1.pdf  used on input line 11.
+8-1.pdf  used on input line 11.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 ) [6
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-6-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-8-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb) [7
@@ -2039,31 +2039,31 @@ Overfull \vbox (491.55606pt too high) detected at line 450
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-12-1.pdf, id=102, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-14-1.pdf, id=102, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-12-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-14-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-12-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-14-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-12-1.pdf  used on input line 19.
+14-1.pdf  used on input line 19.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 ) [11
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-12-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-14-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-13-1.pdf, id=115, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-15-1.pdf, id=115, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-13-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-15-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-13-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-15-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-13-1.pdf  used on input line 16.
+15-1.pdf  used on input line 16.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 ) [12
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-13-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-15-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb) [13
@@ -2118,34 +2118,29 @@ Package pdftex.def Info: figure/mtcars_model_interact.PNG  used on input line 2
  <./figure/mtcars_model_interact.PNG>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
-(Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-22-1.pdf, id=156, 722.7p
-t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-22-1.pdf Graphic fi
-le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-22-1.pdf>
-Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-22-1.pdf  used on input line 18.
-(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
-) [16
+(Intro_Datenanalyse3.vrb) [16
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-22-1.pdf>]
+]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-23-1.pdf, id=172, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-26-1.pdf, id=163, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-23-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-26-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-23-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-26-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-23-1.pdf  used on input line 16.
+26-1.pdf  used on input line 4.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 23.
-) [17
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 15.
+)
+Overfull \vbox (0.64757pt too high) detected at line 637
+ []
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-23-1.pdf>]
+[17
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-26-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
@@ -2195,49 +2190,49 @@ Overfull \hbox (118.11641pt too wide) in paragraph at lines 26--26
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-27-1.pdf, id=207, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-32-1.pdf, id=198, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-27-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-32-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-27-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-32-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-27-1.pdf  used on input line 16.
+32-1.pdf  used on input line 16.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 ) [20
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-27-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-32-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-28-1.pdf, id=220, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-33-1.pdf, id=211, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-28-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-33-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-28-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-33-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-28-1.pdf  used on input line 10.
+33-1.pdf  used on input line 10.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 ) [21
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-28-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-33-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-29-1.pdf, id=233, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-34-1.pdf, id=224, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-29-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-34-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-29-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-34-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-29-1.pdf  used on input line 12.
+34-1.pdf  used on input line 12.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 ) [22
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-29-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-34-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<figure/visreg.PNG, id=246, 513.117pt x 236.082pt>
+<figure/visreg.PNG, id=237, 513.117pt x 236.082pt>
 File: figure/visreg.PNG Graphic file (type png)
 <use figure/visreg.PNG>
 Package pdftex.def Info: figure/visreg.PNG  used on input line 16.
@@ -2248,42 +2243,42 @@ Package pdftex.def Info: figure/visreg.PNG  used on input line 16.
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-34-1.pdf, id=255, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-39-1.pdf, id=246, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-34-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-39-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-34-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-39-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-34-1.pdf  used on input line 19.
+39-1.pdf  used on input line 19.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 ) [24
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-34-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-39-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-36-1.pdf, id=272, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-41-1.pdf, id=263, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-36-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-41-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-36-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-41-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-36-1.pdf  used on input line 21.
+41-1.pdf  used on input line 21.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 )
 
 LaTeX Font Warning: Font shape `T1/lmtt/bx/sc' undefined
-(Font)              using `T1/lmtt/bx/n' instead on input line 805.
+(Font)              using `T1/lmtt/bx/n' instead on input line 819.
 
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 805.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 819.
 
-Overfull \vbox (15.356pt too high) detected at line 805
+Overfull \vbox (15.356pt too high) detected at line 819
  []
 
 [25
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-36-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-41-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
@@ -2322,17 +2317,17 @@ Overfull \hbox (26.13667pt too wide) in paragraph at lines 25--25
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-40-1.pdf, id=298, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-45-1.pdf, id=289, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-40-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-45-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-40-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-45-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-40-1.pdf  used on input line 12.
+45-1.pdf  used on input line 12.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 ) [27
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-40-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-45-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
@@ -2383,63 +2378,63 @@ Overfull \hbox (37.63414pt too wide) in paragraph at lines 19--19
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-44-1.pdf, id=323, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-49-1.pdf, id=314, 722.7p
 t x 216.81pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-44-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-49-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-44-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-49-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-44-1.pdf  used on input line 10.
+49-1.pdf  used on input line 10.
 (pdftex.def)             Requested size: 307.2923pt x 92.18768pt.
 ) [29
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-44-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-49-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-46-1.pdf, id=340, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-51-1.pdf, id=331, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-46-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-51-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-46-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-51-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-46-1.pdf  used on input line 16.
+51-1.pdf  used on input line 16.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 ) [30
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-46-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-51-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-47-1.pdf, id=356, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-52-1.pdf, id=347, 722.7p
 t x 289.08pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-47-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-52-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-47-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-52-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-47-1.pdf  used on input line 10.
+52-1.pdf  used on input line 10.
 (pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
 ) [31
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-47-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-52-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-48-1.pdf, id=371, 722.7p
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-53-1.pdf, id=362, 722.7p
 t x 433.62pt>
-File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-48-1.pdf Graphic fi
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-53-1.pdf Graphic fi
 le (type pdf)
-<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-48-1.pdf>
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-53-1.pdf>
 Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
-48-1.pdf  used on input line 10.
+53-1.pdf  used on input line 10.
 (pdftex.def)             Requested size: 307.2923pt x 184.37538pt.
 )
-Overfull \vbox (2.01443pt too high) detected at line 930
+Overfull \vbox (2.01443pt too high) detected at line 944
  []
 
 [32
 
- <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-48-1.pdf>]
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-53-1.pdf>]
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb) [33
@@ -2462,28 +2457,28 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 \openout4 = `Intro_Datenanalyse3.vrb'.
 
 (Intro_Datenanalyse3.vrb
-<figure/stargazertabex.PNG, id=406, 451.6875pt x 550.4565pt>
+<figure/stargazertabex.PNG, id=397, 451.6875pt x 550.4565pt>
 File: figure/stargazertabex.PNG Graphic file (type png)
 <use figure/stargazertabex.PNG>
 Package pdftex.def Info: figure/stargazertabex.PNG  used on input line 15.
 (pdftex.def)             Requested size: 188.94931pt x 230.26624pt.
 )
 LaTeX Font Info:    Font shape `T1/lmtt/bx/sc' in size <14.4> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1014.
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 1021.
 
-Overfull \vbox (103.75513pt too high) detected at line 1014
+Overfull \vbox (103.75513pt too high) detected at line 1021
  []
 
 [35
 
  <./figure/stargazertabex.PNG>]
-<figure/Diagslr.PNG, id=417, 1132.23pt x 591.4095pt>
+<figure/Diagslr.PNG, id=408, 1132.23pt x 591.4095pt>
 File: figure/Diagslr.PNG Graphic file (type png)
 <use figure/Diagslr.PNG>
-Package pdftex.def Info: figure/Diagslr.PNG  used on input line 1035.
+Package pdftex.def Info: figure/Diagslr.PNG  used on input line 1042.
 (pdftex.def)             Requested size: 307.27834pt x 160.50389pt.
 
-Overfull \vbox (50.0429pt too high) detected at line 1035
+Overfull \vbox (50.0429pt too high) detected at line 1042
  []
 
 [36
@@ -2493,7 +2488,500 @@ Overfull \vbox (50.0429pt too high) detected at line 1035
 
 (Intro_Datenanalyse3.vrb) [37
 
+] [38
+
 ]
+<figure/CDAagresti.PNG, id=443, 351.11176pt x 142.73325pt>
+File: figure/CDAagresti.PNG Graphic file (type png)
+<use figure/CDAagresti.PNG>
+Package pdftex.def Info: figure/CDAagresti.PNG  used on input line 1094.
+(pdftex.def)             Requested size: 307.30238pt x 124.92393pt.
+[39
+
+ <./figure/CDAagresti.PNG>]
+<figure/extendinglinearmodel.PNG, id=454, 499.8675pt x 133.6995pt>
+File: figure/extendinglinearmodel.PNG Graphic file (type png)
+<use figure/extendinglinearmodel.PNG>
+Package pdftex.def Info: figure/extendinglinearmodel.PNG  used on input line 11
+21.
+(pdftex.def)             Requested size: 307.29846pt x 82.19307pt.
+
+LaTeX Font Warning: Font shape `T1/lmss/m/sc' in size <10> not available
+(Font)              Font shape `T1/lmr/m/sc' tried instead on input line 1121.
+
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10'.
+(microtype)             Ignoring protrusion settings for this character.
+[40
+
+ <./figure/extendinglinearmodel.PNG>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [41
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [42
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+Overfull \hbox (26.13667pt too wide) in paragraph at lines 20--20
+[]\T1/lmtt/m/n/10.95 ## -99   1   2   3   4   5   6   7   8   9  10  11  12  13
+[] 
+ []
+
+
+Overfull \hbox (26.13667pt too wide) in paragraph at lines 20--20
+[]\T1/lmtt/m/n/10.95 ##   5  31  87 101  91  83 100 163 159 133  64  56 105  44
+[] 
+ []
+
+
+Overfull \hbox (3.14174pt too wide) in paragraph at lines 38--38
+[]\T1/lmtt/m/n/10.95 ##   1   2   3   4   5   6   7   8   9  10  11  12  13[] 
+ []
+
+
+Overfull \hbox (3.14174pt too wide) in paragraph at lines 38--38
+[]\T1/lmtt/m/n/10.95 ##  31  87 101  91  83 100 163 159 133  64  56 105  44[] 
+ []
+
+) [43
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [44
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<figure/cdplot_children_age.png, id=495, 572.89032pt x 367.3725pt>
+File: figure/cdplot_children_age.png Graphic file (type png)
+<use figure/cdplot_children_age.png>
+Package pdftex.def Info: figure/cdplot_children_age.png  used on input line 10.
+
+(pdftex.def)             Requested size: 307.29315pt x 197.05525pt.
+)
+Overfull \vbox (14.6943pt too high) detected at line 1241
+ []
+
+[45
+
+ <./figure/cdplot_children_age.png>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [46
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [47
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 22--22
+[]\T1/lmtt/m/n/10.95 ##               Estimate Std. Error   z value     Pr(>|z|
+)[] 
+ []
+
+
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 22--22
+[]\T1/lmtt/m/n/10.95 ## (Intercept) -0.7194058 0.16384386 -4.390801 1.129338e-0
+5[] 
+ []
+
+
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 22--22
+[]\T1/lmtt/m/n/10.95 ## age          0.2225862 0.02376266  9.367056 7.458415e-2
+1[] 
+ []
+
+) [48
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 17--17
+[]\T1/lmtt/m/n/10.95 ##               Estimate Std. Error   z value     Pr(>|z|
+)[] 
+ []
+
+
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 17--17
+[]\T1/lmtt/m/n/10.95 ## (Intercept) -0.7194058 0.16384386 -4.390801 1.129338e-0
+5[] 
+ []
+
+
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 17--17
+[]\T1/lmtt/m/n/10.95 ## age          0.2225862 0.02376266  9.367056 7.458415e-2
+1[] 
+ []
+
+) [49
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ##               Estimate Std. Error   z value     Pr(>|z|
+)[] 
+ []
+
+
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ## (Intercept) -0.7194058 0.16384386 -4.390801 1.129338e-0
+5[] 
+ []
+
+
+Overfull \hbox (31.8854pt too wide) in paragraph at lines 14--14
+[]\T1/lmtt/m/n/10.95 ## age          0.2225862 0.02376266  9.367056 7.458415e-2
+1[] 
+ []
+
+) [50
+
+] [51
+
+] [52
+
+]
+<figure/sigmoid.PNG, id=557, 603.4545pt x 326.4195pt>
+File: figure/sigmoid.PNG Graphic file (type png)
+<use figure/sigmoid.PNG>
+Package pdftex.def Info: figure/sigmoid.PNG  used on input line 1427.
+(pdftex.def)             Requested size: 307.29732pt x 166.22269pt.
+[53
+
+ <./figure/sigmoid.PNG>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [54
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+Overfull \hbox (3.14174pt too wide) in paragraph at lines 25--25
+[]\T1/lmtt/m/n/10.95 ## age   1   98.956       999       1160 < 2.2e-16 ***[] 
+ []
+
+
+Overfull \hbox (66.3778pt too wide) in paragraph at lines 25--25
+[]\T1/lmtt/m/n/10.95 ## Signif. codes:  0 \TS1/lmtt/m/n/10.95 '\T1/lmtt/m/n/10.
+95 ***\TS1/lmtt/m/n/10.95 ' \T1/lmtt/m/n/10.95 0.001 \TS1/lmtt/m/n/10.95 '\T1/l
+mtt/m/n/10.95 **\TS1/lmtt/m/n/10.95 ' \T1/lmtt/m/n/10.95 0.01 \TS1/lmtt/m/n/10.
+95 '\T1/lmtt/m/n/10.95 *\TS1/lmtt/m/n/10.95 ' \T1/lmtt/m/n/10.95 0.05 \TS1/lmtt
+/m/n/10.95 '\T1/lmtt/m/n/10.95 .\TS1/lmtt/m/n/10.95 ' \T1/lmtt/m/n/10.95 0.1 \T
+S1/lmtt/m/n/10.95 ' ' \T1/lmtt/m/n/10.95 1[] 
+ []
+
+)
+Overfull \vbox (9.47249pt too high) detected at line 1492
+ []
+
+[55
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [56
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<figure/pseudor2.PNG, id=590, 252.34274pt x 95.1555pt>
+File: figure/pseudor2.PNG Graphic file (type png)
+<use figure/pseudor2.PNG>
+Package pdftex.def Info: figure/pseudor2.PNG  used on input line 11.
+(pdftex.def)             Requested size: 252.35367pt x 95.15959pt.
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <14.4> on input line 1535.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 1535.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 1535.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <14.4> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1535.
+
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1535.
+
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <7> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 1535.
+
+[57
+
+ <./figure/pseudor2.PNG>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [58
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [59
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [60
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [61
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [62
+
+]
+<figure/Rtutorials.PNG, id=638, 600.44325pt x 115.632pt>
+File: figure/Rtutorials.PNG Graphic file (type png)
+<use figure/Rtutorials.PNG>
+Package pdftex.def Info: figure/Rtutorials.PNG  used on input line 1724.
+(pdftex.def)             Requested size: 307.2848pt x 59.17621pt.
+<figure/orings.PNG, id=640, 616.704pt x 130.086pt>
+File: figure/orings.PNG Graphic file (type png)
+<use figure/orings.PNG>
+Package pdftex.def Info: figure/orings.PNG  used on input line 1724.
+(pdftex.def)             Requested size: 307.2973pt x 64.82051pt.
+
+Overfull \vbox (6.98564pt too high) detected at line 1724
+ []
+
+[63
+
+ <./figure/Rtutorials.PNG> <./figure/orings.PNG>] [64
+
+]
+<figure/GalleryGGplot2.PNG, id=662, 1128.01425pt x 258.9675pt>
+File: figure/GalleryGGplot2.PNG Graphic file (type png)
+<use figure/GalleryGGplot2.PNG>
+Package pdftex.def Info: figure/GalleryGGplot2.PNG  used on input line 1746.
+(pdftex.def)             Requested size: 307.28743pt x 70.5465pt.
+[65
+
+ <./figure/GalleryGGplot2.PNG>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<figure/LibraryGGplot2.PNG, id=672, 487.22025pt x 331.2375pt>
+File: figure/LibraryGGplot2.PNG Graphic file (type png)
+<use figure/LibraryGGplot2.PNG>
+Package pdftex.def Info: figure/LibraryGGplot2.PNG  used on input line 24.
+(pdftex.def)             Requested size: 307.28493pt x 208.90816pt.
+)
+Overfull \vbox (93.17773pt too high) detected at line 1774
+ []
+
+[66
+
+ <./figure/LibraryGGplot2.PNG>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+Overfull \hbox (49.67102pt too wide) in alignment at lines 15--29
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Package longtable Warning: Column widths have changed
+(longtable)                in table 2 on input line 29.
+
+) [67
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-109-1.pdf, id=690, 722.7
+pt x 289.08pt>
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-109-1.pdf Graphic f
+ile (type pdf)
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-109-1.pdf>
+Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
+109-1.pdf  used on input line 21.
+(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
+)
+Overfull \vbox (37.94894pt too high) detected at line 1836
+ []
+
+[68
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-109-1.pdf>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-111-1.pdf, id=703, 722.7
+pt x 289.08pt>
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-111-1.pdf Graphic f
+ile (type pdf)
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-111-1.pdf>
+Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
+111-1.pdf  used on input line 10.
+(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
+) [69
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-111-1.pdf>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-112-1.pdf, id=716, 722.7
+pt x 289.08pt>
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-112-1.pdf Graphic f
+ile (type pdf)
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-112-1.pdf>
+Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
+112-1.pdf  used on input line 10.
+(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
+) [70
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-112-1.pdf>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-113-1.pdf, id=729, 722.7
+pt x 289.08pt>
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-113-1.pdf Graphic f
+ile (type pdf)
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-113-1.pdf>
+Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
+113-1.pdf  used on input line 10.
+(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
+) [71
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-113-1.pdf>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-114-1.pdf, id=742, 722.7
+pt x 289.08pt>
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-114-1.pdf Graphic f
+ile (type pdf)
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-114-1.pdf>
+Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
+114-1.pdf  used on input line 11.
+(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
+) [72
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-114-1.pdf>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-115-1.pdf, id=755, 722.7
+pt x 289.08pt>
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-115-1.pdf Graphic f
+ile (type pdf)
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-115-1.pdf>
+Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
+115-1.pdf  used on input line 10.
+(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
+) [73
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-115-1.pdf>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-116-1.pdf, id=769, 722.7
+pt x 289.08pt>
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-116-1.pdf Graphic f
+ile (type pdf)
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-116-1.pdf>
+Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
+116-1.pdf  used on input line 11.
+(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
+) [74
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-116-1.pdf>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-117-1.pdf, id=786, 722.7
+pt x 289.08pt>
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-117-1.pdf Graphic f
+ile (type pdf)
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-117-1.pdf>
+Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
+117-1.pdf  used on input line 11.
+(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
+) [75
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-117-1.pdf>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-118-1.pdf, id=799, 722.7
+pt x 289.08pt>
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-118-1.pdf Graphic f
+ile (type pdf)
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-118-1.pdf>
+Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
+118-1.pdf  used on input line 16.
+(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
+) [76
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-118-1.pdf>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [77
+
+]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb
+<Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-121-1.pdf, id=820, 722.7
+pt x 289.08pt>
+File: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-121-1.pdf Graphic f
+ile (type pdf)
+<use Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-121-1.pdf>
+Package pdftex.def Info: Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-
+121-1.pdf  used on input line 12.
+(pdftex.def)             Requested size: 307.2923pt x 122.91692pt.
+) [78
+
+ <./Intro_Datenanalyse3_files/figure-beamer/unnamed-chunk-121-1.pdf>]
+\openout4 = `Intro_Datenanalyse3.vrb'.
+
+(Intro_Datenanalyse3.vrb) [79
+
+]
+<figure/WhyIuseggplot2.PNG, id=842, 478.78876pt x 234.27525pt>
+File: figure/WhyIuseggplot2.PNG Graphic file (type png)
+<use figure/WhyIuseggplot2.PNG>
+Package pdftex.def Info: figure/WhyIuseggplot2.PNG  used on input line 2036.
+(pdftex.def)             Requested size: 307.29314pt x 150.36104pt.
+<figure/introggplot2.PNG, id=844, 384.2355pt x 124.0635pt>
+File: figure/introggplot2.PNG Graphic file (type png)
+<use figure/introggplot2.PNG>
+Package pdftex.def Info: figure/introggplot2.PNG  used on input line 2036.
+(pdftex.def)             Requested size: 307.30087pt x 99.22252pt.
+
+Overfull \hbox (1.75935pt too wide) in paragraph at lines 2036--2036
+[][]\T1/lmss/m/n/10.95 (-20) - 
+ []
+
+
+Overfull \vbox (166.5725pt too high) detected at line 2036
+ []
+
+[80
+
+ <./figure/WhyIuseggplot2.PNG> <./figure/introggplot2.PNG>]
 \tf@nav=\write6
 \openout6 = `Intro_Datenanalyse3.nav'.
 
@@ -2506,27 +2994,27 @@ Overfull \vbox (50.0429pt too high) detected at line 1035
 
 Package longtable Warning: Table widths have changed. Rerun LaTeX.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1065.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1065.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2038.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2038.
 (Intro_Datenanalyse3.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1065.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1065.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2038.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 2038.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1065.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2038.
  ) 
 Here is how much of TeX's memory you used:
- 24951 strings out of 493337
- 458072 string characters out of 3139439
- 547816 words of memory out of 3000000
- 27749 multiletter control sequences out of 15000+200000
- 74393 words of font info for 76 fonts, out of 3000000 for 9000
+ 25339 strings out of 493337
+ 468690 string characters out of 3139439
+ 547815 words of memory out of 3000000
+ 27916 multiletter control sequences out of 15000+200000
+ 109169 words of font info for 109 fonts, out of 3000000 for 9000
  1127 hyphenation exceptions out of 8191
- 56i,15n,55p,423b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Fil
-es/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
-nc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm
+ 56i,15n,56p,542b,565s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/d
+vips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit
 .enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}<C:/Program Fil
 es/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
@@ -2534,14 +3022,15 @@ lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Program Files/MiK
 TeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmsso10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/l
-msso8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/public/lm/lmtcsc10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/lm/lmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
-/symbols/msam10.pfb>
-Output written on Intro_Datenanalyse3.pdf (37 pages, 1089364 bytes).
+msso12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsso8.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/lm/lmtcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/lm/lmtk10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt
+10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on Intro_Datenanalyse3.pdf (80 pages, 3523423 bytes).
 PDF statistics:
- 523 PDF objects out of 1000 (max. 8388607)
- 111 named destinations out of 1000 (max. 500000)
- 10386 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 977 PDF objects out of 1000 (max. 8388607)
+ 240 named destinations out of 1000 (max. 500000)
+ 18694 words of extra memory for PDF output out of 20736 (max. 10000000)
 

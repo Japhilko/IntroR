@@ -14,3 +14,6 @@ arm
 interplot
 visreg
 readstata13
+faraway
+pscl
+RColorBrewer
