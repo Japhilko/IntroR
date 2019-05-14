@@ -17,6 +17,11 @@ output:
 knitr::opts_chunk$set(echo = TRUE,message=F,warning=F)
 ```
 
+# Lattice Graphiken
+
+```{r child = 'LatticePaket.Rmd'}
+```
+
 
 # Die lineare Regression 
 
