@@ -27,14 +27,15 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_ffm.md)
     - Aufgabe: Zuweisungen und Funktionen ([Browser](tutorial/Aufgabe_Zuweisung.md))
 
 
-- Wie bekommt man Hilfe? ([Browser](slides/Hilfe.md) |
-[pdf](slides/Hilfe.pdf) |
-[rcode](slides/Hilfe.R))
-
 - Modularer Aufbau von R ([Browser](slides/ModularerAufbau.md) |
  [pdf](slides/ModularerAufbau.pdf) | [rcode](rcode/InstallPackages.R))
 
     - Aufgabe Zusatzpakete ([Browser](tutorial/Aufgabe_Zusatzpakete.md))
+
+- Wie bekommt man Hilfe? ([Browser](slides/Hilfe.md) |
+[pdf](slides/Hilfe.pdf) |
+[rcode](slides/Hilfe.R))
+
 
 ## Rein und raus – Datenimport und -export
 
@@ -46,8 +47,6 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_ffm.md)
 - Datenexport ([Browser](slides/Export.md) | [pdf](slides/Export.pdf) | [rcode](slides/Export.R))
 
 ## Ein erster Eindruck – Was uns die Daten sagen
-
-- Das GESIS Panel ([pdf](slides/GESISPanel.pdf))
 
 <!--
 - Indizieren
