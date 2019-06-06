@@ -48,14 +48,7 @@ Unterlagen für den Kurs 2019. Die Foliensätze sind [hier](slides/Intro_ffm.md)
 
 ## Ein erster Eindruck – Was uns die Daten sagen
 
-<!--
-- Indizieren
-([Browser](slides/datenanalyse_ffm.Rmd)| [pdf](slides/datenanalyse_ffm) |  [rcode](rcode/datenanalyse_ffm.R))
--->
-
-- Datenverarbeitung ([Browser](slides/DatenVerarbeitung.Rmd) | [pdf](slides/Datenanalyse.pdf) | [rcode](rcode/Datenanalyse.R))
-
-    - Aufgabe - Apply Funktion verwenden ([Browser](tutorial/Aufgabe_Apply.md))
+- Datenverarbeitung ([Browser](slides/DatenVerarbeitung.Rmd) | [pdf](slides/DatenVerarbeitung.pdf) | [rcode](rcode/DatenVerarbeitung.R))
 
 ## Liebe auf den ersten Plot – Grafiken mit R	
 
